@@ -22,9 +22,11 @@ every admissible future input**. The network has 216 coupled hybrid cells (18 la
    pulses are transmitted **exactly** through all 18 layers. The latencies depend on the device and on
    the learned gains; they are not claimed to be equal across devices.
 
-So in this realization, a learning process with local rules installs, despite physical variability, a
-regime that transmits temporal patterns exactly. Point simulations can suggest this; they cannot
-establish it.
+So in this realization, a learning process with local rules installs, under small parameter
+uncertainty (±1e-4 relative on device constants, ±1e-5 on initial states), a regime that transmits
+temporal patterns exactly. This box is much smaller than the variability of real components; the
+result is a statement about it, not about physical hardware. Point simulations can suggest such a
+property; they cannot establish it for every point of the box.
 
 > **Made with AI.** The code, the diagnostics and the written proof were produced with Claude
 > (Anthropic) and ChatGPT (OpenAI) under the author's direction (see [How this was built](#how-this-was-built)).
@@ -57,11 +59,16 @@ at most 5 % of width (layer 18: 7.28e-3 against 6.91e-3).*
 ## Origin of the model
 
 The physical kernel of A22 is inspired by the **Reset Operator** of Nicolas Breuillaud (*The Reset
-Operator: A Structural Constraint on Recursivity*, manuscript, 2026). After each threshold crossing, the
-operator opens a finite interval of reduced admission while internal dynamics restore a below-threshold
-state. A22 is one concrete realization of this structure: READY, fast and slow phases; admission closed
-after firing; return to rest before admission reopens. The full model is
-[`engine/reference/full_model_reference.md`](engine/reference/full_model_reference.md).
+Operator: A Structural Constraint on Recursivity*, manuscript, 2026). The definition of the operator,
+in particular of its coupling, is the one given in that paper; this repository does not restate it.
+
+A22 is one concrete realization of a threshold–protection–return cycle: a READY phase in which inputs
+charge the cell, a threshold crossing, protected fast and slow phases during which the principal
+admission is closed, and a return to rest before admission reopens. The full model of the
+realization is [`engine/reference/full_model_reference.md`](engine/reference/full_model_reference.md)
+(in French). Its banner and its section 7 date from 18 October 2026, before the v3.3 campaign; read
+[`engine/reference/STATUS_NOTE_EN.md`](engine/reference/STATUS_NOTE_EN.md) first. The physical
+definition in that file is current; its status statements are historical.
 
 The result is about this realization and its parameter box. It is not a proof of the Reset Operator
 hypothesis in general (see [`docs/MODEL_BOUNDARY_EN.txt`](docs/MODEL_BOUNDARY_EN.txt)).

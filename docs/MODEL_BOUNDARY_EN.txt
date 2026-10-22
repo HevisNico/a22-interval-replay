@@ -1,6 +1,11 @@
+Note (October 2026). This text was written for an earlier engine package. Its description of R
+follows version V3(5) of the Reset Operator paper; later versions define the coupling differently
+(through the slope). The definition that applies is the one of the cited version of the paper (see
+README, "Origin of the model"). The scope statements below are unchanged.
+
 A22 rebuild scope and scientific source
 
-The user has explicitly retained the complete A22 physical realization. This
+The author has explicitly retained the complete A22 physical realization. This
 work changes its implementation infrastructure, not its equations, topology,
 parameter box, arithmetic precision, source protocol or event semantics.
 
@@ -24,8 +29,8 @@ state variables or recovery timing are independent of all external inputs.
 
 The exponential laws, coefficients, topology of 18 layers and 12 lanes,
 plasticity, resource supply and pulse protocol are retained realization
-choices. They are not claimed to be uniquely deduced from R. The user has
-already made these choices and has requested that this work preserve them.
+choices. They are not claimed to be uniquely deduced from R. The author has
+already made these choices and has asked that this work preserve them.
 
 The source model itself distinguishes historical numerical claims from
 qualification under later code revisions. Successful software tests do not

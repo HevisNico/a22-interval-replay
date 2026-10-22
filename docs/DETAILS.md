@@ -47,6 +47,37 @@ separate process. The program identity (a hash of all code, built extensions and
 plus the environment) is frozen when the campaign starts and bound into every receipt. Any change makes
 the campaign refuse to continue; there is no option to continue from another program's layers.
 
+## Positioning
+
+**Affine arithmetic.** The arithmetic is classical affine arithmetic (Comba and Stolfi, 1993; de
+Figueiredo and Stolfi, 2004): a form *c + Σ dₖ εₖ + [−e, e]* is a zonotope whose generators are the
+noise symbols, so the method belongs to the same family as zonotope-based reachability (Girard, 2005;
+CORA). The implementation choices are conventional for validated numerics: centers as 160-digit
+Decimal intervals with directed rounding, binary64 coefficients with every rounding bounded upward, and
+a cap of 256 symbols whose dropped mass is added to the remainder (the analogue of zonotope order
+reduction). Arpra (Turner and Nowotny, 2021) applies arbitrary-precision affine arithmetic to neuron
+models but explicitly leaves out threshold-and-reset dynamics. Nothing in the arithmetic itself is new
+here; what is specific is how events are handled.
+
+**Why not CORA, Flow\* or JuliaReach.** These tools compute reachable sets of general hybrid automata,
+with zonotopes and support functions (CORA, JuliaReach) or Taylor models (Flow\*), by integrating the
+flow and intersecting the reachable set with each guard. A22 differs from their usual benchmarks in
+four ways, which motivated a dedicated engine:
+- between events every flow has a closed form, so no flow integration is needed and the remaining
+  difficulty is entirely discrete;
+- each cell goes through thousands of discrete transitions (about 21,000 spikes in the network), and
+  the order of nearby events is often uncertain; the engine either proves an order from the
+  correlated difference of two dates or enumerates every admissible weak order and joins the results;
+  a guard-intersection approach would branch or over-approximate at each of these transitions;
+- event dates are shared symbolic quantities ("time atoms") reused by every downstream cell, which
+  keeps the correlation between cells without building the product automaton of 216 cells;
+- plasticity is stored as gated histories (partial and completed charge transfers), not as a fixed set
+  of continuous variables, and these histories are folded and merged with dedicated sound rules.
+
+These are reasons for a dedicated engine, not measured results: **no comparison with CORA, Flow\* or
+JuliaReach was run.** A fair benchmark on a single cell or a small sub-network, with the same parameter
+box, would be a useful addition, and is welcome as a contribution.
+
 ## From the v2 engine to v3.3
 
 The v2 engine stopped at layer 18 (cells 4 and 8): it could not order a spike against an input event.
