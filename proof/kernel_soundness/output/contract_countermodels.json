@@ -1,0 +1,49 @@
+{
+  "scope": "countermodels to weaker contracts; not A22 campaign counterexamples",
+  "original_kernel_imported_or_executed": false,
+  "memory_anchor": {
+    "same_token": "A",
+    "global_atom_range": [
+      0,
+      2
+    ],
+    "conditional_anchor_boxes": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "evaluation_time": 3,
+    "first_box_charge_upper_rational": [
+      "4308865634670513905195912338635433243374106573",
+      "17434087248886703725333574136669143040000000000"
+    ],
+    "second_branch_charge_lower_rational": [
+      "565000587743636604951722529067299812178743353811382078181",
+      "1649096215461787025772657112491462068011309989888000000000"
+    ],
+    "excluded_gap_lower_rational": [
+      "13380999924595151546903239095893582011053815767764668915209",
+      "140173178314251897190675854561774275780961349140480000000000"
+    ],
+    "excluded_gap_exceeds": "1/20",
+    "necessary_extra_contract": "retained box must cover the common anchor for every joined branch"
+  },
+  "threshold_boundary": {
+    "model": "x(0)=0; x'=1 before t=1, x'=0 after; reaching x=1 emits",
+    "true_first_root": 1,
+    "closed_root_enclosure": [
+      1,
+      2
+    ],
+    "external_date": 1,
+    "weak_order_lower": 0,
+    "necessary_extra_contract": "strict physical ordering, or explicit equal-time guard handling",
+    "a22_reachability_or_acceptance_demonstrated": false
+  },
+  "all_exact_assertions_passed": true
+}

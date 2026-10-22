@@ -1,0 +1,140 @@
+{
+  "method": "AST-based textual reconstruction; no A22 module imported or executed",
+  "substitutions": [
+    {
+      "old": "s=dict(t=v.T('initial_slab',U0),q=R+I(-DELTA.hi,DELTA.hi)*(-K*U0).exp()+I(0,(3*C*A*U0).hi),\n        z=[I(g).ln()+I(-DELTA.hi,(9*DELTA).hi) for g in ('.3','1.2','.3')],b=I('.08')+I(-DELTA.hi,DELTA.hi),",
+      "new": "s=dict(t=v.T('initial_slab',U0),q=R+INIT['q']*(-K*U0).exp()+I(0,(3*C*A*U0).hi),\n        z=[I(g).ln()+INIT['z'][i] for i,g in enumerate(('.3','1.2','.3'))],b=I('.08')+INIT['b'],",
+      "occurrences": 1
+    },
+    {
+      "old": "D1 if k==0 else D0",
+      "new": "D1_PORTS[j] if k==0 else D0_PORTS[j]",
+      "occurrences": 1
+    },
+    {
+      "old": "off=shift(mon,DM,f'{cell}:mo:{j}:{k}');err=shift(off,DS,f'{cell}:e:{j}:{k}');end=shift(err,DE,f'{cell}:eo:{j}:{k}')",
+      "new": "off=shift(mon,DM_PORTS[j],f'{cell}:mo:{j}:{k}');err=shift(off,DS_PORTS[j],f'{cell}:e:{j}:{k}');end=shift(err,DE_PORTS[j],f'{cell}:eo:{j}:{k}')",
+      "occurrences": 1
+    },
+    {
+      "old": "return out,dict(q=",
+      "new": "return out,dict(terminal_affine=s,q=",
+      "occurrences": 1
+    },
+    {
+      "old": "            s,kind=advance(s,L,cell,count);count+=1\n",
+      "new": "            try:s,kind=advance(s,L,cell,count)\n            except v.Ambiguous:\n                _c=COMMUTE(s,pending,idx,stopidx,suffix,cell,count)\n                if _c is None:\n                    _r=RECOVERY_GROUP(s,pending,idx,cell,count)\n                    if _r is None:raise\n                    s,_k,_n,_m=_r;idx=_k;count+=_n;clusters+=1;branches+=_m\n                    continue\n                s,_f,_n,_k=_c;out.append(_f);count+=_k-idx+1;idx=_k;clusters+=1;branches+=_n\n                continue\n            count+=1\n",
+      "occurrences": 1
+    },
+    {
+      "old": "            try:s,kind=advance(s,tt,cell,count)\n            except v.Ambiguous:\n                if s['p']!=2:raise\n",
+      "new": "            try:s,kind=advance(s,tt,cell,count)\n            except v.Ambiguous:\n                _c=COMMUTE(s,pending,idx,stopidx,suffix,cell,count)\n                if _c is not None:\n                    s,_f,_n,_k=_c;out.append(_f);count+=_k-idx+1;idx=_k;clusters+=1;branches+=_n\n                    continue\n                if s['p']!=2:raise\n",
+      "occurrences": 1
+    },
+    {
+      "old": "            U=v.T(f'{cell}:U:{count}',I(upper));poss=[]\n            for order in admissible_orders(s,group):\n                ss=s\n                for tt,actions in order:ss=act(flowing(ss,tt,True),actions)\n                ss=flowing(ss,U,True);poss.append(ss)\n",
+      "new": "            U=v.T(f'{cell}:U:{count}',I(upper));poss=[]\n            try:\n                for order in admissible_orders(s,group):\n                    ss=s\n                    for tt,actions in order:ss=act(flowing(ss,tt,True),actions)\n                    ss=flowing(ss,U,True);poss.append(ss)\n            except AssertionError as _refusal:\n                if str(_refusal)!='internal crossing inside uncertain external cluster':raise\n                _c=COMMUTE(s,pending,idx,stopidx,suffix,cell,count)\n                if _c is None:raise\n                s,_f,_n,_k=_c;out.append(_f);count+=_k-idx;idx=_k;clusters+=1;branches+=_n\n                continue\n",
+      "occurrences": 1
+    },
+    {
+      "old": "(-LE*t.minus(s['err'][j]))",
+      "new": "(-LE_PORTS[j]*t.minus(s['err'][j]))",
+      "occurrences": 1
+    },
+    {
+      "old": "(-LM*t.minus(s['mark'][j]))",
+      "new": "(-LM_PORTS[j]*t.minus(s['mark'][j]))",
+      "occurrences": 1
+    },
+    {
+      "old": "if not all(tt.box().hi<=x.box().lo for x,_,_ in candidates[1:]):",
+      "new": "if not all(x.minus(tt).lo>=0 for x,_,_ in candidates[1:]):",
+      "occurrences": 1
+    },
+    {
+      "function": "actuations_A19.gain",
+      "old": "age=I(max(D(0),age.lo),max(D(0),age.hi))",
+      "new": "age=amax(I(0),age)",
+      "occurrences": 1
+    },
+    {
+      "function": "actuations_A19.gain",
+      "old": "return I(min(STEP.lo,max(D(0),x.lo)),min(STEP.hi,max(D(0),x.hi)))",
+      "new": "return amin(STEP,amax(I(0),x))",
+      "occurrences": 1
+    },
+    {
+      "function": "actuations_A19.increment",
+      "old": "return I(max(D(0),min(x.lo,cap.lo)),max(D(0),min(x.hi,cap.hi)))",
+      "new": "return amax(I(0),amin(x,cap))",
+      "occurrences": 1
+    },
+    {
+      "function": "actuations_A19.clip",
+      "old": "return I(min(BMAX.lo,x.lo),min(BMAX.hi,x.hi))",
+      "new": "return amin(BMAX,x)",
+      "occurrences": 1
+    },
+    {
+      "function": "depot_A19.value",
+      "old": "return I(min(x.lo,TARGET.lo),min(x.hi,TARGET.hi))",
+      "new": "return amin(x,TARGET)",
+      "occurrences": 1
+    },
+    {
+      "function": "dependances_A17.tail",
+      "old": "admitted=I(min(elapsed.lo,duration.lo),min(elapsed.hi,duration.hi))",
+      "new": "admitted=amin(elapsed,duration)",
+      "occurrences": 1
+    },
+    {
+      "function": "dependances_A17.tail",
+      "old": "after=I(max(D(0),(elapsed-duration).lo),max(D(0),(elapsed-duration).hi))",
+      "new": "after=amax(I(0),elapsed-duration)",
+      "occurrences": 1
+    }
+  ],
+  "files": [
+    {
+      "file": "actuations_A19__clip.txt",
+      "sha256": "5ac2c683e75313fd25545d65619263dec75541de1da642aabbebb8f865e7b75a"
+    },
+    {
+      "file": "actuations_A19__gain.txt",
+      "sha256": "4aa624071b46a05ba2e9c935c2007f555c77495145ae4a7dbed3471ddad7e549"
+    },
+    {
+      "file": "actuations_A19__increment.txt",
+      "sha256": "dfe8257022c9fe6596863abda0a911f3865d5d528b497dbe71adb11a129b252f"
+    },
+    {
+      "file": "advance_inner.txt",
+      "sha256": "f0cb4ed5afbedb6b743f0b7d9fd30d6e5882864d5c5e24cce82cbffc59356ea7"
+    },
+    {
+      "file": "coefficients.txt",
+      "sha256": "84a299861c2ff3ca1f65d5adadfc5570d8d15be559bd43927f8bd8e074224e83"
+    },
+    {
+      "file": "dependances_A17__tail.txt",
+      "sha256": "d60185f4cf63fbace07a64efdc803fa061f5be98d8b8cb867ae4f5575c8e4a66"
+    },
+    {
+      "file": "depot_A19__value.txt",
+      "sha256": "f6e7a97791d360fc6c7e68e51210119e7daf71c88ac5ec79560a6a3d8b45c6ea"
+    },
+    {
+      "file": "unit.txt",
+      "sha256": "f96acf4c08357719eaf3450c53935fc00ce645b94c62e2adc1828a532b04f3eb"
+    }
+  ],
+  "outer_advance_wrappers_in_order": [
+    "avance_causale_A22.advance (FAST relative ordering)",
+    "nofire_cover.advance (strict READY fallback)"
+  ],
+  "other_adapters": [
+    "ready_general_A22.install replaces legacy local READY helpers",
+    "port_box_adapter then port_symbols replace settings and per-port evaluations",
+    "engine history folding/union/cap adapters remain installed"
+  ]
+}

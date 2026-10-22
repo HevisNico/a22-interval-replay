@@ -1,0 +1,95 @@
+A22 v3.3 — PRE-BUILD AND POST-BUILD PROGRAM IDENTITIES
+===================================================
+
+The two identities name different file sets, not different source revisions.
+
+Pre-build identity
+  426eefc40a4c77e8649827b06e3d3cb6e40832b3f678f48c146535c24c60d944
+  71 files selected by run.py:identity(), without the compiled extensions.
+  This is source_identity_before_target_build in PACKAGE_MANIFEST.json.
+
+Post-build identity used by the recorded campaign and the theorem
+  ae1b515af494ef604526dbe8e651c325512b997f6e93f1d3aefb646b96e13256
+  The same 71 files plus the two archived extensions below: 73 files total.
+
+All 87 original files in A22_fresh_launch_v3_3_EN(2).zip are byte-identical
+to their counterparts in the program_used snapshot. Only 71 participate in
+the pre-build identity: the identity function selects executable sources,
+C/header sources and the reference model, not every documentation, test,
+manifest or tool file in the package. Under affine/ and kernel/, it includes
+the specified executable-source and extension suffixes, including tests
+located there. Root-level tests/ and tools/ are outside that selection.
+
+The exact two additional files are:
+
+affine/_rounding_native.cpython-312-x86_64-linux-gnu.so
+  Bytes: 21880
+  SHA-256: 29b1d226d6576e418c38d476cb050a20b37f6db67b6f70ca734423cac6985c57
+
+kernel/native/_a22_native.cpython-312-x86_64-linux-gnu.so
+  Bytes: 41032
+  SHA-256: 9cf239a62f67859f3e3694ff929112f2034678aee97f0867a7391e9315cf6cb8
+
+Both are extracted unchanged from program_used/ in
+A22_v33_layer_18(1).zip. Their bytes also match every other supplied
+program_used snapshot: the layers 01-06 archive and the twelve individual
+archives for layers 07-18, thirteen snapshot archives in total.
+native_extensions_provenance.json records the extraction archive hash,
+member paths, sizes, per-file hashes and complete identity file lists.
+
+Where they are included
+----------------------
+
+The updated dossier contains both files at their original relative paths
+under provenance_audit/source/A22_fresh_launch_v3_3_EN/. That directory now
+reconstructs the archived post-build program tree. No original source file
+was edited. PACKAGE_MANIFEST.json is deliberately preserved byte-for-byte:
+its before-target-build field still correctly describes the pre-build set.
+The dossier's outer SHA256SUMS also covers both added binaries.
+
+Reproduction without loading the engine
+--------------------------------------
+
+From the extracted dossier directory, run:
+
+  python3 learning_justification/verify_build_identity.py
+
+This standard-library checker reads bytes only. It reconstructs the two
+identities and the recorded kernel_id, and checks both binary hashes.
+It does not import run.py, load either extension, compile code, replay a
+cell or launch a campaign. Use Python without -O for its assertions.
+
+The program identity algorithm sorts the selected relative paths, then
+hashes the concatenation of each UTF-8 path, one NUL byte, and that file's
+raw bytes. It is not the hash of the ZIP, nor a concatenation of file hashes.
+The pre-build reconstruction omits exactly the two listed extensions; the
+post-build reconstruction includes them.
+
+The separate kernel_id is the SHA-256 of compact, sorted-key JSON containing
+the post-build source identity, the recorded environment, precision=160 and
+symbols=256. It reconstructs to:
+
+  65cf7b7776347fa8de24fa5e1c357e98ee0f90c4bb8d65f694610fb26db3b25c
+
+The archived environment is Python 3.12.14, NumPy 2.3.5, SciPy 1.17.0,
+arithmetic_backend=native. Its native_sha256 is the _rounding_native hash
+above. The second extension is also covered by the post-build program
+identity, even though it is not that environment field's named binary.
+
+Meaning and limits
+------------------
+
+The theorem targets the post-build program identity because that is the
+identity bound to the existing campaign. The original package manifest
+targets the pre-build source distribution. The difference is fully
+accounted for by adding these two exact archived files.
+
+These are archived CPython 3.12, Linux x86-64 extensions, not newly compiled
+replacements. A fresh build is not asserted to reproduce their exact bytes.
+Matching hashes establish artifact identity, not independent proof that
+the machine code implements the C sources or that an arbitrary host has a
+compatible execution environment. The theorem's stated trusted-execution
+assumptions and the archived experimental_not_qualified status are unchanged.
+
+No compilation, extension loading, new campaign or cell replay was performed
+to prepare this correction.

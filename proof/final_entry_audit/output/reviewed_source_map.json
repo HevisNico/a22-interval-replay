@@ -1,0 +1,103 @@
+{
+  "scope": "Source files read for mathematical/source correspondence; hashes identify the reviewed target, not a whole-program correctness certificate",
+  "areas": {
+    "initial_section": [
+      {
+        "path": "kernel/R_cycle_local_A20_2026-10-18/validation_A15.py",
+        "sha256": "ee895e72d6ac62c3b3487939a72ea912c96662414ea5e1711f05deb61f565ae8"
+      },
+      {
+        "path": "affine/port_box_adapter.py",
+        "sha256": "0314ba7fcc35d199ce68ad3b47c2b1661b2267882a887b07853631a577f73915"
+      }
+    ],
+    "physical_port_routing": [
+      {
+        "path": "affine/port_symbols.py",
+        "sha256": "7f0417b69fef7e0c0005f31e82ea5c04a5cd90522617e8dbd22fc818fd1073e0"
+      },
+      {
+        "path": "affine/engine.py",
+        "sha256": "09fe1f1cf20b2ebdd4213bd967ffa3a33dbc7e8247b66e3c9c5ba02b7a67026d"
+      }
+    ],
+    "arithmetic": [
+      {
+        "path": "affine/affine_iv.py",
+        "sha256": "8208939cd6f6e0710c0af36f20f2a90560f3434c5321d60b01e3a898b7236f9d"
+      },
+      {
+        "path": "affine/rounding.py",
+        "sha256": "b2fef7d457ca16643bbe2f888c494d77fc62c75399b9ae22949d3f979f8c8fb0"
+      },
+      {
+        "path": "affine/rounding_native.c",
+        "sha256": "b82f03f5dbd66833be40470a78d708242002648050f541e6b13de83a944423cd"
+      },
+      {
+        "path": "affine/decimal_cache.py",
+        "sha256": "bd8a54bc444ebb4f00b03a79fd498c70489f332fe34dd81f262a5bfd93a16a09"
+      },
+      {
+        "path": "affine/sound_lattice.py",
+        "sha256": "4593094b883d2f07dff6b1dfbad012e3b40389e616210ee56ffdadad31ec6491"
+      }
+    ],
+    "clock_identity": [
+      {
+        "path": "affine/temporal.py",
+        "sha256": "edc8119faefa89fab3cd3959212d0e355a6941da8173dce697fb0782e0a3c090"
+      },
+      {
+        "path": "affine/artifacts.py",
+        "sha256": "4a810dfa084329abf5c83296674d8473f2a11c9991d70dd1b7dcaee13c58c7ea"
+      }
+    ],
+    "flow_and_histories": [
+      {
+        "path": "kernel/R_cycle_local_A20_2026-10-18/dependances_A17.py",
+        "sha256": "8a52f1bc27ed29f4510bfcc0def8acc1b11e3de80f3b7034174bcbbbaa8485dc"
+      },
+      {
+        "path": "kernel/R_cycle_local_A20_2026-10-18/actuations_A19.py",
+        "sha256": "20ae25248a243e968b3915a0783dcb8b28545c2e972d490824052deb77288b32"
+      },
+      {
+        "path": "kernel/R_cycle_local_A20_2026-10-18/depot_A19.py",
+        "sha256": "da8c04d3725e3a25bd648d05d9d2759272ccb951f8e2c3b513bc05d6bb51881d"
+      },
+      {
+        "path": "kernel/R_cycle_local_A20_2026-10-18/flux_charge_A19.py",
+        "sha256": "5bc70300b0ad6df10cba637d951deb2696c94f3d22818c93b4b3571ba2fbbdc4"
+      }
+    ],
+    "branch_and_root_semantics": [
+      {
+        "path": "kernel/R_cycle_local_A20_2026-10-18/cycle_local_A20.py",
+        "sha256": "4c53125e1664c45fb530cf21b79f1c6aa8a9f771ce7d3ffd22d6a2e4e918e9cf"
+      },
+      {
+        "path": "kernel/R_cycle_local_A20_2026-10-18/branche_retour_A19.py",
+        "sha256": "eb984f9106239d977ae3cda96f1b2687adb5ca40ba6119089cf74380978613f5"
+      },
+      {
+        "path": "kernel/R_continuation_A22_2026-10-18/ready_general_A22.py",
+        "sha256": "4426d77b0d39b61fdd73a5a278f301835f38e2c236d00fb88de1036507e1851d"
+      },
+      {
+        "path": "kernel/R_continuation_A22_2026-10-18/garde_relative_A22.py",
+        "sha256": "ba78c4a6e984ff61a79f8e79b715fb3c1a7962e750cde5568c2d91bce05c37c5"
+      },
+      {
+        "path": "affine/commutation.py",
+        "sha256": "3aad05fa74e8dbed9e089e422936d29377240b5d84d9d7dc0873910e50f2548d"
+      }
+    ],
+    "feedforward_dispatch": [
+      {
+        "path": "run.py",
+        "sha256": "0899c87a97491df15667faaefb88f72c8948379a60a010e52a26dc9c69daaf5e"
+      }
+    ]
+  }
+}

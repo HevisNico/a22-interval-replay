@@ -1,0 +1,112 @@
+{
+ "campaign_run_id": "f29efeaf7ff44d09bbce1e149630f39a",
+ "kernel_id": "65cf7b7776347fa8de24fa5e1c357e98ee0f90c4bb8d65f694610fb26db3b25c",
+ "checks": {
+  "layer18_lane01": {
+   "layer": 18,
+   "lane": 1,
+   "run_id": "f29efeaf7ff44d09bbce1e149630f39a",
+   "kernel_id": "65cf7b7776347fa8de24fa5e1c357e98ee0f90c4bb8d65f694610fb26db3b25c",
+   "status": "complete",
+   "cell_complete": true,
+   "all_checked_decisions_proved": true,
+   "exit_code": 0,
+   "error": null,
+   "seconds": 48.6,
+   "decision_counts": {
+    "H1_fire": 105,
+    "H1_commutation": 0,
+    "H2_standard": 957,
+    "H2_no_fire_cover": 0
+   },
+   "decisions": {
+    "H2_standard: proved": 957,
+    "H1_fire: proved": 105
+   },
+   "unproved_decision_count": 0,
+   "unproved_decisions": [],
+   "tool_sha256": "bd13eff1458c7f7834834b6b7254d539325742eb92e1d963832eb9e5022fab0f",
+   "scope": "Diagnostic advance/commutation guard rechecks using the same interval evaluator; not every direct cluster-flow assertion, a campaign receipt or full kernel qualification"
+  },
+  "layer18_lane04": {
+   "layer": 18,
+   "lane": 4,
+   "run_id": "f29efeaf7ff44d09bbce1e149630f39a",
+   "kernel_id": "65cf7b7776347fa8de24fa5e1c357e98ee0f90c4bb8d65f694610fb26db3b25c",
+   "status": "complete",
+   "cell_complete": true,
+   "all_checked_decisions_proved": true,
+   "exit_code": 0,
+   "error": null,
+   "seconds": 1469.7,
+   "decision_counts": {
+    "H1_fire": 3,
+    "H1_commutation": 101,
+    "H2_standard": 843,
+    "H2_no_fire_cover": 0
+   },
+   "decisions": {
+    "H2_standard: proved": 843,
+    "H1_fire: proved": 3,
+    "H1_commutation: proved": 101
+   },
+   "unproved_decision_count": 0,
+   "unproved_decisions": [],
+   "tool_sha256": "bd13eff1458c7f7834834b6b7254d539325742eb92e1d963832eb9e5022fab0f",
+   "scope": "Diagnostic advance/commutation guard rechecks using the same interval evaluator; not every direct cluster-flow assertion, a campaign receipt or full kernel qualification"
+  },
+  "layer18_lane08": {
+   "layer": 18,
+   "lane": 8,
+   "run_id": "f29efeaf7ff44d09bbce1e149630f39a",
+   "kernel_id": "65cf7b7776347fa8de24fa5e1c357e98ee0f90c4bb8d65f694610fb26db3b25c",
+   "status": "complete",
+   "cell_complete": true,
+   "all_checked_decisions_proved": true,
+   "exit_code": 0,
+   "error": null,
+   "seconds": 1464.5,
+   "decision_counts": {
+    "H1_fire": 3,
+    "H1_commutation": 101,
+    "H2_standard": 843,
+    "H2_no_fire_cover": 0
+   },
+   "decisions": {
+    "H2_standard: proved": 843,
+    "H1_fire: proved": 3,
+    "H1_commutation: proved": 101
+   },
+   "unproved_decision_count": 0,
+   "unproved_decisions": [],
+   "tool_sha256": "bd13eff1458c7f7834834b6b7254d539325742eb92e1d963832eb9e5022fab0f",
+   "scope": "Diagnostic advance/commutation guard rechecks using the same interval evaluator; not every direct cluster-flow assertion, a campaign receipt or full kernel qualification"
+  },
+  "layer18_lane11": {
+   "layer": 18,
+   "lane": 11,
+   "run_id": "f29efeaf7ff44d09bbce1e149630f39a",
+   "kernel_id": "65cf7b7776347fa8de24fa5e1c357e98ee0f90c4bb8d65f694610fb26db3b25c",
+   "status": "complete",
+   "cell_complete": true,
+   "all_checked_decisions_proved": true,
+   "exit_code": 0,
+   "error": null,
+   "seconds": 49.1,
+   "decision_counts": {
+    "H1_fire": 105,
+    "H1_commutation": 0,
+    "H2_standard": 957,
+    "H2_no_fire_cover": 0
+   },
+   "decisions": {
+    "H2_standard: proved": 957,
+    "H1_fire: proved": 105
+   },
+   "unproved_decision_count": 0,
+   "unproved_decisions": [],
+   "tool_sha256": "bd13eff1458c7f7834834b6b7254d539325742eb92e1d963832eb9e5022fab0f",
+   "scope": "Diagnostic advance/commutation guard rechecks using the same interval evaluator; not every direct cluster-flow assertion, a campaign receipt or full kernel qualification"
+  }
+ }
+}

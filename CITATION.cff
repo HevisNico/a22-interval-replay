@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this computation or its results, please cite it as below."
+title: "A22: validated interval replay of the full 128-pulse learning transient"
+type: software
+authors:
+  - family-names: "Breuillaud"
+    given-names: "Nicolas"
+version: "3.3"
+date-released: "2026-10-22"
+license: MIT
+abstract: >-
+  End-to-end propagation of the A22 spiking-network realization (18 layers x 12 lanes,
+  128 input pulses, horizon 1116) with outward-rounded affine interval arithmetic over a box of
+  device parameters, independent for each input port of each cell, and initial states. All 18
+  layers complete with no forced decision; the independent A14 reference gains lie inside the
+  computed enclosures for 648 of 648 boxes. Experimental; not a qualified all-trajectories proof.
+keywords:
+  - interval arithmetic
+  - affine arithmetic
+  - hybrid systems
+  - validated numerics
+  - spiking networks

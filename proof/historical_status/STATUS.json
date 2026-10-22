@@ -1,0 +1,19 @@
+{
+  "schema": "A22-proof-dossier-status-2",
+  "future_return_from_Q": "established by analytic argument and two independent finite inequality checks",
+  "exact_future_word_preservation_from_Q": "proved by fixed influential gains and layerwise translation induction",
+  "initial_section_coverage": "analytic lemma with new independent integer inequalities",
+  "stored_global_clock_definitions": "PASS: 63888 distinct retained atoms, no conflict",
+  "training_source_correspondence": "Relational proof draft, macro contracts, and static effective-source reconstruction supplied; local soundness remains open",
+  "global_training_entry": "OPEN",
+  "unconditional_training_plus_future_invariance": "NOT ESTABLISHED",
+  "new_campaign_run": false,
+  "cell_replay_run": false,
+  "original_program_modified": false,
+  "remaining_obligation": "Instantiate the strict-root/interior-enclosure lemma on all effective guard paths, discharge reachable memory-anchor join conditions, and finish validation of the macro simulation relation under the stated arithmetic contracts.",
+  "new_exact_checks": "PASS: two countermodels to insufficient abstract proof contracts; NOT counterexamples to the campaign",
+  "effective_source_views": 8,
+  "literal_substitutions_checked": 17,
+  "confirmed_campaign_counterexample": false,
+  "original_source_files_rechecked_unchanged": 87
+}

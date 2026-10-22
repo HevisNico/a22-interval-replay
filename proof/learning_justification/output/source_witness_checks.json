@@ -1,0 +1,841 @@
+{
+  "scope": "Static source witnesses only; no semantic proof certification",
+  "original_a22_imported_or_executed": false,
+  "original_source_files_unchanged": 87,
+  "function_witnesses": [
+    {
+      "path": "run.py",
+      "function": "initialize",
+      "first_line": 26,
+      "last_line": 31,
+      "function_sha256": "a39d52d090f357f8cf5e6a15e1d2c7c101bab1e9f3c814d4691d994d2b380a71"
+    },
+    {
+      "path": "run.py",
+      "function": "worker",
+      "first_line": 39,
+      "last_line": 99,
+      "function_sha256": "524235633eae4851d497fa9f7bc8b4381fab131915739d7c18c0f02cbcacc87b"
+    },
+    {
+      "path": "affine/affine_iv.py",
+      "function": "make",
+      "first_line": 88,
+      "last_line": 101,
+      "function_sha256": "fb44224f9f058947820146f21570766603f6be18f32065e3a26332251df6465d"
+    },
+    {
+      "path": "affine/affine_iv.py",
+      "function": "__mul__",
+      "first_line": 182,
+      "last_line": 198,
+      "function_sha256": "7fd2f4e43580a7e3b996ddf8242fae7820ac90799400704959ddbad1a2db1dcb"
+    },
+    {
+      "path": "affine/affine_iv.py",
+      "function": "_unary",
+      "first_line": 201,
+      "last_line": 214,
+      "function_sha256": "74a5a086a88a14d64fcebec993f764f4d2ac522c4d64bf24dfa2d27df9df81b3"
+    },
+    {
+      "path": "affine/affine_iv.py",
+      "function": "exp",
+      "first_line": 216,
+      "last_line": 223,
+      "function_sha256": "138e54d0ff202a57f98672ce07b51cc2b8d4f01a47e99c98e81d4295295d734b"
+    },
+    {
+      "path": "affine/affine_iv.py",
+      "function": "ln",
+      "first_line": 225,
+      "last_line": 233,
+      "function_sha256": "474a7cffac0a47fdf2149d2dd2e05059802b3b322ef4fcfcf99deb7c44dec601"
+    },
+    {
+      "path": "affine/affine_iv.py",
+      "function": "hull",
+      "first_line": 308,
+      "last_line": 350,
+      "function_sha256": "a193035381731cfb14c954e2e3d2a04e6eadd9b14aec1d1964b0a68ae66b6173"
+    },
+    {
+      "path": "affine/engine.py",
+      "function": "_plain_root",
+      "first_line": 32,
+      "last_line": 73,
+      "function_sha256": "cc972ceb9468fea5750b99fefe202cdf6ea2493bed9e460457a385094cc8dbcc"
+    },
+    {
+      "path": "affine/engine.py",
+      "function": "affine_refine",
+      "first_line": 75,
+      "last_line": 89,
+      "function_sha256": "747250132f7d82947116a1accdbe09806ecb88ef96e14302c7153205b0362e25"
+    },
+    {
+      "path": "affine/engine.py",
+      "function": "ready_root",
+      "first_line": 97,
+      "last_line": 102,
+      "function_sha256": "e559d7c9e14f8797627e306d9fbbf30d6824a8dca973f1d24d0d6bba1720e2c7"
+    },
+    {
+      "path": "affine/engine.py",
+      "function": "compute_cell",
+      "first_line": 290,
+      "last_line": 307,
+      "function_sha256": "9c4ea248b0b987936528e4c561a76790d2d44997b4a7cc45383f6cb09912c3aa"
+    },
+    {
+      "path": "affine/temporal.py",
+      "function": "fresh",
+      "first_line": 17,
+      "last_line": 21,
+      "function_sha256": "ee9699d21b1d23df76f72a528618e95aebaf1991944f6daf86d01349bcdc2099"
+    },
+    {
+      "path": "affine/temporal.py",
+      "function": "shift",
+      "first_line": 98,
+      "last_line": 101,
+      "function_sha256": "651e83bb96d43b710dd32cde9846e8b11839724423c19188de7f7da934d0a2a5"
+    },
+    {
+      "path": "affine/temporal.py",
+      "function": "minus",
+      "first_line": 66,
+      "last_line": 83,
+      "function_sha256": "69f805147a6c8df836945400b51623756517d81336e73a814710f3db23a204d8"
+    },
+    {
+      "path": "affine/temporal.py",
+      "function": "token",
+      "first_line": 84,
+      "last_line": 96,
+      "function_sha256": "0f576584b375abc7c7527d98d8a281ab10257474100833e2bdf32fe129404c29"
+    },
+    {
+      "path": "kernel/R_cycle_local_A20_2026-10-18/outils_validation.py",
+      "function": "ready",
+      "first_line": 48,
+      "last_line": 49,
+      "function_sha256": "78d5e24479149bae2cac1d2afba56688fe1e2c1400dbed78c71d486e37ffcd7f"
+    },
+    {
+      "path": "kernel/R_cycle_local_A20_2026-10-18/dependances_A17.py",
+      "function": "pulse",
+      "first_line": 73,
+      "last_line": 78,
+      "function_sha256": "422d02172b71a359f8b0a7c4fcb399db5a24340819f4c836eb7bff68dd82215c"
+    },
+    {
+      "path": "kernel/R_cycle_local_A20_2026-10-18/dependances_A17.py",
+      "function": "join",
+      "first_line": 118,
+      "last_line": 127,
+      "function_sha256": "b57253f93056f16c2ef2672bb0e170e982e4896179e6dd9d59ad31a994519448"
+    },
+    {
+      "path": "kernel/R_cycle_local_A20_2026-10-18/dependances_A17.py",
+      "function": "evaluate",
+      "first_line": 107,
+      "last_line": 116,
+      "function_sha256": "608910fdf9a2b56b37e012a22eff7bf08361946791b34c2906b4e1050c7a40ec"
+    },
+    {
+      "path": "kernel/R_cycle_local_A20_2026-10-18/actuations_A19.py",
+      "function": "ell",
+      "first_line": 160,
+      "last_line": 160,
+      "function_sha256": "5882d7fb38fbac06b8bda64f969ca09df8628b91e237a119437dc11b71099dfd"
+    },
+    {
+      "path": "kernel/R_cycle_local_A20_2026-10-18/depot_A19.py",
+      "function": "certain_cap",
+      "first_line": 33,
+      "last_line": 33,
+      "function_sha256": "539452e9c8a6b81cb236267aaa37a2b1484c62823a4d055b4e48d5eab38edc06"
+    },
+    {
+      "path": "kernel/R_cycle_local_A20_2026-10-18/validation_A15.py",
+      "function": "admissible_orders",
+      "first_line": 156,
+      "last_line": 193,
+      "function_sha256": "937a4d291cf19b38c16c9986e04c0aae63c447dd807f2e9d4387cfe122955def"
+    },
+    {
+      "path": "kernel/R_cycle_local_A20_2026-10-18/validation_A15.py",
+      "function": "unit",
+      "first_line": 406,
+      "last_line": 510,
+      "function_sha256": "fcc0f5dba27dec6af644d182062ee3683ef1ae9a41facf74c64f8aeea8ed9fa8"
+    },
+    {
+      "path": "kernel/R_cycle_local_A20_2026-10-18/validation_A15.py",
+      "function": "flowing",
+      "first_line": 89,
+      "last_line": 117,
+      "function_sha256": "cba6802b9069679c32683f0b9aabb2460d467fb7387843cbcb48353c2593f2ba"
+    },
+    {
+      "path": "kernel/R_cycle_local_A20_2026-10-18/validation_A15.py",
+      "function": "fire_reset",
+      "first_line": 308,
+      "last_line": 315,
+      "function_sha256": "ea6a0b1bd9fce1b662ab1908b06738522afa8e8c25436c25162bc815331e2b2c"
+    },
+    {
+      "path": "kernel/R_cycle_local_A20_2026-10-18/validation_A15.py",
+      "function": "protected_section_cluster",
+      "first_line": 215,
+      "last_line": 231,
+      "function_sha256": "640618beb324d04af24400a514a3f89c614fa25bf590ac7d479aaf299acdfa25"
+    },
+    {
+      "path": "kernel/R_cycle_local_A20_2026-10-18/validation_A15.py",
+      "function": "recovery_auxiliary_cluster",
+      "first_line": 270,
+      "last_line": 306,
+      "function_sha256": "cdc34488e7f5cf4aeab33dd3b1f3964c638e473c3287d1c3ed79253a7e3985b6"
+    },
+    {
+      "path": "kernel/R_cycle_local_A20_2026-10-18/branche_retour_A19.py",
+      "function": "return_with_marks",
+      "first_line": 12,
+      "last_line": 25,
+      "function_sha256": "bb0de18cc197cb15e224d3fac503dca882f37a070239e6a08afad143378f1ff5"
+    },
+    {
+      "path": "kernel/R_cycle_local_A20_2026-10-18/cycle_local_A20.py",
+      "function": "resolve",
+      "first_line": 130,
+      "last_line": 183,
+      "function_sha256": "7e1bd639750d00d6c56131d6fbfd23866e1fb440c59c08a8c03294e19bddc82f"
+    },
+    {
+      "path": "kernel/R_cycle_local_A20_2026-10-18/cycle_local_A20.py",
+      "function": "pending_window",
+      "first_line": 193,
+      "last_line": 206,
+      "function_sha256": "f902be30a08e2ba74f05bc3abfa1b3eea531fd98aadf655c3ea7266f7369b189"
+    },
+    {
+      "path": "kernel/R_continuation_A22_2026-10-18/garde_relative_A22.py",
+      "function": "cover",
+      "first_line": 14,
+      "last_line": 30,
+      "function_sha256": "594b58a322436662fefbf057447241a879a580e34fbf1005815df8706f2dd3a8"
+    },
+    {
+      "path": "kernel/R_continuation_A22_2026-10-18/garde_relative_A22.py",
+      "function": "ready_to",
+      "first_line": 32,
+      "last_line": 51,
+      "function_sha256": "5a7d9347f2e24e0b4303e6cbcc992f8e696caac0284f1fda4925190bcda5d680"
+    },
+    {
+      "path": "kernel/R_continuation_A22_2026-10-18/avance_causale_A22.py",
+      "function": "advance",
+      "first_line": 5,
+      "last_line": 12,
+      "function_sha256": "6cf9a7997ba9a26eb80340abdb4b078c8a0819fabd4144f26401c8f9bae301d9"
+    },
+    {
+      "path": "affine/commutation.py",
+      "function": "_resolve",
+      "first_line": 154,
+      "last_line": 256,
+      "function_sha256": "7c3e6baa938036ae1fa57df57b048dbaf0e8c430958f49fc1fea8cc14c9c16f7"
+    },
+    {
+      "path": "affine/commutation.py",
+      "function": "_fire_root",
+      "first_line": 59,
+      "last_line": 84,
+      "function_sha256": "f542ab859a62033289d98063b3595f41b9e2b7df1911ab3881417f2842439673"
+    },
+    {
+      "path": "affine/commutation.py",
+      "function": "_first_crossing_cover",
+      "first_line": 87,
+      "last_line": 117,
+      "function_sha256": "808293cf5a03e89bc0d8837431d77e8dbfde94adcdee3bee81e16b2bcbea7716"
+    },
+    {
+      "path": "affine/recovery_group.py",
+      "function": "resolve",
+      "first_line": 20,
+      "last_line": 36,
+      "function_sha256": "f677dd805ffaba35759d7900f6e72f771f6e9e551e378b035ee5bd1f62694006"
+    },
+    {
+      "path": "kernel/R_cycle_local_A20_2026-10-18/profil_largeurs_A19.py",
+      "function": "export",
+      "first_line": 28,
+      "last_line": 37,
+      "function_sha256": "a9d12f96dc0c69c9624f1e784f49c43331a4794b74b28410f3de9dd0d82a6d56"
+    },
+    {
+      "path": "affine/port_box_adapter.py",
+      "function": "settings",
+      "first_line": 11,
+      "last_line": 20,
+      "function_sha256": "94eae68c2fa7a1f2dec726d819c421f35915f42efbca876d614219304e3f4da8"
+    }
+  ],
+  "checks": [
+    {
+      "id": "runner_refuses_optimized_python_with_if",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "_plain_root_derivative_precedes_new_guard_evaluation",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "affine_refine_derivative_precedes_new_guard_evaluation",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "time_shift_allocates_atom_for_nonpoint_duration",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "time_minus_checks_atom_definitions",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "time_minus_selects_absolute_or_expression_enclosure",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "slow_guard_evaluates_expanded_logarithm",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "per_order_return_uses_unfinished_history_at_earlier_probes",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "absolute_restriction_preserves_return_expression",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "memory_join_compares_anchor_tokens",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "fast_slow_equal_date_normalization",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "profile_preserves_complete_relative_order_list",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "gain_cap_uses_upper_target",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "first_delay_has_distinct_port_symbols",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "new_cell_uses_fresh_noise_namespace",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "fast_overlap_intercepted_before_multiple_group_advance",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "protected_macro_requires_forward_group_entry",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "group_extension_uses_complete_suffix_minimum",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "local_window_stops_before_every_remaining_event",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "commutation_cover_caller_checks_upper_endpoint_before_fallback",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "commutation_cover_requires_strictly_below_initial_charge",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "commutation_cover_scans_left_before_right",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "commutation_cover_preserves_undecided_lower_and_certified_upper",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:PACKAGE_MANIFEST.json",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:README_EN.txt",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:SHA256SUMS",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:VALIDATION_EN.txt",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:affine/affine_iv.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:affine/affine_sim.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:affine/artifacts.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:affine/commutation.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:affine/decimal_cache.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:affine/engine.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:affine/nofire_cover.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:affine/port_box_adapter.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:affine/port_symbols.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:affine/recovery_group.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:affine/rounding.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:affine/rounding_native.c",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:affine/sound_lattice.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:affine/temporal.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:build_all_native.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:build_native.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/avance_causale_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/campagne_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/canonical_bytes_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/cycle_relatif_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/garde_relative_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/groupe_pret_feu_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/groupe_protege_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/identite_temps_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/metriques_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/ordonnanceur_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/provenance_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/queue_regenerative_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/ready_general_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/rejeu_qualifie_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/reprendre_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/reprise_groupe_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/retour_file_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/source_reuse_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/subdivision_recuperation_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/temps_symboliques_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/temps_valides_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/test_ancestor_reuse.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/test_atom_registry_reuse.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/test_certify_audit_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/test_groupe_pret_feu_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/test_groupe_protege_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/test_identite_temps_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/test_memo_DAG_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/test_provenance_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/test_ready_general_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/test_rejeu_qualifie_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/test_source_reuse_integration_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/test_subdivision_qualifiee_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/test_temps_relatifs_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_continuation_A22_2026-10-18/translation_tetes_A22.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_cycle_local_A20_2026-10-18/actuations_A19.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_cycle_local_A20_2026-10-18/branche_retour_A19.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_cycle_local_A20_2026-10-18/charger_foret_A20.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_cycle_local_A20_2026-10-18/cycle_local_A20.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_cycle_local_A20_2026-10-18/dependances_A17.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_cycle_local_A20_2026-10-18/depot_A19.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_cycle_local_A20_2026-10-18/etat_A20.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_cycle_local_A20_2026-10-18/flux_charge_A19.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_cycle_local_A20_2026-10-18/intervalles_decimaux.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_cycle_local_A20_2026-10-18/outils_validation.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_cycle_local_A20_2026-10-18/profil_largeurs_A19.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_cycle_local_A20_2026-10-18/validation_A15.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_histoires_A21_2026-10-18/groupe_pret_A21.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_histoires_A21_2026-10-18/histoires_A21.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_histoires_A21_2026-10-18/queue_regenerative_A21.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/R_histoires_A21_2026-10-18/reprise_A21.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:kernel/native/a22_native.c",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:launch_fresh.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:reference/full_model_reference.md",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:requirements.txt",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:run.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:tests/test_core.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:tests/test_diagnostic_coverage.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:tests/test_fast.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:tests/test_pipeline.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:tests/test_sound_fixes.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:tests/test_v31_histories.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:tests/test_v32_caps.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:tests/test_v33_ports.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:tests/test_v3_fixes.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:tools/bilan_campagne.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    },
+    {
+      "id": "source_unchanged:tools/verif_h1h2.py",
+      "status": "PASS",
+      "scope": "structural source witness"
+    }
+  ],
+  "manual_proof": "LEARNING_COVERAGE_THEOREM_EN.txt",
+  "proof_level": "manual source-level argument under A1-A4; not machine checked"
+}

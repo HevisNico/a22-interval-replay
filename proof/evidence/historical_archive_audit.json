@@ -1,0 +1,11 @@
+{
+  "archive_sha256": "e020a0fa1da6b4673fd956eaea23a8b28dc51920d4df4abca33bffc1ad858edd",
+  "archive_bytes": 54916917,
+  "manifest_entries": 88,
+  "manifest_all_pass": true,
+  "proof_sha256": "07c2717bce6fad9c257a707bfdb84506294dd8dde554280a32f659fd3b5ab69c",
+  "physical_sections_1_to_5_byte_identical": true,
+  "common_python_modules": 16,
+  "common_python_modules_byte_identical": 16,
+  "execution_scope": "passive read-only inspection; no replay, campaign or executable checkpoint deserialization"
+}
