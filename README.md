@@ -1,51 +1,86 @@
-# A22 — validated interval replay of the full 128-pulse learning transient
+# A22 — enclosing every learning trajectory of a 216-cell spiking network, with a manual proof
 
-**Contribution.** This is a computer-assisted enclosure of **all admissible trajectories** of a learning
-spiking network during its full 128-pulse training transient. The network has 216 coupled hybrid cells
-(18 layers × 12 lanes) with:
-- uncertain physical parameters (±1e-4 relative), **independent for each input port of each cell**,
-  as the model specifies;
+**Contribution.** This repository contains a computer-assisted enclosure of **all admissible
+trajectories** of a learning spiking network during its full 128-pulse training transient, together with
+a written proof that the computation covers them and that the learned state is then **invariant for
+every admissible future input**. The network has 216 coupled hybrid cells (18 layers × 12 lanes) with:
+- uncertain physical parameters (±1e-4 relative), **independent for each input port of each cell**;
 - uncertain initial states (±1e-5);
 - evolving learned gains and a recovery actuator;
-- threshold crossings;
-- events whose order may vary.
+- threshold crossings, and events whose order may vary.
 
-In concrete terms, for every parameter vector in the box:
-- the learned gains after training are determined to within ±2.4 % in the worst cell;
-- spike dates are determined to within 7.3e-3 time units for the median cell at the last layer.
+**The result**, for every fixed device in the parameter box and every admissible initial state (proof in
+[`proof/`](proof/), under the execution assumptions A1–A4 stated there):
 
-So in this realization, the outcome of learning is fixed by the input protocol up to small, quantified
-margins, despite physical variability. Point simulations can suggest this, but they cannot establish it.
+1. **Training.** After the 128 training pulses (times 8k, horizon 1116), the network is in an explicit
+   quiescent domain Q. The learned gains are determined to within ±2.4 % in the worst cell, and the
+   training spike dates to within 7.3e-3 time units for the median cell of the last layer.
+2. **Afterwards, forever.** From Q, for every future sequence of source pulses spaced by at least 20:
+   each of the 191 active cells fires **exactly once** per pulse, the whole network is back at rest
+   within 12.791 time units, and the network returns to Q.
+3. **Exact transmission.** Each active cell answers with a fixed latency, so the intervals between
+   pulses are transmitted **exactly** through all 18 layers. The latencies depend on the device and on
+   the learned gains; they are not claimed to be equal across devices.
 
-**State of the work.** The computation is complete and cross-checked:
-- all 18 layers completed, with no forced decision;
-- every layer was re-read by a separate verifier process;
-- every spike decision in the four hardest or most sensitive cells was re-proved by an independent
-  script;
-- the independent A14 reference gains fall inside the computed enclosures in **648 of 648** cases.
+So in this realization, a learning process with local rules installs, despite physical variability, a
+regime that transmits temporal patterns exactly. Point simulations can suggest this; they cannot
+establish it.
 
-The proof that the program is correct is not finished. Specialists can help with short, self-contained
-review tasks: see **[REVIEW.md](REVIEW.md)**.
-
-> **Status: experimental, not a qualified all-trajectories proof.** The computation is complete and
-> reproducible. The proof that the program is correct is not complete yet (see
-> [docs/DETAILS.md](docs/DETAILS.md#path-to-qualification)).
+> **Made with AI.** The code, the diagnostics and the written proof were produced with Claude
+> (Anthropic) and ChatGPT (OpenAI) under the author's direction (see [How this was built](#how-this-was-built)).
+>
+> **Status.** The computation is complete, reproducible and bound to its exact code by hashes. The
+> coverage and invariance argument is a **manual mathematical proof under explicit execution
+> assumptions** (A1–A4: authentic execution of the recorded program, correct arithmetic runtime and
+> native binary, fail-closed assertions, namespace discipline). It has **not yet been reviewed by an
+> independent expert** and is not machine-checked. The archived software status remains
+> `experimental_not_qualified`. Review is welcome: see **[REVIEW.md](REVIEW.md)**.
 
 | | |
 |---|---|
 | Layers completed / cells | 18 / 216, each layer re-read by a separate verifier process |
+| Campaign identity | `kernel_id` **reproduced exactly** from the published sources and the two archived binaries |
 | A14 reference gain boxes inside our enclosures | **648 / 648** (exact rational test) |
 | Independent H1/H2 re-check, layer 18 lanes 1, 4, 8, 11 | 418 / 418 spikes and 3,600 / 3,600 "no spike" decisions re-proved |
 | Output-date width, median cell, layer 18 | 7.3e-3 time units (worst cell: 3.8e-2) |
-| Learned gains, worst relative half-width (all cells) | ±2.4 % (cell 18,6); widest absolute: 7.5e-2 on a gain of 1.69 (cells 18,4 and 18,8) |
-| Computation-remainder share of the widest date, median cell | ≈ 0 up to layer 10, 45 % at layer 18 |
+| Learned gains, worst relative half-width | ±2.4 % (cell 18,6) |
+| Future regime (from Q) | 191 active cells, one spike each per pulse; network at rest within 12.791; margin > 7.209 before the next pulse |
+| Future-domain inequalities | checked by two independent programs (different arithmetic, no engine import) |
 | Critical-path time, 8 workers | 49 min in total (layer 18: 24 min) |
 
 ![Output-date enclosure width by layer](figures/date_width_by_layer.png)
 
-*Median output-date width per layer. v3.3 treats each port's constants as independent, as the model
-specifies; v3.2 shared them across the three ports of a cell. The more general model costs at most 5 %
-of width (layer 18: 7.28e-3 against 6.91e-3).*
+*Median output-date width per layer during training. v3.3 treats each port's constants as independent,
+as the model specifies; v3.2 shared them across the three ports of a cell. The more general model costs
+at most 5 % of width (layer 18: 7.28e-3 against 6.91e-3).*
+
+## Origin of the model
+
+The physical kernel of A22 is inspired by the **Reset Operator** of Nicolas Breuillaud (*The Reset
+Operator: A Structural Constraint on Recursivity*, manuscript, 2026). After each threshold crossing, the
+operator opens a finite interval of reduced admission while internal dynamics restore a below-threshold
+state. A22 is one concrete realization of this structure: READY, fast and slow phases; admission closed
+after firing; return to rest before admission reopens. The full model is
+[`engine/reference/full_model_reference.md`](engine/reference/full_model_reference.md).
+
+The result is about this realization and its parameter box. It is not a proof of the Reset Operator
+hypothesis in general (see [`docs/MODEL_BOUNDARY_EN.txt`](docs/MODEL_BOUNDARY_EN.txt)).
+
+## How the proof is organized
+
+The chain is: **initial section → every training step → terminal domain Q → every future wave.**
+
+| Step | Where | How it is established |
+|---|---|---|
+| Initial section [0, U0] | `proof/final_entry_audit/` | analytic lemma + independent integer inequalities |
+| Every training step of every cell | `proof/learning_justification/output/LEARNING_COVERAGE_THEOREM_EN.txt` | relational invariant (I1–I5) preserved by every successful program step; open-image lemma for strict root order; event coverage; memory joins |
+| Entry into event groups | `proof/learning_justification/output/GROUP_ENTRY_CLOCK_LEMMA_EN.txt` | case split on the control paths |
+| Composition over the 18 layers | same theorem, Section 10 | feedforward induction with shared parent identities |
+| Training end ⊂ Q | same theorem, Sections 10–11 | exact terminal extraction (216 authenticated results) |
+| Q → Q for every future pulse | `proof/FUTURE_INVARIANCE_PROOF_EN.txt` | analytic argument + two independent inequality checkers |
+| Exact transmission of the pulse word | `proof/GLOBAL_THEOREM_AND_WORD_PRESERVATION_EN.txt` | fixed influential gains + layer induction |
+
+Start with [`proof/learning_justification/output/REVIEW_GUIDE_EN.txt`](proof/learning_justification/output/REVIEW_GUIDE_EN.txt).
 
 ## What was closed
 
@@ -62,12 +97,25 @@ an exact counterexample, that the model makes them independent per port; v3.2 th
 sub-family. A first correction replaced the shared symbols by plain interval boxes. That is sound, but
 it forgets that a port keeps the same constant at every pulse: enclosures grew 3–10× and the campaign
 stopped at layer 18 ([`history/plain_box_package/`](history/plain_box_package/)). **v3.3** gives each
-port its own symbol, used only for that port's quantities. It is the campaign reported here.
+port its own symbol, used only for that port's quantities. It is the campaign reported and proved here.
 
 ## Reproduce
 
-Requirements: Linux x86-64, CPython 3.12, a C compiler, OpenSSL development headers, NumPy 2.3.5,
-SciPy 1.17.0.
+**The proof checks** (no engine import, no campaign): download the complete proof dossier from the
+Release `v3.3-proof`, unzip it, and run from its folder, with Python 3 and without `-O`:
+
+```
+python3 learning_justification/verify_build_identity.py      # identities and kernel_id
+python3 learning_justification/verify_source_witnesses.py    # 110 source facts
+python3 kernel_soundness/extract_effective_source.py         # code as actually executed
+python3 kernel_soundness/check_contract_countermodels.py
+python3 provenance_audit/certify_future.py provenance_audit/output/all_terminal_exact.json future_recheck.json
+python3 provenance_audit/verify_future_certificate.py provenance_audit/output/all_terminal_exact.json future_recheck.json independent_recheck.json
+python3 final_entry_audit/certify_initial_section.py initial_recheck.json
+```
+
+**A new campaign** (requirements: Linux x86-64, CPython 3.12, a C compiler, OpenSSL development headers,
+NumPy 2.3.5, SciPy 1.17.0):
 
 ```
 cd engine
@@ -77,51 +125,44 @@ python -B -m unittest discover -s tests                 # 77 tests
 python launch_fresh.py --out results/A22_v33_001        # 8 workers by default, ~12 GiB RAM
 ```
 
-Then the checks (`--out` files must be outside the campaign directory):
-
-```
-python -B tools/verif_h1h2.py --campaign results/A22_v33_001 --layer 18 --lane 4 --out ../h1h2_18_04.json
-python -B tools/bilan_campagne.py --campaign results/A22_v33_001 \
-       --reference ../results/reference_A14_gain_boxes.json --out ../summary.json
-```
-
-The native extensions are built on the target machine, so the kernel_id of a new campaign differs from
-ours (it includes the built binaries and the environment). The program-source identity before the
-build is fixed; see [results/HASHES.md](results/HASHES.md).
+A new build produces new native binaries, so a new campaign has a different `kernel_id`; the proof is
+about the recorded campaign. See [results/HASHES.md](results/HASHES.md) for both program identities.
 
 ## Contents
 
 | Path | What it is |
 |---|---|
-| `engine/` | The exact v3.3 program package used for the campaign (physics kernel unchanged since the first release) |
+| `proof/` | The proof dossier (theorems, lemmas, certificates, audit outputs, scripts); see `proof/OMITTED_IN_REPOSITORY.md` |
+| `engine/` | The exact v3.3 program sources used for the campaign (physics kernel unchanged since the first release) |
 | `tools/` | The read-only check scripts (same files as `engine/tools/`) |
 | `results/campaign_summary.json` | Per-layer and per-cell summary of the campaign (timings, widths, gains, A14 inclusion) |
 | `results/h1h2_layer18_lanes_1_4_8_11.json` | Independent re-check of every spike decision in four layer-18 cells |
 | `results/layers_cells_and_timings.json` | Per-layer `cells.tsv` rows and `complete.json` of the campaign, in one file |
-| `results/campaign_identity.json` | Campaign identity (run_id, kernel_id, environment): the campaign's `campaign.json` |
+| `results/campaign_identity.json` | Campaign identity (run_id, kernel_id, environment) |
 | `results/reference_A14_gain_boxes.json` | Independent reference gains (exact fractions) |
 | `results/v2_refusal_layer18_lane4.json` | The layer-18 refusal of the v2 engine, kept for the record |
-| `results/HASHES.md` | Identities, provenance evidence, file hashes |
-| `history/` | The v3.2 campaign (engine ZIP, summary, checks) and the plain-box refusal records |
-| `docs/DETAILS.md` | Method, the changes that made layer 18 pass, checks, limitations, path to qualification |
+| `results/HASHES.md` | Identities, exact provenance reconstruction, file and Release-asset hashes |
+| `history/` | The v3.2 campaign and the plain-box refusal records |
+| `docs/DETAILS.md` | Method, fixes, results by layer, checks, limitations |
 | `docs/AUDIT_EN.txt`, `docs/MODEL_BOUNDARY_EN.txt` | Earlier arithmetic audit; scope of the model |
-| `REVIEW.md` | Call for review: five self-contained tasks (1–2 h each) |
+| `REVIEW.md` | Call for review: self-contained tasks, most important first |
 | `figures/` | Figures (PNG and SVG) |
 
 ## How this was built
 
-The model and the research questions are the author's. The code was developed with AI assistants
-(Claude and others) under the author's direction; the author designed the model, found the
-port-independence gap with an exact counterexample, and directed and validated the work. This is why
-the repository does not ask to be taken on trust. The campaign identity is bound to the exact code by
-hashes, every layer is re-read by a separate process, critical decisions are re-proved by independent
-scripts, and the results are compared with an independent reference.
+This work was done with two AI assistants, **Claude** (Anthropic) and **ChatGPT** (OpenAI), under the
+author's direction. The model, the Reset Operator and the research questions are the author's. Claude
+and ChatGPT wrote and corrected the code, ran the diagnostics, drafted the proof (mainly ChatGPT) and
+audited it (mainly Claude); each also re-checked the other's work. The author designed the model, found
+the port-independence gap with an exact counterexample, ran the campaigns, and directed and validated
+the work. This is why the repository does
+not ask to be taken on trust: the campaign is bound to its exact code by reproducible hashes, every layer
+is re-read by a separate process, critical decisions are re-proved by independent scripts, the results
+are compared with an independent reference, and the proof states its assumptions explicitly. What it
+still needs is review by human specialists.
 
 ## License and citation
 
-Code (`engine/`, `tools/`, the engine ZIP in `history/v3.2/`): MIT, see `LICENSE`. Documentation,
-figures and results: CC BY 4.0, see `LICENSE-docs.md`. To cite, use `CITATION.cff` (GitHub's "Cite this
-repository" button).
-
-Scope: the result is about the A22 realization and its parameter box. It is not a statement about the
-reset-operator hypothesis R in general (see `docs/MODEL_BOUNDARY_EN.txt`).
+Code (`engine/`, `tools/`, scripts in `proof/`, the engine ZIP in `history/v3.2/`): MIT, see `LICENSE`.
+Documentation, proofs, figures and results: CC BY 4.0, see `LICENSE-docs.md`. To cite, use
+`CITATION.cff` (GitHub's "Cite this repository" button).

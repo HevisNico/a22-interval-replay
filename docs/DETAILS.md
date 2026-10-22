@@ -98,7 +98,9 @@ side per layer).
 Against v3.2 (shared constants per cell), the median width is equal up to layer 11 and at most 5 % larger
 afterwards (layer 18: 7.28e-3 against 6.91e-3). Against the plain-box package, layer-17 widths are 3–10×
 smaller, cell by cell (worst 7.5e-3 against 5.7e-2). The commutation fix was needed only in cells (18,4) and (18,8):
-101 times each, as in v3.2, and never widening the spike date (maximum widening 0).
+101 times each, as in v3.2, and never widening the spike date (maximum widening 0). All 202 uses were
+the same case: a spike against the end of **one mark**, with two branches. The guard name
+`fire_arrival_commutation` is broader than this use; no raw arrival was involved.
 
 ![Artificial share by layer](../figures/artificial_share_by_layer.png)
 
@@ -162,24 +164,37 @@ each actuation and deposit segment uses its own port and restores the globals; t
   prevent completion; a per-port symbol for C would only tighten.
 - **Shared arithmetic.** The H1/H2 re-check uses the same affine arithmetic as the engine. It checks the
   decision logic, not the arithmetic itself.
+- **Trusted execution.** The proof assumes A1–A4 (authentic execution of the recorded program, correct
+  Python/Decimal runtime and native binaries, fail-closed assertions, namespace discipline). The
+  compiler and the binaries are identified by hash, not verified.
 
-## Path to qualification
+## Proof status
 
-A qualified all-trajectories statement needs both halves of a computer-assisted proof:
+**Done** (`proof/`, manual proof under the execution assumptions A1–A4):
+- **initial section** [0, U0]: analytic lemma, checked by independent integer inequalities;
+- **every training step** of every cell: a relational invariant (I1–I5) between the physical state and
+  the program state is preserved by every successful program step. The key new arguments are:
+  - the *open-image lemma*: a computed root is always enclosed strictly, so a weak order test cannot
+    hide an exact simultaneity;
+  - complete event coverage, including every successful macro exit and the commutation fallback
+    `_first_crossing_cover`;
+  - memory joins and the discrete fields kept by a union;
+  - forward entry into event groups (separate lemma);
+- **composition** over the 18 layers by feedforward induction, hence *training end ⊂ Q*;
+- **future invariance** from Q, checked by two independent inequality programs, and **exact
+  transmission** of the pulse word;
+- **provenance**: the campaign `kernel_id` is reproduced exactly from the published sources and the two
+  archived binaries (`results/HASHES.md`).
 
-1. **Written lemmas** for every proof obligation:
-   - model ↔ code (M1–M10): closed forms, pulse responses, linearity, phases, learning, auxiliary
-     currents, and the per-port parameter mapping of fix P;
-   - arithmetic (A1–A8);
-   - hybrid events (H1–H9; H1 and H2 are done);
-   - engine overlays (S1–S9, plus P and R);
-   - layer chaining and integrity (C1–C5).
-2. **An independent certificate checker.** A deterministic re-run records each decision; it is accepted
-   only if the payload hash matches the receipt. A short separate program then re-proves every
-   predicate: root brackets and first crossings, order proofs, complete order enumeration, commutation
-   preconditions, and union containment. The trusted base shrinks to the lemmas, about 500 lines of
-   arithmetic, and the checker.
-3. **Independent review** of the lemmas, the arithmetic, and the checker.
+The no-fire cover and fix R are outside the campaign theorem: each records an entry on every successful
+use, and no entry exists.
 
-If review finds a flaw, the fix changes the program identity and the campaign is re-run from layer 1.
-Otherwise this campaign stands as computed.
+**Not done:**
+1. **Independent expert review** of the proof. The most load-bearing parts are the open-image lemma and
+   Section 6 (strict root order) of `LEARNING_COVERAGE_THEOREM_EN.txt`; see [REVIEW.md](../REVIEW.md).
+2. **Machine checking** of the argument (proof assistant), or an execution certificate checked by a
+   small independent program (re-run that records every transition, checked family by family).
+3. **Qualification of the native binaries and toolchain** (assumption A2).
+
+If review finds a flaw that needs a code change, the program identity changes and the campaign is
+re-run from layer 1. A flaw in the argument alone can be repaired in the proof without re-running.

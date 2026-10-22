@@ -1,125 +1,133 @@
 # Call for review
 
-This repository contains a complete, reproducible computation whose correctness proof is **not
-finished**. The fastest way to finish it is for specialists to check small, self-contained pieces.
-Each task below can be read in **one to two hours** without knowing the rest of the code.
+This repository contains a complete, reproducible computation and a **manual proof** that it covers
+every admissible trajectory, under stated execution assumptions. The proof has **not yet been reviewed
+by an independent expert**. The fastest way to check it is for specialists to take small,
+self-contained pieces. Each task below can be read in **one to three hours** without knowing the rest.
 
 **What helps most:** one of three answers, given as a GitHub issue titled `Review: <task>`:
 - "the argument holds";
-- "there is a gap at <file:line>, because …";
+- "there is a gap at <file:section or file:line>, because …";
 - "here is a counterexample".
 
-Partial reviews are welcome.
+Partial reviews are welcome. Tasks are listed **most important first**.
 
-Background for every task: the [README](README.md) and the method section of
-[docs/DETAILS.md](docs/DETAILS.md#method). In what follows, *affine form* means
-*c + Σ dₖ εₖ + [−e, e]*, valid for every ε in [−1, 1]^N.
+Background for every task: the [README](README.md), the method section of
+[docs/DETAILS.md](docs/DETAILS.md#method), and the review guide
+[proof/learning_justification/output/REVIEW_GUIDE_EN.txt](proof/learning_justification/output/REVIEW_GUIDE_EN.txt).
+In what follows, *affine form* means *c + Σ dₖ εₖ + [−e, e]*, valid for every ε in [−1, 1]^N, and
+"the theorem" means `proof/learning_justification/output/LEARNING_COVERAGE_THEOREM_EN.txt`.
+
+The code actually executed differs from the files in places: some functions are rewritten when the
+engine is loaded. Their final text is in `proof/kernel_soundness/output/effective_source/`.
 
 ---
 
-## Task 1 — Unimodality lemma (first crossing H1, no missed spike H2)
+## Task 1 — Open-image lemma and strict root order (most load-bearing)
 
-**Claim.** Between two events in READY, the charge obeys *q' = −K(q − R) + I(t)*. Here *I* is a sum of
-currents *g·A·e^(−A·age)* with *g > 0*, and each current is cut off at age 1. Under these conditions
-the charge is unimodal: it rises, then falls. Two consequences follow:
-- **H1:** a crossing certified on a bracket [l, h] (sign at l and h, slope > 0 on [l, h]) is the
-  first crossing after t₀;
-- **H2:** the single-exponential "peak" bound, which extends every active current beyond its end with
-  the current gain, dominates the true charge, because learned gains never decrease.
+**Claim.** Every computed threshold root is enclosed *strictly*: with the old parameters and dates
+fixed, the computed enclosure contains an open interval around the true root (theorem, Sections 4–6;
+also `proof/kernel_soundness/output/STRICT_ROOT_LEMMA_EN.txt`). Consequently, when the engine accepts
+an order from a weak test *x − t ≥ 0*, the physical order is strict, and an exact simultaneity between a
+spike and an event can never pass the ordinary order test.
 
-**Where:**
-- `engine/kernel/R_cycle_local_A20_2026-10-18/validation_A15.py`, `advance`, lines 322–349 (decision);
-- `engine/kernel/R_cycle_local_A20_2026-10-18/dependances_A17.py`, `pulse`, `tail`, `evaluate`
-  (charge model);
-- `docs/DETAILS.md`, "Independent checks" (the argument);
-- `tools/verif_h1h2.py` (the bisection re-check used on the campaign).
+**Where:** `engine/affine/engine.py` (`affine_refine`, `root`, `ready_root`), the effective `advance`
+(`proof/kernel_soundness/output/effective_source/advance_inner.txt`), `engine/affine/temporal.py`
+(`minus`, `shift`), `engine/affine/affine_iv.py` (`_unary`, exp/ln).
 
 **Questions.**
-1. Does unimodality hold for the charge model exactly as coded, including the tail terms of pulses
-   admitted before *t₀*?
-2. Is "learned gains never decrease" true for the deposit model (`depot_A19.py`) and after the history
-   unions of `engine/affine/engine.py` (fix H, line 319; fix S, line 383)?
+1. Is the open-image lemma correct as stated, for the operations actually used after the fresh
+   exponential (products, sums, hulls, truncation, error promotion)?
+2. In `affine_refine`, does every retained output (not only the last bracket) keep the true root
+   strictly inside, including the case where the rounded midpoint is 0?
+3. Is there any exp/ln evaluation on these paths whose result is exact (no adjacent-number expansion)
+   and would remove the strict margin?
 
-## Task 2 — Commutation of a spike with input events (fix E)
+## Task 2 — Event coverage and every successful exit (theorem, Section 8)
 
-**Claim.** In READY, an arrival adds a non-negative pulse response. An end of admission, a mark event
-or an error event leaves the charge unchanged. So the true spike date *F* satisfies
-*min(a, f₀) ≤ F ≤ f₀*, tightened to *f₀ − κ(f₀ − a)⁺* with *κ = G·A/(σ + G·A)*.
+**Claim.** For every physical order of events, including equal times, the program keeps a branch that
+covers it, through every successful path: ordinary advance, external groups, protected FAST/SLOW
+groups, recovery/auxiliary groups, the local-cycle resolver, and the 202 recorded commutations (all a
+spike against one end of mark, including the fallback `_first_crossing_cover`). Entry into event groups
+is always forward in time (`proof/learning_justification/output/GROUP_ENTRY_CLOCK_LEMMA_EN.txt`).
 
-The engine computes every order with the unchanged kernel maps and joins the results at a common
-clock *U*. *U* is before the next event and before the end of the fast phase.
-
-**Where:**
-- `engine/affine/commutation.py`: the module docstring states Lemmas 0, 0', 1 and 2; the rest is the
-  implementation;
-- `engine/affine/engine.py`: where it is hooked in (search `COMMUTE`).
+**Where:** effective `unit` (`proof/kernel_soundness/output/effective_source/unit.txt`),
+`validation_A15.py` (`admissible_orders`, `protected_section_cluster`, `recovery_auxiliary_cluster`),
+`cycle_local_A20.py`, `engine/affine/commutation.py`.
 
 **Questions.**
-1. Are the preconditions checked in `_resolve` sufficient for the lemmas?
-2. Is the join at *U* sound when the joined branches differ only in their actuation and deposit
-   histories?
+1. Can a physical branch be lost at a group boundary, an equal-time order, or a FAST/SLOW boundary of
+   zero duration?
+2. Is the first-crossing property (unimodality of the READY charge between events, Section 7) used
+   correctly at every place a spike is accepted?
 
-## Task 3 — Unions of branches (fixes C, H, S)
+## Task 3 — Unions: memory anchors and the fields kept from the first branch (theorem, Section 9)
 
-**Claim.**
-- **C:** a union keeps one common coefficient per symbol and absorbs only the deviations, rounded
-  upward. It is pointwise valid for any choice of the common coefficient.
-- **H:** folding completed learning terms into the initial value is exact. Histories with the same
-  structure that differ only in that additive initial value can be joined.
-- **S:** intersecting a union with the plain envelope of its members is sound.
+**Claim.** `join_states` keeps the discrete fields (current mark and error origins, fire date, raw
+inputs) of its first branch, and `dep.join` keeps the first branch's memory anchor. At every reachable
+successful caller, these are common to all branches, or the memory is dropped (which is conservative).
 
-**Where:** `engine/affine/affine_iv.py` (`_dev_up` line 285, `hull` line 308) and
-`engine/affine/engine.py` (fix H line 319, fix S line 383). The exact-rational tests are in
-`engine/tests/test_v3_fixes.py`, `test_v31_histories.py` and `test_v32_caps.py`.
+**Where:** `validation_A15.py` (`join_states`), `dependances_A17.py` (`join`), the callers in the
+effective `unit`, `engine/affine/commutation.py`.
 
-## Task 4 — Outward-rounded affine arithmetic
+**Questions.**
+1. Is there a reachable union whose branches differ in a mark or error origin, or in the fire date?
+2. Is it true that separately recomputed returns always get distinct time atoms, so that their memories
+   can never be wrongly merged under an equal token?
 
-**Claim.** Each affine operation is valid pointwise:
+## Task 4 — Future invariance and exact transmission
+
+**Claim.** From the quiescent domain Q, every source pulse spaced by at least 20 makes each of the 191
+active cells fire exactly once, the network is at rest within 12.791, and the state returns to Q. Active
+cells have fixed latencies, so the pulse word is transmitted exactly.
+
+**Where:** `proof/FUTURE_INVARIANCE_PROOF_EN.txt`, `proof/GLOBAL_THEOREM_AND_WORD_PRESERVATION_EN.txt`,
+the two checkers `proof/provenance_audit/certify_future.py` and `verify_future_certificate.py`.
+
+**Questions.**
+1. Is the "influential / masked / silent" classification of ports enough to keep the head response
+   identical from wave to wave?
+2. Are the strict margins (reopening, end of raw pulse, end of error) the right ones, and are the two
+   checkers' series and tail bounds correct?
+
+## Task 5 — Outward-rounded affine arithmetic
+
+**Claim.** Each affine operation is valid pointwise, for arbitrary represented operand values:
 - the multiplication remainder covers every term (`__mul__`, line 182);
 - in the mean-value form for exp, ln and reciprocal, the slope domain includes the expansion point
   (`_unary`, line 201);
+- a union keeps a common coefficient and absorbs the spread (`_dev_up` line 285, `hull` line 308);
 - truncation to 256 symbols bounds the dropped mass upward (`truncate_coeff`: Python reference in
   `engine/affine/rounding.py` line 51, C in `engine/affine/rounding_native.c`).
 
-**Where:** `engine/affine/affine_iv.py`, `engine/affine/rounding.py`,
-`engine/affine/rounding_native.c`, and the earlier audit in `docs/AUDIT_EN.txt`.
+**Where:** `engine/affine/affine_iv.py`, `engine/affine/rounding.py`, `engine/affine/rounding_native.c`,
+`engine/affine/sound_lattice.py`, the theorem's Section 4, and the earlier audit `docs/AUDIT_EN.txt`.
 
-## Task 5 — Per-port parameter symbols (fix P)
+## Task 6 — Per-port parameter symbols (fix P)
 
-**Claim.** The model gives each port *i* of a cell independent constants LM_i, LS_i, LE_i, M_i (and
-C_i). The engine gives port *j* one symbol per constant and uses it **only** where the kernel evaluates a
-quantity of port *j*; every other occurrence keeps a plain interval box (C is plain everywhere). Hence:
-- every trajectory of the model is represented (a plain box only adds freedom);
-- no correlation that the model does not have is imposed (a symbol never stands for two different
-  physical quantities, and the symbols of two ports are distinct).
+**Claim.** Each port *j* of a cell gets one symbol per constant (LM, LS, LE, M), used only where the
+kernel evaluates a quantity of port *j*; every other occurrence keeps a plain interval (C is plain
+everywhere). Hence every trajectory of the model is represented, and no correlation the model does not
+have is imposed.
 
-**Where:**
-- `engine/affine/port_symbols.py`: `settings` (line 49) builds the per-port values; `with_port`
-  (line 93) and `with_deposit_port` (line 133) set the kernel's module-level rate constant to the
-  segment's port for one evaluation and restore it; `raw_dose` (line 107) re-implements the kernel's
-  `actuations_A19.raw_dose` one mark at a time;
-- `engine/affine/engine.py`: event durations of port *j* (line 155) and the coefficients of port *j*
-  (line 222);
-- tests in `engine/tests/test_v33_ports.py`.
+**Where:** `engine/affine/port_symbols.py` (`settings` line 49, `with_port` line 93, `raw_dose` line 107,
+`with_deposit_port` line 133), `engine/affine/engine.py` (event durations line 155, coefficients
+line 222), tests in `engine/tests/test_v33_ports.py`.
 
 **Questions.**
-1. Does every kernel use of LM, LS, LE, M that depends on a port receive that port's value, and does
-   every other use keep the plain box? (In particular: are all segments of a deposit history on one
-   port, and is the fallback to the plain box correct when they are not?)
+1. Does every port-dependent use of LM, LS, LE, M receive that port's value, and every other use keep
+   the plain box?
 2. Is the per-mark `raw_dose` identical to the kernel's for a single-port history, and correct for a
    history that mixes ports?
-
-Fix R (`engine/affine/recovery_group.py`) and the no-fire cover (`engine/affine/nofire_cover.py`) are
-in the program but were not triggered in this campaign; reviewing them is welcome but not needed for
-the reported result.
 
 ---
 
 ## What is out of scope here
 
-- The scientific hypothesis behind the model (see `docs/MODEL_BOUNDARY_EN.txt`).
+- The scientific hypothesis behind the model (the Reset Operator; see `docs/MODEL_BOUNDARY_EN.txt`).
 - Whether the parameter box is physically meaningful.
+- The correctness of the compiler and of the two native binaries (identified by hash; assumption A2).
 
-The question in every task is whether the computation encloses all admissible trajectories of the
-model as coded. Correspondence between the code and the model's written definition is a separate
-obligation, listed in [docs/DETAILS.md](docs/DETAILS.md#path-to-qualification).
+The question in every task is whether the proof is correct for the model and the program as recorded.
+The proof status, and what remains beyond review, are in
+[docs/DETAILS.md](docs/DETAILS.md#proof-status).
