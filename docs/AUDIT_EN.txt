@@ -1,0 +1,159 @@
+INDEPENDENT CODE REVIEW AND CORRECTIVE WORK — SCOPE AND FINDINGS
+
+Scope
+The two supplied archives were inspected, their ZIP CRCs checked and every
+entry in their SHA-256 manifests verified (63 prototype entries, 17 result
+entries). The supplied kernel files also matched the available v3 base.
+The papers named by MODEL_BOUNDARY_EN.txt were not audited. Reported simulation
+success and containment of point samples were not used as enclosure proofs.
+The original archives and extracted originals were preserved separately.
+
+DEMONSTRATED DEFECTS IN THE SUPPLIED AFFINE PROTOTYPE
+
+1. Radius summation (affine_iv._rad and discarded coefficients in I.make).
+A constant four-ulp-style inflation does not bound an arbitrarily accumulated
+sum of up to 96 coefficients. Reproducible form: one coefficient 1.0 followed
+by 95 coefficients 2**-54, all with the same positive sign at epsilon=1.
+The original upper bound is 1.000000000000000888178419700125..., while the exact
+sum is 18014398509482079/18014398509481984. The latter is outside the bound.
+Fix: upward rounding at every nonnegative primitive addition/multiplication,
+including coefficient truncation. A separately readable Python reference and
+an equivalent C implementation are included. Non-finite intermediates refuse.
+
+2. Endpoint-owner recovery manufactures a dependence (I.__new__, hull, min).
+Let x=epsilon and y=-epsilon. The original hull([x,y]) selects tied endpoints
+from x and returns x itself. Subsequent subtraction of x gives essentially zero,
+although the y branch permits a value near -2 at epsilon=1. Likewise,
+I(min(x.lo,(-x+.1).lo), min(x.hi,(-x+.1).hi)) can incorrectly return x.
+Fix: endpoints are ordinary Decimals and never recover a hidden owner. A union
+retains only coefficients identical in every member, absorbs the other terms
+with directed bounds, and keeps the full union. Plain endpoint reconstruction
+can lose precision, but cannot silently create a relation.
+
+3. Independent time creation and exact-clock collision (Time.minus/token).
+The original overlay can cancel two uncertain times created with the same key,
+including independent affine forms. The base Time API assumed keys denoted
+physical identity; the overlay supplied no attestation enforcing that contract.
+This is an API counterexample, not evidence that the canonical run encountered
+that collision. Separately, token() rounded constants through the ambient
+28-digit Decimal context: 1 and 1+10**-30 received the same clock token.
+Fix: a new creation has a producer-scoped atom ID. plus()/copy() explicitly
+retain the expression. Labels have no dependency meaning. Constant clocks use
+exact Fraction arithmetic with checked exact Decimal conversion. Conflicting
+atom definitions are rejected when compared or decoded. Imported legacy
+pickles/receipts are not automatically migrated.
+
+4. Equal marginal bounds can hide distinct histories (ac.unique / dz.unique).
+The base helpers deduplicated repr(history). The prototype's affine repr only
+contained marginal endpoints and the symbol count. Histories with coefficients
+on different symbols could therefore have equal representations.
+Fix: exact structural keys include affine coefficients and their names, time
+expressions, and all dataclass fields. Storage DAG sharing does not remove any
+history list entry. Tests retain distinct histories with equal marginal boxes.
+
+OTHER CORRECTIONS / MISSING JUSTIFICATIONS FOUND
+
+5. First monitor delay D1 (settings_cell / unit).
+The prototype used one new D1 noise symbol for all three first monitor delays.
+No physical common-initial-delay assumption establishing that correlation was
+provided. This review does not assert that the physical delays are independent.
+The correction gives each port its own enclosure symbol over the same certified
+D1 interval. Allowing their combinations is a conservative relaxation, also
+covering a physically shared delay, rather than asserting an unproved equality.
+Shared device parameters remain shared. Original settings inequalities have
+been restored and are executed before each cell calculation.
+
+6. Root mean-value refinement (affine_refine).
+After narrowing, the original constructor could return a correlated T. The
+mean-value intermediate point lies between a global midpoint and the actual
+root; it need not lie in that correlated T for the same parameter realization.
+No standalone physical counterexample to this refinement was established here.
+Fix: each derivative domain is explicitly the plain global bracket. Endpoint
+sign and positive-slope checks remain. This removes that domain-proof gap; it
+does not independently prove every physical guard argument in the old kernel.
+
+7. Numerical proof obligations.
+Center-to-float deviations, slope deviations, reciprocal endpoint magnitudes
+and capped-dose error magnitudes now use explicit directed Decimal operations
+or exact copy_abs(), not the ambient Decimal precision. Unary slope domains
+include the expansion point itself. Affine forms expose read-only coefficients
+and reject ordinary attribute reassignment, protecting their cached bounds.
+The native loop is compiled without fast-math or FMA contraction. Overflow and
+invalid domains fail closed. The Python reference remains available.
+
+8. Output and continuation coverage.
+The new cell artifact includes emitted Time objects, their expressions, the
+returned state and the terminal affine state with memory/actuation/deposit
+histories. Zero-input cells are actually evaluated, not replaced with an empty
+success record. If the existing local solver returns branches with different
+emissions, the forest, emissions, pending events and continuation prefix are
+saved and the cell is refused. This release does not propagate that forest.
+
+9. What the original reports actually say.
+The supplied 60 cell records contain 2,948 event clusters and 5,894 enclosed
+orders. Layer 1 reports zero; later layers include two-order groups. Thus an
+unqualified statement that there was "no branching" is misleading if it means
+no event-order alternatives. These counters do not establish how many separate
+terminal A21 histories existed, nor that an erroneous hull removed an actual
+trajectory in those five runs. The arithmetic counterexamples above establish
+invalid general contracts, not specific wrong physical output dates.
+
+ARITHMETIC RATIONALE FOR THE CORRECTIONS
+
+A represented quantity has center interval c, shared linear term sum d_i e_i,
+and an anonymous remainder [-r,r]. Each nonnegative error-bound primitive is
+rounded upward independently. For a coefficient addition or multiplication,
+a full neighboring binary64 spacing bounds the round-to-nearest error, with
+subnormal cases included and overflow rejected. The exact rational tests cover
+these operations and the original radius witness, rather than merely comparing
+the implementation to itself. The runtime assumes IEEE binary64 round-to-nearest
+with subnormals; the native module checks format/mode at import.
+
+For x*y, the retained linear term is my*dx + mx*dy, where mx/my approximate the
+center intervals. The remainder bounds center deviations times the opposite
+linear radii, center magnitudes times anonymous errors, the product of the two
+noncentral radii, and coefficient rounding. Every positive sum/product in that
+bound is outward. For a unary function, a slope interval over the full argument
+range and expansion point bounds the mean-value remainder; the center function
+value retains outward Decimal neighbors. In a union, coefficients common to all
+members can be retained. Every noncommon coefficient and anonymous error is
+absorbed before taking the directed center hull. These arguments justify the
+local constructions under the stated arithmetic/function assumptions.
+They are not a machine-checked proof of the entire hybrid-system implementation.
+
+PERFORMANCE CHANGES
+Bounded memoization stores only scalar Decimal exp/ln values, with precision,
+rounding mode and exponent range in the key. It does not merge physical states,
+times or histories. Immutable affine forms cache their own radius/center data.
+Native coefficient loops replace Python loops. Multiplication by a point one
+and addition of a point zero are exact shortcuts. Time differences avoid
+unnecessary multiplications by integer one. Each worker reads only the three
+source trains its cell consumes. Artifact encoding preserves sharing as a typed
+DAG; JSON output is streamed to an atomic file. A fresh child per cell bounds
+cross-job retention. Fresh verifier decisions are reused only after file hashes
+are checked. No floating tolerance substitutes for exact fresh/disk comparison.
+
+EVIDENCE AND LIMITS
+The included unit tests cover exact counterexamples, randomized rational
+pointwise checks, unary checks, Python/native differential checks, identities,
+all five comparison views, lineage/payload alteration, missing cells, and the
+saved unresolved-forest path. Full early-layer runs exercise two workers,
+per-cell persistence, a fresh verifier process and local ZIP checks. Detailed
+counts/times and tested version boundaries are in BENCHMARKS_EN.json.
+
+Hashes and fresh/disk equality establish integrity and reproducibility of the
+recorded calculation, not that the calculation's mathematics is correct. The
+receipt format is new and is not the earlier qualified A22 receipt format.
+The scientific coverage of every guard, extra crossing, simultaneous event,
+phase switch, delayed current and physical stop in the original physical
+engine remains a separate review/proof obligation. The base engine still joins
+compatible states by enclosing unions; this is not a complete genealogy of
+all A21/A22 histories. Unhandled distinct-emission forests are refused.
+
+Before claiming a qualified all-trajectories campaign, obtain an independent
+review of this effective overlay and its arithmetic proof, test the complete
+hybrid edge cases and forest continuation, and establish a verified strategy
+for any unresolved branches encountered in later layers. Layers 9–18 have not
+been demonstrated by this release. A cache test or point sample is not a
+substitute for those obligations. The next chat can run this package as an
+explicit experimental test without silently changing the retained physics.

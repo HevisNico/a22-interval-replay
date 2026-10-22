@@ -1,0 +1,42 @@
+A22 rebuild scope and scientific source
+
+The user has explicitly retained the complete A22 physical realization. This
+work changes its implementation infrastructure, not its equations, topology,
+parameter box, arithmetic precision, source protocol or event semantics.
+
+Source texts supplied by the author:
+- The Reset Operator A Structural Constraint on Recursivity V3(5).docx
+- The_Present_as_a_Reset_Interval_v13(2).docx
+- MODELE_COMPLET_REFERENCE(1).md
+
+This package does not review the papers or claim to prove their general
+hypothesis. R supplies the structural constraint: a threshold crossing arms
+a finite interval of reduced admission coupling while internal dynamics
+restore a below-threshold state. The first paper explicitly distinguishes
+admission sensitivity from dissipation and whole-cycle contraction.
+
+The retained A22 realization implements this structure through its READY,
+fast and slow phases, closed principal admission after firing, continuous
+charge decay and return to r before admission reopens. Auxiliary channels,
+delayed currents, gain history and resource bookkeeping remain those of A22.
+Protection at the principal admission boundary is not a claim that all other
+state variables or recovery timing are independent of all external inputs.
+
+The exponential laws, coefficients, topology of 18 layers and 12 lanes,
+plasticity, resource supply and pulse protocol are retained realization
+choices. They are not claimed to be uniquely deduced from R. The user has
+already made these choices and has requested that this work preserve them.
+
+The source model itself distinguishes historical numerical claims from
+qualification under later code revisions. Successful software tests do not
+supply an independent proof of enclosure of every admissible trajectory.
+All inherited mathematical assumptions and unresolved proof obligations
+remain in scope; this is an implementation optimization, not a new physical
+model or a formal verification of the original mathematical construction.
+
+RESEARCH RELEASE ADDENDUM
+The physical realization described above is retained, but the effective
+computational kernel is new. Numerical abstraction, time identities, per-port
+first-delay enclosures and persistence differ from the original prototype.
+Original source-file equality is not a proof of effective semantic equality.
+See AUDIT_EN.txt for the conservative relaxation and remaining proof scope.
