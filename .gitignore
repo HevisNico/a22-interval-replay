@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+# campaign outputs and diagnostics (publish campaigns as Release assets instead)
+campaign*/
+campagne*/
+*_through_*.zip
+test_diagnostics/
+diagnostics/
+verification_diagnostics/
+bilan_campagne.json
+# local archives (the v3.2 engine ZIP is kept on purpose)
+*.zip
+!history/v3.2/A22_Affine_Fast_Start_v3_2_clean.zip
+# built native extensions (built on the target machine)
+*.so
+# results of a local campaign run inside engine/
+engine/results/
