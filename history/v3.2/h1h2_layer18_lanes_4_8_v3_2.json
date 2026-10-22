@@ -1,0 +1,40 @@
+[
+  {
+    "layer": 18,
+    "lane": 4,
+    "exit_code": 0,
+    "wall_seconds": 1166.9352138270042,
+    "script_sha256": "bfff4ba18cdbcd7313d2c429f1b4cf935ee0898684d250022e826ffffa9c17a6",
+    "result": {
+      "couche": 18,
+      "voie": 4,
+      "statut": "cellule calculée jusqu'au bout",
+      "secondes": 1165.1,
+      "decisions": {
+        "H2 pas de tir : prouvé": 843,
+        "H1 tir : prouvé": 3,
+        "H1 tir par commutation : prouvé": 101
+      },
+      "non_prouvees": []
+    }
+  },
+  {
+    "layer": 18,
+    "lane": 8,
+    "exit_code": 0,
+    "wall_seconds": 1180.8406527330008,
+    "script_sha256": "bfff4ba18cdbcd7313d2c429f1b4cf935ee0898684d250022e826ffffa9c17a6",
+    "result": {
+      "couche": 18,
+      "voie": 8,
+      "statut": "cellule calculée jusqu'au bout",
+      "secondes": 1178.9,
+      "decisions": {
+        "H2 pas de tir : prouvé": 843,
+        "H1 tir : prouvé": 3,
+        "H1 tir par commutation : prouvé": 101
+      },
+      "non_prouvees": []
+    }
+  }
+]
