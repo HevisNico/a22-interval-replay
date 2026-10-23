@@ -103,7 +103,15 @@ The chain is: **initial section → every training step → terminal domain Q �
 | Composition over the 18 layers | same theorem, Section 10 | feedforward induction with shared parent identities |
 | Training end ⊂ Q | same theorem, Sections 10–11 | exact terminal extraction (216 authenticated results) |
 | Q → Q for every future pulse | `proof/FUTURE_INVARIANCE_PROOF_EN.txt` | analytic argument + two independent inequality checkers |
-| Exact transmission of the pulse word | `proof/GLOBAL_THEOREM_AND_WORD_PRESERVATION_EN.txt` | fixed influential gains + layer induction |
+| Exact transmission of the pulse word | `proof/GLOBAL_THEOREM_AND_WORD_PRESERVATION_EN.txt`¹ | fixed influential gains + layer induction |
+
+¹ This file predates the learning-coverage theorem. Its sentence "The current dossier has not discharged
+that application premise [H_entry]" is **historical**: H_entry is discharged by
+`LEARNING_COVERAGE_THEOREM_EN.txt` at the manual level under A1–A4 (`proof/STATUS.json`:
+`"global_training_entry": "PROVED BY THE SUPPLIED MANUAL ARGUMENT, UNDER A1-A4"`). The file is kept
+byte-identical because its SHA-256 is cited by the proof dossier and by `depth/`. The same applies to
+`proof/TRAINING_ENTRY_REVIEW_EN.txt` and `proof/historical_status/` (see the "Historical documents"
+section of `proof/README_EN.txt`).
 
 Start with [`proof/learning_justification/output/REVIEW_GUIDE_EN.txt`](proof/learning_justification/output/REVIEW_GUIDE_EN.txt).
 

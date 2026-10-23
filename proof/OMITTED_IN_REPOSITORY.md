@@ -17,3 +17,13 @@ Consequences:
 **To run every check**, download the complete dossier from the GitHub Release `v3.3-proof`
 (SHA-256 in [`../results/HASHES.md`](../results/HASHES.md)), unzip it, and follow its `README_EN.txt`.
 None of the scripts imports the engine, loads a compiled extension, or runs a campaign.
+
+## Historical statements kept unchanged
+
+Some files of the dossier record the status *before* the learning-coverage theorem, and say that the
+training entry H_entry is open: `GLOBAL_THEOREM_AND_WORD_PRESERVATION_EN.txt` (one sentence, which
+points to `TRAINING_ENTRY_REVIEW_EN.txt`), `TRAINING_ENTRY_REVIEW_EN.txt`, and `historical_status/`.
+These statements are superseded. The current status is in `STATUS.json`: H_entry is proved by the
+manual argument of `learning_justification/output/LEARNING_COVERAGE_THEOREM_EN.txt`, under A1–A4, and
+that argument has not yet been reviewed independently. The files are kept byte-identical, because
+their hashes are cited by `SHA256SUMS`, by `../results/HASHES.md` and by `../depth/`.
