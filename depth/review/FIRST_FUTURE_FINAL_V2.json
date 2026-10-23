@@ -1,0 +1,192 @@
+{
+  "status": "PASS: all six target certificates explicitly establish first source >=1116",
+  "scope": "All six prescribed preparations at target depths; historical preliminary reports remain depth-specific.",
+  "argument_document": "../review_20261023_v1/REVIEW.md sections 2-3; final numerical scope provided by rows",
+  "rows": [
+    {
+      "preparation": "nominal",
+      "depth": 68,
+      "certificate_path": "runs/nominal_v1/contracts_v2_from_1116_through_068.json",
+      "certificate_sha256": "9b34203a611535e48446e38fcb48e7f042dbdd154a047ad014a8fba82b961659",
+      "composition_path": "audits/nominal_finite_to_infinite.json",
+      "composition_sha256": "5edf0b1a1b83c029e162e61a67bb288a89c190d175c39cdf8760fc5db9ea5120",
+      "first_future_source_lower": "1116",
+      "future_source_gap_lower": "20",
+      "active_cells": 791,
+      "minimum_local_entry_slack": "86.636253503169763681543059153230266005172333509763798586301542806334",
+      "latest_training_only_local_settling_bound": "1048.823071339095493831934982109363763279586548105871363837104813855478",
+      "masked_port_instances": 15,
+      "training_to_first_future_gap_lower": "99.99947697714167848285910803773637511353971714298191701029478466928245"
+    },
+    {
+      "preparation": "plus",
+      "depth": 68,
+      "certificate_path": "runs/plus_v1/contracts_v2_from_1116_through_068.json",
+      "certificate_sha256": "1f23c7ec05aa55f67a89321a97d7501280fd1d92e3a946cd1382d95a99bb3b16",
+      "composition_path": "audits/plus_finite_to_infinite.json",
+      "composition_sha256": "33b553726565e33fb4627db3b2bdd42cf9fc4031f8cd87913712bde5ec6729c7",
+      "first_future_source_lower": "1116",
+      "future_source_gap_lower": "20",
+      "active_cells": 791,
+      "minimum_local_entry_slack": "86.636190816626545991621003923994196115423937212170186102693701818178",
+      "latest_training_only_local_settling_bound": "1048.822419314884310366959430549326535515647537670601874048592815338435",
+      "masked_port_instances": 15,
+      "training_to_first_future_gap_lower": "99.99947861175908794783465959777360287747872757825140679880678318632536"
+    },
+    {
+      "preparation": "minus",
+      "depth": 68,
+      "certificate_path": "runs/minus_v1/contracts_v2_from_1116_through_068.json",
+      "certificate_sha256": "460eeff1539175cb397c12c0840f57004db117744ddf1bd2d7ca699650da9a87",
+      "composition_path": "audits/minus_finite_to_infinite.json",
+      "composition_sha256": "5f51e39cf4aa3411986faa34a36561547a57fe752e7e30940f6e1d91636d68f7",
+      "first_future_source_lower": "1116",
+      "future_source_gap_lower": "20",
+      "active_cells": 791,
+      "minimum_local_entry_slack": "86.636316160653127587872991758204204925539902963835386278268581586222",
+      "latest_training_only_local_settling_bound": "1048.823723380646310802602037402258550456587301830334704430161282341157",
+      "masked_port_instances": 15,
+      "training_to_first_future_gap_lower": "99.99947533431745251219205274484158793653896341851857641723831618360339"
+    },
+    {
+      "preparation": "plus_prefix18",
+      "depth": 68,
+      "certificate_path": "runs/plus_prefix18_v1/contracts_v2_from_1116_through_068.json",
+      "certificate_sha256": "f74ce7eaea8b26fe2c68065265eb178a2a8936ab476e95e09fc2a141893c9109",
+      "composition_path": "audits/plus_prefix18_finite_to_infinite.json",
+      "composition_sha256": "e4900a0b9c3e87c2a3d19ef06fd8554fe5578bba07674b9728a1a24557d8d251",
+      "first_future_source_lower": "1116",
+      "future_source_gap_lower": "20",
+      "active_cells": 791,
+      "minimum_local_entry_slack": "86.636190816626545991621003923994196115423937212170186102693701818178",
+      "latest_training_only_local_settling_bound": "1048.822910958064090156310603433421031698910087866521481090314819572986",
+      "masked_port_instances": 15,
+      "training_to_first_future_gap_lower": "99.99947688965990215848348671367910669421617738233179975708477895177525"
+    },
+    {
+      "preparation": "minus_prefix18",
+      "depth": 68,
+      "certificate_path": "runs/minus_prefix18_v1/contracts_v2_from_1116_through_068.json",
+      "certificate_sha256": "fa7da4a1b16d51b16395bea19dd21df8eb1a72c8dda00204bb6ae9ed7e29e959",
+      "composition_path": "audits/minus_prefix18_finite_to_infinite.json",
+      "composition_sha256": "1ffc77d850ef1c611907c7e1cc5ff8845241ed9155ffa6a005d8150471ce855e",
+      "first_future_source_lower": "1116",
+      "future_source_gap_lower": "20",
+      "active_cells": 791,
+      "minimum_local_entry_slack": "86.636316160653127587872991758204204925539902963835386278268581586222",
+      "latest_training_only_local_settling_bound": "1048.823231720579193215335111741336470026301510225217616439532884261412",
+      "masked_port_instances": 15,
+      "training_to_first_future_gap_lower": "99.99947706465293509945897840576366836682475502363566440786671426334853"
+    },
+    {
+      "preparation": "interface",
+      "depth": 128,
+      "certificate_path": "runs/interface_v1/contracts_v2_from_1116_through_128.json",
+      "certificate_sha256": "a4052ca3ebfdf553458c76ef3828c1ec4a88a69038c3aa7ec3c597f34d40739e",
+      "composition_path": "audits/interface_finite_to_infinite.json",
+      "composition_sha256": "b50d1d388ec34ecd028c78c60bbf77339611b38a0c5c2ee3a8d95f80118e3965",
+      "first_future_source_lower": "1116",
+      "future_source_gap_lower": "20",
+      "active_cells": 1511,
+      "minimum_local_entry_slack": "86.636255531405489346249723799793090733345711583565150298679410974854",
+      "latest_training_only_local_settling_bound": "1088.817745920186231600368478522698776277375176278715491284575037170833",
+      "masked_port_instances": 15,
+      "training_to_first_future_gap_lower": "99.99914151948688271442561162440136211575108897013778956282456135392773"
+    }
+  ],
+  "historical_certificate_crosswalk": [
+    {
+      "path": "runs/interface_v1/contracts_v2_from_1116_through_030.json",
+      "sha256": "932c532281fbc998c25c1343232c3c5170e6c918f47c3ff516d57140185db095",
+      "preparation": "interface",
+      "depth": 30,
+      "explicit_first_future_source_lower": "1116",
+      "history_class_string": null,
+      "interpretation": "Current explicit field is authoritative only for the stated depth; absence is not upgraded by this inventory."
+    },
+    {
+      "path": "runs/interface_v1/contracts_v2_from_1116_through_128.json",
+      "sha256": "a4052ca3ebfdf553458c76ef3828c1ec4a88a69038c3aa7ec3c597f34d40739e",
+      "preparation": "interface",
+      "depth": 128,
+      "explicit_first_future_source_lower": "1116",
+      "history_class_string": "first source at or after 1116, subsequent source gaps >=20",
+      "interpretation": "Current explicit field is authoritative only for the stated depth; absence is not upgraded by this inventory."
+    },
+    {
+      "path": "runs/minus_prefix18_v1/contracts_v2_from_1116_through_068.json",
+      "sha256": "fa7da4a1b16d51b16395bea19dd21df8eb1a72c8dda00204bb6ae9ed7e29e959",
+      "preparation": "minus_prefix18",
+      "depth": 68,
+      "explicit_first_future_source_lower": "1116",
+      "history_class_string": "first source at or after 1116, subsequent source gaps >=20",
+      "interpretation": "Current explicit field is authoritative only for the stated depth; absence is not upgraded by this inventory."
+    },
+    {
+      "path": "runs/minus_v1/contracts_v2_from_1116_through_068.json",
+      "sha256": "460eeff1539175cb397c12c0840f57004db117744ddf1bd2d7ca699650da9a87",
+      "preparation": "minus",
+      "depth": 68,
+      "explicit_first_future_source_lower": "1116",
+      "history_class_string": "first source at or after 1116, subsequent source gaps >=20",
+      "interpretation": "Current explicit field is authoritative only for the stated depth; absence is not upgraded by this inventory."
+    },
+    {
+      "path": "runs/nominal_v1/contracts_through_013.json",
+      "sha256": "33c60baed3bd0bd284b48a9b6afa93739465c7a237ee8b6b94de73b72510715d",
+      "preparation": "nominal",
+      "depth": 13,
+      "explicit_first_future_source_lower": null,
+      "history_class_string": null,
+      "interpretation": "Current explicit field is authoritative only for the stated depth; absence is not upgraded by this inventory."
+    },
+    {
+      "path": "runs/nominal_v1/contracts_v2_from_1116_through_018.json",
+      "sha256": "efc189fd3623a35bc680021834f93b854d67bf518595cb97b02be3254ec90391",
+      "preparation": "nominal",
+      "depth": 18,
+      "explicit_first_future_source_lower": "1116",
+      "history_class_string": null,
+      "interpretation": "Current explicit field is authoritative only for the stated depth; absence is not upgraded by this inventory."
+    },
+    {
+      "path": "runs/nominal_v1/contracts_v2_from_1116_through_068.json",
+      "sha256": "9b34203a611535e48446e38fcb48e7f042dbdd154a047ad014a8fba82b961659",
+      "preparation": "nominal",
+      "depth": 68,
+      "explicit_first_future_source_lower": "1116",
+      "history_class_string": "first source at or after 1116, subsequent source gaps >=20",
+      "interpretation": "Current explicit field is authoritative only for the stated depth; absence is not upgraded by this inventory."
+    },
+    {
+      "path": "runs/plus_prefix18_v1/contracts_v2_from_1116_through_068.json",
+      "sha256": "f74ce7eaea8b26fe2c68065265eb178a2a8936ab476e95e09fc2a141893c9109",
+      "preparation": "plus_prefix18",
+      "depth": 68,
+      "explicit_first_future_source_lower": "1116",
+      "history_class_string": "first source at or after 1116, subsequent source gaps >=20",
+      "interpretation": "Current explicit field is authoritative only for the stated depth; absence is not upgraded by this inventory."
+    },
+    {
+      "path": "runs/plus_v1/contracts_v2_from_1116_through_018.json",
+      "sha256": "7ddf112ab907d530032d5554a9411b37ce15cf74a55ffbcb905c23755c7b8053",
+      "preparation": "plus",
+      "depth": 18,
+      "explicit_first_future_source_lower": "1116",
+      "history_class_string": null,
+      "interpretation": "Current explicit field is authoritative only for the stated depth; absence is not upgraded by this inventory."
+    },
+    {
+      "path": "runs/plus_v1/contracts_v2_from_1116_through_068.json",
+      "sha256": "1f23c7ec05aa55f67a89321a97d7501280fd1d92e3a946cd1382d95a99bb3b16",
+      "preparation": "plus",
+      "depth": 68,
+      "explicit_first_future_source_lower": "1116",
+      "history_class_string": "first source at or after 1116, subsequent source gaps >=20",
+      "interpretation": "Current explicit field is authoritative only for the stated depth; absence is not upgraded by this inventory."
+    }
+  ],
+  "verifier_sha256": "b5587fc935e4f21a82058b44cecfda78892c6cf9de706ee3f89955192bb716ef",
+  "checker_sha256": "2990922605e18be9f8e61133d64cc6f8798cdaec5612d78e5b86ede3302aca76",
+  "observation_horizon": "4096 is the training-only observation endpoint, not the lower bound on first admitted future source."
+}

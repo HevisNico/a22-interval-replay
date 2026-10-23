@@ -5,8 +5,8 @@ type: software
 authors:
   - family-names: "Breuillaud"
     given-names: "Nicolas"
-version: "3.3"
-date-released: "2026-10-22"
+version: "4.0-depth"
+date-released: "2026-10-23"
 license: MIT
 abstract: >-
   End-to-end propagation of the A22 spiking-network realization (18 layers x 12 lanes,
@@ -16,7 +16,11 @@ abstract: >-
   computed enclosures for 648 of 648 boxes. A manual proof, under explicit execution assumptions,
   shows that the computation covers every admissible training trajectory and that the learned
   state is invariant for every future pulse sequence with gaps of at least 20, with exact
-  transmission of the pulse word. The proof is not yet independently reviewed or machine-checked.
+  transmission of the pulse word. Release 4.0-depth extends this to arbitrary depth for six
+  prescribed realizations: the full training transient is certified through 68 layers (128 for a
+  connected two-region case), the learned state enters a tail contract, and every lane of a medium
+  has one common limiting duration per layer, identical for different upstream preparations of the
+  same medium. The proof is not yet independently reviewed or machine-checked.
   The code, diagnostics and proof were produced with the AI assistants Claude (Anthropic) and
   ChatGPT (OpenAI) under the author's direction. The physical kernel is inspired by the author's
   Reset Operator.

@@ -122,6 +122,56 @@ line 222), tests in `engine/tests/test_v33_ports.py`.
 
 ---
 
+## Depth extension (v4.0-depth)
+
+These tasks concern [`depth/`](depth/README.md). Several of the cited documents are in French; their
+formulas and tables can be read directly.
+
+## Task 7 — Masked late parent and local regeneration (boundary checker)
+
+**Claim.** The frozen checker required every parent to arrive before the first raw-pulse end, which is
+stronger than the model needs. The supplementary checker `certify_contracts.py` replaces that
+requirement with five explicit conditions. With them, a parent that arrives after the first firing
+(during protection) does not change the head equation. All raw currents end before reopening, and the
+cell regenerates locally before the next wave, even if the masked port's gain keeps changing. Hence
+`t_j^p = s_p + d_j` for every admissible future word.
+
+**Where:** `depth/review/REVIEW_V1_FR.md` §2; `certify_contracts.py` in each case certificate
+(`review_tools/`); the model's recovery law in `engine/reference/full_model_reference.md` (ḃ ≥ 0, b ≤ 1.1).
+
+**Questions.**
+1. Are the two protection bounds, with `b_entry` and 1.1, valid with partial MARK phases?
+2. Can a masked ERROR that lasts past reopening ever cause an extra firing before the next wave?
+
+## Task 8 — Finite-to-infinite composition and tail theorems
+
+**Claim.** If the boundary cohorts satisfy diameter ≤ W and same-lane gaps ≥ 15.5, then fresh downstream
+cells never change their gains or recovery, regenerate locally, and preserve diameter and spacing. The
+min/max translation bounds then give one asymptotic duration per layer for all lanes. For the interface,
+a six-layer row-overlap contraction (β > 0.057) gives one common duration with a fixed phase profile.
+
+**Where:** `depth/theory/LEARNING_SPEED_SELECTION_EN.txt` §4–5;
+`depth/review/FINITE_TO_INFINITE.md`; `depth/theory/conditional_tail_certificate.json`;
+`compose_tail.py` in each case certificate.
+
+**Questions.**
+1. Is the tail tube (head ages within u ± W) enough for every protection and regeneration margin used?
+2. In the interface argument, is Lipschitz control of the scalar advance correctly obtained from the
+   stochastic Jacobian?
+
+## Task 9 — First future wave at time 1116 without global rest
+
+**Claim.** For each cell, the last training recovery and the last auxiliary completion are bounded above
+(using b ≥ 0.08), and they precede the earliest possible arrival of the first future wave. Exact rest at
+the 4096 observation time then implies exact rest on the whole preceding current-free interval.
+
+**Where:** `depth/review/REVIEW_V1_FR.md` §3; `depth/review/FIRST_FUTURE_FINAL_V2.json`.
+
+**Question.** Does "exact rest at 4096" correctly imply exact rest from each cell's own bound Q_v onward,
+for every state variable used by the head equation?
+
+---
+
 ## What is out of scope here
 
 - The scientific hypothesis behind the model (the Reset Operator; see `docs/MODEL_BOUNDARY_EN.txt`).

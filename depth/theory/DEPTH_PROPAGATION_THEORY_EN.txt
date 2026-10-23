@@ -1,0 +1,399 @@
+A22 — PROPAGATION WITH INCREASING DEPTH
+First theoretical results and a falsifiable next theorem
+22 October 2026
+
+This is a mathematical extension study, not a new training campaign. No
+original engine file was changed, no native extension was loaded, and no
+cell was replayed. Two scalar root brackets and finite matrix products were
+checked independently. Documents and executable checks are in English.
+
+EXECUTIVE FINDINGS
+
+1. The historical narrow Q12 mechanism extends to the existing WIDE finite
+   head domain: layers 7 through 18 have a certified upper contraction bound
+   Q <= 0.6816852954683713304 < 0.682. This concerns date perturbations for
+   the SAME fixed physical gains and parameters. It does not identify
+   latencies across different learned devices.
+
+2. The existing boundary date boxes at layers 6 and 18 are disjoint even
+   after an arbitrary common time translation. Therefore the stored input
+   box cannot simply serve as a recurrent domain for this block. A larger
+   or differently shaped invariant domain is needed.
+
+3. There is a precise conditional theorem: an autonomous or periodically
+   repeated block with an invariant normalized shape domain and uniform
+   contraction has an additive eigenprofile and a common asymptotic delay
+   per layer. The proof is given below, including the scalar drift.
+
+4. Mixing alone is insufficient, even for the supplied local physical laws.
+   We construct a connected, positive-contact, nominal R extension whose
+   future words are preserved, whose normalized dates mix uniformly, and
+   whose depth-average delay nevertheless has two subsequential limits.
+   Its post-preparation states are admissible to the local equations;
+   their reachability by the prescribed 128-pulse training is NOT proved.
+
+5. The two-region test has a clear conditional outcome. Uniform global
+   mixing plus a bounded intrinsic block delay spread rules out different
+   asymptotic lane speeds within one connected strip. The current finite
+   certificate does not yet establish these hypotheses at every depth.
+
+1. WHAT IS BEING EXTENDED
+
+The established finite-network statement has the form
+
+    t[n,j,p] = s[p] + d[n,j].
+
+The learning-coverage dossier supplies a manual source-level bridge under
+its explicit assumptions A1–A4. Earlier files with an OPEN entry status are
+historical drafts superseded at that stated proof level. This study neither
+reopens that finite result nor upgrades it to a proof-assistant certificate.
+
+An 18-layer graph does not itself define a sequence as n tends to infinity.
+An extension rule must specify new cells, port parameters, learned states,
+training histories, and which lanes remain active. Here the principal target
+is a fixed-width strip with the same 12-lane periodic adjacency, all lanes
+active after an entrance section, and arbitrarily many downstream layers.
+
+The desired statement is, for each fixed admissible extension,
+
+    d[n,j]/n -> tau, for every considered lane j, with 0 < tau < infinity.
+
+Then v=1/tau is the speed in layers per unit time. A common tau within one
+device is distinct from a universal tau across different learned devices,
+parameter realizations, preparations, or increasing widths. No universal
+device-independent speed is established here.
+
+2. RECOVERING THE SPATIAL CONTRACTION
+
+For a cell at exact READY charge r=0.1, define its first head threshold by
+
+    r + sum_i g_i h_+(F-t_i) = 1,
+    h(u) = a/(a-kappa) [exp(-kappa*u)-exp(-a*u)],
+    a=log(4), kappa=1/2.
+
+Assume strict, uniformly certified guards: contributing ages lie in (0,1),
+masked contacts remain after the head, and the threshold slope is positive.
+For fixed gains and fixed physical parameters, implicit differentiation gives
+
+    dF/dt_i = g_i h'(F-t_i) / S,
+    S = sum_contributing_i g_i h'(F-t_i) > 0.
+
+Masked entries are zero. These derivatives are nonnegative and sum to one.
+Translation of all arrivals translates F by the same amount. The relevant
+quantity is osc(x)=max_j x_j-min_j x_j, not an absolute timing norm.
+
+Let L_n be a componentwise rational lower bound for the true row-stochastic
+Jacobian J_n, uniform over the head domain at layer n. For a block a..b,
+
+    P = L_b ... L_a,
+    beta = min_rows_i,j sum_k min(P[i,k],P[j,k]),
+    Q = 1-beta.
+
+Every true Jacobian product dominates P. If beta>0, its oscillation operator
+norm is at most Q. Integrate the Jacobian along an admissible straight segment
+between two entrance vectors: osc(T(x)-T(y)) <= Q osc(x-y). The segment and
+all its intermediate heads must remain in the certified domains. This is a
+finite-domain statement, not a license to extrapolate those domains.
+
+Why the segment condition holds for the present finite head boxes: the stored
+strict endpoint guards enclose each root for all independently enclosed gains
+and parent dates, the active/masked classification stays strict, and induction
+keeps every intermediate root in the next stored rectangle. A segment in the
+layer-6 entrance rectangle therefore has the required enclosed images. Shared
+physical gains are held fixed along that segment, even though the bounds are
+uniform over their enclosing boxes.
+
+The historical script certificat_domaine_A15.py applies this mechanism to the
+last 12 narrow layers. Its approximately 0.6246369142769641 bound belongs to
+that narrow domain. We did not reuse this number for the wide domain.
+
+NEW FINITE WIDE RESULT. The supplied wide future-closure certificate contains
+strict positive contributing ages at every head. Using directed 70-digit
+arithmetic, finite exponential/logarithm series with explicit tails, rational
+downward rounding of each influence to a multiple of 10^-6, and exact rational
+matrix products, the new checker obtains for layers 7..18:
+
+    beta >= 0.318314704531628669606070668764404571053184995481266547747784669079875449
+    Q    <= 0.681685295468371330393929331235595428946815004518733452252215330920124551.
+
+The exact matrices, fractions, head ages and source hashes are in
+results/finite_wide_contraction.json. Some shorter blocks also have positive
+overlap; they are listed without claiming repeatability.
+
+This contracts the DIFFERENCE between two date profiles propagated through
+the same block. It does not assert osc(T(x)) <= Q osc(x): heterogeneous cells
+can generate a nonzero output shape even from synchronous inputs.
+
+BOUNDARY FAILURE. If an output vector y from the layer-18 box could equal an
+input vector x from the layer-6 box plus c times the all-ones vector, then
+
+    max_j (y_lower[j]-x_upper[j]) <= c
+       <= min_j (y_upper[j]-x_lower[j]).
+
+The checker finds the lower bound larger than the upper bound. Thus these
+two boxes have no common shape. This specifically rejects direct recycling
+of the stored input rectangle. It does not prove that a larger invariant
+shape domain is impossible, nor that repeating a physical block is invalid.
+
+3. A SUFFICIENT THEOREM THAT ALSO CONTROLS THE DRIFT
+
+Theorem (repeated block). Let T map the arrival-date vector across a block
+of m layers with fixed learned physical data. On a translation-invariant
+domain suppose:
+
+(i) T(x+c*1)=T(x)+c*1, and the physical head map is well defined;
+(ii) S is a nonempty closed set of normalized vectors z with z[0]=0;
+(iii) H(z)=T(z)-T(z)[0]*1 maps S into itself;
+(iv) osc(H(z)-H(w)) <= rho osc(z-w), with rho<1;
+(v) lambda(z)=T(z)[0] is Lipschitz on S in the oscillation norm;
+(vi) all intermediate layers have bounded relative delays, and uniform
+     local head, gain-protection, tail, resource and recovery margins hold.
+
+Then H has a unique fixed shape z*. Write x_k=c_k*1+z_k at block boundaries.
+The normalized sequence converges geometrically to z*, while
+
+    c_(k+1)-c_k = lambda(z_k) -> lambda* = lambda(z*).
+
+In fact the Lipschitz condition gives a summable error:
+
+    sum_k |lambda(z_k)-lambda*|
+       <= Lip(lambda) osc(z_0-z*)/(1-rho).
+
+Therefore c_k=k*lambda*+O(1), x_k/k -> lambda* times 1, and the bounded
+intermediate-layer offsets imply
+
+    d[n,j]/n -> tau = lambda*/m.
+
+If block delays are uniformly positive and finite, tau is positive and finite.
+
+Proof. On the gauge z[0]=0, osc is a norm; closed S is complete. The contraction
+mapping theorem gives z*, convergence and its geometric bound. Translation
+equivariance gives the scalar recurrence. Summing the Lipschitz errors proves
+the O(1) drift remainder. Writing n=km+r, 0<=r<m, finishes the layer claim.
+For a monotone differentiable head map with stochastic Jacobian, the scalar
+component is Lipschitz on the admitted convex domain, since the infinity norm
+of its derivative is one and ||z-w||_infinity <= osc(z-w) on the fixed gauge.
+
+An m-periodic physical extension is autonomous at block boundaries. A merely
+depth-dependent extension is not. Alternatively, if normalized block maps
+converge uniformly to a common contraction, their drift functions converge
+uniformly to a continuous limit, and a common invariant compact shape domain
+exists, the same limit conclusion follows: a_k <= rho*a_(k-1)+epsilon_k with
+epsilon_k -> 0 gives shape convergence; drift convergence gives the Cesaro
+limit. This is another sufficient assumption, not an observed A22 fact.
+
+4. THE TWO-REGION TEST
+
+First distinguish a topological contact from an effective head influence. A
+late input can be physically connected but have derivative zero because the
+head already fired. Therefore a connected wiring diagram alone is insufficient.
+
+Suppose every consecutive block T_k has contraction rho<1 on the relevant
+date domain, the synchronous reference belongs to that domain, and
+
+    osc(T_k(0)) <= B, uniformly in k.
+
+Then, using translation equivariance,
+
+    D_(k+1)=osc(x_(k+1)) <= rho D_k + B,
+    D_k <= rho^k D_0 + B/(1-rho).
+
+Hence (x_k[i]-x_k[j])/k -> 0. Two different limiting lane speeds within this
+strip are impossible. Their common drift may still fail to converge. If zero
+shape is inadmissible, use an admitted reference shape and explicitly bound
+the corresponding forcing term; do not silently insert zero into the domain.
+
+A simpler physical obstruction to persistent separation is available in the
+all-active-head regime. If all three parent arrivals are strictly between
+F-1 and F for every cell, any pair of neighboring parent lanes differs by
+less than one time unit because they share a child. On a 12-lane ring this
+bounds the spatial diameter by six. Two regions with different linear depth
+slopes must eventually leave this regime. With masked contacts the appropriate
+late-input/protection bound must replace this argument.
+
+If effective influence products split into two closed components instead,
+the abstract recurrence diag(W_A,W_B)x+(a*1_A,b*1_B) permits two speeds a!=b
+while preserving translated input words. This is a diagnostic model, NOT a
+counterexample using the fixed A22 wiring and reachable learned states. It
+identifies the cut whose uniformly positive influence would need proof.
+
+To decide the physical learned-state question, two separately trained regions
+must be joined using the actual cross-port couplings and admissible histories.
+All first-root, no-extra-fire, error-gate, raw-tail and recovery guards must be
+verified at the interface. Persistent separation, if admissible, refutes the
+global mixing premise. Loss of those guards shows failure of that candidate
+domain, not automatically failure of the physical system or its motifs.
+
+5. A PHYSICAL COUNTEREXAMPLE TO 'MIXING IMPLIES A DEPTH SPEED'
+
+This construction uses the exact nominal local R equations and the same
+three-parent 12-lane periodic adjacency. It starts at a downstream interface
+with all lanes active and synchronous, after an ASSUMED preparation. It is
+not asserted to be the output of the supplied lane-0 training protocol.
+
+At every cell take q=r, auxiliary charges r_m, no pending currents, E in
+[50,100], and b=1.1. Choose one of two gain profiles, common to all lanes of
+a layer but allowed to vary between layers:
+
+    A: (0.6,1.2,0.6), total gain 2.4;
+    B: (0.9,1.2,0.9), total gain 3.0.
+
+Both profiles are strictly positive, below the nominal cap 4, and no smaller
+than the nominal initial gains componentwise. These facts are necessary
+compatibility checks, not a proof of training attainability.
+
+For synchronous parent arrivals, the local head delay u_G solves
+
+    0.1 + G h(u_G) = 1.
+
+Directed scalar brackets prove
+
+    u_A in (0.388183908205202, 0.388183908205205),
+    u_B in (0.281469348037381, 0.281469348037385).
+
+They are distinct by h'>0. The exact rational brackets are supplied in JSON.
+Nominal auxiliary marks end at age 0.04, before either firing; their errors
+occupy ages [1.10,1.25], entirely inside principal protection. Thus neither
+gains nor b changes on future waves. Reopening occurs after a protected
+duration 1+log(2.5)/1.1, approximately 1.833. Raw tails have ended and every
+cell and auxiliary recovers before the next same-port input with gap >=20.
+The existing resource inequality applies to these smaller gains as well.
+
+The construction is robust to a date-shape tube osc(t)<=0.01. Monotonicity
+and translation equivariance put every output in [min(t)+u_G,max(t)+u_G],
+so this tube maps into itself for either profile. All head ages lie inside
+[0.19,0.51]; strict physical margins are checked on this larger interval.
+Every one of the three influences is at least 1/20. On the ring, six steps
+connect every source lane to every target lane, padding paths by self-edges.
+Every entry of the six-step Jacobian product is therefore >=(1/20)^6 and
+
+    Q_6 <= 1-12/20^6 = 15999997/16000000 < 1.
+
+Now alternate A and B in runs of lengths L_k=2^(2^k), k>=1. For exactly
+synchronous interface pulses, all lanes stay exactly synchronous and
+
+    d[n,j] = sum_(ell=1)^n u_(G_ell), independently of j.
+
+At the end N_k of a run, the preceding run lengths divided by L_k tend to
+zero. Therefore d[N_k,j]/N_k tends along alternate subsequences to u_A and
+u_B. There is NO depth-average limit, despite all contacts being present,
+uniform local mixing, and exact preservation of every temporal input word.
+
+This disproves an inference from the local equations plus post-preparation
+mixing to a common limiting speed for arbitrary depth arrangements. It does
+NOT disprove the stronger conjecture restricted to states generated by the
+specified learning protocol. Excluding this construction from the learned
+class requires a property of learning across depth, not another timing-only
+contraction estimate. Even uniform A and uniform B strips have different
+device-level speeds, so universal speed across all admissible preparations
+would need an additional selection mechanism.
+
+6. WHAT A TRANSMISSIBLE LEARNED DOMAIN MUST CONTAIN
+
+A reusable block contract needs a normalized date-shape domain, influential
+gain bounds, physical parameter bounds, auxiliary modes and clocks, admissible
+masked-port histories, recovery bounds, resource bounds, and enough information
+to ensure the same physical event semantics at its entrance and exit.
+
+For post-training propagation, gains can be fixed because physical protection
+has been proved. For propagation OF TRAINING into fresh deeper cells, a single
+future date vector and a gain box are not a sufficient state: the incoming
+training history determines the new cells' learning. It must be represented
+by a sound history contract or included in a sufficiently rich state. Reusing
+a fitted terminal gain distribution is not a proof of learned-domain closure.
+
+For heads whose gains vary between compared states, differentiation also gives
+
+    dF/dg_i = -h(F-t_i)/S.
+
+Thus the appropriate perturbation estimate contains a gain-forcing term,
+for example e_next <= rho*e + K_g*eta. If a sound learning map additionally
+gave eta_next <= L_h*e + kappa_g*eta, a sufficient joint contraction condition
+would be kappa_g<1 and K_g*L_h < (1-rho)*(1-kappa_g). A weighted sum norm proves
+this by choosing a weight w with rho+w*L_h<1 and kappa_g+K_g/w<1. These are
+conditional inequalities, not measured coefficients of the current learner.
+
+Protected future gains may simply retain their differences: then kappa_g=1.
+Date mixing alone cannot be promoted to contraction across learned gain
+profiles. Recovery b can remain dynamic without entering the head equation;
+its task is to satisfy a uniform upper bound on protected duration and a
+strict margin before the next relevant input. It need not converge if those
+inequalities remain uniform.
+
+7. PIPELINING: A NECESSARY CHANGE OF PROOF GEOMETRY
+
+The finite proof uses a whole-network settling bound below 12.791 and input
+gaps >=20. A positive-delay infinite strip cannot settle globally before each
+new source pulse: different waves coexist at different depths.
+
+The extension therefore needs a LOCAL, per-cell or finite-block regeneration
+contract with wave identities. Same-port pulses must remain separated, all
+cross-port inputs assigned to one wave must fit the admitted cohort, and each
+cell must reset before the next wave reaches that cell. Global silence must
+not be imposed at every source event. The construction in Section 5 satisfies
+this by exact translation, local margins and a positive delay per layer.
+For each finite time its excited causal cone has finite depth, so the infinite
+strip is defined consistently by its finite prefixes; it does not introduce
+an infinite cascade in finite time.
+
+8. CONCRETE NEXT TARGET AND STOP CONDITIONS
+
+The next proof target is a learned, recurrent block domain plus one justified
+depth law: periodicity, convergence of the effective block map and drift, or
+another independently proved condition giving convergence of the scalar
+average. Choosing a convenient repeated block constructs an extension; it
+does not prove that arbitrary independently trained layers select that block.
+
+Before any long campaign:
+
+* Propose a larger normalized domain containing both the layer-6 and layer-18
+  shapes; do not reuse the disjoint stored rectangles as a self-map.
+* Bound the three coupled quantities: head-date shape, learned gain/history
+  state, and local recovery/cohort margins.
+* Verify block image inclusion, effective influence overlap, and local
+  pipeline regeneration with strict margins. A positive finite Q alone is
+  not a pass for this step.
+* Determine whether learning rules exclude alternating long depth runs with
+  different scalar delays. If they do not, restrict the theorem explicitly
+  rather than infer an average from simulations.
+* Run the two-region interface proof attempt with fixed wiring and reachable
+  states. A model with removed links is not the decisive physical test.
+
+Failure categories must remain distinct: an invalid interval enclosure is
+inconclusive; an admissible counterexample refutes the proposed claim; a
+failure of training reachability leaves the post-preparation example outside
+the learned theorem; an unproved infinite extension is an open obligation.
+
+9. REPRODUCIBILITY AND REFERENCES
+
+Run from the extracted folder, with ordinary Python and no extra packages:
+
+    python -B check_depth_obstructions.py
+
+This overwrites only the two local results JSON files. Do not use -O/-OO.
+interval_support.py is an unchanged copy of the previously supplied independent
+future-certificate checker, used only for its directed interval operations.
+The accompanying inputs are copies of the existing terminal and future
+certificate JSON files. The original engine, .so files and campaign results
+are not execution dependencies. SHA256SUMS records all delivered files except
+itself. Source identities and exact finite matrices are also recorded in JSON.
+
+Project sources examined:
+  reference/full_model_reference.md, sections 1–8 (physical laws;
+  its historical results section is not the latest proof status).
+  R_cycle_local_A20_2026-10-18/certificat_domaine_A15.py.
+  R_histoires_A21_2026-10-18/domaine_prefixe_A17.py.
+  PREUVE_CONTINUATION.md, spatial derivative/overlap argument.
+  LEARNING_COVERAGE_THEOREM_EN.txt (latest manual learning bridge, A1–A4).
+  GLOBAL_THEOREM_AND_WORD_PRESERVATION_EN.txt (finite future theorem;
+  its older OPEN entry statement is superseded by the manual bridge).
+
+Mathematical background: S. Gaubert and Z. Qu, Dobrushin's ergodicity
+coefficient for Markov operators on cones, Integral Equations and Operator
+Theory 81(1), 127–150 (2015), DOI 10.1007/s00020-014-2193-2.
+Primary source: https://arxiv.org/abs/1307.4649
+Author manuscript: https://www.cmap.polytechnique.fr/~gaubert/PAPERS/GaubertQuIEOTD14QuFinal.pdf
+The row-overlap formula and oscillation contraction are standard background;
+the finite A22 bound, boundary test and physical construction above are the
+specific calculations and arguments supplied in this study. External literature
+does not certify the A22 model or the new implementation.

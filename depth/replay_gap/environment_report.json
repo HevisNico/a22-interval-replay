@@ -1,0 +1,436 @@
+{
+  "schema": "A22-verification-replay-environment-1",
+  "source_comparison_report_sha256": "4b4c54aaca83c135c990babdf06a7ae57241b8f252317e08e308058224b49eaf",
+  "source_identity": "3ecdb7bd2e618c19fd89ac43f07eca18170865b0f68c1ce1100ba87b96520211",
+  "identical_across_all_six_captures": true,
+  "environment": {
+    "SOABI": "cpython-312-x86_64-linux-gnu",
+    "arithmetic_backend": "native",
+    "assertions_enabled": true,
+    "byteorder": "little",
+    "decimal_binary_sha256": null,
+    "decimal_context": "Context(prec=28, rounding=ROUND_HALF_EVEN, Emin=-999999, Emax=999999, capitals=1, clamp=0, flags=[], traps=[InvalidOperation, DivisionByZero, Overflow])",
+    "decimal_module": "built-in",
+    "float_info": "sys.float_info(max=1.7976931348623157e+308, max_exp=1024, max_10_exp=308, min=2.2250738585072014e-308, min_exp=-1021, min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)",
+    "libc": [
+      "glibc",
+      "2.39"
+    ],
+    "libmpdec_version": "4.0.0",
+    "machine": "x86_64",
+    "native_modules": {
+      "_a22_native": {
+        "bytes": 41032,
+        "loaded_at_capture": false,
+        "path": "/workspace/scratch/4e46c8d0286a/verification replay/frozen/vendor/engine/kernel/native/_a22_native.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "b968a17f31e85b9b1c8b0db44fd0f93d07bcb77e83f8a8510be1d0ba79f7a26f"
+      },
+      "_rounding_native": {
+        "bytes": 21880,
+        "loaded_at_capture": true,
+        "path": "/workspace/scratch/4e46c8d0286a/verification replay/frozen/vendor/engine/affine/_rounding_native.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "29b1d226d6576e418c38d476cb050a20b37f6db67b6f70ca734423cac6985c57"
+      }
+    },
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "python_build": [
+      "main",
+      "Aug 25 2026 14:00:49"
+    ],
+    "python_compiler": "Clang 22.1.3 ",
+    "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "python_executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+    "python_full": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "python_version": "3.12.14",
+    "scipy": "1.17.0",
+    "source_identity": "3ecdb7bd2e618c19fd89ac43f07eca18170865b0f68c1ce1100ba87b96520211",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "PYTHONHASHSEED": null
+    },
+    "uname": [
+      "Linux",
+      "f736e276a54f",
+      "6.18.55",
+      "#1 SMP Wed Oct 14 19:45:18 UTC 2026",
+      "x86_64",
+      "x86_64"
+    ]
+  },
+  "captures": [
+    {
+      "preparation": "minus",
+      "phase": "production_audit",
+      "environment": {
+        "SOABI": "cpython-312-x86_64-linux-gnu",
+        "arithmetic_backend": "native",
+        "assertions_enabled": true,
+        "byteorder": "little",
+        "decimal_binary_sha256": null,
+        "decimal_context": "Context(prec=28, rounding=ROUND_HALF_EVEN, Emin=-999999, Emax=999999, capitals=1, clamp=0, flags=[], traps=[InvalidOperation, DivisionByZero, Overflow])",
+        "decimal_module": "built-in",
+        "float_info": "sys.float_info(max=1.7976931348623157e+308, max_exp=1024, max_10_exp=308, min=2.2250738585072014e-308, min_exp=-1021, min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)",
+        "libc": [
+          "glibc",
+          "2.39"
+        ],
+        "libmpdec_version": "4.0.0",
+        "machine": "x86_64",
+        "native_modules": {
+          "_a22_native": {
+            "bytes": 41032,
+            "loaded_at_capture": false,
+            "path": "/workspace/scratch/4e46c8d0286a/verification replay/frozen/vendor/engine/kernel/native/_a22_native.cpython-312-x86_64-linux-gnu.so",
+            "sha256": "b968a17f31e85b9b1c8b0db44fd0f93d07bcb77e83f8a8510be1d0ba79f7a26f"
+          },
+          "_rounding_native": {
+            "bytes": 21880,
+            "loaded_at_capture": true,
+            "path": "/workspace/scratch/4e46c8d0286a/verification replay/frozen/vendor/engine/affine/_rounding_native.cpython-312-x86_64-linux-gnu.so",
+            "sha256": "29b1d226d6576e418c38d476cb050a20b37f6db67b6f70ca734423cac6985c57"
+          }
+        },
+        "numpy": "2.3.5",
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+        "python_build": [
+          "main",
+          "Aug 25 2026 14:00:49"
+        ],
+        "python_compiler": "Clang 22.1.3 ",
+        "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "python_executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "python_full": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "python_version": "3.12.14",
+        "scipy": "1.17.0",
+        "source_identity": "3ecdb7bd2e618c19fd89ac43f07eca18170865b0f68c1ce1100ba87b96520211",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "PYTHONHASHSEED": null
+        },
+        "uname": [
+          "Linux",
+          "f736e276a54f",
+          "6.18.55",
+          "#1 SMP Wed Oct 14 19:45:18 UTC 2026",
+          "x86_64",
+          "x86_64"
+        ]
+      }
+    },
+    {
+      "preparation": "minus",
+      "phase": "replay_comparison",
+      "environment": {
+        "SOABI": "cpython-312-x86_64-linux-gnu",
+        "arithmetic_backend": "native",
+        "assertions_enabled": true,
+        "byteorder": "little",
+        "decimal_binary_sha256": null,
+        "decimal_context": "Context(prec=28, rounding=ROUND_HALF_EVEN, Emin=-999999, Emax=999999, capitals=1, clamp=0, flags=[], traps=[InvalidOperation, DivisionByZero, Overflow])",
+        "decimal_module": "built-in",
+        "float_info": "sys.float_info(max=1.7976931348623157e+308, max_exp=1024, max_10_exp=308, min=2.2250738585072014e-308, min_exp=-1021, min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)",
+        "libc": [
+          "glibc",
+          "2.39"
+        ],
+        "libmpdec_version": "4.0.0",
+        "machine": "x86_64",
+        "native_modules": {
+          "_a22_native": {
+            "bytes": 41032,
+            "loaded_at_capture": false,
+            "path": "/workspace/scratch/4e46c8d0286a/verification replay/frozen/vendor/engine/kernel/native/_a22_native.cpython-312-x86_64-linux-gnu.so",
+            "sha256": "b968a17f31e85b9b1c8b0db44fd0f93d07bcb77e83f8a8510be1d0ba79f7a26f"
+          },
+          "_rounding_native": {
+            "bytes": 21880,
+            "loaded_at_capture": true,
+            "path": "/workspace/scratch/4e46c8d0286a/verification replay/frozen/vendor/engine/affine/_rounding_native.cpython-312-x86_64-linux-gnu.so",
+            "sha256": "29b1d226d6576e418c38d476cb050a20b37f6db67b6f70ca734423cac6985c57"
+          }
+        },
+        "numpy": "2.3.5",
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+        "python_build": [
+          "main",
+          "Aug 25 2026 14:00:49"
+        ],
+        "python_compiler": "Clang 22.1.3 ",
+        "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "python_executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "python_full": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "python_version": "3.12.14",
+        "scipy": "1.17.0",
+        "source_identity": "3ecdb7bd2e618c19fd89ac43f07eca18170865b0f68c1ce1100ba87b96520211",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "PYTHONHASHSEED": null
+        },
+        "uname": [
+          "Linux",
+          "f736e276a54f",
+          "6.18.55",
+          "#1 SMP Wed Oct 14 19:45:18 UTC 2026",
+          "x86_64",
+          "x86_64"
+        ]
+      }
+    },
+    {
+      "preparation": "plus_prefix18",
+      "phase": "production_audit",
+      "environment": {
+        "SOABI": "cpython-312-x86_64-linux-gnu",
+        "arithmetic_backend": "native",
+        "assertions_enabled": true,
+        "byteorder": "little",
+        "decimal_binary_sha256": null,
+        "decimal_context": "Context(prec=28, rounding=ROUND_HALF_EVEN, Emin=-999999, Emax=999999, capitals=1, clamp=0, flags=[], traps=[InvalidOperation, DivisionByZero, Overflow])",
+        "decimal_module": "built-in",
+        "float_info": "sys.float_info(max=1.7976931348623157e+308, max_exp=1024, max_10_exp=308, min=2.2250738585072014e-308, min_exp=-1021, min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)",
+        "libc": [
+          "glibc",
+          "2.39"
+        ],
+        "libmpdec_version": "4.0.0",
+        "machine": "x86_64",
+        "native_modules": {
+          "_a22_native": {
+            "bytes": 41032,
+            "loaded_at_capture": false,
+            "path": "/workspace/scratch/4e46c8d0286a/verification replay/frozen/vendor/engine/kernel/native/_a22_native.cpython-312-x86_64-linux-gnu.so",
+            "sha256": "b968a17f31e85b9b1c8b0db44fd0f93d07bcb77e83f8a8510be1d0ba79f7a26f"
+          },
+          "_rounding_native": {
+            "bytes": 21880,
+            "loaded_at_capture": true,
+            "path": "/workspace/scratch/4e46c8d0286a/verification replay/frozen/vendor/engine/affine/_rounding_native.cpython-312-x86_64-linux-gnu.so",
+            "sha256": "29b1d226d6576e418c38d476cb050a20b37f6db67b6f70ca734423cac6985c57"
+          }
+        },
+        "numpy": "2.3.5",
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+        "python_build": [
+          "main",
+          "Aug 25 2026 14:00:49"
+        ],
+        "python_compiler": "Clang 22.1.3 ",
+        "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "python_executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "python_full": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "python_version": "3.12.14",
+        "scipy": "1.17.0",
+        "source_identity": "3ecdb7bd2e618c19fd89ac43f07eca18170865b0f68c1ce1100ba87b96520211",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "PYTHONHASHSEED": null
+        },
+        "uname": [
+          "Linux",
+          "f736e276a54f",
+          "6.18.55",
+          "#1 SMP Wed Oct 14 19:45:18 UTC 2026",
+          "x86_64",
+          "x86_64"
+        ]
+      }
+    },
+    {
+      "preparation": "plus_prefix18",
+      "phase": "replay_comparison",
+      "environment": {
+        "SOABI": "cpython-312-x86_64-linux-gnu",
+        "arithmetic_backend": "native",
+        "assertions_enabled": true,
+        "byteorder": "little",
+        "decimal_binary_sha256": null,
+        "decimal_context": "Context(prec=28, rounding=ROUND_HALF_EVEN, Emin=-999999, Emax=999999, capitals=1, clamp=0, flags=[], traps=[InvalidOperation, DivisionByZero, Overflow])",
+        "decimal_module": "built-in",
+        "float_info": "sys.float_info(max=1.7976931348623157e+308, max_exp=1024, max_10_exp=308, min=2.2250738585072014e-308, min_exp=-1021, min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)",
+        "libc": [
+          "glibc",
+          "2.39"
+        ],
+        "libmpdec_version": "4.0.0",
+        "machine": "x86_64",
+        "native_modules": {
+          "_a22_native": {
+            "bytes": 41032,
+            "loaded_at_capture": false,
+            "path": "/workspace/scratch/4e46c8d0286a/verification replay/frozen/vendor/engine/kernel/native/_a22_native.cpython-312-x86_64-linux-gnu.so",
+            "sha256": "b968a17f31e85b9b1c8b0db44fd0f93d07bcb77e83f8a8510be1d0ba79f7a26f"
+          },
+          "_rounding_native": {
+            "bytes": 21880,
+            "loaded_at_capture": true,
+            "path": "/workspace/scratch/4e46c8d0286a/verification replay/frozen/vendor/engine/affine/_rounding_native.cpython-312-x86_64-linux-gnu.so",
+            "sha256": "29b1d226d6576e418c38d476cb050a20b37f6db67b6f70ca734423cac6985c57"
+          }
+        },
+        "numpy": "2.3.5",
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+        "python_build": [
+          "main",
+          "Aug 25 2026 14:00:49"
+        ],
+        "python_compiler": "Clang 22.1.3 ",
+        "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "python_executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "python_full": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "python_version": "3.12.14",
+        "scipy": "1.17.0",
+        "source_identity": "3ecdb7bd2e618c19fd89ac43f07eca18170865b0f68c1ce1100ba87b96520211",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "PYTHONHASHSEED": null
+        },
+        "uname": [
+          "Linux",
+          "f736e276a54f",
+          "6.18.55",
+          "#1 SMP Wed Oct 14 19:45:18 UTC 2026",
+          "x86_64",
+          "x86_64"
+        ]
+      }
+    },
+    {
+      "preparation": "minus_prefix18",
+      "phase": "production_audit",
+      "environment": {
+        "SOABI": "cpython-312-x86_64-linux-gnu",
+        "arithmetic_backend": "native",
+        "assertions_enabled": true,
+        "byteorder": "little",
+        "decimal_binary_sha256": null,
+        "decimal_context": "Context(prec=28, rounding=ROUND_HALF_EVEN, Emin=-999999, Emax=999999, capitals=1, clamp=0, flags=[], traps=[InvalidOperation, DivisionByZero, Overflow])",
+        "decimal_module": "built-in",
+        "float_info": "sys.float_info(max=1.7976931348623157e+308, max_exp=1024, max_10_exp=308, min=2.2250738585072014e-308, min_exp=-1021, min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)",
+        "libc": [
+          "glibc",
+          "2.39"
+        ],
+        "libmpdec_version": "4.0.0",
+        "machine": "x86_64",
+        "native_modules": {
+          "_a22_native": {
+            "bytes": 41032,
+            "loaded_at_capture": false,
+            "path": "/workspace/scratch/4e46c8d0286a/verification replay/frozen/vendor/engine/kernel/native/_a22_native.cpython-312-x86_64-linux-gnu.so",
+            "sha256": "b968a17f31e85b9b1c8b0db44fd0f93d07bcb77e83f8a8510be1d0ba79f7a26f"
+          },
+          "_rounding_native": {
+            "bytes": 21880,
+            "loaded_at_capture": true,
+            "path": "/workspace/scratch/4e46c8d0286a/verification replay/frozen/vendor/engine/affine/_rounding_native.cpython-312-x86_64-linux-gnu.so",
+            "sha256": "29b1d226d6576e418c38d476cb050a20b37f6db67b6f70ca734423cac6985c57"
+          }
+        },
+        "numpy": "2.3.5",
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+        "python_build": [
+          "main",
+          "Aug 25 2026 14:00:49"
+        ],
+        "python_compiler": "Clang 22.1.3 ",
+        "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "python_executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "python_full": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "python_version": "3.12.14",
+        "scipy": "1.17.0",
+        "source_identity": "3ecdb7bd2e618c19fd89ac43f07eca18170865b0f68c1ce1100ba87b96520211",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "PYTHONHASHSEED": null
+        },
+        "uname": [
+          "Linux",
+          "f736e276a54f",
+          "6.18.55",
+          "#1 SMP Wed Oct 14 19:45:18 UTC 2026",
+          "x86_64",
+          "x86_64"
+        ]
+      }
+    },
+    {
+      "preparation": "minus_prefix18",
+      "phase": "replay_comparison",
+      "environment": {
+        "SOABI": "cpython-312-x86_64-linux-gnu",
+        "arithmetic_backend": "native",
+        "assertions_enabled": true,
+        "byteorder": "little",
+        "decimal_binary_sha256": null,
+        "decimal_context": "Context(prec=28, rounding=ROUND_HALF_EVEN, Emin=-999999, Emax=999999, capitals=1, clamp=0, flags=[], traps=[InvalidOperation, DivisionByZero, Overflow])",
+        "decimal_module": "built-in",
+        "float_info": "sys.float_info(max=1.7976931348623157e+308, max_exp=1024, max_10_exp=308, min=2.2250738585072014e-308, min_exp=-1021, min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)",
+        "libc": [
+          "glibc",
+          "2.39"
+        ],
+        "libmpdec_version": "4.0.0",
+        "machine": "x86_64",
+        "native_modules": {
+          "_a22_native": {
+            "bytes": 41032,
+            "loaded_at_capture": false,
+            "path": "/workspace/scratch/4e46c8d0286a/verification replay/frozen/vendor/engine/kernel/native/_a22_native.cpython-312-x86_64-linux-gnu.so",
+            "sha256": "b968a17f31e85b9b1c8b0db44fd0f93d07bcb77e83f8a8510be1d0ba79f7a26f"
+          },
+          "_rounding_native": {
+            "bytes": 21880,
+            "loaded_at_capture": true,
+            "path": "/workspace/scratch/4e46c8d0286a/verification replay/frozen/vendor/engine/affine/_rounding_native.cpython-312-x86_64-linux-gnu.so",
+            "sha256": "29b1d226d6576e418c38d476cb050a20b37f6db67b6f70ca734423cac6985c57"
+          }
+        },
+        "numpy": "2.3.5",
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+        "python_build": [
+          "main",
+          "Aug 25 2026 14:00:49"
+        ],
+        "python_compiler": "Clang 22.1.3 ",
+        "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "python_executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "python_full": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "python_version": "3.12.14",
+        "scipy": "1.17.0",
+        "source_identity": "3ecdb7bd2e618c19fd89ac43f07eca18170865b0f68c1ce1100ba87b96520211",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "PYTHONHASHSEED": null
+        },
+        "uname": [
+          "Linux",
+          "f736e276a54f",
+          "6.18.55",
+          "#1 SMP Wed Oct 14 19:45:18 UTC 2026",
+          "x86_64",
+          "x86_64"
+        ]
+      }
+    }
+  ],
+  "notes": [
+    "Captured in the original replay verification processes, not inferred from the packaging runtime.",
+    "Native hashes identify the archived files; loaded_at_capture preserves the actual observed import status.",
+    "The default Decimal context is distinct from the engine directed contexts (160 digits). No binary was rebuilt."
+  ]
+}

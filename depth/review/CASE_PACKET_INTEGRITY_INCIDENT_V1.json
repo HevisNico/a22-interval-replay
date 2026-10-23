@@ -1,0 +1,132 @@
+{
+  "status": "Local certificate packet integrity discrepancy caught before final aggregation",
+  "rows": [
+    {
+      "case": "nominal",
+      "path": "checkpoints/A22_nominal_068_certificate.zip",
+      "expected_sha256": "e5ca94b0e12667e360f705032864e6ee759b3179890a495f975d8a5a1a2d5e0b",
+      "actual_sha256": "e5ca94b0e12667e360f705032864e6ee759b3179890a495f975d8a5a1a2d5e0b",
+      "bytes": 10117778,
+      "original_save_receipt": {
+        "archive_sha256": "e5ca94b0e12667e360f705032864e6ee759b3179890a495f975d8a5a1a2d5e0b",
+        "kind": "case_certificate",
+        "preparation": "nominal",
+        "depth": 68,
+        "status": "succeeded",
+        "library_file_id": "libfile_8024b73d7a2481919bf8d8926ca360bd",
+        "file_id": "file_00000000c680824394f52ce916ab507f",
+        "file_name": "A22_nominal_068_certificate.zip",
+        "version": 0
+      },
+      "crc_error": null,
+      "entries": 16,
+      "valid": true
+    },
+    {
+      "case": "plus",
+      "path": "checkpoints/A22_plus_068_certificate.zip",
+      "expected_sha256": "be2db10216f884d3be6a3150bc10462c6106ab7184d9b63caf3667feabb83024",
+      "actual_sha256": "be2db10216f884d3be6a3150bc10462c6106ab7184d9b63caf3667feabb83024",
+      "bytes": 10124600,
+      "original_save_receipt": {
+        "archive_sha256": "be2db10216f884d3be6a3150bc10462c6106ab7184d9b63caf3667feabb83024",
+        "kind": "case_certificate",
+        "preparation": "plus",
+        "depth": 68,
+        "status": "succeeded",
+        "library_file_id": "libfile_b352d3552f2c8191b094b679633a3758",
+        "file_id": "file_00000000bed08243aad53bd8940e35a9",
+        "file_name": "A22_plus_068_certificate.zip",
+        "version": 0
+      },
+      "crc_error": null,
+      "entries": 16,
+      "valid": true
+    },
+    {
+      "case": "minus",
+      "path": "checkpoints/A22_minus_068_certificate.zip",
+      "expected_sha256": "20d667cbbc902ad2ed44e5e4cec3a94a36f91a338939855d1fb38bdf95df5341",
+      "actual_sha256": "20d667cbbc902ad2ed44e5e4cec3a94a36f91a338939855d1fb38bdf95df5341",
+      "bytes": 10125250,
+      "original_save_receipt": {
+        "archive_sha256": "20d667cbbc902ad2ed44e5e4cec3a94a36f91a338939855d1fb38bdf95df5341",
+        "kind": "case_certificate",
+        "preparation": "minus",
+        "depth": 68,
+        "status": "succeeded",
+        "library_file_id": "libfile_3a332fb13f3081918f8d2718eeb93099",
+        "file_id": "file_00000000348c8211bb37324d2bad25d3",
+        "file_name": "A22_minus_068_certificate.zip",
+        "version": 0
+      },
+      "crc_error": null,
+      "entries": 16,
+      "valid": true
+    },
+    {
+      "case": "plus_prefix18",
+      "path": "checkpoints/A22_plus_prefix18_068_certificate.zip",
+      "expected_sha256": "76b550728bfa9304711974bd57c20e944cd570f176e814a31831b71760c8217a",
+      "actual_sha256": "f43a6cd9ba9b5248180c2dd911f6d94850111ad4f54b04d98c0723ad2f59d24f",
+      "bytes": 6779791,
+      "original_save_receipt": {
+        "archive_sha256": "76b550728bfa9304711974bd57c20e944cd570f176e814a31831b71760c8217a",
+        "kind": "case_certificate",
+        "preparation": "plus_prefix18",
+        "depth": 68,
+        "status": "succeeded",
+        "library_file_id": "libfile_dcf3a514be34819194cf258f522a3510",
+        "file_id": "file_00000000d100821190263725c646a3e8",
+        "file_name": "A22_plus_prefix18_068_certificate.zip",
+        "version": 0
+      },
+      "zip_error": "BadZipFile: File is not a zip file",
+      "valid": false
+    },
+    {
+      "case": "minus_prefix18",
+      "path": "checkpoints/A22_minus_prefix18_068_certificate.zip",
+      "expected_sha256": "ff20075d65e26f2f6ae95c3f29ec705852e9e85b511678fd2307431bf81f75d5",
+      "actual_sha256": "ff20075d65e26f2f6ae95c3f29ec705852e9e85b511678fd2307431bf81f75d5",
+      "bytes": 10120015,
+      "original_save_receipt": {
+        "archive_sha256": "ff20075d65e26f2f6ae95c3f29ec705852e9e85b511678fd2307431bf81f75d5",
+        "kind": "case_certificate",
+        "preparation": "minus_prefix18",
+        "depth": 68,
+        "status": "succeeded",
+        "library_file_id": "libfile_80194524a5c88191b761c3f2060c3cbe",
+        "file_id": "file_00000000a7d08246ad5b11dc19487e53",
+        "file_name": "A22_minus_prefix18_068_certificate.zip",
+        "version": 0
+      },
+      "crc_error": null,
+      "entries": 16,
+      "valid": true
+    },
+    {
+      "case": "interface",
+      "path": "checkpoints/A22_interface_128_certificate.zip",
+      "expected_sha256": "ce66c9b05a633fd4450a364c66a3d89aa02c7af8bec517ac08b9c87f7ebf103a",
+      "actual_sha256": "ce66c9b05a633fd4450a364c66a3d89aa02c7af8bec517ac08b9c87f7ebf103a",
+      "bytes": 17908504,
+      "original_save_receipt": {
+        "kind": "case_certificate",
+        "preparation": "interface",
+        "depth": 128,
+        "archive_sha256": "ce66c9b05a633fd4450a364c66a3d89aa02c7af8bec517ac08b9c87f7ebf103a",
+        "status": "succeeded",
+        "library_file_id": "libfile_c5e987c85aa881919f1e4a673b3c0cee",
+        "file_id": "file_000000005a0481f4a8f6385e595655d3",
+        "file_name": "A22_interface_128_certificate.zip",
+        "version": 0
+      },
+      "crc_error": null,
+      "entries": 16,
+      "valid": true
+    }
+  ],
+  "scope": "Scientific checkpoint/source chain authenticated separately in RECOVERY_FINAL_V1.json. Remote old case packet bytes have not been reread and are not asserted corrupt or intact. Existing archives and receipts are preserved. New separately named replacements will be reconstructed from authenticated inputs.",
+  "observed_at_unix": 1792768510.030883
+}

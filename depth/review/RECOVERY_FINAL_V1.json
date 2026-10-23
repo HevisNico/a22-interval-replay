@@ -1,0 +1,150 @@
+{
+  "status": "PASS: all 468 layers, 5616 payloads and full receipt parent chains restored and authenticated; native gated reuse passed",
+  "counts": {
+    "interface": 128,
+    "minus_prefix18": 68,
+    "minus": 68,
+    "nominal": 68,
+    "plus_prefix18": 68,
+    "plus": 68
+  },
+  "cells": 5616,
+  "bundle_chain": [
+    {
+      "archive": "A22_recovery_through_015.zip",
+      "sha256": "b4a49af317e1ed0c284420db2373dd2fdf5708e870cc5ca17de0fad8393a0be5",
+      "library_file_id": "libfile_b41a4226993081919a0b33755d25831b"
+    },
+    {
+      "archive": "A22_recovery_through_020.zip",
+      "sha256": "e623fcf4a8960407a98bb5bdc0626b3e3c8393bf91db2e1b96c60eef1fb6ba5d",
+      "library_file_id": "libfile_5937dd6600308191a908403dfa79127d"
+    },
+    {
+      "archive": "A22_recovery_through_025.zip",
+      "sha256": "2c6dd0ec3ff8e1f4719d12964ea9482fb7fce0e6fd176907b114045a51376e20",
+      "library_file_id": "libfile_c0633a5807e4819182e1b7199874a948"
+    },
+    {
+      "archive": "A22_recovery_through_030.zip",
+      "sha256": "b8532611cf3bab1d8112630fb8e0ae8c6f96486f70f6351c06c7e8e20019e76c",
+      "library_file_id": "libfile_dee629983cc081918a452d201b2f321a"
+    },
+    {
+      "archive": "A22_recovery_through_035.zip",
+      "sha256": "31edd4743d375b37a67f6f9d7c1b9f6c50e93da0ef7c1818442df99a4fa2375c",
+      "library_file_id": "libfile_0839de0c3cdc819181a0164e7f5645cd"
+    },
+    {
+      "archive": "A22_recovery_through_040.zip",
+      "sha256": "7023f39f04f71f41f35e4a7ca781f82eaec9b857b33a19d6631ee209ef9e21ea",
+      "library_file_id": "libfile_981517f71a5c8191a658f00b928b1451"
+    },
+    {
+      "archive": "A22_recovery_through_045.zip",
+      "sha256": "858c602eb6b2bc8e1a84bb1fd3df421ce191606eded4d169cacee681ba15866d",
+      "library_file_id": "libfile_c8ad1bdef0f88191a43b8ef8e99622ad"
+    },
+    {
+      "archive": "A22_recovery_through_050.zip",
+      "sha256": "021c35bc3e8fd99245767f28d746ca78a827a2eb68698cfa0edac1d72b430bba",
+      "library_file_id": "libfile_abcb879332c88191b20521b4c6767030"
+    },
+    {
+      "archive": "A22_recovery_through_055.zip",
+      "sha256": "dc7ad86eb7f115897960858a648d458e20aac70b0079a20ecb7daeaf7620eb6b",
+      "library_file_id": "libfile_65994257e4a08191b7934845bbb238fd"
+    },
+    {
+      "archive": "A22_recovery_through_060.zip",
+      "sha256": "b3d21d6b19e95d325b406f0eb34d7c5c607c417dcf195fffc53b3ee61ceb324a",
+      "library_file_id": "libfile_1fed11be70608191a67a4423314ff327"
+    },
+    {
+      "archive": "A22_recovery_through_065.zip",
+      "sha256": "d225fe72cda16c3125e0b70eb8ad1b6e23ee010c05c820e6f7ecce7045640648",
+      "library_file_id": "libfile_834ca8f1da3881919680f3d1ab93972e"
+    },
+    {
+      "archive": "A22_recovery_through_070.zip",
+      "sha256": "3c9af85d1cb6fa56146a405e879f93babb8223dd39b99822f031501368c80efb",
+      "library_file_id": "libfile_2cb0bd7a6c3c81918d6bf5367dac02d5"
+    },
+    {
+      "archive": "A22_recovery_through_075.zip",
+      "sha256": "7fded33d35cd1b66e9269de03ce1eac85a9c21cdef3a5322fb741bb2c3d07e31",
+      "library_file_id": "libfile_7ba935e887ac8191b0cf8f228e020da8"
+    },
+    {
+      "archive": "A22_recovery_through_080.zip",
+      "sha256": "51fc425e827126f69283be9bf897076d8cd020cd697ba3d4bca51681cd02ed81",
+      "library_file_id": "libfile_da55031a9de08191b60bbcdd2612c428"
+    },
+    {
+      "archive": "A22_recovery_through_085.zip",
+      "sha256": "baa148aabb449124af7f38ee3e7e704bc39b844a661a80dd3f55b47d1b801bd1",
+      "library_file_id": "libfile_519754479f748191b2a1c0d1ff56f3e0"
+    },
+    {
+      "archive": "A22_recovery_through_090.zip",
+      "sha256": "65d94bf0cc245a0719a1aeca9004209fc35f8195c1b079b69961546077774942",
+      "library_file_id": "libfile_c6a4ec45bda48191ad8ac71cf4b3b38d"
+    },
+    {
+      "archive": "A22_recovery_through_095.zip",
+      "sha256": "7eb83273ec739dce3eedec6b88b715ca92978ae76c33120efcc9a62c3c6603ed",
+      "library_file_id": "libfile_412b1e706840819182b00a76b6b7f36a"
+    },
+    {
+      "archive": "A22_recovery_through_100.zip",
+      "sha256": "73a5f6faaa55aeb5c45bbf467e22a3c152c3d1d54b8b004054b5a9eb9e0ddde8",
+      "library_file_id": "libfile_fdfa12fb87f48191a82a4e4ad7fb575a"
+    },
+    {
+      "archive": "A22_recovery_through_105.zip",
+      "sha256": "16850356a578ccb2647ec2d5b656d93bbcde79ec4962c3cedb2b598276344153",
+      "library_file_id": "libfile_a9ae6e372630819194c2c02eea7007f0"
+    },
+    {
+      "archive": "A22_recovery_through_110.zip",
+      "sha256": "48acbc17775dc91099fbd1420738ac064adcd25d2c2e6d6ef2e593f1b5fce553",
+      "library_file_id": "libfile_c9978faef1f88191a2d048a937ff104e"
+    },
+    {
+      "archive": "A22_recovery_through_115.zip",
+      "sha256": "5b3108d44d49b6058249997afb7bcfedabdd619b13684b4c2fa8154d294132d1",
+      "library_file_id": "libfile_09cf0b19e1548191ad26228b93c28c37"
+    },
+    {
+      "archive": "A22_recovery_through_120.zip",
+      "sha256": "d8f528b2f8808b9d6852a68ed777c72a4cc3b9bab67bbcd1c5dff4e998d40fc5",
+      "library_file_id": "libfile_51ed71f033448191ae37d80352556f62"
+    },
+    {
+      "archive": "A22_recovery_through_125.zip",
+      "sha256": "19e171e1e5af353b41ed11d907726e27887eb51c5513cd386eee0d2711f2fe5e",
+      "library_file_id": "libfile_55b0a2b83b3081919c394ba485af0ef0"
+    },
+    {
+      "archive": "A22_final_recovery.zip",
+      "sha256": "1ca1f8599abd5806a5e522ad5f8f2d03e41ed44cbfa0c8fe71f891c719880d13",
+      "library_file_id": "libfile_f27d031ccdbc8191b3928dbfb5325b17"
+    }
+  ],
+  "script_sha256": "0eb4add36f9de57cdb89cc11e6c1e5216f3ecf33ba02d20b2e9e84bf9524b816",
+  "restorer_sha256": "9c9ceabd942fa6d1422368c67aff5babc866c7786522d14f7da6ccaf78ecf591",
+  "native_resume_smoke": {
+    "case": "nominal",
+    "reused_layers": [
+      1,
+      2
+    ],
+    "external_save_gate": true,
+    "returncode": 0
+  },
+  "logs": {
+    "final_restore.log": "57afe493ea16cb4523c2c020e52fadb5e81fb5c3ec10e91d37f1f43bf4ef799e",
+    "final_native_resume.log": "e5e0e512fa006a082972565f4fcaeb9070023cd7f2804d3188e338577b686ebd"
+  },
+  "scope": "Separate restore tree; no production engine, original certificate or checkpoint modified."
+}

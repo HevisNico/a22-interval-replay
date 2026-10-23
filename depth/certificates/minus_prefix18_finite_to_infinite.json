@@ -1,0 +1,49 @@
+{
+  "status": "PASS: finite obligations bound to manual infinite-tail composition under A1-A4",
+  "preparation": "minus_prefix18",
+  "validated_prefix_depth": 68,
+  "training_cohorts": 54,
+  "maximum_training_diameter_upper": "0.1042003999584236692584864170781145842020255182101735518623897160192525003874569343227898949627114420920564930265143047242554926905636124039567104156803374193",
+  "minimum_same_lane_gap_lower": "15.58644727296364295069454355198266338352785762106044142245447115653199069773607015898938852612159760457875618817370683825579955729485257103045272679902119696628",
+  "future_cohort_diameter_upper": "0.00052293541506",
+  "training_to_first_future_gap_lower": "99.99947706465293509945897840576366836682475502363566440786671426334853",
+  "tail_theorem": "Homogeneous fresh-tail monotonicity and translation bounds",
+  "common_asymptotic_duration_enclosure": [
+    "0.666573250880782846132521779480839541065506637096405029296875",
+    "0.66657325088078284681773755249167834335821680724620819091796875"
+  ],
+  "source_identity": "3ecdb7bd2e618c19fd89ac43f07eca18170865b0f68c1ce1100ba87b96520211",
+  "inputs": {
+    "campaign": {
+      "path": "runs/minus_prefix18_v1/campaign.json",
+      "sha256": "cdaf747c12cf0f79f726f72e452c7d736d80738b45f4e0694b877d326d62a031"
+    },
+    "boundary": {
+      "path": "runs/minus_prefix18_v1/contracts_v2_from_1116_through_068.json",
+      "sha256": "fa7da4a1b16d51b16395bea19dd21df8eb1a72c8dda00204bb6ae9ed7e29e959"
+    },
+    "audit": {
+      "path": "audits/minus_prefix18_through_068.json",
+      "sha256": "1cd3bc2593ce3841b7c59d2d80826fd6487bdd0dd00313a5fc51c679756cae15"
+    },
+    "tail": {
+      "path": "theory/A22_learning_speed_and_local_pipeline_EN/results/conditional_tail_certificate.json",
+      "sha256": "e75d3bc93d6f6859a256f7b70ff2fe52d22976464ead2ebcfe0240b064a03c88"
+    },
+    "rechecks": {
+      "path": "audits/theory_rechecks.json",
+      "sha256": "1e34b0b1f51d540ddd5f1770fb06e5bc74c173267489703260e2e9d6b9f31a65"
+    },
+    "manual_composition": {
+      "path": "supervision/FINITE_TO_INFINITE.md",
+      "sha256": "a5f101e31681b30dd5a4070f59ea372becaefa968b6a388573555a5b44e7b953"
+    }
+  },
+  "composer_sha256": "27fa3a7fa1029aac1e9a64fac084684e0ce1ff9b20150c5897195132ada6d19f",
+  "scope": "One prescribed realization; original future source class: first >=1116, gaps >=20.",
+  "proof_level": "Manual source argument with directed checks; no proof-assistant or independent runtime qualification claim.",
+  "remaining_assumptions": [
+    "Upstream A1-A4 and manual source-coverage argument",
+    "Correctness of the recorded interpreter, native interval arithmetic and execution environment"
+  ]
+}

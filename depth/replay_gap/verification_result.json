@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "archives": 9,
+  "recomputed_cells": 108,
+  "layer68_cells": 36,
+  "normalized_provenance_matches": 36,
+  "differences_exactly_parents": 36,
+  "aggregate_normalized_sha256": "cec51daddf8b10d3031a7d303aef908db1eaa185d9518dbb0ef0b8a852f8c6e6"
+}

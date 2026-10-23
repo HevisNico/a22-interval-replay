@@ -1,0 +1,23 @@
+{
+  "status": "PASS: new versioned review packet reconstructed from authenticated original sources/checkpoints; CRC and every composed input checked again after successful save",
+  "original_local_packet_sha256": "f43a6cd9ba9b5248180c2dd911f6d94850111ad4f54b04d98c0723ad2f59d24f",
+  "original_local_packet_bytes": 6779791,
+  "original_local_packet_retained": "checkpoints/A22_plus_prefix18_068_certificate.zip",
+  "replacement": {
+    "archive_sha256": "9c4a3501d6c95ddb32c1607010436381fb0600c97b48ddaab77280d4610c52de",
+    "kind": "case_certificate_recovered",
+    "preparation": "plus_prefix18",
+    "depth": 68,
+    "supersedes_local_packet_only": "A22_plus_prefix18_068_certificate.zip",
+    "status": "succeeded",
+    "library_file_id": "libfile_9d1dbba6ab3c8191802559423fbcb4cc",
+    "file_id": "file_00000000a8b88246aef878a79e5d7c44",
+    "file_name": "A22_plus_prefix18_068_certificate_v2_recovered.zip",
+    "version": 0,
+    "path": "checkpoints/A22_plus_prefix18_068_certificate_v2_recovered.zip",
+    "bytes": 10126568
+  },
+  "core_source_validation": "RECOVERY_FINAL_V1.json authenticated all 468 original layer ZIPs, all 5616 payloads and parent receipt chains. The new packet contains the unchanged six-input manual composition bindings for plus_prefix18.",
+  "remaining_obligation": "Cause and time of the local review-packet truncation are not determined. Previously saved remote packet bytes were not reread and are not asserted valid or invalid. Runtime/compiler/storage qualification and independent review remain outside this work.",
+  "source_changes": "Packaging-only new script; scientific engine, model, theoretical sources, reports, states and emissions unchanged."
+}

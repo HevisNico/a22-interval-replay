@@ -56,6 +56,24 @@ property; they cannot establish it for every point of the box.
 as the model specifies; v3.2 shared them across the three ports of a cell. The more general model costs
 at most 5 % of width (layer 18: 7.28e-3 against 6.91e-3).*
 
+## New in v4.0-depth: arbitrary depth
+
+The 18-layer result above now extends to **arbitrary depth** ([`depth/README.md`](depth/README.md)). For
+six prescribed realizations, the complete training transient is certified through 68 layers (128 for a
+connected two-region case). The learned state enters a tail contract that manual theorems carry through
+every deeper layer. As a result:
+
+- **one limiting duration per layer, common to all lanes** of a medium;
+- **independence from the preparation**: two different upstream preparations followed by the same medium
+  reach exactly the same limiting duration (u₀ = 0.666573250880782846…), and keep only a bounded phase offset;
+- **the speed belongs to the medium**: homogeneous media with gains shifted by ±1e-5 have the distinct
+  durations u₊ < u₀ < u₋;
+- **exact transmission of every admissible future pulse word, at any depth**.
+
+The proof level is the same as above: a manual proof under A1–A4, with directed-rounding computations,
+not yet independently reviewed. It covers six prescribed realizations, not the whole uncertainty box.
+To check the release assets, run `python3 -I tools/verify_depth_assets.py <assets folder>`.
+
 ## Origin of the model
 
 The physical kernel of A22 is inspired by the **Reset Operator** of Nicolas Breuillaud (*The Reset
@@ -139,6 +157,8 @@ about the recorded campaign. See [results/HASHES.md](results/HASHES.md) for both
 
 | Path | What it is |
 |---|---|
+| `depth/` | The v4.0-depth extension: summary, certificates, theory, review records, layer index, verification replay |
+| `tools/verify_depth_assets.py` | Read-only integrity check of the v4.0-depth release assets |
 | `proof/` | The proof dossier (theorems, lemmas, certificates, audit outputs, scripts); see `proof/OMITTED_IN_REPOSITORY.md` |
 | `engine/` | The exact v3.3 program sources used for the campaign (physics kernel unchanged since the first release) |
 | `tools/` | The read-only check scripts (same files as `engine/tools/`) |

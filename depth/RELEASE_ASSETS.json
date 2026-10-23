@@ -1,0 +1,89 @@
+{
+ "release": "v4.0-depth",
+ "assets": [
+  {
+   "name": "A22_depth_propagation_theory_EN.zip",
+   "bytes": 198144,
+   "sha256": "ea1efea831963092d3836d3a2784903f7c1112027b55697076a576774bf8fd94",
+   "content": "Theory dossier: depth propagation, finite contraction, obstructions."
+  },
+  {
+   "name": "A22_final_reviewed_v3.zip",
+   "bytes": 173956390,
+   "sha256": "5ed7d2cb8e27bff314067a3abb7d6a338426f4a5909e3c2707ec41c63a27806c",
+   "content": "Final reviewed envelope: six case certificates (boundary layer, contracts, compositions), final review, integrity records."
+  },
+  {
+   "name": "A22_learning_speed_and_local_pipeline_EN.zip",
+   "bytes": 5238706,
+   "sha256": "eb0c655ff928fdf25f7a3261f5e13949565f8f4fb2c16969f46b0249dc29ad6f",
+   "content": "Theory dossier: conditional tail theorems, local pipeline, point diagnostics."
+  },
+  {
+   "name": "A22_recovery_through_015.zip",
+   "bytes": 50904335,
+   "sha256": "b4a49af317e1ed0c284420db2373dd2fdf5708e870cc5ca17de0fad8393a0be5",
+   "content": "Incremental recovery snapshot (layer archives of the six preparations up to this interface depth)."
+  },
+  {
+   "name": "A22_recovery_through_020.zip",
+   "bytes": 26082940,
+   "sha256": "e623fcf4a8960407a98bb5bdc0626b3e3c8393bf91db2e1b96c60eef1fb6ba5d",
+   "content": "Incremental recovery snapshot (layer archives of the six preparations up to this interface depth)."
+  },
+  {
+   "name": "A22_recovery_through_025.zip",
+   "bytes": 35589328,
+   "sha256": "2c6dd0ec3ff8e1f4719d12964ea9482fb7fce0e6fd176907b114045a51376e20",
+   "content": "Incremental recovery snapshot (layer archives of the six preparations up to this interface depth)."
+  },
+  {
+   "name": "A22_recovery_through_030.zip",
+   "bytes": 42014435,
+   "sha256": "b8532611cf3bab1d8112630fb8e0ae8c6f96486f70f6351c06c7e8e20019e76c",
+   "content": "Incremental recovery snapshot (layer archives of the six preparations up to this interface depth)."
+  },
+  {
+   "name": "A22_recovery_through_035.zip",
+   "bytes": 58098169,
+   "sha256": "31edd4743d375b37a67f6f9d7c1b9f6c50e93da0ef7c1818442df99a4fa2375c",
+   "content": "Incremental recovery snapshot (layer archives of the six preparations up to this interface depth)."
+  },
+  {
+   "name": "A22_recovery_through_040.zip",
+   "bytes": 67026453,
+   "sha256": "7023f39f04f71f41f35e4a7ca781f82eaec9b857b33a19d6631ee209ef9e21ea",
+   "content": "Incremental recovery snapshot (layer archives of the six preparations up to this interface depth)."
+  },
+  {
+   "name": "A22_recovery_through_045.zip",
+   "bytes": 89049242,
+   "sha256": "858c602eb6b2bc8e1a84bb1fd3df421ce191606eded4d169cacee681ba15866d",
+   "content": "Incremental recovery snapshot (layer archives of the six preparations up to this interface depth)."
+  },
+  {
+   "name": "A22_recovery_through_050.zip",
+   "bytes": 118421518,
+   "sha256": "021c35bc3e8fd99245767f28d746ca78a827a2eb68698cfa0edac1d72b430bba",
+   "content": "Incremental recovery snapshot (layer archives of the six preparations up to this interface depth)."
+  },
+  {
+   "name": "A22_recovery_through_interface128_data_part01.zip",
+   "bytes": 292563933,
+   "sha256": "7097a2d504325ea0c87987ee9aea7e93cc6721c54b02e2e480b5cfca304ef3d9",
+   "content": "Interface preparation, layer archives 001-096."
+  },
+  {
+   "name": "A22_recovery_through_interface128_data_part02.zip",
+   "bytes": 274638579,
+   "sha256": "2596d82b79f06d70aed212a366311eec397287fb1e0b6c6b4fb52c5a61f136aa",
+   "content": "Interface preparation, layer archives 097-128."
+  },
+  {
+   "name": "A22_verification_replay_complet.zip",
+   "bytes": 22370561,
+   "sha256": "279979234705ffea87c9ff68a01895bedd70fe38c4afbb5582e7a304e4c4f285",
+   "content": "Verification replay of the six lost intermediate archives, with comparison and environment reports."
+  }
+ ]
+}
