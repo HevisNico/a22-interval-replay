@@ -1,0 +1,33 @@
+PACKAGE VALIDATION — v3.3
+
+Program source identity before the target build (run.identity() with no
+built extension present): 426eefc40a4c77e8649827b06e3d3cb6e40832b3f678f48c146535c24c60d944
+The identity changes when the extensions are built on the target machine.
+That is expected; the campaign freezes the post-build identity.
+
+Diagnosis of the stopped campaign (A22_fresh_001, layer 18, cells 1 and 11)
+--------------------------------------------------------------------------
+- The program used was byte-identical to the previous package.
+- Cell (18,1) was replayed from the stored layer-17 results. The refusal is
+  reproduced at event 108 (t = 215.85-215.87), slow recovery, b = 0.380,
+  one actuation history: ell(boundary) in [-0.0010, 0.0110], i.e. the
+  return to READY may fall on either side of an overlapping event group.
+- Cause: plain parameter boxes. The layer-17 date widths of that campaign
+  were 4-10x those of v3.2 (worst 0.057 vs 0.0074).
+- Fix R alone resolves this refusal on the stored inputs (the kernel's
+  local-cycle resolver certified the window). The joined state is then too
+  wide for the next event cluster, which confirms that the enclosures, not
+  the event logic, were the root problem. Hence fix P.
+
+Checks on this exact package
+----------------------------
+- Physics kernel (kernel/): unchanged, byte for byte.
+- Tests: 77/77 pass (61 of v3.2, 5 diagnostic-tool tests, 11 new tests of
+  fixes P and R). Two v3.2 tests that pin every symbol to an exact point
+  switch off the per-port coverage check while sampling.
+- Fresh layers 1-3 (8 workers): maximum date widths 1.587e-4, 3.536e-4,
+  1.004e-3; v3.2 had 1.587e-4, 3.536e-4, 1.001e-3; the previous package
+  (plain boxes) had 1.748e-4, 4.435e-4, 1.235e-3.
+
+These checks establish package consistency and early-layer behaviour. They
+do not qualify the hybrid reachability mathematics.
