@@ -70,12 +70,54 @@ forces one common duration for both half-rings, with a fixed spatial phase profi
 - *Coordination.* In the connected `interface` medium, the two half-rings cannot run at different
   asymptotic speeds.
 
+## New in v4.1: speed as a statistical property of the medium, and speed ceilings
+
+Three further results extend the tail (`ergodic/` and `cone/`). They are manual proofs with
+directed-rounding lemmas, checked by two arithmetic implementations. No new campaign was run.
+
+**1. Heterogeneous tail** (`ergodic/01_HETEROGENEOUS_TAIL_EN.md`). The tail theorem now covers
+the real A22 parameter box: the perturbed constants C, M, L_m, L_s and L_e are chosen independently
+at every port, cell and layer (±1e-4 relative), and gain offsets independently per port. Protection,
+regeneration and a six-layer contraction (row overlap ρ₆ = 971/11664, β > 0.0092) hold with diameter
+0.11 at block boundaries. A second variant admits the *complete* initial box for the fresh tail
+cells, without resetting them to exact rest: initial ERROR tails, an initial charge memory bounded
+and summable over depth, and a first input at t ≥ 20. All six certified boundaries satisfy that
+condition: their first cohort arrives at t ≈ 209 (layer 68) or t ≈ 249 (layer 128).
+
+**2. Deterministic speed of a random medium** (`ergodic/02_ERGODIC_SPEED_EN.md`). Suppose the layer
+environments form a stationary ergodic sequence, for example i.i.d. layers; correlations inside a
+layer are allowed. Then Kingman's subadditive ergodic theorem gives, for almost every realization of
+the medium, **one deterministic limiting duration γ(P)**. It is shared by all lanes and by every
+preparation that enters the contract. The speed 1/γ(P) is therefore a property of the *statistical
+class* of the medium, not of its particular realization, nor of the preparation. Stationarity alone
+does not suffice; a counterexample is included.
+
+**3. Speed ceilings** (`cone/03_CAUSAL_CONE_EN.md`).
+
+| Front | Ceiling, in layers per time unit | Hypothesis |
+|---|---:|---|
+| Every cohort in the tail (exact-rest variant) | < 1.500248 | tail contract |
+| Every cohort in the tail (complete initial box, first cohort included) | < 1.500548 | tail contract, first input ≥ 20 |
+| First activation, during learning | < 18.234831 | none beyond the original initial box |
+
+In the exact-rest variant, the typical speed of every admissible tail medium lies between
+1/u₊ ≈ 1.500173 and the ceiling 1/u₋ ≈ 1.500248 (up to 1.500548 in the complete-initial-box variant).
+The narrowness of this window comes from the small gain box (±1e-5).
+
+**Combined statement.** Each of the six certified preparations, followed by any stationary ergodic
+random medium of the A22 box, propagates with the deterministic speed 1/γ(P), common to all lanes, and
+no admitted cohort exceeds the ceiling of its tail class.
+
 ## What is not claimed
 
-- Not the whole v3.3 uncertainty box: six prescribed realizations only.
-- Not one duration for all media. Different media have different durations. A medium that varies with
-  depth (for example long alternating blocks of η = ±1e-5) need not have a depth-average limit at all. The
-  statement is about a fixed medium.
+- Not the whole v3.3 uncertainty box upstream: entry into the tail contract is certified for six
+  prescribed preparations only. Entry for every preparation remains open.
+- Not one duration for all media. Different media, or different laws of random media, have different
+  durations. A deterministic medium that varies with depth (for example long alternating blocks of
+  η = ±1e-5) need not have a depth-average limit; stationary ergodic media do (v4.1).
+- No information cone for arbitrary perturbations of an already active network. Outside the contract,
+  a cell close to threshold can fire almost at once (`cone/03_CAUSAL_CONE_EN.md` §6).
+- No numerical value of γ(P) for a particular law beyond the bounds above.
 - No relativistic or Lorentz-invariance interpretation. A22 is oriented and inhomogeneous and cannot test one.
 - No proof-assistant verification and no independent expert review yet.
 
@@ -118,6 +160,16 @@ forces one common duration for both half-rings, with a fixed spatial phase profi
    replay chain and its layer-68 comparison. Expected last line: `PASS`. It does not run the engine.
 3. The finite inequalities themselves can be re-run from the case certificates inside
    `A22_final_reviewed_v3.zip` (`review_tools/` in each certificate, standard library only, without `-O`).
+4. The v4.1 lemmas, from inside each folder (standard library only):
+
+   ```
+   cd depth/ergodic && python3 verify.py && python3 verify_integer.py
+   cd depth/cone && python3 verify_cone.py
+   ```
+
+   Expected: `PASS_NUMERICAL_LEMMAS`, `PASS_INDEPENDENT_INTEGER_CRITICAL_CHECKS`,
+   `PASS_DECIMAL_AND_INTEGER_CONE_CHECKS`. The verifiers rewrite their JSON result files, so run them in
+   a copy if you want to keep the published bytes. Each folder's `SHA256SUMS` authenticates its files.
 
 ## Contents of this folder
 
@@ -129,6 +181,8 @@ forces one common duration for both half-rings, with a fixed spatial phase profi
 | `theory/` | The two theory texts and the conditional tail certificate |
 | `review/` | Adaptation note, review addenda, first-future and recovery records, integrity incident records |
 | `replay_gap/` | Verification-replay result, comparison report, environment report |
+| `ergodic/` | v4.1: heterogeneous tail and ergodic speed (proofs, verifiers, results, source snapshots) |
+| `cone/` | v4.1: speed ceilings and forward cones (proof, verifier, certificate; includes the `ergodic/` package as a dependency ZIP) |
 
 Several review documents were written in French (suffix `_FR`). The tables and JSON files are
 language-neutral.
@@ -139,4 +193,6 @@ The campaigns, the boundary checkers, the theory dossiers and the review addenda
 ChatGPT (OpenAI) under the author's direction. Claude (Anthropic) audited the packets, re-checked the
 hashes, the replay chain and the layer-68 comparison with its own code, independently recomputed the
 tail durations and the six-layer overlap bound, and wrote this summary and `tools/verify_depth_assets.py`.
-The author designed the questions and the preparations, and directed and validated the work.
+For v4.1, the heterogeneous-tail, ergodic-speed and cone packages were produced with ChatGPT. Claude
+reviewed them, independently recomputed ρ₆, β, both closure slacks, the tail roots and the global
+first-activation delay, and ran the three verifiers. The author designed the questions and the preparations, and directed and validated the work.

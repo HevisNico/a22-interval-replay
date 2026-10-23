@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: "Breuillaud"
     given-names: "Nicolas"
-version: "4.0-depth"
+version: "4.1"
 date-released: "2026-10-23"
 license: MIT
 abstract: >-
@@ -20,7 +20,10 @@ abstract: >-
   prescribed realizations: the full training transient is certified through 68 layers (128 for a
   connected two-region case), the learned state enters a tail contract, and every lane of a medium
   has one common limiting duration per layer, identical for different upstream preparations of the
-  same medium. The proof is not yet independently reviewed or machine-checked.
+  same medium. Release 4.1 extends the tail to the full independent parameter box, proves a
+  deterministic limiting speed for stationary ergodic random media (Kingman's subadditive ergodic
+  theorem), and gives speed ceilings for tail cohorts and for first activation during learning.
+  The proof is not yet independently reviewed or machine-checked.
   The code, diagnostics and proof were produced with the AI assistants Claude (Anthropic) and
   ChatGPT (OpenAI) under the author's direction. The physical kernel is inspired by the author's
   Reset Operator.

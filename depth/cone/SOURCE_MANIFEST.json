@@ -1,0 +1,10 @@
+{
+  "source_commit": "5b4e283e7d5162f406012687a80f9e4b5c3a3960",
+  "files": {
+    "directed.py": "a577108362a4868d7aa1279f1a7e254e5b6939e2967154678772f2ad6daf8ca0",
+    "integer_support.py": "14a0e34c13a006524cab836cb59b8a492706efa75240d499082a74a179063805",
+    "sources/model_reference.md": "6f8462431cd43714af99d2181d5d017b2de910381690665ba7875659c061fecf",
+    "dependencies/A22_points_1_2_heterogeneous_tail_ergodic_speed_EN.zip": "a1bc53f0824e1f53e342dc0392d755265f63dc469be584f47afc6fe2cde2438b"
+  },
+  "note": "Point 1-2 dependency is the previously delivered English ZIP, byte for byte; original-language model snapshot unchanged."
+}

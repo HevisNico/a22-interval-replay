@@ -1,0 +1,384 @@
+A22 — DOES LEARNING SELECT A PREPARATION-INDEPENDENT PROPAGATION DELAY?
+Targeted admissible-history study, local proofs and remaining obligation
+22 October 2026
+
+ANSWER AND EVIDENCE LEVEL
+
+The decisive distinction is between changing a finite learned prefix and
+changing the initial state of every fresh downstream cell. In the tested
+finite-prefix preparations, IDENTICAL fresh nominal layers recover the same
+progression delay. Different persistent delays occur when the initial gain
+perturbation is maintained throughout the fresh bulk. Therefore the bulk
+tests alone do not demonstrate transmission of two competing learned speeds.
+All infinite-depth conclusions still require a finite training-entry proof.
+
+There are three distinct results:
+
+PROVED WITH DIRECTED INEQUALITY CHECKS: two authorized initial states, under
+the actual 128-pulse source protocol, produce distinct persistent learned
+head delays in cell (1,0). Thus local learning does not erase all duration
+freedom. This alone does not decide asymptotic propagation speed.
+
+EXPLORATORY FULL-HISTORY COMPUTATIONS: six explicit authorized preparations
+were propagated through 192 fresh layers. No terminal gains were copied into
+new cells. Two homogeneous bulk preparations give different progression delays;
+two different 18-layer prefixes followed by identical nominal fresh cells give
+the same progression delay, with a surviving constant phase offset. A mixed
+bulk preparation with the real ring connections exhibits a common regional
+progression delay. These are point diagnostics, not validated enclosures.
+
+PROVED CONDITIONAL INFINITE-TAIL RESULT: a full-history entrance contract,
+suggested by the diagnostics, implies that deeper fresh cells cease changing
+their gains. Two homogeneous initial perturbations then have explicitly
+different asymptotic delays. A connected mixed-lane tail has one common
+asymptotic delay. Directed checks establish the tail inequalities, not the
+claim that the full learning prefix reaches this contract.
+
+Separately, the supplied 18-layer future certificate supports a local
+pipeline theorem with source gaps >=7, replacing global rest between waves.
+This improvement applies to its existing certified domain, not automatically
+to fresh deeper cells.
+
+1. PREPARATIONS AND WHAT WAS ACTUALLY RUN
+
+The physical constants are nominal and identical in all runs. The source
+is lane 0 only, at times 8k, k=0,...,127. Every fresh cell starts at time zero
+with q=0.1, auxiliary charges 0.025 in READY, b=0.08, reserve E in [50,100],
+no pending currents, and
+
+    z_i(0) = log(g_i,nominal) + eta,
+    (g_0,g_1,g_2)_nominal = (0.3,1.2,0.3).
+
+The first four preparations are nominal eta=0; plus eta=+10^-5 everywhere; minus
+eta=-10^-5 everywhere; and interface eta=+10^-5 in lanes 0..5, -10^-5 in
+lanes 6..11. The chosen eta is constant across the three ports of a cell
+and across depth in each lane. All are choices inside the prescribed initial
+box, with the same physical parameters. Independence of allowed choices does
+not require that a selected realization be random or spatially heterogeneous.
+Two essential controls, plus_prefix18 and minus_prefix18, apply the shift
+only in layers 1..18, then use identical nominal eta=0 in every fresh layer.
+They test memory transmitted by the training history without continually
+reintroducing a different initial gain in new cells.
+
+The interface is present THROUGHOUT training, with every actual cross-region
+connection retained. It is not assembled by splicing unrelated terminal
+states or emission histories. Separately trained isolated regions followed
+by rewiring would require a different admissible preparation protocol; that
+operation was not silently introduced.
+
+All emitted pulses from each preceding layer, including the entire irregular
+training transient, feed the next fresh layer. Missed pulses are not inserted
+back. Main currents, protection, auxiliary mark/error phases, capped gain
+updates and b updates are evolved during training. Only E is eliminated by
+the existing uniform resource bound, which keeps the power gate open.
+
+Four future probes at 4096,4116,4136,4156 are appended to the source. The first
+is an allowed time >=1116; this delay permits a clean finite-prefix diagnostic.
+The deep prefix's last training output is around 1119, so it would have been
+incorrect to assume every new layer was already trained and quiescent at 1116.
+
+point_diagnostic.py is a separate point-arithmetic implementation using exact
+nominal auxiliary offsets derived from the ODEs, closed-form flows and scalar
+bisection. It imports no original engine or native extension. It uses a 1e-9
+external-event grouping tolerance and does not cover all weak event orders.
+No original code was modified and no certified A22 campaign was launched.
+
+Before extension, the nominal diagnostic reproduced all 21,302 archived
+training emissions on the original 18 layers, with no count mismatch and a
+maximum date discrepancy of 1.978150976356119e-11. This is a regression check,
+not an interval proof. Each 192-layer diagnostic took about 14–17 seconds.
+
+2. WHAT THE HISTORY REVEALS
+
+All six runs have 58 training emissions per lane at layer 64 and 54 at
+layer 68. They then retain 54 per lane through layer 192. The loss does NOT
+continue until all training pulses disappear.
+
+From layer 69 onward, every fresh cell retains its initial gains and b=0.08
+in these diagnostics. The incoming training word has become sufficiently
+spaced that every pulse can pass without exposing an ERROR current to an
+open principal gate. Marks also finish before the main firing. Training is
+still arriving, but neither gain nor recovery adaptation is actuated.
+
+At layer 68 the plus/minus histories have maximum cross-lane cohort widths
+approximately 0.104192/0.104203, and minimum same-lane gaps approximately
+15.586453/15.586441. These are comfortably inside the proposed homogeneous
+tail contract: cohort diameter <=0.11 and same-lane gap >=15.5.
+
+The mixed-interface history has maximum cohort width approximately 0.006964
+at layer 128, inside a smaller <=0.01 contract used for its block-contraction
+proof. Its minimum gap remains above 15.5. These memberships are POINT
+observations until the prefix receives validated enclosures.
+
+Effective future delays per layer, measured over layers 160..192:
+
+  preparation        all lanes         lanes 0..5        lanes 6..11
+  plus bulk          0.666556597073    0.666556601278     0.666556592868
+  minus bulk         0.666589905699    0.666589909907     0.666589901491
+  mixed bulk         0.666573266812    0.666573186852     0.666573346772
+  plus prefix only   0.666573250881    0.666573255084     0.666573246677
+  minus prefix only  0.666573250881    0.666573255091     0.666573246671
+
+These are finite-depth slopes, not limits estimated with an error theorem.
+The plus/minus difference is about 3.33086e-5 per layer. At layer 192 their
+mean future latencies differ by about 0.00543269. In contrast, the prefix-only
+controls differ in mean latency by about 0.000320851 at both layers 128 and
+192: an approximately constant phase displacement, not a growing speed gap.
+Their measured 160..192 slopes differ by less than 3e-14, within point precision.
+
+In the mixed case, the mean latency difference between the two half-rings
+approaches a small nonzero offset (about -0.00063132 at layer 192), rather
+than a visibly growing linear separation. Its two regional slopes get close.
+Coordination need not mean equal arrival dates: a fixed spatial phase profile
+is compatible with one common limiting progression rate.
+
+All four probe translations in each of the six runs agree to displayed point precision in
+every active cell. This observation is weaker than a theorem for every future
+word; the latter requires the boundary fixed-latency contract identified below.
+
+3. AN ACTUALLY ATTAINED LOCAL NON-SELECTION THEOREM
+
+Consider cell (1,0), whose only driven port is the source's central port.
+Use the authorized initial states above, with eta=+10^-5 or -10^-5 and all
+physical constants nominal. Define a=log(4), kappa=1/2 and
+
+    h(u)=a/(a-kappa) [exp(-kappa*u)-exp(-a*u)].
+
+The pulse at time 0 cannot fire this cell: even at its maximum charge,
+0.1+1.2 exp(eta) h(1)<1. Its complete ERROR phase occurs while READY and
+adds exactly 0.6 to z. Thus g becomes 1.2 exp(eta+0.6), below cap 4.
+
+At time 8 there remains charge from the failed first pulse. Relative to time
+8 the head charge is exactly
+
+    0.1 + [1.2 exp(eta) h(1) exp(-3.5)] exp(-u/2)
+        + 1.2 exp(eta+0.6) h(u).
+
+Directed bounds put its first crossing in u in [0.43,0.46]. The time-16 pulse
+arrives during protection. Its mark raises b from 0.08 to 0.18, while its
+ERROR is entirely protected. Integrating b during that mark places reopening
+between 18.1869 and 18.2003, after ERROR ends at 17.25 and before time 24.
+
+From time 24 onward, each training pulse fires from exact rest. Its mark
+ends before firing, its ERROR is protected, and recovery finishes before
+the next input eight units later. These strict inequalities give an induction
+through all remaining training pulses. There are exactly 126 firings, at
+source indices 1 and 3..127. The final values are
+
+    g_terminal = 1.2 exp(eta+0.6), b_terminal=0.18.
+
+The persistent learned head delays satisfy
+
+    eta=-10^-5: u approximately 0.4515317747619872;
+    eta=+10^-5: u approximately 0.4515164025882775.
+
+Their strict separation is greater than 0.000015372173709679.
+check_learning_and_pipeline.py verifies the necessary directed inequalities
+and supplies exact enclosing endpoints. This is an admissible learning
+example, not a manually imposed terminal gain. It proves local memory of
+the initial preparation, but does not alone prove different depth speeds.
+
+4. CONDITIONAL INFINITE HOMOGENEOUS TAIL
+
+Assume an entrance section provides complete matched input cohorts t_j^p
+on all 12 lanes, including the training history, with
+
+    max_j t_j^p-min_j t_j^p <= W=0.11,
+    t_j^(p+1)-t_j^p >= H=15.5.
+
+All downstream cells are fresh authorized cells as in Section 1, with one
+fixed homogeneous eta in [-10^-5,10^-5]. There is no replacement of their
+initial states by learned states. The nominal synchronized delay u_eta solves
+
+    0.1 + 1.8 exp(eta) h(u_eta) = 1.
+
+If every parent date lies between l and l+W, monotonicity and translation
+equivariance place the child's first firing between l+u_eta and l+W+u_eta.
+Consequently the head ages lie between u_eta-W and u_eta+W. The checker proves
+on this whole tube that marks finish before firing, the first head precedes
+raw-pulse endings and ERROR onset, all ERROR phases and raw tails end during
+protection, and reopening precedes the next cohort. The slow recovery uses
+the unchanged b=0.08, with duration 1+log(2.5)/0.08. The recovery slack relative
+to H is greater than 2.2697, despite this relatively slow recovery.
+
+Therefore g and b never change; each cohort produces exactly one emission
+per cell and the cell regenerates locally. Since all rows use the same gain
+profile, the output cohort diameter is no larger than its input diameter.
+If every input component of the next cohort is at least H later, monotonicity
+and translation equivariance give the same separation for its outputs.
+The complete history contract therefore propagates through every fresh layer.
+
+For any one cohort with entrance vector t, its n-layer image is bounded by
+
+    min(t)+n*u_eta <= T_eta^n(t)_j <= max(t)+n*u_eta.
+
+Dividing by n proves a common asymptotic delay u_eta for every lane, without
+needing to infer an average from a finite regression. The exact directed
+root brackets give
+
+    u_plus  = 0.6665565970727810...;
+    u_zero  = 0.6665732508807828...;
+    u_minus = 0.6665899056987104...;
+    u_minus-u_plus > 0.000033308625929372.
+
+Thus the two preparations have provably different infinite-tail delays IF
+the full authorized learning prefixes enter the proposed history contract.
+The finite entry is currently supported by the point computations only.
+
+IDENTICAL-FRESH-CELL COROLLARY. If two different upstream preparations both
+enter this contract and all subsequent fresh cells are nominal (eta=0),
+their asymptotic delays are BOTH u_zero, regardless of their entrance phase
+profiles or different earlier learning histories. The bounded min/max
+inequality proves this directly. The prefix-only controls are candidates for
+this corollary. Their matching duration does not establish contraction of
+all learned variables: in the tail the gains simply never change. The
+mechanism is input spacing plus local protection, followed by propagation
+through the same fresh physical response map.
+
+For future words, also require the entrance's exact translated-cohort property
+t_j^p=s_p+d_j. Local regeneration and fixed gains then preserve that property
+and all future intervals. The finite training cohorts need not themselves
+be translations of one common profile: the tail proof preserves their order
+and separation without claiming their individual intervals are unchanged.
+
+5. CONDITIONAL CONNECTED INTERFACE THEOREM
+
+Fix a depth-independent lane pattern eta_j, including the half-plus/half-minus
+interface. All three gains of a cell have the same multiplier exp(eta_j).
+The physical graph retains both cross-region connections around the ring.
+Assume full entrance-history cohorts have diameter <=D=0.01 and gaps >=15.5.
+
+Let Delta=u_minus-u_plus. One layer increases cohort diameter by at most Delta.
+Thus six intermediate steps stay in diameter D+6*Delta<0.010200. On this tube
+the same physical protection and recovery inequalities remain valid, so no
+plastic actuation changes the initial gains or b.
+
+The gain scale cancels in the timing Jacobian ratios. A uniform lower matrix
+has the three nonzero row entries gamma*(1/6,2/3,1/6), where gamma is a directed
+lower bound on h'(largest age)/h'(smallest age). Its six-fold product has a
+row-overlap lower bound beta>0.05734. Therefore the six-layer head map contracts
+differences modulo common translation by at most 1-beta.
+
+The six-layer image of a synchronous vector has diameter <=6*Delta. Hence
+
+    osc(T^6(x)) <= (1-beta)*D+6*Delta < D.
+
+The checked closure slack exceeds 0.0003735. This is an invariant normalized
+domain for the six-layer block. Contraction gives a unique normalized fixed
+profile; continuity/Lipschitz control of the scalar advance gives an additive
+eigenvalue and one limiting delay shared by every lane. Bounded intermediate
+offsets pass this result from six-layer boundaries to all depths. The limiting
+delay lies between u_plus and u_minus. It need not equal the arithmetic mean.
+
+Consequently, once this tail contract is entered, the real cross-links prevent
+two different regional asymptotic speeds, while allowing a fixed phase offset.
+This is compatible with different speeds in two separate homogeneous
+preparations. The two possibilities in the question are not mutually exclusive:
+within-device coordination and across-preparation non-selection can coexist.
+
+Entry for the mixed case is suggested at layer 128 by the point histories.
+No validated statement that every allowed preparation reaches this domain is
+made, and no artificial stitching of the plus and minus histories is used.
+
+6. LOCAL PIPELINING — AN OBLIGATION DISCHARGED ON THE EXISTING DOMAIN
+
+For any certified cell let d be its head latency, a_i its parent latencies,
+P_max a uniform upper protected duration, and E_max the maximum auxiliary
+cycle duration. A sufficient local gap condition is
+
+    H > d+P_max-min_i a_i,
+    H > max_i a_i+E_max-min_i a_i.
+
+Also retain the already checked within-wave first-root, gain protection,
+masked-port and raw-tail inequalities. The outgoing pulse ends before the
+main recovery and is included explicitly in the checker.
+
+Proof: if the current wave has source time s_p, the cell is back at exact
+READY charge and every incoming auxiliary has completed before the earliest
+arrival belonging to the next wave. Its influential gains remain fixed;
+masked gains and b stay in their admitted ranges. Each wave therefore sees
+the same head equations after a local regeneration. Induct over source pulses
+within each cell and over the feedforward graph. Other waves may still be
+travelling farther downstream; no argument requires global quiescence.
+
+For all 191 active cells in the existing 18-layer certificate, the largest
+required local gap is strictly below
+
+    6.965293252185588.
+
+Thus H=7 has a uniform strictly positive local slack greater than 0.0347067.
+Starting in the certified terminal section Q at an allowed first source time,
+the same fixed-latency and word-preservation conclusion extends to source
+gaps >=7. The 25 inactive cells have no incoming active chain and remain silent.
+This is a new local proof using the existing root/gain/recovery enclosures;
+the old proof's global settling bound below 12.791 is no longer needed
+between consecutive source pulses. There is no assertion that the entire
+network returns to Q between such overlapping waves.
+
+For the conditional infinite fresh tail the relevant bound is different:
+H>=15.5 suffices because b remains 0.08. The original future gaps >=20 satisfy
+it. Positive per-layer head ages bound the active causal cone at each finite
+time; combined with the positive per-port gaps this excludes an infinite
+downstream event cascade in finite time. Together with local regeneration,
+this gives a consistent infinite-strip construction conditional on entry.
+
+7. EXACTLY WHAT REMAINS TO BE CERTIFIED
+
+The decisive missing link is FINITE, not an infinite simulation:
+
+For plus and minus, validate the complete original training prefix through
+layer 68, including all emitted and omitted pulses, and certify 54 matched
+boundary emissions per lane, cohort diameter <=0.11, gaps >=15.5, and the
+boundary's translated future-cohort contract. For the mixed preparation,
+certify an analogous boundary at layer 128 with diameter <=0.01.
+
+The existing manual learning proof and campaign cover 18 layers, not these
+new prefixes. Nominal regression agreement, a hash of a diagnostic trace,
+or decimal intervals placed around point values do not supply this link.
+Neither do four identical future-probe translations establish every future
+word. The tail proof must remain explicitly conditional until that finite
+prefix and future-boundary verification is performed.
+
+Validate the two prefix-only controls as well at layer 68. If these candidate
+entries are validated, the homogeneous tail theorem proves common duration
+for these distinct finite preparations with identical fresh bulk, AND proves
+non-universality when fresh initial gain offsets persist throughout the bulk.
+The mixed tail theorem settles regional coordination at the connected interface.
+Neither conclusion quantifies over every admissible history, parameter field,
+or finite preparation. No single universal learning-selection theorem has
+been established by these examples.
+If an entry check fails through interval overestimation, that is inconclusive;
+an actual physical violation would reject that proposed witness.
+
+8. FILES AND REPRODUCTION
+
+check_learning_and_pipeline.py performs the directed finite inequality checks
+for the attained local example, existing-domain local recovery, and conditional
+infinite tails. Its support file uses finite exponential/logarithm series with
+explicit tails and directed Decimal arithmetic. It does NOT certify the point
+trajectories through 192 layers. Assertions must remain enabled.
+
+  python -B check_learning_and_pipeline.py
+
+point_diagnostic.py reproduces one exploratory preparation; summarize_diagnostics.py
+recreates the descriptive tables and candidate boundary files. Do not confuse
+these commands with the verified inequalities above:
+
+  python -B point_diagnostic.py --case nominal --depth 192
+  python -B point_diagnostic.py --case plus --depth 192
+  python -B point_diagnostic.py --case minus --depth 192
+  python -B point_diagnostic.py --case interface --depth 192
+  python -B point_diagnostic.py --case plus_prefix18 --depth 192
+  python -B point_diagnostic.py --case minus_prefix18 --depth 192
+  python -B summarize_diagnostics.py
+
+All scripts use the Python standard library. All full per-cell emitted training
+histories and four-probe outputs are included, together with initial shifts,
+terminal states and source-script hashes. Boundary candidate files are marked
+POINT ONLY. The separately supplied original future certificate and terminal
+JSON files are copied unchanged. SHA256SUMS authenticates the delivered files.
+
+The physical rules are those of full_model_reference.md, sections 1–6. The
+existing finite learning bridge retains its assumptions A1–A4 and its manual
+source-proof status. This dossier is a new mathematical and diagnostic study;
+it is not an independent proof-assistant check or qualification of the runtime.

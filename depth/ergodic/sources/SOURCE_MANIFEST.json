@@ -1,0 +1,31 @@
+{
+  "repository": "https://github.com/HevisNico/a22-interval-replay",
+  "commit": "5b4e283e7d5162f406012687a80f9e4b5c3a3960",
+  "files": [
+    {
+      "repository_path": "engine/reference/full_model_reference.md",
+      "snapshot": "engine__reference__full_model_reference.md",
+      "sha256": "6f8462431cd43714af99d2181d5d017b2de910381690665ba7875659c061fecf"
+    },
+    {
+      "repository_path": "depth/README.md",
+      "snapshot": "depth__README.md",
+      "sha256": "5ddf97da5f5cf52bd4feaa8a0ea1829121d16278e07628e4605a501bf72d7ec3"
+    },
+    {
+      "repository_path": "depth/theory/LEARNING_SPEED_SELECTION_EN.txt",
+      "snapshot": "depth__theory__LEARNING_SPEED_SELECTION_EN.txt",
+      "sha256": "99986b4309b95dca441dd3aeb84e048c8ff6bf22dd790d94b85dd61290e58a2e"
+    },
+    {
+      "repository_path": "depth/theory/conditional_tail_certificate.json",
+      "snapshot": "depth__theory__conditional_tail_certificate.json",
+      "sha256": "e75d3bc93d6f6859a256f7b70ff2fe52d22976464ead2ebcfe0240b064a03c88"
+    },
+    {
+      "repository_path": "proof/FUTURE_INVARIANCE_PROOF_EN.txt",
+      "snapshot": "proof__FUTURE_INVARIANCE_PROOF_EN.txt",
+      "sha256": "3963381ec78c6dc0ee0fc10a6ecaf0bc1238e277b6f46dd82418ef0c77580e3c"
+    }
+  ]
+}

@@ -223,7 +223,8 @@ use, and no entry exists.
 **Depth extension (v4.0-depth)**, same proof level: certified training entry into a tail contract
 for six prescribed realizations (68 layers; 128 for the interface case), composed with manual tail
 theorems for arbitrary depth. See [depth/README.md](../depth/README.md); its review tasks are Tasks 7–9
-of [REVIEW.md](../REVIEW.md).
+of [REVIEW.md](../REVIEW.md). Version 4.1 adds the heterogeneous tail, the ergodic speed theorem and speed
+ceilings (Tasks 10–12).
 
 **Not done:**
 1. **Independent expert review** of the proof. The most load-bearing parts are the open-image lemma and

@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-23",
+  "requests_addressed": [
+    1,
+    2
+  ],
+  "proof_status": "MANUAL_DERIVATIONS_WITH_VERIFIED_FINITE_NUMERICAL_LEMMAS; independent expert review pending",
+  "point_1": {
+    "status": "conditional_heterogeneous_tail_extension_derived",
+    "independent_per_port_constants_relative_radius": "1e-4",
+    "independent_initial_log_gain_radius": "1e-5",
+    "invariant_block_layers": 6,
+    "entrance_cohort_width": "0.11",
+    "entrance_same_lane_gap": "15.5",
+    "exact_rest_variant": "arbitrary heterogeneous layers and ports; exact initial q,m; b in 0.08 +/-1e-5",
+    "full_fresh_initial_box_variant": "all original fresh states, with first input time >=20; effective log offsets [-1e-5,9e-5]; initial q memory explicitly bounded",
+    "full_initial_box_is_not_universal_prefix_entry": true
+  },
+  "point_2": {
+    "status": "conditional_stationary_ergodic_speed_theorem_derived",
+    "law_required": "joint stationary ergodic law of the complete layer environment; iid layers suffice",
+    "conclusion": "For almost every environment, every entering finite preparation and all lanes have the same deterministic limiting duration gamma(law), speed 1/gamma(law).",
+    "explicit_subadditive_observable": "U_n=max_j(T_n ... T_1(0))_j",
+    "numeric_value_for_unspecified_law": null,
+    "nonstationary_first_cohort": "summable comparison error <1e-8 in full initial-box variant",
+    "law_includes_correlations": true,
+    "auxiliary_only_disorder_with_nominal_gains": "limiting duration exactly u_zero"
+  },
+  "validation": {
+    "directed_decimal": "PASS_NUMERICAL_LEMMAS",
+    "independent_integer_arithmetic": "PASS_INDEPENDENT_INTEGER_CRITICAL_CHECKS",
+    "optimization_flag": "Normal and -O JSON results identical for both implementations",
+    "independent_mathematical_review": false,
+    "proof_assistant": false
+  },
+  "not_established": [
+    "Entry into the contract for every admissible upstream preparation",
+    "A numerical speed for an unspecified probability law",
+    "Universality across different laws or merely identical marginal means",
+    "Isotropy or Lorentz invariance"
+  ],
+  "new_training_campaign_launched": false,
+  "original_repository_worktree_status": "clean, unchanged",
+  "source_commit": "5b4e283e7d5162f406012687a80f9e4b5c3a3960",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "implementation": "CPython",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "external_dependencies": []
+  },
+  "notes": [
+    "This package is separate from production campaigns and receipts.",
+    "Snapshots provide source identity, not a fresh proof audit of the original campaigns.",
+    "Two arithmetic implementations do not constitute independent scientific authorship or review."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS_INDEPENDENT_INTEGER_CRITICAL_CHECKS",
+  "arithmetic": "integer fixed point at 50 decimal places; 80-term exp and 160-term atanh log with explicit remainders; no Decimal, floats, third-party libraries or main-result import",
+  "profiles": [
+    {
+      "profile": "exact_rest_tail",
+      "overlap_strict_lower": "0.0092949",
+      "closure_strict_lower_rational": "102823405551/125000000000000",
+      "recovery_strict_lower_rational": "226814421086479757290252266823339078072132491672859/100000000000000000000000000000000000000000000000000"
+    },
+    {
+      "profile": "full_fresh_initial_box",
+      "overlap_strict_lower": "0.0091295",
+      "closure_strict_lower_rational": "2602254713/500000000000000",
+      "recovery_strict_lower_rational": "226734501012981557290252266823339078072132491672859/100000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "scope": "Independent arithmetic checks of critical numerical inequalities; not an independent mathematical review."
+}

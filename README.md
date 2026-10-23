@@ -70,8 +70,20 @@ every deeper layer. As a result:
   durations u₊ < u₀ < u₋;
 - **exact transmission of every admissible future pulse word, at any depth**.
 
+**New in v4.1** ([`depth/README.md`](depth/README.md#new-in-v41-speed-as-a-statistical-property-of-the-medium-and-speed-ceilings)):
+- **the real parameter box in the tail**: the tail theorem holds with every perturbed constant chosen
+  independently per port, cell and layer, and also for fresh cells anywhere in the complete initial box;
+- **a deterministic speed for random media**: for any stationary ergodic law of the medium (for example
+  i.i.d. layers), almost every realization has the same limiting speed 1/γ(P), common to all lanes and to
+  every preparation that enters the contract (Kingman's subadditive ergodic theorem). The speed is a
+  property of the medium's statistical class;
+- **speed ceilings**: no admitted cohort in the tail travels faster than 1.500248 layers per time unit
+  (1.500548 for the complete-initial-box variant). During learning, without any entry assumption, the
+  front of first activation travels at most 18.23 layers per time unit.
+
 The proof level is the same as above: a manual proof under A1–A4, with directed-rounding computations,
-not yet independently reviewed. It covers six prescribed realizations, not the whole uncertainty box.
+not yet independently reviewed. Entry into the tail contract is certified for six prescribed
+preparations, not for the whole uncertainty box.
 To check the release assets, run `python3 -I tools/verify_depth_assets.py <assets folder>`.
 
 ## Origin of the model

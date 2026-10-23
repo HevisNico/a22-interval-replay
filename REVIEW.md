@@ -170,6 +170,43 @@ the 4096 observation time then implies exact rest on the whole preceding current
 **Question.** Does "exact rest at 4096" correctly imply exact rest from each cell's own bound Q_v onward,
 for every state variable used by the head equation?
 
+## Task 10 — Heterogeneous tail closure (v4.1)
+
+**Claim.** Every perturbed constant is independent per port, cell and layer, and the gain offsets
+are independent per port. With these, every Jacobian row dominates γP, where P is the circulant matrix
+(1/6, 2/3, 1/6) and γ comes from the within-cell age spread ≤ W and the concavity of log h′. Any six
+layers then have row overlap β ≥ γ⁶·971/11664. The six-layer block closes the diameter 0.11 with slack
+> 8.2·10⁻⁴ (exact rest), or > 5.2·10⁻⁶ (complete initial box, first input ≥ 20).
+
+**Where:** `depth/ergodic/01_HETEROGENEOUS_TAIL_EN.md` §3–6; `verify.py`, `verify_integer.py`.
+
+**Questions.** Is the within-cell age spread bound (W, not 2W) correct? Are the initial ERROR integral
+(8χ) and the summable effect of q(0) in the complete-box variant handled correctly? The second slack is
+small: are all its terms bounded in the right direction?
+
+## Task 11 — Kingman on a restricted domain (v4.1)
+
+**Claim.** U_n = maxⱼ (Tₙ∘…∘T₁(0))ⱼ is subadditive along the one-layer shift. The comparisons use
+only orbits certified to stay in the tube, and the tube is never assumed invariant from an arbitrary
+point. Hence, for a stationary ergodic medium, U_n/n converges almost surely to a constant γ(P). The
+same probability-one event serves every entrance profile.
+
+**Where:** `depth/ergodic/02_ERGODIC_SPEED_EN.md` §2–5.
+
+**Question.** Are both comparison orbits admissible at every step, including when the comparison starts
+at a layer that is not a block boundary?
+
+## Task 12 — Speed ceilings (v4.1)
+
+**Claim.** In the tail, no cell fires before the earliest cohort arrival plus u_min, the synchronized
+delay at maximal gains. During learning, the gain cap gives a current envelope 3·C_max·a, which delays
+every first activation by at least 0.05484 per layer.
+
+**Where:** `depth/cone/03_CAUSAL_CONE_EN.md` §2–5; `verify_cone.py`.
+
+**Question.** Does the first-activation envelope remain valid when gains grow during learning, before
+a cell's first firing?
+
 ---
 
 ## What is out of scope here

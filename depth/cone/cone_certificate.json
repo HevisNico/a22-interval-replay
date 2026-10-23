@@ -1,0 +1,105 @@
+{
+  "status": "PASS_DECIMAL_AND_INTEGER_CONE_CHECKS",
+  "proof_status": "Manual cone proofs with verified numerical lemmas; independent expert review pending",
+  "units": {
+    "time": "A22 model time",
+    "depth": "layers",
+    "speed": "layers per model time unit"
+  },
+  "tail_profiles": [
+    {
+      "name": "exact_rest_tail",
+      "max_total_effective_gain": [
+        "1.800018000090000300000750001500002500003571433035719246036706353715721",
+        "1.800018000090000300000750001500002500003571433035719246036706353715882"
+      ],
+      "minimum_synchronized_delay_enclosure": [
+        "0.666556597072780",
+        "0.666556597072782"
+      ],
+      "uniform_cohort_front_speed_ceiling_enclosure": [
+        "1.500247697482182405107681801537180950172969177116269629165674079811206",
+        "1.500247697482186906593989402730477290991804350503812475762403305737611"
+      ],
+      "strict_coarse_speed_ceiling": "1.500248",
+      "scope": "Regenerated cohort fronts under the point-1 entrance contract; not a delay from every individual parent arrival."
+    },
+    {
+      "name": "full_initial_box_regenerated_tail",
+      "max_total_effective_gain": [
+        "1.800162007290218704920838574828619582224317640495911770483382794807349",
+        "1.800162007290218704920838574828619582224317640495911770483382794807503"
+      ],
+      "minimum_synchronized_delay_enclosure": [
+        "0.666423402950283",
+        "0.666423402950286"
+      ],
+      "uniform_cohort_front_speed_ceiling_enclosure": [
+        "1.500547543157931715913274158117932289206648533358333043396100795276833",
+        "1.500547543157938470842061990063177292049527536518441205662591866423286"
+      ],
+      "strict_coarse_speed_ceiling": "1.500548",
+      "scope": "Regenerated cohort fronts under the point-1 entrance contract; not a delay from every individual parent arrival.",
+      "first_physical_cohort": {
+        "first_input_time_minimum": "20",
+        "per_layer_error_upper": "2e-9",
+        "uniform_delay_bound_enclosure": [
+          "0.666423400950283",
+          "0.666423400950286"
+        ],
+        "speed_ceiling_enclosure": [
+          "1.500547547661217587982673152212688601385264982808229843890683452244470",
+          "1.500547547661224342911501528525303272616761701626812383678255967003974"
+        ],
+        "strict_coarse_speed_ceiling": "1.500548",
+        "total_error_enclosure": [
+          "7.115506493735287384778697639832229382190339859107727546398367775817109E-9",
+          "7.115506493735287384778697639832229382190339859107727546398367775818224E-9"
+        ],
+        "sharper_cone": "min_j t[n,j] >= min_j t[0,j] + n*u_min - sum_{k=1}^n epsilon_k; sum epsilon_k < 1e-8"
+      }
+    }
+  ],
+  "global_first_activation": {
+    "scope": "Entire original initial box, no hidden incoming currents, original graph and per-port non-overlap; no tail entrance hypothesis.",
+    "max_port_gain": "4.0004",
+    "max_admitted_current": [
+      "16.63719588667203129475617227208773725757538442496859071150620985986404",
+      "16.63719588667203129475617227208773725757538442496859071150620985986527"
+    ],
+    "delay_lower_bound_enclosure": [
+      "0.05484010375122239918146297596657585220342952410761890677884778047185932",
+      "0.05484010375122239918146297596657585220342952410761890677884778047217932"
+    ],
+    "speed_ceiling_enclosure": [
+      "18.23483056371332554316695241904359578125336051207358077347455482723380",
+      "18.23483056371332554316695241904359578125336051207358077347455482734021"
+    ],
+    "strict_coarse_speed_ceiling": "18.234831",
+    "cone": "First emission at layer n is no earlier than s0+n*d_global, with s0 the first source pulse time.",
+    "sharpness": "Conservative current-envelope bound; not claimed to be the fastest physically attainable device."
+  },
+  "not_claimed": [
+    "A universal per-edge waiting time from every arriving parent pulse",
+    "A general information cone for perturbations of an already active network",
+    "Universal entry into the tail contract",
+    "Isotropy or a relativistic light cone"
+  ],
+  "new_campaign": false,
+  "source_commit": "5b4e283e7d5162f406012687a80f9e4b5c3a3960",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "implementation": "CPython",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "external_dependencies": []
+  },
+  "arithmetic": [
+    "70-digit directed Decimal, explicit series remainders",
+    "50-decimal-place integer fixed point, separate explicit series remainders"
+  ],
+  "code_sha256": {
+    "directed.py": "a577108362a4868d7aa1279f1a7e254e5b6939e2967154678772f2ad6daf8ca0",
+    "integer_support.py": "14a0e34c13a006524cab836cb59b8a492706efa75240d499082a74a179063805",
+    "verify_cone.py": "bb8b9b7e7232f741e87560eda5cd75889c4050af36531f305fd0bf848e194b30"
+  }
+}
