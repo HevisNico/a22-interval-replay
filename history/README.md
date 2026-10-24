@@ -4,7 +4,7 @@
 
 Complete 18-layer campaign (run_id `872e032a…`), 648/648 A14 boxes inside. Its engine gave the auxiliary
 constants LM, LS, LE, M, C of a cell **one** symbol shared by its three ports. The model makes them
-independent per port (exact counterexample found by the author: a mark-duration gap of
+independent per port (exact counterexample: a mark-duration gap of
 400/99,999,999 that the shared symbol cannot represent). This campaign therefore covers only the
 sub-family where the three ports of a cell share their constants. Kept for comparison: engine ZIP,
 summary, H1/H2 re-check, hashes (`HASHES_v3_2.md`; file paths there are those of the v3.2 repository).

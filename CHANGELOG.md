@@ -6,8 +6,8 @@ Each version is a GitHub release with the same tag. The main result and how to c
 ## v3.2 → v3.3: one symbol per port
 
 The **v3.2** campaign (kept in [`history/v3.2/`](history/v3.2/)) completed, but it gave the auxiliary
-constants of a cell (LM, LS, LE, M, C) **one** symbol shared by its three ports. The author found, with
-an exact counterexample, that the model makes them independent per port; v3.2 therefore covered only a
+constants of a cell (LM, LS, LE, M, C) **one** symbol shared by its three ports. An exact counterexample
+showed that the model makes them independent per port; v3.2 therefore covered only a
 sub-family. A first correction replaced the shared symbols by plain interval boxes. That is sound, but
 it forgets that a port keeps the same constant at every pulse: enclosures grew 3–10× and the campaign
 stopped at layer 18 ([`history/plain_box_package/`](history/plain_box_package/)). **v3.3** gives each
