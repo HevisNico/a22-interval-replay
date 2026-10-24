@@ -201,7 +201,7 @@ This work was done with two AI assistants, **Claude** (Anthropic) and **ChatGPT*
 author's direction. The model, the Reset Operator and the research questions are the author's. Claude
 and ChatGPT wrote and corrected the code, ran the diagnostics, drafted the proof (mainly ChatGPT) and
 audited it (mainly Claude); each also re-checked the other's work. The author ran the campaigns, and directed 
-the work. This is why the repository does
+the work. He does not understand it all but is happy orchestrating and learning. This is why the repository does
 not ask to be taken on trust: the campaign is bound to its exact code by reproducible hashes, every layer
 is re-read by a separate process, critical decisions are re-proved by independent scripts, the results
 are compared with an independent reference, and the proof states its assumptions explicitly. What it
