@@ -1,4 +1,4 @@
-# A22 — enclosing every learning trajectory of a 216-cell spiking network, with a manual proof
+﻿# A22 — enclosing every learning trajectory of a 216-cell spiking network, with a manual proof
 
 **Contribution.** This repository contains a computer-assisted enclosure of **all admissible
 trajectories** of a learning spiking network during its full 128-pulse training transient, together with
@@ -200,8 +200,7 @@ about the recorded campaign. See [results/HASHES.md](results/HASHES.md) for both
 This work was done with two AI assistants, **Claude** (Anthropic) and **ChatGPT** (OpenAI), under the
 author's direction. The model, the Reset Operator and the research questions are the author's. Claude
 and ChatGPT wrote and corrected the code, ran the diagnostics, drafted the proof (mainly ChatGPT) and
-audited it (mainly Claude); each also re-checked the other's work. The author designed the model, found
-the port-independence gap with an exact counterexample, ran the campaigns, and directed and validated
+audited it (mainly Claude); each also re-checked the other's work. The author ran the campaigns, and directed 
 the work. This is why the repository does
 not ask to be taken on trust: the campaign is bound to its exact code by reproducible hashes, every layer
 is re-read by a separate process, critical decisions are re-proved by independent scripts, the results
@@ -213,3 +212,4 @@ still needs is review by human specialists.
 Code (`engine/`, `tools/`, scripts in `proof/`, the engine ZIP in `history/v3.2/`): MIT, see `LICENSE`.
 Documentation, proofs, figures and results: CC BY 4.0, see `LICENSE-docs.md`. To cite, use
 `CITATION.cff` (GitHub's "Cite this repository" button).
+
