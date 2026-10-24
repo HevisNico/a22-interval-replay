@@ -40,6 +40,13 @@ Per-layer medians and maxima of the date widths, and the largest learned-gain wi
   travel round the ring meet. The exploratory layer-19 computation of the open entry problem
   stopped at the same lane, cell (19, 6).
 
+- **The layer-10 maximum (about 0.18 at every ε) is a known, isolated case.** It is one spike date
+  in the mirror cells (10, 2) and (10, 10): a slow recovery makes the return to READY uncertain by
+  about 0.1, that return coincides with an input arrival, and both branches (input fully or partly
+  admitted) are enclosed and joined. The next spike is back to about 1e-3 and nothing propagates
+  (see the Limitations of [`docs/DETAILS.md`](../docs/DETAILS.md#limitations)). It does not depend on ε,
+  which is why the medians, not the maxima, are compared above.
+
 A refusal is a limit of the computation, not a physical counterexample.
 
 ## Files

@@ -9,9 +9,6 @@ every admissible future input**. The network has 216 coupled hybrid cells (18 la
 - evolving learned gains and a recovery actuator;
 - threshold crossings, and events whose order may vary.
 
-New here? Start with [**why this network matters**](WHY_A22_MATTERS.md): what is hard, what is
-known, what A22 adds, and where the method stops working.
-
 **The result**, for every fixed device in the parameter box and every admissible initial state (proof in
 [`proof/`](proof/), under the execution assumptions A1–A4 stated there):
 
@@ -59,47 +56,32 @@ property; they cannot establish it for every point of the box.
 as the model specifies; v3.2 shared them across the three ports of a cell. The more general model costs
 at most 5 % of width (layer 18: 7.28e-3 against 6.91e-3).*
 
-## New in v4.0-depth: arbitrary depth
+## Start here
 
-The 18-layer result above now extends to **arbitrary depth** ([`depth/README.md`](depth/README.md)). For
-six prescribed realizations, the complete training transient is certified through 68 layers (128 for a
-connected two-region case). The learned state enters a tail contract that manual theorems carry through
-every deeper layer. As a result:
+- **Why this network matters**, what is already known and where the method stops working:
+  [`WHY_A22_MATTERS.md`](WHY_A22_MATTERS.md).
+- **The most useful single check**: Task 1 of [`REVIEW.md`](REVIEW.md), the strict-root lemma on which
+  the whole event-order argument rests (one to three hours, no need to know the rest).
+- **The proof itself**: start with
+  [`proof/learning_justification/output/REVIEW_GUIDE_EN.txt`](proof/learning_justification/output/REVIEW_GUIDE_EN.txt).
 
-- **one limiting duration per layer, common to all lanes** of a medium;
-- **independence from the preparation**: two different upstream preparations followed by the same medium
-  reach exactly the same limiting duration (u₀ = 0.666573250880782846…), and keep only a bounded phase offset;
-- **the speed belongs to the medium**: homogeneous media with gains shifted by ±1e-5 have the distinct
-  durations u₊ < u₀ < u₋;
-- **exact transmission of every admissible future pulse word, at any depth**.
+## Beyond the 18 layers
 
-**New in v4.1** ([`depth/README.md`](depth/README.md#new-in-v41-speed-as-a-statistical-property-of-the-medium-and-speed-ceilings)):
-- **the real parameter box in the tail**: the tail theorem holds with every perturbed constant chosen
-  independently per port, cell and layer, and also for fresh cells anywhere in the complete initial box;
-- **a deterministic speed for random media**: for any stationary ergodic law of the medium (for example
-  i.i.d. layers), almost every realization has the same limiting speed 1/γ(P), common to all lanes and to
-  every preparation that enters the contract (Kingman's subadditive ergodic theorem). The speed is a
-  property of the medium's statistical class;
-- **speed ceilings**: no admitted cohort in the tail travels faster than 1.500248 layers per time unit
-  (1.500548 for the complete-initial-box variant). During learning, without any entry assumption, the
-  front of first activation travels at most 18.23 layers per time unit.
+Later releases extend the result; each is described in [`CHANGELOG.md`](CHANGELOG.md).
 
-**New in v4.2** ([`depth/point4/README.md`](depth/point4/README.md)): whether *every* preparation of the
-original source enters the tail is still **open**, and is now posed precisely. Proved so far: a wider
-tail contract (D = 0.195), the pruning mechanism that stops learning in depth, a conditional bridge to
-the tail, and the fate of the leading precursor at layer 18. There are also certified obstructions
-showing what any complete proof must overcome.
+- **Arbitrary depth** ([`depth/`](depth/README.md)). For six prescribed preparations, training is
+  certified through 68 layers (128 in one case), and tail theorems carry the learned regime to any
+  depth: one limiting duration per layer, common to all lanes and to different preparations of the
+  same medium, with exact transmission of every admissible pulse word.
+- **Random media.** For any stationary ergodic medium, almost every realization has the same limiting
+  speed, with proved speed ceilings.
+- **Open problem** ([`depth/point4/`](depth/point4/README.md)). Whether *every* preparation of the
+  original source enters that regime is open; the partial results and obstructions are recorded.
+- **Box width** ([`sweep/`](sweep/README.md)). Research campaigns cover all 18 layers at ±3e-4 and 17 at
+  ±1e-3; the manual proof covers ±1e-4 only.
 
-**Also in v4.2: how wide can the box be?** ([`sweep/README.md`](sweep/README.md)). Fresh campaigns with
-wider parameter boxes cover all 18 layers at ±3e-4 (three times the box above) and 17 layers at ±1e-3,
-then stop earlier (7 layers at ±3e-3, 4 at ±1e-2). The enclosures stay roughly proportional to the box
-width; what fails first is the certification of an event order. These campaigns are research runs; the
-manual proof covers ±1e-4 only.
-
-The proof level is the same as above: a manual proof under A1–A4, with directed-rounding computations,
-not yet independently reviewed. Entry into the tail contract is certified for six prescribed
-preparations, not for the whole uncertainty box.
-To check the release assets, run `python3 -I tools/verify_depth_assets.py <assets folder>`.
+These results have the same proof level as above: a manual proof under A1–A4, not yet independently
+reviewed. To check the depth release assets, run `python3 -I tools/verify_depth_assets.py <assets folder>`.
 
 ## Origin of the model
 
@@ -140,8 +122,6 @@ byte-identical because its SHA-256 is cited by the proof dossier and by `depth/`
 `proof/TRAINING_ENTRY_REVIEW_EN.txt` and `proof/historical_status/` (see the "Historical documents"
 section of `proof/README_EN.txt`).
 
-Start with [`proof/learning_justification/output/REVIEW_GUIDE_EN.txt`](proof/learning_justification/output/REVIEW_GUIDE_EN.txt).
-
 ## What was closed
 
 The A14 reference (`results/reference_A14_gain_boxes.json`) lists one item as **unclosed**: *"A validated
@@ -149,15 +129,12 @@ interval replay of the complete 128-pulse learning transient from the initial st
 that replay. It agrees with the reference on all 648 learned-gain boxes. Those reference gains were
 observed numerically with parameters within 1e-8, a set that lies inside the parameter box used here.
 
-## Version history in one paragraph
+## Version history
 
-The **v3.2** campaign (kept in [`history/v3.2/`](history/v3.2/)) completed, but it gave the auxiliary
-constants of a cell (LM, LS, LE, M, C) **one** symbol shared by its three ports. The author found, with
-an exact counterexample, that the model makes them independent per port; v3.2 therefore covered only a
-sub-family. A first correction replaced the shared symbols by plain interval boxes. That is sound, but
-it forgets that a port keeps the same constant at every pulse: enclosures grew 3–10× and the campaign
-stopped at layer 18 ([`history/plain_box_package/`](history/plain_box_package/)). **v3.3** gives each
-port its own symbol, used only for that port's quantities. It is the campaign reported and proved here.
+**v3.3** is the campaign reported and proved here. It gives each port of a cell its own symbol for
+each constant, as the model specifies; the earlier v3.2 campaign shared them across a cell's three
+ports and therefore covered only a sub-family of the devices. The full history is in
+[`CHANGELOG.md`](CHANGELOG.md).
 
 ## Reproduce
 
@@ -193,6 +170,7 @@ about the recorded campaign. See [results/HASHES.md](results/HASHES.md) for both
 | Path | What it is |
 |---|---|
 | `WHY_A22_MATTERS.md` | Why this network matters: the question, related work, limits of the method |
+| `CHANGELOG.md` | What each release added |
 | `depth/` | The v4.0-depth extension: summary, certificates, theory, review records, layer index, verification replay; `depth/point4/` holds the open entry problem (v4.2) |
 | `sweep/` | The box-width sweep: results, run records and the exact sweep program (v4.2) |
 | `tools/verify_depth_assets.py` | Read-only integrity check of the v4.0-depth release assets |
@@ -217,12 +195,13 @@ about the recorded campaign. See [results/HASHES.md](results/HASHES.md) for both
 This work was done with two AI assistants, **Claude** (Anthropic) and **ChatGPT** (OpenAI), under the
 author's direction. The model, the Reset Operator and the research questions are the author's. Claude
 and ChatGPT wrote and corrected the code, ran the diagnostics, drafted the proof (mainly ChatGPT) and
-audited it (mainly Claude); each also re-checked the other's work. The author ran the campaigns, and directed 
-the work. He does not understand it all but is happy orchestrating and learning. This is why the repository does
-not ask to be taken on trust: the campaign is bound to its exact code by reproducible hashes, every layer
-is re-read by a separate process, critical decisions are re-proved by independent scripts, the results
-are compared with an independent reference, and the proof states its assumptions explicitly. What it
-still needs is review by human specialists.
+audited it (mainly Claude); each also re-checked the other's work. The author designed the model, found
+the port-independence gap with an exact counterexample, ran the campaigns and directed the work; he
+relied on the assistants for parts of the mathematics that he has not checked in full himself. This
+is why the repository does not ask to be taken on trust: the campaign is bound to its exact code by
+reproducible hashes, every layer is re-read by a separate process, critical decisions are re-proved by
+independent scripts, the results are compared with an independent reference, and the proof states its
+assumptions explicitly. What it still needs is review by human specialists.
 
 ## License and citation
 
