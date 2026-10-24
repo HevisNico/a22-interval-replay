@@ -1,0 +1,89 @@
+{
+  "sources": {
+    "baselines.py": {
+      "sha256": "91114c5929e37f9942f7f6e6d7639ad7ab0e59c7a2458ba40279f8ac6179fa8e",
+      "identical_existing_workspace_sources": []
+    },
+    "check_kernels.py": {
+      "sha256": "c7965e6305dd16ba9e175c4dd55fc88967025044d30039753dfc48f22e39e3ce",
+      "identical_existing_workspace_sources": []
+    },
+    "directed.py": {
+      "sha256": "a577108362a4868d7aa1279f1a7e254e5b6939e2967154678772f2ad6daf8ca0",
+      "identical_existing_workspace_sources": [
+        "point4_modes_EN/directed.py",
+        "point4_multilayer_EN/directed.py",
+        "point4_extinction_investigation_EN/directed.py",
+        "point4_desynchronization_EN/directed.py"
+      ]
+    },
+    "directed_high.py": {
+      "sha256": "a0ba9b75821845680a4f21e3d6a65493147787076587319a98f8cfe1987516a2",
+      "identical_existing_workspace_sources": [],
+      "description": "Copy of directed.py with both Decimal contexts increased from 70 to 130 digits. Explicit finite-series remainders retained."
+    },
+    "pruning_high.py": {
+      "sha256": "61762038c234674c466128be2d32733028eb51054e7272e51e7319d907466acc",
+      "identical_existing_workspace_sources": [],
+      "description": "Nominal pruning/root kernel adapted from verify_blocks.py, using directed_high, 130-digit candidate context and 1e-95 root padding. Every proposed bracket must pass directed root sign checks."
+    },
+    "record_environment.py": {
+      "sha256": "812b5d8915ace7406bd278c0b347991df1f7b3b096ccabae10661bd583772a87",
+      "identical_existing_workspace_sources": []
+    },
+    "search_disorder.py": {
+      "sha256": "c18467c525e4d7033731854f126631a8b2b80f539599de314af0a834496898c3",
+      "identical_existing_workspace_sources": []
+    },
+    "verify_blocks.py": {
+      "sha256": "879c30cf1d1edd38de6b5549a976724e033d887628f8ec2d8e2193a1a0001bf8",
+      "identical_existing_workspace_sources": [
+        "point4_modes_EN/verify_blocks.py",
+        "point4_multilayer_EN/verify_blocks.py"
+      ]
+    },
+    "verify_bridge.py": {
+      "sha256": "2bf86f93557611f8b1b875a069db42a1cf2b2aa479ed9507f209c1139279523b",
+      "identical_existing_workspace_sources": []
+    },
+    "verify_desync.py": {
+      "sha256": "13e03de4e07c2adca3787ce97648534c87c6929bb6f6ba33d64c446ec356cc12",
+      "identical_existing_workspace_sources": [
+        "point4_modes_EN/verify_desync.py",
+        "point4_multilayer_EN/verify_desync.py",
+        "point4_desynchronization_EN/verify_desync.py"
+      ]
+    },
+    "verify_disorder.py": {
+      "sha256": "f0301aed945411a51c82fde382b8449bc581e3b6d85104202ab86b558725eb7d",
+      "identical_existing_workspace_sources": []
+    },
+    "verify_forcing.py": {
+      "sha256": "784c4b8453bff6b80924ccb57399aa887814a861d55f6498096e546c807d61b5",
+      "identical_existing_workspace_sources": []
+    },
+    "verify_full_corner.py": {
+      "sha256": "16a9f655ff9ff345751bf0dcfab75c67f9ab8bf95354b420b8a27269090f704a",
+      "identical_existing_workspace_sources": []
+    },
+    "verify_pruning.py": {
+      "sha256": "f926628a8e007081af5c66cd842f20e59847e18181532cbac0cda040b2ebc274",
+      "identical_existing_workspace_sources": [
+        "point4_modes_EN/verify_pruning.py",
+        "point4_multilayer_EN/verify_pruning.py",
+        "point4_extinction_investigation_EN/verify_pruning.py",
+        "point4_desynchronization_EN/verify_pruning.py"
+      ]
+    }
+  },
+  "dependency": {
+    "path": "dependencies/A22_point_4_modes_and_tail_budget_EN.zip",
+    "sha256": "17b7d37da9a87b2db89ac478df279d89a6b9513f58137ee7a7605b48a3059fd0"
+  },
+  "production_repository": {
+    "commit": "94f499c85bbc784c08c0d8bdb5e616360dc34863",
+    "git_status_porcelain": "",
+    "modified_by_this_work": false
+  },
+  "A22_native_binaries_used": false
+}

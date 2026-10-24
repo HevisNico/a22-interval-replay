@@ -13,7 +13,8 @@ the few you happened to simulate?
 
 A22 answers that question for one concrete network: 18 layers of 12 cells, trained by 128 pulses
 with a local learning rule, for every device in a small parameter box (±1e-4 on the constants,
-±1e-5 on the initial states).
+±1e-5 on the initial states). The same computation also covers all 18 layers with ±3e-4 on the
+constants (see "Where the method stops working").
 
 ## The core result: learning reaches the same regime for every device
 
@@ -81,6 +82,24 @@ This is a proof of concept of the method, on a small box. The box is far tighter
 variability of real components, and in such a box much of the dynamics is close to linear, which is
 part of why affine arithmetic succeeds. What is known about its limits:
 
+- **How far the box can be widened** ([`sweep/README.md`](sweep/README.md)). Four fresh campaigns,
+  identical to the v3.3 campaign except for the relative half-width ε of the physical parameters
+  (initial states stay at ±1e-5):
+
+  | ε | Layers accepted | First refusal |
+  |---|---|---|
+  | 1e-4 (the v3.3 result) | 18 of 18 | none |
+  | 3e-4 | 18 of 18 | none |
+  | 1e-3 | 17 | layer 18, lane 6 |
+  | 3e-3 | 7 | layer 8, lane 0 |
+  | 1e-2 | 4 | layer 5 |
+
+  The enclosures stay roughly proportional to ε: at 1e-3, the median output-date width agrees
+  with a linear fit through the 1e-4 and 3e-4 campaigns to within 25 % on every accepted layer, and
+  within 5 % on most of them. What fails first is the decision of an event order: once the enclosures, though still
+  linear, become comparable to the gaps between events, an order can no longer be certified, and
+  the campaign refuses. A refusal is a limit of the computation, not a counterexample.
+
 - **Correlations are essential.** Giving each constant a plain interval instead of a symbol per port
   made the enclosures grow 3 to 10 times, and that campaign stopped at layer 18. With one symbol per
   port, the enclosures are at most 5 % wider than in the earlier campaign that shared one symbol
@@ -89,10 +108,7 @@ part of why affine arithmetic succeeds. What is known about its limits:
 - **Wider fronts break single-step enclosures.** Past layer 18, when the arrival times of a cell's
   parents differ by a large fraction of a time unit, one-step enclosures stop contracting and their
   width grows layer after layer. This is the obstacle in the open step below.
-- **The box width has not been mapped.** How far the box can be widened before the campaign refuses
-  is not known. That experiment has not been run.
-
-![Output-date enclosure width by layer](../figures/date_width_by_layer.png)
+![Output-date enclosure width by layer](figures/date_width_by_layer.png)
 
 *Median width of the enclosure of the output dates, per layer, during training (v3.3 campaign).*
 
@@ -100,16 +116,16 @@ part of why affine arithmetic succeeds. What is known about its limits:
 
 - It is **one model**. The equations, topology and learning rule are fixed choices of this
   realization, inspired by the author's Reset Operator. Nothing here proves that hypothesis in
-  general ([`MODEL_BOUNDARY_EN.txt`](MODEL_BOUNDARY_EN.txt)).
+  general ([`docs/MODEL_BOUNDARY_EN.txt`](docs/MODEL_BOUNDARY_EN.txt)).
 - **The proof is not yet reviewed.** It is a manual proof under explicit execution assumptions
   (A1–A4), not machine-checked and not yet read by an independent expert.
 - **One step is open.** Entry into the deep-layer regime is certified for six prescribed
   preparations. Whether every preparation of the original source enters it is open
-  ([`../depth/point4/README.md`](../depth/point4/README.md)).
+  ([`depth/point4/README.md`](depth/point4/README.md)).
 
 ## How you can help
 
-The most useful single check is **Task 1** of [`REVIEW.md`](../REVIEW.md): the lemma that every
+The most useful single check is **Task 1** of [`REVIEW.md`](REVIEW.md): the lemma that every
 threshold root is enclosed strictly, on which the whole event-order argument rests. It can be read
 in one to three hours without knowing the rest. "It holds", "there is a gap here" or "here is a
 counterexample" are all useful answers.

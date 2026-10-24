@@ -1,0 +1,4378 @@
+{
+  "kernel_id": "6399666600660a2deb16f2b5e435c2bda966b5cf2a7187a2cce36529ad61e96f",
+  "run_id": "9db9d3688bd8411b8c054d2c373d06af",
+  "environment": {
+    "arithmetic_backend": "native",
+    "native_sha256": "29b1d226d6576e418c38d476cb050a20b37f6db67b6f70ca734423cac6985c57",
+    "numpy": "2.3.5",
+    "python": "3.12.14",
+    "scipy": "1.17.0"
+  },
+  "scientific_status": "experimental_not_qualified",
+  "layers": [
+    {
+      "layer": 1,
+      "stored_research_completion_markers_present": true,
+      "critical_path_seconds": 6.9,
+      "revalidation_seconds": 2.8,
+      "elapsed_seconds": 9.7,
+      "cells": [
+        {
+          "lane": 0,
+          "status": "research_cell_complete",
+          "pulses": 126,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 4.3,
+          "peak_rss_mib": 65,
+          "max_date_width": 9.329e-05,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0002187,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              2.18652,
+              2.18674
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 9.329e-05,
+            "named_physical_symbol_share": 0.805,
+            "other_symbol_share": 0.005,
+            "anonymous_or_center_share": 0.19,
+            "symbols": 21,
+            "top_origin_layers": {
+              "1": 0.81
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 1,
+          "status": "research_cell_complete",
+          "pulses": 124,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 3.4,
+          "peak_rss_mib": 65,
+          "max_date_width": 0.0001593,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              1.81488,
+              1.81506
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0001593,
+            "named_physical_symbol_share": 0.995,
+            "other_symbol_share": 0.005,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "1": 1.0
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 2,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 3,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 4,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 5,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 6,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 7,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 8,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 9,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 10,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 11,
+          "status": "research_cell_complete",
+          "pulses": 124,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 3.9,
+          "peak_rss_mib": 65,
+          "max_date_width": 0.0001593,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              1.81488,
+              1.81506
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0001593,
+            "named_physical_symbol_share": 0.995,
+            "other_symbol_share": 0.005,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "1": 1.0
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        }
+      ]
+    },
+    {
+      "layer": 2,
+      "stored_research_completion_markers_present": true,
+      "critical_path_seconds": 22.4,
+      "revalidation_seconds": 5.3,
+      "elapsed_seconds": 27.8,
+      "cells": [
+        {
+          "lane": 0,
+          "status": "research_cell_complete",
+          "pulses": 124,
+          "clusters": 744,
+          "orders": 1488,
+          "seconds": 19.9,
+          "peak_rss_mib": 115,
+          "max_date_width": 0.0001456,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0002187,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              2.18652,
+              2.18674
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0001456,
+            "named_physical_symbol_share": 0.996,
+            "other_symbol_share": 0.004,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "1": 0.698,
+              "2": 0.302
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 1,
+          "status": "research_cell_complete",
+          "pulses": 124,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 8.4,
+          "peak_rss_mib": 99,
+          "max_date_width": 0.0003552,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.54663,
+              0.546685
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0003552,
+            "named_physical_symbol_share": 0.995,
+            "other_symbol_share": 0.005,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "2": 0.593,
+              "1": 0.407
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 2,
+          "status": "research_cell_complete",
+          "pulses": 120,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 4.5,
+          "peak_rss_mib": 84,
+          "max_date_width": 0.0003187,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              1.81488,
+              1.81506
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0003187,
+            "named_physical_symbol_share": 0.995,
+            "other_symbol_share": 0.005,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "1": 0.5,
+              "2": 0.5
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 3,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 4,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 5,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 6,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 7,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 8,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 9,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 10,
+          "status": "research_cell_complete",
+          "pulses": 120,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 5.1,
+          "peak_rss_mib": 84,
+          "max_date_width": 0.0003187,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              1.81488,
+              1.81506
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0003187,
+            "named_physical_symbol_share": 0.995,
+            "other_symbol_share": 0.005,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "1": 0.5,
+              "2": 0.5
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 11,
+          "status": "research_cell_complete",
+          "pulses": 124,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 8.0,
+          "peak_rss_mib": 99,
+          "max_date_width": 0.0003552,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.54663,
+              0.546685
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0003552,
+            "named_physical_symbol_share": 0.995,
+            "other_symbol_share": 0.005,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "2": 0.593,
+              "1": 0.407
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        }
+      ]
+    },
+    {
+      "layer": 3,
+      "stored_research_completion_markers_present": true,
+      "critical_path_seconds": 29.0,
+      "revalidation_seconds": 9.9,
+      "elapsed_seconds": 38.9,
+      "cells": [
+        {
+          "lane": 0,
+          "status": "research_cell_complete",
+          "pulses": 123,
+          "clusters": 744,
+          "orders": 1488,
+          "seconds": 26.5,
+          "peak_rss_mib": 129,
+          "max_date_width": 0.0004928,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.54663,
+              0.546685
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.54663,
+              0.546685
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0004928,
+            "named_physical_symbol_share": 0.995,
+            "other_symbol_share": 0.005,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "3": 0.392,
+              "2": 0.337,
+              "1": 0.27
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 1,
+          "status": "research_cell_complete",
+          "pulses": 122,
+          "clusters": 119,
+          "orders": 119,
+          "seconds": 23.3,
+          "peak_rss_mib": 129,
+          "max_date_width": 0.007336,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.07317,
+          "gains": [
+            [
+              0.54663,
+              0.546685
+            ],
+            [
+              2.54729,
+              2.62045
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.007336,
+            "named_physical_symbol_share": 0.92,
+            "other_symbol_share": 0.08,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "3": 0.962,
+              "2": 0.0205,
+              "1": 0.0176
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 2,
+          "status": "research_cell_complete",
+          "pulses": 120,
+          "clusters": 119,
+          "orders": 119,
+          "seconds": 11.6,
+          "peak_rss_mib": 116,
+          "max_date_width": 0.0003795,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              1.81488,
+              1.81506
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0003795,
+            "named_physical_symbol_share": 0.993,
+            "other_symbol_share": 0.007,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "2": 0.502,
+              "1": 0.396,
+              "3": 0.102
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 3,
+          "status": "research_cell_complete",
+          "pulses": 116,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 5.7,
+          "peak_rss_mib": 94,
+          "max_date_width": 0.000478,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              1.81488,
+              1.81506
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.000478,
+            "named_physical_symbol_share": 0.995,
+            "other_symbol_share": 0.005,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "1": 0.333,
+              "2": 0.333,
+              "3": 0.333
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 4,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 5,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 6,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 7,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 8,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 9,
+          "status": "research_cell_complete",
+          "pulses": 116,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 5.6,
+          "peak_rss_mib": 94,
+          "max_date_width": 0.000478,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              1.81488,
+              1.81506
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.000478,
+            "named_physical_symbol_share": 0.995,
+            "other_symbol_share": 0.005,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "1": 0.333,
+              "2": 0.333,
+              "3": 0.333
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 10,
+          "status": "research_cell_complete",
+          "pulses": 120,
+          "clusters": 119,
+          "orders": 119,
+          "seconds": 11.4,
+          "peak_rss_mib": 115,
+          "max_date_width": 0.0003795,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              1.81488,
+              1.81506
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0003795,
+            "named_physical_symbol_share": 0.993,
+            "other_symbol_share": 0.007,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "2": 0.502,
+              "1": 0.396,
+              "3": 0.102
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 11,
+          "status": "research_cell_complete",
+          "pulses": 122,
+          "clusters": 119,
+          "orders": 119,
+          "seconds": 23.2,
+          "peak_rss_mib": 129,
+          "max_date_width": 0.007336,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.07317,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              2.54729,
+              2.62045
+            ],
+            [
+              0.54663,
+              0.546685
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.007336,
+            "named_physical_symbol_share": 0.92,
+            "other_symbol_share": 0.08,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "3": 0.962,
+              "2": 0.0205,
+              "1": 0.0176
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        }
+      ]
+    },
+    {
+      "layer": 4,
+      "stored_research_completion_markers_present": true,
+      "critical_path_seconds": 44.8,
+      "revalidation_seconds": 17.8,
+      "elapsed_seconds": 62.6,
+      "cells": [
+        {
+          "lane": 0,
+          "status": "research_cell_complete",
+          "pulses": 121,
+          "clusters": 732,
+          "orders": 1940,
+          "seconds": 41.0,
+          "peak_rss_mib": 145,
+          "max_date_width": 0.001484,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0003984,
+          "gains": [
+            [
+              0.54663,
+              0.546685
+            ],
+            [
+              3.9841,
+              3.9845
+            ],
+            [
+              0.54663,
+              0.546685
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.001484,
+            "named_physical_symbol_share": 0.931,
+            "other_symbol_share": 0.069,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "3": 0.755,
+              "2": 0.114,
+              "1": 0.0907,
+              "4": 0.0405
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 1,
+          "status": "research_cell_complete",
+          "pulses": 121,
+          "clusters": 119,
+          "orders": 238,
+          "seconds": 21.3,
+          "peak_rss_mib": 146,
+          "max_date_width": 0.003454,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.54663,
+              0.546685
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.003454,
+            "named_physical_symbol_share": 0.91,
+            "other_symbol_share": 0.09,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "3": 0.862,
+              "4": 0.05,
+              "2": 0.0486,
+              "1": 0.0397
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 2,
+          "status": "research_cell_complete",
+          "pulses": 120,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 18.2,
+          "peak_rss_mib": 154,
+          "max_date_width": 0.001988,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.54663,
+              0.546685
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.001988,
+            "named_physical_symbol_share": 0.921,
+            "other_symbol_share": 0.079,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "3": 0.71,
+              "4": 0.126,
+              "2": 0.0907,
+              "1": 0.0735
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 3,
+          "status": "research_cell_complete",
+          "pulses": 116,
+          "clusters": 116,
+          "orders": 116,
+          "seconds": 12.7,
+          "peak_rss_mib": 134,
+          "max_date_width": 0.0004772,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              1.81488,
+              1.81506
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0004772,
+            "named_physical_symbol_share": 0.993,
+            "other_symbol_share": 0.007,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "2": 0.361,
+              "1": 0.326,
+              "3": 0.23,
+              "4": 0.0828
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 4,
+          "status": "research_cell_complete",
+          "pulses": 112,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 6.6,
+          "peak_rss_mib": 103,
+          "max_date_width": 0.0006373,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              1.81488,
+              1.81506
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0006373,
+            "named_physical_symbol_share": 0.995,
+            "other_symbol_share": 0.005,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "1": 0.25,
+              "2": 0.25,
+              "3": 0.25,
+              "4": 0.25
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 5,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 6,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 7,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 8,
+          "status": "research_cell_complete",
+          "pulses": 112,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 5.1,
+          "peak_rss_mib": 103,
+          "max_date_width": 0.0006373,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              1.81488,
+              1.81506
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0006373,
+            "named_physical_symbol_share": 0.995,
+            "other_symbol_share": 0.005,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "1": 0.25,
+              "2": 0.25,
+              "3": 0.25,
+              "4": 0.25
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 9,
+          "status": "research_cell_complete",
+          "pulses": 116,
+          "clusters": 116,
+          "orders": 116,
+          "seconds": 12.4,
+          "peak_rss_mib": 129,
+          "max_date_width": 0.0004772,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              1.81488,
+              1.81506
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0004772,
+            "named_physical_symbol_share": 0.993,
+            "other_symbol_share": 0.007,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "2": 0.361,
+              "1": 0.326,
+              "3": 0.23,
+              "4": 0.0828
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 10,
+          "status": "research_cell_complete",
+          "pulses": 120,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 18.7,
+          "peak_rss_mib": 154,
+          "max_date_width": 0.001988,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.54663,
+              0.546685
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.001988,
+            "named_physical_symbol_share": 0.921,
+            "other_symbol_share": 0.079,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "3": 0.71,
+              "4": 0.126,
+              "2": 0.0907,
+              "1": 0.0735
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 11,
+          "status": "research_cell_complete",
+          "pulses": 121,
+          "clusters": 119,
+          "orders": 238,
+          "seconds": 20.6,
+          "peak_rss_mib": 145,
+          "max_date_width": 0.003454,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.54663,
+              0.546685
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.003454,
+            "named_physical_symbol_share": 0.91,
+            "other_symbol_share": 0.09,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "3": 0.862,
+              "4": 0.05,
+              "2": 0.0486,
+              "1": 0.0397
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        }
+      ]
+    },
+    {
+      "layer": 5,
+      "stored_research_completion_markers_present": true,
+      "critical_path_seconds": 43.5,
+      "revalidation_seconds": 24.0,
+      "elapsed_seconds": 67.4,
+      "cells": [
+        {
+          "lane": 0,
+          "status": "research_cell_complete",
+          "pulses": 120,
+          "clusters": 726,
+          "orders": 1452,
+          "seconds": 39.9,
+          "peak_rss_mib": 164,
+          "max_date_width": 0.002934,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.54663,
+              0.546685
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.54663,
+              0.546685
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.002934,
+            "named_physical_symbol_share": 0.903,
+            "other_symbol_share": 0.097,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "3": 0.815,
+              "2": 0.0574,
+              "1": 0.0464,
+              "4": 0.0437
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 1,
+          "status": "research_cell_complete",
+          "pulses": 120,
+          "clusters": 120,
+          "orders": 123,
+          "seconds": 32.6,
+          "peak_rss_mib": 171,
+          "max_date_width": 0.003093,
+          "q_width": 0.0,
+          "b_width": 0.009247,
+          "gain_width": 0.0002187,
+          "gains": [
+            [
+              0.54663,
+              0.546685
+            ],
+            [
+              2.18652,
+              2.18674
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.003093,
+            "named_physical_symbol_share": 0.909,
+            "other_symbol_share": 0.091,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "3": 0.827,
+              "4": 0.0564,
+              "2": 0.0551,
+              "1": 0.0448
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 2,
+          "status": "research_cell_complete",
+          "pulses": 119,
+          "clusters": 6,
+          "orders": 11,
+          "seconds": 25.9,
+          "peak_rss_mib": 178,
+          "max_date_width": 0.002427,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.54663,
+              0.546685
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.002427,
+            "named_physical_symbol_share": 0.923,
+            "other_symbol_share": 0.077,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "3": 0.678,
+              "4": 0.0984,
+              "5": 0.0904,
+              "2": 0.0734
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 3,
+          "status": "research_cell_complete",
+          "pulses": 116,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 17.3,
+          "peak_rss_mib": 174,
+          "max_date_width": 0.0012,
+          "q_width": 0.0,
+          "b_width": 0.0,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              1.81488,
+              1.81506
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0012,
+            "named_physical_symbol_share": 0.936,
+            "other_symbol_share": 0.064,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "3": 0.615,
+              "2": 0.145,
+              "1": 0.127,
+              "4": 0.0801
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 4,
+          "status": "research_cell_complete",
+          "pulses": 112,
+          "clusters": 110,
+          "orders": 110,
+          "seconds": 10.7,
+          "peak_rss_mib": 150,
+          "max_date_width": 0.001218,
+          "q_width": 0.0,
+          "b_width": 0.0,
+          "gain_width": 0.0003307,
+          "gains": [
+            [
+              3.30692,
+              3.30725
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.001218,
+            "named_physical_symbol_share": 0.935,
+            "other_symbol_share": 0.065,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "5": 0.538,
+              "2": 0.147,
+              "1": 0.126,
+              "4": 0.121
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 5,
+          "status": "research_cell_complete",
+          "pulses": 108,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 5.4,
+          "peak_rss_mib": 111,
+          "max_date_width": 0.0007966,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              1.81488,
+              1.81506
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0007966,
+            "named_physical_symbol_share": 0.995,
+            "other_symbol_share": 0.005,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "1": 0.2,
+              "2": 0.2,
+              "3": 0.2,
+              "4": 0.2
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 6,
+          "status": "research_cell_complete",
+          "pulses": 0,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 0.0,
+          "peak_rss_mib": 62,
+          "max_date_width": 0.0,
+          "q_width": 2.1e-160,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0
+        },
+        {
+          "lane": 7,
+          "status": "research_cell_complete",
+          "pulses": 108,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 6.2,
+          "peak_rss_mib": 111,
+          "max_date_width": 0.0007966,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              1.81488,
+              1.81506
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0007966,
+            "named_physical_symbol_share": 0.995,
+            "other_symbol_share": 0.005,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "1": 0.2,
+              "2": 0.2,
+              "3": 0.2,
+              "4": 0.2
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 8,
+          "status": "research_cell_complete",
+          "pulses": 112,
+          "clusters": 110,
+          "orders": 110,
+          "seconds": 9.4,
+          "peak_rss_mib": 142,
+          "max_date_width": 0.001218,
+          "q_width": 0.0,
+          "b_width": 0.0,
+          "gain_width": 0.0003307,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              3.30692,
+              3.30725
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.001218,
+            "named_physical_symbol_share": 0.935,
+            "other_symbol_share": 0.065,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "5": 0.538,
+              "2": 0.147,
+              "1": 0.126,
+              "4": 0.121
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 9,
+          "status": "research_cell_complete",
+          "pulses": 116,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 17.7,
+          "peak_rss_mib": 171,
+          "max_date_width": 0.0012,
+          "q_width": 0.0,
+          "b_width": 0.0,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              1.81488,
+              1.81506
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0012,
+            "named_physical_symbol_share": 0.936,
+            "other_symbol_share": 0.064,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "3": 0.615,
+              "2": 0.145,
+              "1": 0.127,
+              "4": 0.0801
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 10,
+          "status": "research_cell_complete",
+          "pulses": 119,
+          "clusters": 6,
+          "orders": 11,
+          "seconds": 26.2,
+          "peak_rss_mib": 173,
+          "max_date_width": 0.002427,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.54663,
+              0.546685
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.002427,
+            "named_physical_symbol_share": 0.923,
+            "other_symbol_share": 0.077,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "3": 0.678,
+              "4": 0.0984,
+              "5": 0.0904,
+              "2": 0.0734
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 11,
+          "status": "research_cell_complete",
+          "pulses": 120,
+          "clusters": 120,
+          "orders": 123,
+          "seconds": 31.9,
+          "peak_rss_mib": 165,
+          "max_date_width": 0.003093,
+          "q_width": 0.0,
+          "b_width": 0.009247,
+          "gain_width": 0.0002187,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              2.18652,
+              2.18674
+            ],
+            [
+              0.54663,
+              0.546685
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.003093,
+            "named_physical_symbol_share": 0.909,
+            "other_symbol_share": 0.091,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "3": 0.827,
+              "4": 0.0564,
+              "2": 0.0551,
+              "1": 0.0448
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        }
+      ]
+    },
+    {
+      "layer": 6,
+      "stored_research_completion_markers_present": true,
+      "critical_path_seconds": 108.1,
+      "revalidation_seconds": 30.5,
+      "elapsed_seconds": 138.6,
+      "cells": [
+        {
+          "lane": 0,
+          "status": "research_cell_complete",
+          "pulses": 119,
+          "clusters": 720,
+          "orders": 1448,
+          "seconds": 48.4,
+          "peak_rss_mib": 174,
+          "max_date_width": 0.00305,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0002187,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              2.18652,
+              2.18674
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.00305,
+            "named_physical_symbol_share": 0.894,
+            "other_symbol_share": 0.106,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "3": 0.796,
+              "2": 0.0553,
+              "4": 0.0452,
+              "1": 0.0448
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 1,
+          "status": "research_cell_complete",
+          "pulses": 119,
+          "clusters": 352,
+          "orders": 354,
+          "seconds": 33.3,
+          "peak_rss_mib": 185,
+          "max_date_width": 0.002872,
+          "q_width": 0.0,
+          "b_width": 0.005892,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.54663,
+              0.546685
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.002872,
+            "named_physical_symbol_share": 0.911,
+            "other_symbol_share": 0.089,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.728,
+              "4": 0.0638,
+              "2": 0.0605,
+              "5": 0.058
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 2,
+          "status": "research_cell_complete",
+          "pulses": 118,
+          "clusters": 3,
+          "orders": 4,
+          "seconds": 24.7,
+          "peak_rss_mib": 202,
+          "max_date_width": 0.002467,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0002187,
+          "gains": [
+            [
+              0.54663,
+              0.546685
+            ],
+            [
+              2.18652,
+              2.18674
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.002467,
+            "named_physical_symbol_share": 0.925,
+            "other_symbol_share": 0.075,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.668,
+              "4": 0.0951,
+              "5": 0.0863,
+              "2": 0.0729
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 3,
+          "status": "research_cell_complete",
+          "pulses": 116,
+          "clusters": 111,
+          "orders": 222,
+          "seconds": 25.6,
+          "peak_rss_mib": 198,
+          "max_date_width": 0.001708,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.996025,
+              0.996125
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.001708,
+            "named_physical_symbol_share": 0.929,
+            "other_symbol_share": 0.071,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.653,
+              "2": 0.102,
+              "1": 0.0875,
+              "4": 0.0665
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 4,
+          "status": "research_cell_complete",
+          "pulses": 112,
+          "clusters": 110,
+          "orders": 220,
+          "seconds": 76.7,
+          "peak_rss_mib": 196,
+          "max_date_width": 0.001241,
+          "q_width": 0.0,
+          "b_width": 0.0,
+          "gain_width": 0.024,
+          "gains": [
+            [
+              1.81488,
+              1.81506
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              3.988,
+              4.012
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            true
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.001241,
+            "named_physical_symbol_share": 0.936,
+            "other_symbol_share": 0.064,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.408,
+              "5": 0.203,
+              "2": 0.142,
+              "1": 0.123
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 5,
+          "status": "research_cell_complete",
+          "pulses": 109,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 9.6,
+          "peak_rss_mib": 164,
+          "max_date_width": 0.0006689,
+          "q_width": 0.0,
+          "b_width": 0.0,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              1.81488,
+              1.81506
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0006689,
+            "named_physical_symbol_share": 0.994,
+            "other_symbol_share": 0.006,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "2": 0.257,
+              "6": 0.238,
+              "1": 0.233,
+              "3": 0.164
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 6,
+          "status": "research_cell_complete",
+          "pulses": 105,
+          "clusters": 648,
+          "orders": 1296,
+          "seconds": 23.6,
+          "peak_rss_mib": 150,
+          "max_date_width": 0.0009044,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.996025,
+              0.996125
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.996025,
+              0.996125
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0009044,
+            "named_physical_symbol_share": 0.992,
+            "other_symbol_share": 0.008,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "1": 0.176,
+              "2": 0.176,
+              "3": 0.176,
+              "4": 0.176
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 7,
+          "status": "research_cell_complete",
+          "pulses": 109,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 9.4,
+          "peak_rss_mib": 152,
+          "max_date_width": 0.0006689,
+          "q_width": 0.0,
+          "b_width": 0.0,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              1.81488,
+              1.81506
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0006689,
+            "named_physical_symbol_share": 0.994,
+            "other_symbol_share": 0.006,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "2": 0.257,
+              "6": 0.238,
+              "1": 0.233,
+              "3": 0.164
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 8,
+          "status": "research_cell_complete",
+          "pulses": 112,
+          "clusters": 110,
+          "orders": 220,
+          "seconds": 70.7,
+          "peak_rss_mib": 189,
+          "max_date_width": 0.001241,
+          "q_width": 0.0,
+          "b_width": 0.0,
+          "gain_width": 0.024,
+          "gains": [
+            [
+              3.988,
+              4.012
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              1.81488,
+              1.81506
+            ]
+          ],
+          "gain_caps": [
+            true,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.001241,
+            "named_physical_symbol_share": 0.936,
+            "other_symbol_share": 0.064,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.408,
+              "5": 0.203,
+              "2": 0.142,
+              "1": 0.123
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 9,
+          "status": "research_cell_complete",
+          "pulses": 116,
+          "clusters": 111,
+          "orders": 222,
+          "seconds": 25.7,
+          "peak_rss_mib": 191,
+          "max_date_width": 0.001708,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.996025,
+              0.996125
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.001708,
+            "named_physical_symbol_share": 0.929,
+            "other_symbol_share": 0.071,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.653,
+              "2": 0.102,
+              "1": 0.0875,
+              "4": 0.0665
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 10,
+          "status": "research_cell_complete",
+          "pulses": 118,
+          "clusters": 3,
+          "orders": 4,
+          "seconds": 23.4,
+          "peak_rss_mib": 192,
+          "max_date_width": 0.002467,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0002187,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              2.18652,
+              2.18674
+            ],
+            [
+              0.54663,
+              0.546685
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.002467,
+            "named_physical_symbol_share": 0.925,
+            "other_symbol_share": 0.075,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.668,
+              "4": 0.0951,
+              "5": 0.0863,
+              "2": 0.0729
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 11,
+          "status": "research_cell_complete",
+          "pulses": 119,
+          "clusters": 352,
+          "orders": 354,
+          "seconds": 35.7,
+          "peak_rss_mib": 175,
+          "max_date_width": 0.002872,
+          "q_width": 0.0,
+          "b_width": 0.005892,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.54663,
+              0.546685
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.002872,
+            "named_physical_symbol_share": 0.911,
+            "other_symbol_share": 0.089,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.728,
+              "4": 0.0638,
+              "2": 0.0605,
+              "5": 0.058
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        }
+      ]
+    },
+    {
+      "layer": 7,
+      "stored_research_completion_markers_present": true,
+      "critical_path_seconds": 79.8,
+      "revalidation_seconds": 28.5,
+      "elapsed_seconds": 108.4,
+      "cells": [
+        {
+          "lane": 0,
+          "status": "research_cell_complete",
+          "pulses": 118,
+          "clusters": 714,
+          "orders": 1896,
+          "seconds": 62.7,
+          "peak_rss_mib": 192,
+          "max_date_width": 0.00316,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.54663,
+              0.546685
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.54663,
+              0.546685
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.00316,
+            "named_physical_symbol_share": 0.893,
+            "other_symbol_share": 0.107,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.731,
+              "7": 0.0741,
+              "2": 0.0535,
+              "1": 0.0439
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 1,
+          "status": "research_cell_complete",
+          "pulses": 117,
+          "clusters": 118,
+          "orders": 235,
+          "seconds": 48.8,
+          "peak_rss_mib": 208,
+          "max_date_width": 0.00287,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0003984,
+          "gains": [
+            [
+              0.54663,
+              0.546685
+            ],
+            [
+              3.9841,
+              3.9845
+            ],
+            [
+              0.54663,
+              0.546685
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.00287,
+            "named_physical_symbol_share": 0.91,
+            "other_symbol_share": 0.09,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.714,
+              "4": 0.0643,
+              "5": 0.0616,
+              "2": 0.0607
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 2,
+          "status": "research_cell_complete",
+          "pulses": 117,
+          "clusters": 225,
+          "orders": 338,
+          "seconds": 29.4,
+          "peak_rss_mib": 226,
+          "max_date_width": 0.002761,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.54663,
+              0.546685
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.002761,
+            "named_physical_symbol_share": 0.926,
+            "other_symbol_share": 0.074,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.629,
+              "4": 0.0812,
+              "7": 0.0767,
+              "5": 0.0737
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 3,
+          "status": "research_cell_complete",
+          "pulses": 116,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 27.5,
+          "peak_rss_mib": 222,
+          "max_date_width": 0.001989,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.54663,
+              0.546685
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.001989,
+            "named_physical_symbol_share": 0.933,
+            "other_symbol_share": 0.067,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.598,
+              "7": 0.105,
+              "2": 0.0873,
+              "1": 0.0749
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 4,
+          "status": "research_cell_complete",
+          "pulses": 112,
+          "clusters": 108,
+          "orders": 108,
+          "seconds": 32.5,
+          "peak_rss_mib": 216,
+          "max_date_width": 0.001559,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              1.81488,
+              1.81506
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.299997,
+              0.300027
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.001559,
+            "named_physical_symbol_share": 0.931,
+            "other_symbol_share": 0.069,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.557,
+              "2": 0.112,
+              "5": 0.101,
+              "1": 0.0967
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 5,
+          "status": "research_cell_complete",
+          "pulses": 108,
+          "clusters": 97,
+          "orders": 194,
+          "seconds": 37.4,
+          "peak_rss_mib": 183,
+          "max_date_width": 0.002502,
+          "q_width": 0.0,
+          "b_width": 0.0,
+          "gain_width": 0.0303,
+          "gains": [
+            [
+              1.81488,
+              1.81506
+            ],
+            [
+              1.29214,
+              1.32244
+            ],
+            [
+              3.988,
+              4.012
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            true
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 16,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.002502,
+            "named_physical_symbol_share": 0.941,
+            "other_symbol_share": 0.059,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "7": 0.667,
+              "3": 0.126,
+              "2": 0.0691,
+              "1": 0.0617
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 6,
+          "status": "research_cell_complete",
+          "pulses": 106,
+          "clusters": 654,
+          "orders": 1308,
+          "seconds": 32.0,
+          "peak_rss_mib": 178,
+          "max_date_width": 0.0008048,
+          "q_width": 0.0,
+          "b_width": 0.0,
+          "gain_width": 0.0002187,
+          "gains": [
+            [
+              0.996025,
+              0.996125
+            ],
+            [
+              2.18652,
+              2.18674
+            ],
+            [
+              0.996025,
+              0.996125
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.0008048,
+            "named_physical_symbol_share": 0.99,
+            "other_symbol_share": 0.01,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 256,
+            "top_origin_layers": {
+              "2": 0.214,
+              "6": 0.206,
+              "1": 0.193,
+              "7": 0.149
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 7,
+          "status": "research_cell_complete",
+          "pulses": 108,
+          "clusters": 97,
+          "orders": 194,
+          "seconds": 32.3,
+          "peak_rss_mib": 179,
+          "max_date_width": 0.002502,
+          "q_width": 0.0,
+          "b_width": 0.0,
+          "gain_width": 0.0303,
+          "gains": [
+            [
+              3.988,
+              4.012
+            ],
+            [
+              1.29214,
+              1.32244
+            ],
+            [
+              1.81488,
+              1.81506
+            ]
+          ],
+          "gain_caps": [
+            true,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 16,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.002502,
+            "named_physical_symbol_share": 0.941,
+            "other_symbol_share": 0.059,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "7": 0.667,
+              "3": 0.126,
+              "2": 0.0691,
+              "1": 0.0617
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 8,
+          "status": "research_cell_complete",
+          "pulses": 112,
+          "clusters": 108,
+          "orders": 108,
+          "seconds": 41.6,
+          "peak_rss_mib": 207,
+          "max_date_width": 0.001559,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0001815,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              1.81488,
+              1.81506
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.001559,
+            "named_physical_symbol_share": 0.931,
+            "other_symbol_share": 0.069,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.557,
+              "2": 0.112,
+              "5": 0.101,
+              "1": 0.0967
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 9,
+          "status": "research_cell_complete",
+          "pulses": 116,
+          "clusters": 0,
+          "orders": 0,
+          "seconds": 28.5,
+          "peak_rss_mib": 209,
+          "max_date_width": 0.001989,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.54663,
+              0.546685
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.001989,
+            "named_physical_symbol_share": 0.933,
+            "other_symbol_share": 0.067,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.598,
+              "7": 0.105,
+              "2": 0.0873,
+              "1": 0.0749
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 10,
+          "status": "research_cell_complete",
+          "pulses": 117,
+          "clusters": 225,
+          "orders": 338,
+          "seconds": 28.5,
+          "peak_rss_mib": 213,
+          "max_date_width": 0.002761,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.00012,
+          "gains": [
+            [
+              0.299997,
+              0.300027
+            ],
+            [
+              1.19999,
+              1.20011
+            ],
+            [
+              0.54663,
+              0.546685
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.002761,
+            "named_physical_symbol_share": 0.926,
+            "other_symbol_share": 0.074,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.629,
+              "4": 0.0812,
+              "7": 0.0767,
+              "5": 0.0737
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        },
+        {
+          "lane": 11,
+          "status": "research_cell_complete",
+          "pulses": 117,
+          "clusters": 118,
+          "orders": 235,
+          "seconds": 36.7,
+          "peak_rss_mib": 194,
+          "max_date_width": 0.00287,
+          "q_width": 0.0,
+          "b_width": 2e-05,
+          "gain_width": 0.0003984,
+          "gains": [
+            [
+              0.54663,
+              0.546685
+            ],
+            [
+              3.9841,
+              3.9845
+            ],
+            [
+              0.54663,
+              0.546685
+            ]
+          ],
+          "gain_caps": [
+            false,
+            false,
+            false
+          ],
+          "commutations": 0,
+          "max_commutation_widening": 0.0,
+          "max_actuation_histories": 1,
+          "max_deposit_histories": 1,
+          "recorded_no_fire_cover_decisions": 0,
+          "recorded_no_fire_cover_leaves": 0,
+          "recorded_no_fire_cover_minimum_margin_exact": null,
+          "no_fire_covers_reverified": false,
+          "recovery_group_resolutions": 0,
+          "widest_date": {
+            "width": 0.00287,
+            "named_physical_symbol_share": 0.91,
+            "other_symbol_share": 0.09,
+            "anonymous_or_center_share": 0.0,
+            "symbols": 257,
+            "top_origin_layers": {
+              "3": 0.714,
+              "4": 0.0643,
+              "5": 0.0616,
+              "2": 0.0607
+            },
+            "limitation": "Symbol-label heuristic, not a physical/numerical error separation; parameter-box uncertainty can enter anonymous and center widths"
+          }
+        }
+      ]
+    },
+    {
+      "layer": 8,
+      "stored_research_completion_markers_present": false,
+      "cells": [
+        {
+          "lane": 0,
+          "status": "refusal"
+        },
+        {
+          "lane": 1,
+          "status": "absent"
+        },
+        {
+          "lane": 2,
+          "status": "absent"
+        },
+        {
+          "lane": 3,
+          "status": "absent"
+        },
+        {
+          "lane": 4,
+          "status": "absent"
+        },
+        {
+          "lane": 5,
+          "status": "absent"
+        },
+        {
+          "lane": 6,
+          "status": "absent"
+        },
+        {
+          "lane": 7,
+          "status": "absent"
+        },
+        {
+          "lane": 8,
+          "status": "absent"
+        },
+        {
+          "lane": 9,
+          "status": "absent"
+        },
+        {
+          "lane": 10,
+          "status": "absent"
+        },
+        {
+          "lane": 11,
+          "status": "absent"
+        }
+      ]
+    }
+  ],
+  "scope": "Summary of recorded research outputs; stored completion markers are not mathematical qualification",
+  "tool_sha256": "f02aefc2b72d1c8e6ffe20e33ae9c4039a41ddf79eeb045246313c37c438a707",
+  "seconds_to_summarise": 8.6
+}

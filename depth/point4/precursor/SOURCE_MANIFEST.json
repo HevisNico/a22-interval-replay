@@ -1,0 +1,13 @@
+{
+  "source_layer18_sha256": "e516c4a56ef7295798203e5985e9b7606d1690976b52fc7a794149a61d727d59",
+  "source_point4_sha256": "62da20f58a3099e1740fe6432919abbeec6a60ef4bb50b6eb2f5b4c87677575b",
+  "inherited_arithmetic_member": "point4_disorder_EN/directed.py",
+  "inherited_arithmetic_sha256": "a577108362a4868d7aa1279f1a7e254e5b6939e2967154678772f2ad6daf8ca0",
+  "python": "3.12.14",
+  "new_campaign": false,
+  "full_layer19_computation": false,
+  "manual_lemma": "Leading precursor only; new exact-rational boundary inspection and finite directed inequalities.",
+  "obligation_B": "OPEN",
+  "independent_expert_review": false,
+  "machine_checked_semantic_proof": false
+}

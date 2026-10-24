@@ -1,0 +1,78 @@
+A22 — completed epsilon=1e-3 run: environment and replay
+======================================================
+
+Run status: 17 research layers accepted; experimental_not_qualified.
+No mathematical qualification or closure of obligation B is claimed.
+
+Contents
+--------
+eps_1em3/ contains the immutable campaign identity, cell outputs, receipts,
+separate-process verification records, completion records, and diagnostics.
+SOURCE_FOR_REPLAY.zip contains the exact engine sources, the TWO archived
+CPython 3.12 Linux x86-64 native extensions, tests, and experiment scripts.
+ENVIRONMENT.json records the actual runtime and archived binary hashes.
+The source ZIP includes SOURCE_MANIFEST.json and PREFLIGHT.json.
+
+Required software
+-----------------
+Python 3.12.14; NumPy 2.3.5; SciPy 1.17.0. Use a Linux x86-64 system for
+the supplied binaries. The kernel extension requires OpenSSL libcrypto.
+The original interpreter/runtime and OS are not included as a virtual machine
+or a complete virtual environment. Dependencies are installed from the pins.
+For a local native rebuild, install a C compiler, Python development headers,
+OpenSSL development headers and libcrypto. On Debian-like systems these are
+normally supplied by build-essential, python3.12-dev and libssl-dev.
+
+Prepare a clean Python environment
+---------------------------------
+Extract this run bundle into a new directory, then execute:
+
+  python3.12 -m venv .venv
+  . .venv/bin/activate
+  python -m zipfile -e SOURCE_FOR_REPLAY.zip archived_sources
+  python -m pip install -r archived_sources/engine/requirements.txt
+
+Verify the archived run using its exact archived source and binaries
+------------------------------------------------------------------
+Do NOT rebuild or edit archived_sources before this check. A rebuild can
+change binary bytes and therefore the archived kernel identity.
+
+  python -B archived_sources/engine/run.py --out eps_1em3 --through 17 --epsilon 1e-3 --verify-layer 17
+
+To recheck every layer, repeat with --verify-layer 1 through 17. The verifier
+checks the exact code/runtime identity, parent receipt lineage, payload hashes
+and recorded comparisons. It is an artifact verification, not an independent
+recomputation of every physical trajectory or a new mathematical proof.
+
+If the archived binaries cannot load on the target OS, or code/runtime identity
+does not match, keep the archived campaign untouched. It cannot be accepted
+under a changed environment by editing campaign.json or copying receipts.
+
+Start an independent fresh calculation on your machine
+----------------------------------------------------
+Create a SECOND source copy for rebuilding, separate from archived_sources:
+
+  python -m zipfile -e SOURCE_FOR_REPLAY.zip fresh_sources
+  cd fresh_sources/engine
+  python -B build_all_native.py
+  python -B -m unittest discover -s tests --failfast
+  python -B launch_fresh.py --out ../../fresh_eps_1em3 --workers 8 --memory-mib 1536 --cpu-seconds 14400 --epsilon 1e-3
+
+The fresh output directory must not exist. The runner generates its own new
+campaign.json and run identity. Never edit or reuse the archived receipts.
+For the other sweep values, use --epsilon 1e-3, 3e-3 or 1e-2, each with a new
+output directory. Physical uncertainty is relative +/-epsilon; initial-state
+uncertainty remains delta=1e-5.
+
+Timing
+------
+Eight workers were used. Planning/calculation and fresh verification times are
+separate; verification overlaps the next layer. Do not add both columns over
+all layers to infer elapsed time. The finished run elapsed 1573.866 seconds.
+
+If this delivery has multiple part ZIPs, extract ALL parts into the same
+fresh directory before verification. Shared metadata are identical in each part.
+
+This run REFUSED at layer 18. That layer contains only
+partial outputs and diagnostics, and is NOT accepted. The last accepted layer
+is 17. This is not a physical counterexample.

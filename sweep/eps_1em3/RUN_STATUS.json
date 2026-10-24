@@ -1,0 +1,210 @@
+{
+  "epsilon": "1e-3",
+  "campaign": "/workspace/scratch/ed83c2f4414a/a22_box_width_sweep_20261024/eps_1em3",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-u",
+    "-B",
+    "/workspace/scratch/ed83c2f4414a/a22-interval-replay/engine/launch_fresh.py",
+    "--out",
+    "/workspace/scratch/ed83c2f4414a/a22_box_width_sweep_20261024/eps_1em3",
+    "--workers",
+    "8",
+    "--memory-mib",
+    "1536",
+    "--cpu-seconds",
+    "14400",
+    "--epsilon",
+    "1e-3"
+  ],
+  "started_utc": "2026-10-24T16:18:32.445850+00:00",
+  "status": "refused",
+  "layers": [
+    {
+      "layer": 1,
+      "compute_and_plan_seconds": 7.70728265499929,
+      "fresh_verification_seconds": 2.926480770111084,
+      "max_date_width": 0.0001588135887993276,
+      "median_active_cell_date_width": 0.0001588135887993276,
+      "completed_cells": 12
+    },
+    {
+      "layer": 2,
+      "compute_and_plan_seconds": 26.316701877000014,
+      "fresh_verification_seconds": 5.787940979003906,
+      "max_date_width": 0.0003539102428057179,
+      "median_active_cell_date_width": 0.00031762717759865536,
+      "completed_cells": 12
+    },
+    {
+      "layer": 3,
+      "compute_and_plan_seconds": 33.52478901300128,
+      "fresh_verification_seconds": 10.515094518661499,
+      "max_date_width": 0.00286742260685766,
+      "median_active_cell_date_width": 0.00047644076639798334,
+      "completed_cells": 12
+    },
+    {
+      "layer": 4,
+      "compute_and_plan_seconds": 37.10040005100018,
+      "fresh_verification_seconds": 16.66399359703064,
+      "max_date_width": 0.001523673325264588,
+      "median_active_cell_date_width": 0.000799238745756783,
+      "completed_cells": 12
+    },
+    {
+      "layer": 5,
+      "compute_and_plan_seconds": 43.404182181999204,
+      "fresh_verification_seconds": 22.498608827590942,
+      "max_date_width": 0.0014278632730661536,
+      "median_active_cell_date_width": 0.0009717923746553216,
+      "completed_cells": 12
+    },
+    {
+      "layer": 6,
+      "compute_and_plan_seconds": 103.38365035400057,
+      "fresh_verification_seconds": 30.441004514694214,
+      "max_date_width": 0.0014974862346933556,
+      "median_active_cell_date_width": 0.0010157121801960458,
+      "completed_cells": 12
+    },
+    {
+      "layer": 7,
+      "compute_and_plan_seconds": 72.21985462299926,
+      "fresh_verification_seconds": 29.8603675365448,
+      "max_date_width": 0.0016669129011082956,
+      "median_active_cell_date_width": 0.001323868583693183,
+      "completed_cells": 12
+    },
+    {
+      "layer": 8,
+      "compute_and_plan_seconds": 101.00781100899985,
+      "fresh_verification_seconds": 34.50781869888306,
+      "max_date_width": 0.0029853680900595505,
+      "median_active_cell_date_width": 0.0013210501203941732,
+      "completed_cells": 12
+    },
+    {
+      "layer": 9,
+      "compute_and_plan_seconds": 92.48884770400036,
+      "fresh_verification_seconds": 43.08161115646362,
+      "max_date_width": 0.006898271004237282,
+      "median_active_cell_date_width": 0.001499383873526912,
+      "completed_cells": 12
+    },
+    {
+      "layer": 10,
+      "compute_and_plan_seconds": 124.79007192499921,
+      "fresh_verification_seconds": 41.221649169921875,
+      "max_date_width": 0.22200669274191642,
+      "median_active_cell_date_width": 0.0017141933796218183,
+      "completed_cells": 12
+    },
+    {
+      "layer": 11,
+      "compute_and_plan_seconds": 92.9628832390008,
+      "fresh_verification_seconds": 45.061744689941406,
+      "max_date_width": 0.007117942498958769,
+      "median_active_cell_date_width": 0.002407711701420342,
+      "completed_cells": 12
+    },
+    {
+      "layer": 12,
+      "compute_and_plan_seconds": 138.29011492299833,
+      "fresh_verification_seconds": 49.93148922920227,
+      "max_date_width": 0.006567253584099361,
+      "median_active_cell_date_width": 0.003739485059481168,
+      "completed_cells": 12
+    },
+    {
+      "layer": 13,
+      "compute_and_plan_seconds": 105.22091318899766,
+      "fresh_verification_seconds": 45.74621772766113,
+      "max_date_width": 0.008592668232277119,
+      "median_active_cell_date_width": 0.0024167828229996508,
+      "completed_cells": 12
+    },
+    {
+      "layer": 14,
+      "compute_and_plan_seconds": 156.94262251200053,
+      "fresh_verification_seconds": 47.88327074050903,
+      "max_date_width": 0.010784651718957657,
+      "median_active_cell_date_width": 0.0029419066485190243,
+      "completed_cells": 12
+    },
+    {
+      "layer": 15,
+      "compute_and_plan_seconds": 131.08344121499977,
+      "fresh_verification_seconds": 48.97460961341858,
+      "max_date_width": 0.009940675119135085,
+      "median_active_cell_date_width": 0.005843078705027463,
+      "completed_cells": 12
+    },
+    {
+      "layer": 16,
+      "compute_and_plan_seconds": 116.47105336499953,
+      "fresh_verification_seconds": 34.147406578063965,
+      "max_date_width": 0.009661428745798001,
+      "median_active_cell_date_width": 0.007247291708757565,
+      "completed_cells": 12
+    },
+    {
+      "layer": 17,
+      "compute_and_plan_seconds": 110.80593560000125,
+      "fresh_verification_seconds": 25.06781005859375,
+      "max_date_width": 0.025243380877677066,
+      "median_active_cell_date_width": 0.013211018684318156,
+      "completed_cells": 12
+    }
+  ],
+  "observed_layer_starts_seconds": {
+    "1": 1.009209241001372,
+    "2": 9.032893208001042,
+    "3": 35.107205133001116,
+    "4": 68.71851038600289,
+    "5": 105.84757862900005,
+    "6": 149.53443171300023,
+    "7": 252.99169079700005,
+    "8": 325.36375252100333,
+    "9": 426.36633789700136,
+    "10": 519.3440788630032,
+    "11": 644.406863588003,
+    "12": 737.551903843003,
+    "13": 875.9535753550008,
+    "14": 981.2772349920015,
+    "15": 1138.471055768001,
+    "16": 1270.1062957470022,
+    "17": 1386.6000422739999,
+    "18": 1497.6599456280019
+  },
+  "controller_pid": 421,
+  "failure": {
+    "file": "layer_18/cell_06/refusal.json",
+    "layer": 18,
+    "first_observed_seconds": 1573.8565266790029,
+    "type": "AssertionError",
+    "reason": "Traceback (most recent call last):\n  File \"/workspace/scratch/ed83c2f4414a/a22-interval-replay/engine/run.py\", line 76, in worker\n    result=engine.compute_cell(layer,lane,trains,case['run_id']+f'/cell/{layer}/{lane}')\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/ed83c2f4414a/a22-interval-replay/engine/affine/engine.py\", line 301, in compute_cell\n    outputs,state=b.unit(inputs,f'{layer},{lane}:aff')\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/ed83c2f4414a/a22-interval-replay/engine/kernel/R_cycle_local_A20_2026-10-18/validation_A15.py\", line 95, in unit\n    x=I(min(H,max(D(0),pk.lo)),min(H,max(D(0),pk.hi)))\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/ed83c2f4414a/a22-interval-replay/engine/affine/nofire_cover.py\", line 14, in advance\n    try:return original(s,boundary,cell,count)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/ed83c2f4414a/a22-interval-replay/engine/affine/engine.py\", line 289, in <lambda>\n    b.advance=lambda s,bd,cell,count:causal.advance(s,bd,cell,count,orig_advance)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/ed83c2f4414a/a22-interval-replay/engine/kernel/R_continuation_A22_2026-10-18/avance_causale_A22.py\", line 12, in advance\n    return original(s,boundary,cell,count)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/ed83c2f4414a/a22-interval-replay/engine/kernel/R_cycle_local_A20_2026-10-18/validation_A15.py\", line 9, in advance\n    from fractions import Fraction\n                                   \n  File \"/workspace/scratch/ed83c2f4414a/a22-interval-replay/engine/affine/affine_iv.py\", line 226, in ln\n    assert self.lo > 0\n           ^^^^^^^^^^^\nAssertionError\n"
+  },
+  "returncode": -15,
+  "elapsed_seconds": 1573.865620495002,
+  "ended_utc": "2026-10-24T16:44:46.318865+00:00",
+  "last_accepted_layer": 17,
+  "campaign_identity": {
+    "environment": {
+      "arithmetic_backend": "native",
+      "native_sha256": "29b1d226d6576e418c38d476cb050a20b37f6db67b6f70ca734423cac6985c57",
+      "numpy": "2.3.5",
+      "python": "3.12.14",
+      "scipy": "1.17.0"
+    },
+    "kernel_id": "06fc8bc3f1aa0bd3926053cb6e774c2c88f40375a282d67577c9f007bd244887",
+    "parameters": {
+      "epsilon_relative": "0.001",
+      "initial_delta": "1e-5"
+    },
+    "run_id": "c3b755255b02465c8e2d9194478f0f64",
+    "schema": "A22-affine-research-campaign-1",
+    "scientific_status": "experimental_not_qualified"
+  },
+  "summary_reader_returncode": 0
+}

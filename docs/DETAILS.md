@@ -224,7 +224,8 @@ use, and no entry exists.
 for six prescribed realizations (68 layers; 128 for the interface case), composed with manual tail
 theorems for arbitrary depth. See [depth/README.md](../depth/README.md); its review tasks are Tasks 7–9
 of [REVIEW.md](../REVIEW.md). Version 4.1 adds the heterogeneous tail, the ergodic speed theorem and speed
-ceilings (Tasks 10–12).
+ceilings (Tasks 10–12). Version 4.2 adds partial results and an open problem for entry from every
+preparation (Tasks 13–15, [depth/point4/README.md](../depth/point4/README.md)).
 
 **Not done:**
 1. **Independent expert review** of the proof. The most load-bearing parts are the open-image lemma and

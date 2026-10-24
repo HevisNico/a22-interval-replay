@@ -1,0 +1,43 @@
+{
+  "overall": "PARTIAL_PROGRESS_UNIVERSAL_ENTRY_NOT_PROVED",
+  "results": {
+    "conditional_front_to_tail_bridge": {
+      "status": "PASS_CONDITIONAL",
+      "hypothesis": "Entire finite 128-cohort complete boundary X+8k, first arrival >=20; actual dense fronts and successors stay within diameter .08 for 63 pruning passages.",
+      "conclusion": "Layer64 diameter <.090656432 and same-lane gaps >15.503463513; no further learning from this finite train in fresh layers >=65."
+    },
+    "b_only_half_ring_history": {
+      "status": "PASS_ONE_DIRECTED_HISTORY",
+      "passages": 63,
+      "layer63_diameter_approx": "0.007813337661411",
+      "covers_all_disorder": false
+    },
+    "multiple_parameter_endpoint_history": {
+      "status": "PASS_ONE_DIRECTED_HISTORY",
+      "passages": 63,
+      "layer63_diameter_approx": "0.011108857562706",
+      "covers_all_disorder": false
+    },
+    "uniform_local_parameter_forcing": {
+      "status": "PASS_LOCAL_BOUND_WITH_MANUAL_ARGUMENT",
+      "independent_parameters": true,
+      "example_input_width": ".02",
+      "fresh_extra_diameter_upper": ".0022521",
+      "nominal_contraction_proved": false
+    },
+    "controlled_nominal_63_passage_closure": {
+      "status": "NOT_PROVED"
+    },
+    "original_source_universal_entrance": {
+      "status": "NOT_PROVED"
+    }
+  },
+  "assurance": "Directed arithmetic certificates and manual mathematical argument, not proof-assistant verification or independent peer review.",
+  "validation": {
+    "all_five_current_checkers": "Passed normally",
+    "python_optimized_mode": "Bridge and forcing rerun with -O; resulting JSON byte-identical. Long histories were not rerun with -O.",
+    "generalized_kernel": "Nominal-specialization overlap and selected endpoint inclusion tests passed for five profiles.",
+    "display_rounding": "All five displayed fresh-forcing upper bounds checked against directed JSON endpoints.",
+    "exploratory_search": "Not a certificate; optimizer has no global guarantee."
+  }
+}

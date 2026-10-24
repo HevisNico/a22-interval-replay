@@ -207,6 +207,37 @@ every first activation by at least 0.05484 per layer.
 **Question.** Does the first-activation envelope remain valid when gains grow during learning, before
 a cell's first firing?
 
+## Task 13 — Full-box pruning lemma and the fresh-cells-in-series recurrence (v4.2)
+
+**Claim.** A fresh cell receiving pulses 8 apart blocks the second one, and its first output gap is
+> 15.5. The gain increment is clipped, covering both orders of reopening and ERROR onset, and b is
+tracked. Fresh layers in series give (p, q) → (p + 1, q − 2).
+
+**Where:** `depth/point4/disorder/dependencies/` (extinction progress and desynchronization packages,
+`PROOF_EN.md` / `04_EXTINCTION_PROGRESS_EN.md`).
+
+**Question.** Is every event order at the first dense transition covered, with partial MARK phases?
+
+## Task 14 — Conditional bridge and uniform forcing (v4.2)
+
+**Claim.** If every dense front stays ≤ 0.08 for 63 passages, the boundary reaches layer 64 with
+diameter < 0.0907 and gaps > 15.50346. All independent parameters add at most 0.0022520 to the
+nominal transition's diameter for widths ≤ 0.02.
+
+**Where:** `depth/point4/disorder/PROOF_EN.md`; `verify_bridge.py`, `verify_forcing.py`.
+
+## Task 15 — Layer-18 precursor and its memory (v4.2)
+
+**Claim.** From the certified v3.3 layer-18 enclosures, the leading partial cohort {11, 0, 1} gives
+{0}, then nothing, with b unchanged and gain increments of exactly +0.6 in non-firing cells. The
+first complete cohort has global diameter > 1.0323 (a lower bound).
+
+**Where:** `depth/point4/precursor/REPORT_EN.txt`; `inspect_boundary.py`, `verify_prefix.py`; the
+archive `A22_v33_layer_18.zip` from release v4.2.
+
+**Question.** Is the exact-rational reading of the stored affine enclosures (centres and binary64
+coefficients) outward in every step?
+
 ---
 
 ## What is out of scope here

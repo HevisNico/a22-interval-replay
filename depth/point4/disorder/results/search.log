@@ -1,0 +1,10 @@
+{"fixed_layers": 6, "diameter": 0.004835421965927733}
+{"fixed_layers": 12, "diameter": 0.006850742982455499}
+{"fixed_layers": 24, "diameter": 0.007582931038317725}
+{"fixed_layers": 63, "diameter": 0.007813337662452458}
+{"family": "adversarial b only", "layers": 12, "seed": 0, "success": true, "diameter": 0.007043195674795472}
+{"family": "adversarial b only", "layers": 12, "seed": 1, "success": true, "diameter": 0.007049760158762131}
+{"family": "adversarial b only", "layers": 24, "seed": 0, "success": true, "diameter": 0.008004992666207689}
+{"family": "adversarial b only", "layers": 24, "seed": 1, "success": true, "diameter": 0.008308988457700173}
+{"family": "adversarial b only", "layers": 63, "seed": 0, "success": true, "diameter": 0.00755318819051895}
+{"family": "adversarial b only", "layers": 63, "seed": 1, "success": true, "diameter": 0.008489179163475052}

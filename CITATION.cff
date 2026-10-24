@@ -5,9 +5,11 @@ type: software
 authors:
   - family-names: "Breuillaud"
     given-names: "Nicolas"
-version: "4.1"
-date-released: "2026-10-23"
-license: MIT
+version: "4.2"
+date-released: "2026-10-24"
+license:
+  - MIT
+  - CC-BY-4.0
 abstract: >-
   End-to-end propagation of the A22 spiking-network realization (18 layers x 12 lanes,
   128 input pulses, horizon 1116) with outward-rounded affine interval arithmetic over a box of
@@ -23,6 +25,8 @@ abstract: >-
   same medium. Release 4.1 extends the tail to the full independent parameter box, proves a
   deterministic limiting speed for stationary ergodic random media (Kingman's subadditive ergodic
   theorem), and gives speed ceilings for tail cohorts and for first activation during learning.
+  Release 4.2 widens the tail contract and gives partial results, certified obstructions and a
+  precise open problem for entry from every preparation of the original source.
   The proof is not yet independently reviewed or machine-checked.
   The code, diagnostics and proof were produced with the AI assistants Claude (Anthropic) and
   ChatGPT (OpenAI) under the author's direction. The physical kernel is inspired by the author's

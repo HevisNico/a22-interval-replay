@@ -1,4 +1,4 @@
-﻿# A22 — enclosing every learning trajectory of a 216-cell spiking network, with a manual proof
+# A22 — enclosing every learning trajectory of a 216-cell spiking network, with a manual proof
 
 **Contribution.** This repository contains a computer-assisted enclosure of **all admissible
 trajectories** of a learning spiking network during its full 128-pulse training transient, together with
@@ -8,6 +8,9 @@ every admissible future input**. The network has 216 coupled hybrid cells (18 la
 - uncertain initial states (±1e-5);
 - evolving learned gains and a recovery actuator;
 - threshold crossings, and events whose order may vary.
+
+New here? Start with [**why this network matters**](WHY_A22_MATTERS.md): what is hard, what is
+known, what A22 adds, and where the method stops working.
 
 **The result**, for every fixed device in the parameter box and every admissible initial state (proof in
 [`proof/`](proof/), under the execution assumptions A1–A4 stated there):
@@ -80,6 +83,18 @@ every deeper layer. As a result:
 - **speed ceilings**: no admitted cohort in the tail travels faster than 1.500248 layers per time unit
   (1.500548 for the complete-initial-box variant). During learning, without any entry assumption, the
   front of first activation travels at most 18.23 layers per time unit.
+
+**New in v4.2** ([`depth/point4/README.md`](depth/point4/README.md)): whether *every* preparation of the
+original source enters the tail is still **open**, and is now posed precisely. Proved so far: a wider
+tail contract (D = 0.195), the pruning mechanism that stops learning in depth, a conditional bridge to
+the tail, and the fate of the leading precursor at layer 18. There are also certified obstructions
+showing what any complete proof must overcome.
+
+**Also in v4.2: how wide can the box be?** ([`sweep/README.md`](sweep/README.md)). Fresh campaigns with
+wider parameter boxes cover all 18 layers at ±3e-4 (three times the box above) and 17 layers at ±1e-3,
+then stop earlier (7 layers at ±3e-3, 4 at ±1e-2). The enclosures stay roughly proportional to the box
+width; what fails first is the certification of an event order. These campaigns are research runs; the
+manual proof covers ±1e-4 only.
 
 The proof level is the same as above: a manual proof under A1–A4, with directed-rounding computations,
 not yet independently reviewed. Entry into the tail contract is certified for six prescribed
@@ -177,7 +192,9 @@ about the recorded campaign. See [results/HASHES.md](results/HASHES.md) for both
 
 | Path | What it is |
 |---|---|
-| `depth/` | The v4.0-depth extension: summary, certificates, theory, review records, layer index, verification replay |
+| `WHY_A22_MATTERS.md` | Why this network matters: the question, related work, limits of the method |
+| `depth/` | The v4.0-depth extension: summary, certificates, theory, review records, layer index, verification replay; `depth/point4/` holds the open entry problem (v4.2) |
+| `sweep/` | The box-width sweep: results, run records and the exact sweep program (v4.2) |
 | `tools/verify_depth_assets.py` | Read-only integrity check of the v4.0-depth release assets |
 | `proof/` | The proof dossier (theorems, lemmas, certificates, audit outputs, scripts); see `proof/OMITTED_IN_REPOSITORY.md` |
 | `engine/` | The exact v3.3 program sources used for the campaign (physics kernel unchanged since the first release) |
@@ -209,7 +226,8 @@ still needs is review by human specialists.
 
 ## License and citation
 
-Code (`engine/`, `tools/`, scripts in `proof/`, the engine ZIP in `history/v3.2/`): MIT, see `LICENSE`.
-Documentation, proofs, figures and results: CC BY 4.0, see `LICENSE-docs.md`. To cite, use
+Code files anywhere in the repository or in its release assets: MIT, see `LICENSE`.
+All other content (documents, proofs, figures, data, certificates, results): CC BY 4.0. The exact
+scope is in `LICENSE-docs.md`. To cite, use
 `CITATION.cff` (GitHub's "Cite this repository" button).
 

@@ -1,0 +1,431 @@
+{
+  "status": "PASS_CONDITIONAL_FRONT_TO_TAIL_REDUCTION",
+  "hypotheses": [
+    "Entire boundary history is exactly 128 complete translated 8-spaced cohorts X+8k, k=0,...,127, with first arrival >=20; no omitted additional inputs.",
+    "Fresh downstream cells in the original full independent parameter/state box.",
+    "The actual successive dense-front profiles have diameter <=.08 for every one of the 63 pruning passages. This is a hypothesis, NOT established by this checker."
+  ],
+  "front_width_budget": [
+    "0.08",
+    "0.08"
+  ],
+  "safe_prefix_one_step_diameter_allowance": [
+    "0.0001665067484259469514851840379026198522557377398704836490850311747637",
+    "0.0001665067484259469514851840379026198522557377398704836490850311747637"
+  ],
+  "layer64_uniform_diameter_upper": "0.0906564318992606048950517784257676705443672153517109535414419951848768",
+  "layer64_same_lane_gap_lower": "15.50346351301117240912546753912549421436163292313276801381860536821477",
+  "available_tail_D": [
+    ".11",
+    ".195"
+  ],
+  "final_cohort_bounds": [
+    {
+      "original_cohort": 0,
+      "pruning_passages": 0,
+      "frozen_passages": 64,
+      "diameter_upper": "0.0906564318992606048950517784257676705443672153517109535414419951848768"
+    },
+    {
+      "original_cohort": 2,
+      "pruning_passages": 1,
+      "frozen_passages": 63,
+      "diameter_upper": "0.0904899251508346579435665943878650506921114776118404698923569640101131"
+    },
+    {
+      "original_cohort": 4,
+      "pruning_passages": 2,
+      "frozen_passages": 62,
+      "diameter_upper": "0.0903234184024087109920814103499624308398557398719699862432719328353494"
+    },
+    {
+      "original_cohort": 6,
+      "pruning_passages": 3,
+      "frozen_passages": 61,
+      "diameter_upper": "0.0901569116539827640405962263120598109876000021320995025941869016605857"
+    },
+    {
+      "original_cohort": 8,
+      "pruning_passages": 4,
+      "frozen_passages": 60,
+      "diameter_upper": "0.0899904049055568170891110422741571911353442643922290189451018704858220"
+    },
+    {
+      "original_cohort": 10,
+      "pruning_passages": 5,
+      "frozen_passages": 59,
+      "diameter_upper": "0.0898238981571308701376258582362545712830885266523585352960168393110583"
+    },
+    {
+      "original_cohort": 12,
+      "pruning_passages": 6,
+      "frozen_passages": 58,
+      "diameter_upper": "0.0896573914087049231861406741983519514308327889124880516469318081362946"
+    },
+    {
+      "original_cohort": 14,
+      "pruning_passages": 7,
+      "frozen_passages": 57,
+      "diameter_upper": "0.0894908846602789762346554901604493315785770511726175679978467769615309"
+    },
+    {
+      "original_cohort": 16,
+      "pruning_passages": 8,
+      "frozen_passages": 56,
+      "diameter_upper": "0.0893243779118530292831703061225467117263213134327470843487617457867672"
+    },
+    {
+      "original_cohort": 18,
+      "pruning_passages": 9,
+      "frozen_passages": 55,
+      "diameter_upper": "0.0891578711634270823316851220846440918740655756928766006996767146120035"
+    },
+    {
+      "original_cohort": 20,
+      "pruning_passages": 10,
+      "frozen_passages": 54,
+      "diameter_upper": "0.0889913644150011353801999380467414720218098379530061170505916834372398"
+    },
+    {
+      "original_cohort": 22,
+      "pruning_passages": 11,
+      "frozen_passages": 53,
+      "diameter_upper": "0.0888248576665751884287147540088388521695541002131356334015066522624761"
+    },
+    {
+      "original_cohort": 24,
+      "pruning_passages": 12,
+      "frozen_passages": 52,
+      "diameter_upper": "0.0886583509181492414772295699709362323172983624732651497524216210877124"
+    },
+    {
+      "original_cohort": 26,
+      "pruning_passages": 13,
+      "frozen_passages": 51,
+      "diameter_upper": "0.0884918441697232945257443859330336124650426247333946661033365899129487"
+    },
+    {
+      "original_cohort": 28,
+      "pruning_passages": 14,
+      "frozen_passages": 50,
+      "diameter_upper": "0.0883253374212973475742592018951309926127868869935241824542515587381850"
+    },
+    {
+      "original_cohort": 30,
+      "pruning_passages": 15,
+      "frozen_passages": 49,
+      "diameter_upper": "0.0881588306728714006227740178572283727605311492536536988051665275634213"
+    },
+    {
+      "original_cohort": 32,
+      "pruning_passages": 16,
+      "frozen_passages": 48,
+      "diameter_upper": "0.0879923239244454536712888338193257529082754115137832151560814963886576"
+    },
+    {
+      "original_cohort": 34,
+      "pruning_passages": 17,
+      "frozen_passages": 47,
+      "diameter_upper": "0.0878258171760195067198036497814231330560196737739127315069964652138939"
+    },
+    {
+      "original_cohort": 36,
+      "pruning_passages": 18,
+      "frozen_passages": 46,
+      "diameter_upper": "0.0876593104275935597683184657435205132037639360340422478579114340391302"
+    },
+    {
+      "original_cohort": 38,
+      "pruning_passages": 19,
+      "frozen_passages": 45,
+      "diameter_upper": "0.0874928036791676128168332817056178933515081982941717642088264028643665"
+    },
+    {
+      "original_cohort": 40,
+      "pruning_passages": 20,
+      "frozen_passages": 44,
+      "diameter_upper": "0.0873262969307416658653480976677152734992524605543012805597413716896028"
+    },
+    {
+      "original_cohort": 42,
+      "pruning_passages": 21,
+      "frozen_passages": 43,
+      "diameter_upper": "0.0871597901823157189138629136298126536469967228144307969106563405148391"
+    },
+    {
+      "original_cohort": 44,
+      "pruning_passages": 22,
+      "frozen_passages": 42,
+      "diameter_upper": "0.0869932834338897719623777295919100337947409850745603132615713093400754"
+    },
+    {
+      "original_cohort": 46,
+      "pruning_passages": 23,
+      "frozen_passages": 41,
+      "diameter_upper": "0.0868267766854638250108925455540074139424852473346898296124862781653117"
+    },
+    {
+      "original_cohort": 48,
+      "pruning_passages": 24,
+      "frozen_passages": 40,
+      "diameter_upper": "0.0866602699370378780594073615161047940902295095948193459634012469905480"
+    },
+    {
+      "original_cohort": 50,
+      "pruning_passages": 25,
+      "frozen_passages": 39,
+      "diameter_upper": "0.0864937631886119311079221774782021742379737718549488623143162158157843"
+    },
+    {
+      "original_cohort": 52,
+      "pruning_passages": 26,
+      "frozen_passages": 38,
+      "diameter_upper": "0.0863272564401859841564369934402995543857180341150783786652311846410206"
+    },
+    {
+      "original_cohort": 54,
+      "pruning_passages": 27,
+      "frozen_passages": 37,
+      "diameter_upper": "0.0861607496917600372049518094023969345334622963752078950161461534662569"
+    },
+    {
+      "original_cohort": 56,
+      "pruning_passages": 28,
+      "frozen_passages": 36,
+      "diameter_upper": "0.0859942429433340902534666253644943146812065586353374113670611222914932"
+    },
+    {
+      "original_cohort": 58,
+      "pruning_passages": 29,
+      "frozen_passages": 35,
+      "diameter_upper": "0.0858277361949081433019814413265916948289508208954669277179760911167295"
+    },
+    {
+      "original_cohort": 60,
+      "pruning_passages": 30,
+      "frozen_passages": 34,
+      "diameter_upper": "0.0856612294464821963504962572886890749766950831555964440688910599419658"
+    },
+    {
+      "original_cohort": 62,
+      "pruning_passages": 31,
+      "frozen_passages": 33,
+      "diameter_upper": "0.0854947226980562493990110732507864551244393454157259604198060287672021"
+    },
+    {
+      "original_cohort": 64,
+      "pruning_passages": 32,
+      "frozen_passages": 32,
+      "diameter_upper": "0.0853282159496303024475258892128838352721836076758554767707209975924384"
+    },
+    {
+      "original_cohort": 66,
+      "pruning_passages": 33,
+      "frozen_passages": 31,
+      "diameter_upper": "0.0851617092012043554960407051749812154199278699359849931216359664176747"
+    },
+    {
+      "original_cohort": 68,
+      "pruning_passages": 34,
+      "frozen_passages": 30,
+      "diameter_upper": "0.0849952024527784085445555211370785955676721321961145094725509352429110"
+    },
+    {
+      "original_cohort": 70,
+      "pruning_passages": 35,
+      "frozen_passages": 29,
+      "diameter_upper": "0.0848286957043524615930703370991759757154163944562440258234659040681473"
+    },
+    {
+      "original_cohort": 72,
+      "pruning_passages": 36,
+      "frozen_passages": 28,
+      "diameter_upper": "0.0846621889559265146415851530612733558631606567163735421743808728933836"
+    },
+    {
+      "original_cohort": 74,
+      "pruning_passages": 37,
+      "frozen_passages": 27,
+      "diameter_upper": "0.0844956822075005676900999690233707360109049189765030585252958417186199"
+    },
+    {
+      "original_cohort": 76,
+      "pruning_passages": 38,
+      "frozen_passages": 26,
+      "diameter_upper": "0.0843291754590746207386147849854681161586491812366325748762108105438562"
+    },
+    {
+      "original_cohort": 78,
+      "pruning_passages": 39,
+      "frozen_passages": 25,
+      "diameter_upper": "0.0841626687106486737871296009475654963063934434967620912271257793690925"
+    },
+    {
+      "original_cohort": 80,
+      "pruning_passages": 40,
+      "frozen_passages": 24,
+      "diameter_upper": "0.0839961619622227268356444169096628764541377057568916075780407481943288"
+    },
+    {
+      "original_cohort": 82,
+      "pruning_passages": 41,
+      "frozen_passages": 23,
+      "diameter_upper": "0.0838296552137967798841592328717602566018819680170211239289557170195651"
+    },
+    {
+      "original_cohort": 84,
+      "pruning_passages": 42,
+      "frozen_passages": 22,
+      "diameter_upper": "0.0836631484653708329326740488338576367496262302771506402798706858448014"
+    },
+    {
+      "original_cohort": 86,
+      "pruning_passages": 43,
+      "frozen_passages": 21,
+      "diameter_upper": "0.0834966417169448859811888647959550168973704925372801566307856546700377"
+    },
+    {
+      "original_cohort": 88,
+      "pruning_passages": 44,
+      "frozen_passages": 20,
+      "diameter_upper": "0.0833301349685189390297036807580523970451147547974096729817006234952740"
+    },
+    {
+      "original_cohort": 90,
+      "pruning_passages": 45,
+      "frozen_passages": 19,
+      "diameter_upper": "0.0831636282200929920782184967201497771928590170575391893326155923205103"
+    },
+    {
+      "original_cohort": 92,
+      "pruning_passages": 46,
+      "frozen_passages": 18,
+      "diameter_upper": "0.0829971214716670451267333126822471573406032793176687056835305611457466"
+    },
+    {
+      "original_cohort": 94,
+      "pruning_passages": 47,
+      "frozen_passages": 17,
+      "diameter_upper": "0.0828306147232410981752481286443445374883475415777982220344455299709829"
+    },
+    {
+      "original_cohort": 96,
+      "pruning_passages": 48,
+      "frozen_passages": 16,
+      "diameter_upper": "0.0826641079748151512237629446064419176360918038379277383853604987962192"
+    },
+    {
+      "original_cohort": 98,
+      "pruning_passages": 49,
+      "frozen_passages": 15,
+      "diameter_upper": "0.0824976012263892042722777605685392977838360660980572547362754676214555"
+    },
+    {
+      "original_cohort": 100,
+      "pruning_passages": 50,
+      "frozen_passages": 14,
+      "diameter_upper": "0.0823310944779632573207925765306366779315803283581867710871904364466918"
+    },
+    {
+      "original_cohort": 102,
+      "pruning_passages": 51,
+      "frozen_passages": 13,
+      "diameter_upper": "0.0821645877295373103693073924927340580793245906183162874381054052719281"
+    },
+    {
+      "original_cohort": 104,
+      "pruning_passages": 52,
+      "frozen_passages": 12,
+      "diameter_upper": "0.0819980809811113634178222084548314382270688528784458037890203740971644"
+    },
+    {
+      "original_cohort": 106,
+      "pruning_passages": 53,
+      "frozen_passages": 11,
+      "diameter_upper": "0.0818315742326854164663370244169288183748131151385753201399353429224007"
+    },
+    {
+      "original_cohort": 108,
+      "pruning_passages": 54,
+      "frozen_passages": 10,
+      "diameter_upper": "0.0816650674842594695148518403790261985225573773987048364908503117476370"
+    },
+    {
+      "original_cohort": 110,
+      "pruning_passages": 55,
+      "frozen_passages": 9,
+      "diameter_upper": "0.0814985607358335225633666563411235786703016396588343528417652805728733"
+    },
+    {
+      "original_cohort": 112,
+      "pruning_passages": 56,
+      "frozen_passages": 8,
+      "diameter_upper": "0.0813320539874075756118814723032209588180459019189638691926802493981096"
+    },
+    {
+      "original_cohort": 114,
+      "pruning_passages": 57,
+      "frozen_passages": 7,
+      "diameter_upper": "0.0811655472389816286603962882653183389657901641790933855435952182233459"
+    },
+    {
+      "original_cohort": 116,
+      "pruning_passages": 58,
+      "frozen_passages": 6,
+      "diameter_upper": "0.0809990404905556817089111042274157191135344264392229018945101870485822"
+    },
+    {
+      "original_cohort": 118,
+      "pruning_passages": 59,
+      "frozen_passages": 5,
+      "diameter_upper": "0.0808325337421297347574259201895130992612786886993524182454251558738185"
+    },
+    {
+      "original_cohort": 120,
+      "pruning_passages": 60,
+      "frozen_passages": 4,
+      "diameter_upper": "0.0806660269937037878059407361516104794090229509594819345963401246990548"
+    },
+    {
+      "original_cohort": 122,
+      "pruning_passages": 61,
+      "frozen_passages": 3,
+      "diameter_upper": "0.0804995202452778408544555521137078595567672132196114509472550935242911"
+    },
+    {
+      "original_cohort": 124,
+      "pruning_passages": 62,
+      "frozen_passages": 2,
+      "diameter_upper": "0.0803330134968518939029703680758052397045114754797409672981700623495274"
+    },
+    {
+      "original_cohort": 126,
+      "pruning_passages": 63,
+      "frozen_passages": 1,
+      "diameter_upper": "0.0801665067484259469514851840379026198522557377398704836490850311747637"
+    }
+  ],
+  "conclusion": "Under these hypotheses, layer64 contains 64 safe cohorts satisfying a previously certified heterogeneous-tail contract. No learning from this finite train occurs in fresh layers starting at65.",
+  "not_proved": [
+    "All full-box dense fronts remain in width .08.",
+    "Original single-lane-source reachability of this complete translated boundary family.",
+    "Additional future input histories."
+  ],
+  "baseline_routes": [
+    [
+      "A22_point_4_modes_and_tail_budget_EN.zip",
+      "point4_modes_EN/dependencies/A22_points_1_2_heterogeneous_tail_ergodic_speed_EN.zip",
+      "A22_points_1_2_EN/comparison_and_bounds.json"
+    ],
+    [
+      "A22_point_4_modes_and_tail_budget_EN.zip",
+      "point4_modes_EN/dependencies/A22_point_4_multilayer_EN.zip",
+      "point4_multilayer_EN/dependencies/A22_point_4_desynchronization_EN.zip",
+      "point4_desynchronization_EN/results/desync_certificate.json"
+    ],
+    [
+      "A22_point_4_modes_and_tail_budget_EN.zip",
+      "point4_modes_EN/results/tail_refinement_certificate.json"
+    ]
+  ]
+}

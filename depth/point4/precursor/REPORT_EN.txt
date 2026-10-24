@@ -1,0 +1,286 @@
+A22 POINT 4 — OBLIGATION B: THE LAYER-18 PRECURSOR AND ITS MEMORY
+23 October 2026
+
+STATUS
+Partial analytic progress. Obligation B is NOT closed. This document supplies
+a manual precursor lemma with directed finite inequalities, under the physical
+model and the accepted layer-18 coverage assumptions A1–A4. It is not an
+independently reviewed proof or a proof-assistant certificate.
+
+No layer-19 campaign or full layer-19 trajectory calculation was performed.
+The statements below about layers 19 and 20 are local analytic consequences
+for the isolated leading precursor only. Later complete cohorts were not
+propagated through either layer. No original source, receipt or campaign file
+was modified. All lanes are numbered 0 through 11 and all ports 0 through 2.
+
+1. AUTHENTICATED INPUT AND THE BRIDGE THAT IS ACTUALLY AVAILABLE
+
+Layer archive SHA-256:
+e516c4a56ef7295798203e5985e9b7606d1690976b52fc7a794149a61d727d59
+
+Latest point-4 package SHA-256:
+62da20f58a3099e1740fe6432919abbeec6a60ef4bb50b6eb2f5b4c87677575b
+
+Its nested predecessors were read for the fresh-state pruning assumptions.
+The latest PROOF_EN.md section 1 and verify_bridge.py require the entire
+boundary history to be exactly 128 complete translated cohorts X+8k,
+first arrival >=20, fresh downstream cells, and a <=.08 dense-front profile
+through all 63 pruning passages. The safe-prefix induction also requires the
+prefix to leave gains and b in the effective fresh ranges. Additional future
+inputs need their own full-history verification.
+
+The wider frozen-tail contract D=.195 does not replace these pruning
+hypotheses. The nominal factor for a special alternating profile cannot be
+used for arbitrary profiles. None of those results covers the interface
+extracted below merely because its leading same-lane gaps exceed 15.5.
+
+The reader in this package authenticates the archive, each of the twelve
+receipt hashes against layer verification.json, and each result payload
+against both its receipt and verification.json. It reads the stored typed
+DAG as data only. Every decimal center and every binary64 hexadecimal
+coefficient is converted to an exact rational number. For a stored affine
+base [clo,chi]+sum d_i epsilon_i+[-e,e], it takes
+[clo-sum|d_i|-e, chi+sum|d_i|+e], then adds the exact time offset.
+Decimal report endpoints are rounded outward. No engine or archived native
+binary is imported. Full prior-layer provenance is inherited from the
+published proof and the pinned archive, not re-established by this reader.
+
+2. WHAT THE LAYER-18 HISTORY REALLY LOOKS LIKE
+
+There is a partial precursor P on lanes {11,0,1}, with all three dates in
+[159.75066779079188,159.77141613120453] (display rounded outward).
+No other lane emits before the following complete cohort.
+
+Remove only these three events for the purpose of indexing, NOT from the
+physical input. The remaining 104 outputs per lane have unambiguous ordered,
+disjoint complete-cohort time windows. The first four complete cohorts have
+same-lane gaps >15.6120520786. They are followed by 100 complete cohorts with
+approximately eight-unit gaps. Exact translated-suffix equality is NOT inferred
+from similar rounded dates or equal-looking widths.
+
+Selected rigorous diameter bounds (display rounded outward):
+
+Complete index   Global diameter          Local triplet diameter, receiver 4
+0                [1.03231959,1.03714021]    [0.77107112,0.77657233]
+3                [0.78955672,0.83126996]    [0.51197235,0.52446721]
+4                [0.80710267,0.81912178]    [0.51206733,0.52456075]
+103              [0.80710267,0.81912178]    [0.51206733,0.52456075]
+
+For example, the first-cohort dates on lanes 5 and 3 satisfy
+t_5-t_3 > .77107112. This is a positive LOWER bound valid for every covered
+realization, not an upper-enclosure failure. Thus even the local three-parent
+version of the .08 pruning tube fails at this boundary. The first complete
+cohort does not even have a common interval during which all twelve raw
+pulses are active, although local overlaps may exist.
+
+The precursor and first complete cohort are separated:
+the earliest later arrival anywhere is >175.3099439833.
+This large separation permits an analytic treatment of the precursor in
+isolation, before any of the difficult later event orders arise.
+
+3. PRECURSOR LEMMA — STATEMENT
+
+For every admissible realization represented by the layer-18 archive and
+every independent original fresh-cell choice in downstream layers 19 and 20:
+
+(a) Before any later layer-18 input, layer 19 emits exactly one precursor,
+    on lane 0. Its firing time is in
+    [160.3506677907,160.5714161313].
+(b) This single precursor causes no firing anywhere in layer 20. Hence
+    the leading partial precursor has no emitted descendant in layer 20,
+    and sends no raw input to layer 21.
+(c) At the common section t*=174, every principal and auxiliary in both
+    layers is READY and no precursor raw/auxiliary current is pending.
+    However, several principal charges differ from r and several gains
+    differ substantially from their effective fresh values.
+(d) The precursor changes no recovery actuator b in either layer:
+    every b stays at its own original b0 in [.07999,.08001].
+
+Let z_i* denote the effective log gain after any permitted initial terminal
+ERROR tail has completed, before the first incoming pulse. Then
+z_i* - log(g_nom,i) belongs to [-.00001,.00009]. The exact additional
+increments caused by the precursor, in port order (0,1,2), are:
+
+Layer   Lane         Delta z
+19      0            (0,0,0)
+19      1            (.6,.6,0)
+19      2            (.6,0,0)
+19      10           (0,0,.6)
+19      11           (0,.6,.6)
+19      all others   (0,0,0)
+20      0            (0,.6,0)
+20      1            (.6,0,0)
+20      11           (0,0,.6)
+20      all others   (0,0,0)
+
+4. PROOF: FIRST DOWNSTREAM LAYER
+
+The model's outgoing pulse is canonical:
+p_F(t)=a exp[-a(t-F)] on [F,F+1), a=log 4. An upstream cell's learned gains
+are not an amplitude multiplier on its emitted pulse. They affect its firing
+date. The gains multiplying the received currents belong to the RECEIVING
+cell. Therefore the large learned gains in layer 18 do not invalidate a
+fresh-cell test for the first precursor received at layer 19.
+
+Write kappa=.5, r=.1 and
+h(u)=a/(a-kappa)(exp(-kappa*u)-exp(-a*u)), 0<=u<=1.
+The directed checker gives h(1)<.557666240 and h'(1)>0. The ratio
+(a/kappa)exp[-(a-kappa)u] decreases on [0,1]; its value at 1 is >1,
+so h is strictly increasing on the whole interval. After a raw pulse ends,
+its positive READY contribution decreases exponentially. Its all-time
+maximum contribution is therefore gain*h(1).
+Moreover (a/kappa)^2 exp[-(a-kappa)u]>1 on that interval, so h''<0
+and h'(u)>=h'(1). The derivative margins used in the root checks follow
+after subtracting the possible derivative of the decaying initial error.
+
+The largest gain sum at a layer-19 cell receiving only two of these
+precursor pulses is 1.5 exp(.00009). Even allowing the full initial
+principal error .00001, the maximum excess charge is
+
+   q-r <= .00001 + 1.5 exp(.00009) h(1) < .836584648 < .9.
+
+The one-side-port case has an even smaller bound. Thus lanes 1,2,10,11
+cannot fire, and lanes with no input cannot fire. Lane 0 receives all three
+pulses. For its first head, the numerical inequalities are
+
+   .00001 + 1.8 exp(.00009) h(.6) < .9,
+  -.00001 + 1.8 exp(-.00001) h(.8) > .9.
+
+With precursor width W<.020748341, all three raw pulses remain active at
+t_max+.8. The charge is strictly increasing between t_min+.6 and this
+upper endpoint; a uniform positive derivative is checked. Thus lane 0 has
+one first ascending threshold crossing between those endpoints.
+
+Auxiliary timing is also checked with finite-series directed arithmetic,
+including the first READY auxiliary perturbation after an arrival >=20:
+  threshold delay d in [.01999,.02001];
+  ERROR onset age in [1.0998820107,1.1001180109];
+  ERROR ending age in [1.2498670122,1.2501330124].
+The possible initial terminal ERROR tail finishes before .001. These bounds
+retain independent port constants. Auxiliary threshold root signs and the
+monotonicity needed to exclude an earlier auxiliary crossing are checked.
+
+Every MARK of the precursor ends before lane 0's earliest possible firing.
+Every ERROR starts after its latest possible firing and ends before its
+earliest FAST ending. Lane 0 therefore receives all marks while READY and
+all errors while protected: neither b nor any z_i changes there.
+
+All other receiving cells never fire. Their marks occur while READY and
+cannot change b. Their ERROR currents occur after all raw currents have
+ended, while the principal remains READY, and are admitted in full. Each
+such ERROR changes its port's log gain by
+
+       8 integral(v_e dt) = 8(1/10-1/40) = .6.
+
+This identity depends on the exact auxiliary section endpoints, not on the
+port's perturbed L_e. Caps are inactive because even the largest resulting
+gain is <=1.2 exp(.60009)<2.186739359<3.9996<=C_i.
+
+Lane 0's b stays at b0, so it reopens exactly at
+F+1+log(2.5)/b0 <173.026482163<174.
+It then stays at exact q=r in the absence of raw input. No second precursor
+firing can occur. All auxiliary currents have ended much earlier. The
+earliest later layer-18 input is after 175.3099439833.
+
+The original uniform energy barrier E>=50 applies throughout; gain and
+recovery caps remain within the original model bounds. No unavailable
+power gate is assumed.
+
+5. PROOF: SECOND DOWNSTREAM LAYER AND EXACT MEMORY
+
+Before later cohorts can influence it, layer 20 receives only the single
+canonical pulse emitted by lane 0 of layer 19. It reaches lanes 11,0,1,
+on their right, central and left ports respectively. Even the central
+one-port response satisfies
+
+       q-r <= .00001+1.2 exp(.00009)h(1)<.669269718<.9.
+
+No cell fires. Again all receiving marks occur while READY, and all errors
+are admitted in full. This proves the layer-20 gain table and unchanged b.
+The last precursor ERROR ends before 161.822, hence before 174. Since no
+later layer-19 firing can precede the next layer-18 arrival, no later input
+has reached layer 20 by the chosen section.
+
+Silence does not reset the principal charge of a cell that never fired.
+For a silent cell, at t*=174 its exact excess charge is
+
+ q(t*)-r = (q(0)-r) exp(-kappa*t*)
+           + sum_{received ports i} g_i* h(1)
+                                  exp[-kappa(t*-x_i-1)].
+
+Here x_i are the actual received precursor dates, and g_i* are the gains
+DURING the raw pulses, before the +.6 ERROR increments. No raw current
+overlaps an ERROR in this prefix. For layer 20 use x_i=F, the actual single
+layer-19 firing time. This expression retains the date and parameter
+dependences; the tabulated bounds are merely outer enclosures.
+
+The new finite checker gives the following outward simplified intervals:
+
+Cells                           q(174)-r
+19 lanes 1,11 (two ports)       [.0011102105,.0011219002]
+19 lanes 2,10 (one side port)   [.0002220421,.0002243801]
+20 lane 0 (central port)        [.0011989019,.0013389427]
+20 lanes 1,11 (side port)       [.0002997254,.0003347357]
+
+Layer-19 lane 0 has q=r exactly. Cells with no precursor input retain only
+their decayed original principal error. All auxiliaries that have received
+a precursor have regenerated exactly; nonreceivers retain the admissible
+free evolution of their original READY or final-ERROR states.
+
+An auxiliary with no input is READY but need not be exactly at r_m if it
+started READY off equilibrium.
+No proof step resets those unforced auxiliary perturbations. Their remaining
+errors are included in the fresh-state auxiliary bound at the next input.
+
+6. CONSEQUENCE FOR OBLIGATION B
+
+The leading pulse support shrinks {11,0,1}->{0}->empty, uniformly, without
+a layer campaign. But deleting that support from a downstream history is
+not equivalent to deleting its physical past. Its gain multiplier is
+exp(.6)=1.82211880039..., far outside the effective fresh offset box.
+At t=174 several charges are also outside r+/-1e-5. Waiting erases neither
+the positive gain increments nor their influence on later firings. The
+recovery actuator happens to remain fresh in this particular precursor;
+replacing it by .38 would be equally unjustified.
+
+One may replace the precursor, for later analysis, by the explicit section
+data above in the first two downstream layers, retaining their correlated
+dates and initial parameters. Cells at layer 21 and deeper have received no
+raw precursor and retain their original unforced initial evolution. This is
+a finite-prefix reduction, not a conclusion that the remaining inputs to
+layer 21 are complete or satisfy any diameter/gap requirement.
+
+What is still missing is a theorem propagating the remaining 104 complete
+layer-18 cohorts through this altered two-layer prefix, retaining every new
+partial cohort, all gain/recovery changes, principal memory, and event
+orders. It must reach a suitable small-width boundary (or prove a more
+general bridge for the boundary actually reached). The positive lower
+diameter bounds in section 2 show that invoking the existing .08 local
+lemma immediately, even on local triplets, would be false.
+
+This work does not establish any entry depth, either uniform over the
+original box or depending on the realization. It does not disprove eventual
+entry, and it does not turn the reported layer-19 lane-6 refusal into a
+counterexample. Arbitrary later future words remain outside this lemma.
+
+7. REPRODUCTION
+
+Python 3 standard library, without -O. From this package directory:
+
+ python inspect_boundary.py /path/to/A22_v33_layer_18.zip results
+ python verify_prefix.py
+
+The exact archive hash is required, so a renamed unchanged archive is fine.
+inspect_boundary.py writes boundary.json and dates.tsv; verify_prefix.py
+writes prefix_certificate.json. These are new inspection results, never
+campaign outputs. directed.py is copied byte-for-byte from the supplied
+latest point-4 package and uses finite series with explicit tails, with
+70-digit directed Decimal basic arithmetic. It does not use Decimal.exp/ln,
+NumPy, SciPy, or an A22 native module. All acceptance checks raise explicit
+exceptions. The new checker is a mathematical-inequality checker and is
+not an independent arithmetic implementation of its inherited module.
+
+The passing numerical checks support the manual argument above. The manual
+coverage and causality reasoning is not itself machine-checked. The source
+and output hashes are supplied in SHA256SUMS.txt and provenance in
+SOURCE_MANIFEST.json. Input archives are not duplicated in this package.

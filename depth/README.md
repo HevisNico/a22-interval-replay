@@ -108,6 +108,21 @@ The narrowness of this window comes from the small gain box (±1e-5).
 random medium of the A22 box, propagates with the deterministic speed 1/γ(P), common to all lanes, and
 no admitted cohort exceeds the ceiling of its tail class.
 
+## New in v4.2: entry for every preparation — progress and an open problem
+
+[`point4/README.md`](point4/README.md) addresses whether **every** admissible preparation of the
+original source enters the tail contract. It is **open**. Proved so far:
+- the tail contract widens to **D = 0.195** (5-layer blocks), containing the 0.11 contract above;
+- a full-box local pruning lemma, with b tracked; extinction through fresh cells in series, with the
+  recurrence (p, q) → (p + 1, q − 2);
+- a conditional bridge: if the dense fronts stay ≤ 0.08 through 63 passages, the tail is entered by
+  layer 64; and uniform bounds on the effect of all independent parameters;
+- at layer 18 of the v3.3 full-box campaign, the leading partial precursor dies out in two layers,
+  leaving explicit gain and charge memory.
+
+There are also certified obstructions: the pruning map is not monotone, and the real layer-18 boundary
+has diameter above 1.03, far from the bridge regime. The missing step is stated precisely there.
+
 ## What is not claimed
 
 - Not the whole v3.3 uncertainty box upstream: entry into the tail contract is certified for six
@@ -182,6 +197,7 @@ no admitted cohort exceeds the ceiling of its tail class.
 | `review/` | Adaptation note, review addenda, first-future and recovery records, integrity incident records |
 | `replay_gap/` | Verification-replay result, comparison report, environment report |
 | `ergodic/` | v4.1: heterogeneous tail and ergodic speed (proofs, verifiers, results, source snapshots) |
+| `point4/` | v4.2: entry for every preparation — proved partial results, certified obstructions, open problem |
 | `cone/` | v4.1: speed ceilings and forward cones (proof, verifier, certificate; includes the `ergodic/` package as a dependency ZIP) |
 
 Several review documents were written in French (suffix `_FR`). The tables and JSON files are

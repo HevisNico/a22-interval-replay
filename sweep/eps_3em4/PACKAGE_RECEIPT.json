@@ -1,0 +1,11 @@
+{
+  "archive": "A22_box_sweep_eps_3em4.zip",
+  "archive_sha256": "3f3ec4f32b96b1f3228aa17a6c47a22141006d271c02db3ea07c1f487c5fd1ad",
+  "campaign_identity_sha256": "1b64e5a8a6bb8c8e6e3d459f396c83858275d89142cf6845b8663c37372caa06",
+  "source_archive_sha256": "8a6ee0f585b53bcdc060b1301902aef66dcc98da51c5cc7c8d7b360f03e9ea7b",
+  "manifest_sha256": "cb322b5e768fe09cf3c17fd4fea5cc830e75c5753a79daf932ff7b4a9bf60f53",
+  "input": "Fresh canonical 128-pulse source; no reused layer or receipt",
+  "epsilon": "3e-4",
+  "last_accepted_layer": 18,
+  "status": "completed"
+}
