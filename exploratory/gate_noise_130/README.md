@@ -103,6 +103,12 @@ or b, and final outputs are recounted independently. Point simulator only; no ce
 | `AUDIT.json`, `VALIDATION.json`, `validation/` | Integrity audit and solver checks |
 | Raw outputs (`gate_noise_130_output_part1.zip`, `_part2.zip`, 23 MB) | Learned states and test results: assets of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-interval-replay/releases/tag/exploratory-data-1); unzip both here |
 
+**Repaired checkpoint.** In the original archive, the learned-state file `output/normal_2_9.states` was
+truncated after 1,547 of its 1,560 rows. The analysis and the audit read only the JSON outputs, which are
+complete, so the results reported here are not affected. The released raw outputs contain the file rebuilt from the complete
+states stored in `normal_2_9.json`; all values still present in the truncated file match exactly (see
+`../gate_cap_restore_130/INPUT_REPAIR.json`).
+
 With Python 3 (see `requirements.txt`) and g++ C++17, from this folder:
 
 ```sh
