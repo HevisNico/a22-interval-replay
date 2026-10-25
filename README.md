@@ -87,6 +87,15 @@ Later releases extend the result; each is described in [`CHANGELOG.md`](CHANGELO
 These results have the same proof level as above: a manual proof under A1–A4, not yet independently
 reviewed. To check the depth release assets, run `python3 -I tools/verify_depth_assets.py <assets folder>`.
 
+## Exploratory simulations (not certified)
+
+[`exploratory/`](exploratory/README.md) tests the same physical kernel with a point simulator, outside
+the certified setting: noise on transmitted charges, arrival jitter, closer pulses, other pulse shapes,
+other topologies, ablations of the learning rule and longer training at 130 layers. Main finding so
+far: **networks trained under noise transmit every pulse at 130 layers under 10 % amplitude noise in
+20 seeds out of 20, against 0 out of 20 for clean training of the same duration**; timing then remains
+approximate (about 1 % RMS). These are sampled simulations, not proofs.
+
 ## v4.3: conditional future invariance on a relative gain domain
 
 The [G_rel dossier](depth/g_rel/README.md) characterizes regenerated learned states
@@ -185,6 +194,7 @@ about the recorded campaign. See [results/HASHES.md](results/HASHES.md) for both
 |---|---|
 | `WHY_A22_MATTERS.md` | Why this network matters: the question, related work, limits of the method |
 | `PROOF_WALKTHROUGH.md` | Guided tour of the v3.3 proof: five propositions, three delicate points, source map |
+| `exploratory/` | Uncertified point simulations: noise, inputs, topologies, ablations, noisy training; the point simulator |
 | `CHANGELOG.md` | What each release added |
 | `depth/` | The v4.0-depth extension: summary, certificates, theory, review records, layer index, verification replay; `depth/point4/` holds the open entry problem (v4.2) |
 | `sweep/` | The box-width sweep: results, run records and the exact sweep program (v4.2) |
