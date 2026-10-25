@@ -7,17 +7,32 @@ stated protocol and sample only.
 
 ## The main findings so far
 
-**Training under noise produces a network that transmits reliably under that noise, at 130 layers.**
-With 2,048 noisy training pulses and gains frozen at test, the network recovers 99.5 to 100 % of test
-pulses at layer 130 under 5 to 15 % amplitude noise plus jitter, against 9 to 79 % for the same network
-trained for the same duration without noise ([`gate_noise_130/`](gate_noise_130/README.md), 20 seeds per
-level, separate training and test noise). The margin learned scales with the training noise. The timing
-remains noisy: about 0.5 to 1.3 % relative RMS error on the intervals.
+**1. The learning rule finds a lane-specific gain allocation that transmits reliably under noise, with
+less gain than any working uniform setting of the tested grid.** After 2,048 noisy training pulses (gains frozen at test), the
+network transmits complete 128-pulse words at layer 130 in 19 or 20 of 20 seeds at each of three noise
+levels, with a mean gain of about 1.5. Uniform gains fixed by hand need at least 1.8, 2 and 3 for the
+same result; at a uniform 1.6, no seed gives a complete word. Shuffling the learned gains, even
+preserving each layer's and each port's distribution, destroys transmission (0 of 40)
+([`gain_sweep_shuffle_130/`](gain_sweep_shuffle_130/README.md)).
 
-**The protection gate is not what produces this robustness.** Removing the gate (gains may also grow
-during protection) gives the same or slightly better transmission, but drives almost every gain to its
-cap (97.7 % of ports, against about 2 % with the gate). The gate keeps the learned gains moderate; a
-benefit of that, if any, has not been tested.
+**2. Learning is not necessary if high gains can be set by hand.** Gains fixed at 4 from the start, with
+no learning, transmit every pulse in all 60 realizations, with better timing; at a faster input rate,
+fast recovery is also needed ([`fixed_gain_130/`](fixed_gain_130/README.md)). What learning provides is
+the allocation above, found autonomously from a nominal state that does not ignite on its own.
+
+**3. Noise during training matters.** From the nominal state, noisy training beats clean training of the
+same duration by 21 to 91 points of recall (gains frozen at test), and the learned margin scales with
+the training noise ([`gate_noise_130/`](gate_noise_130/README.md)).
+
+**4. The protection gate stops learning; it is not what produces robustness.** Without the gate, gains
+rise to whatever cap is set (4, 8 or 16) and transmission stays reliable through saturation. With the
+gate, gains stay near 1.5 whatever the cap; restoring the gate stops growth at once
+([`gate_cap_restore_130/`](gate_cap_restore_130/README.md)). Without noise, learning then stops
+completely; under noise, a small residual growth remains.
+
+Timing remains approximate under noise (about 0.5 to 1.3 % relative RMS on the intervals). Mean gain
+is not an energy cost: the resource variable E is not integrated, and in this model it never limits
+the dynamics.
 
 ## The studies
 
@@ -27,12 +42,17 @@ benefit of that, if any, has not been tested.
 | [`ablations_130/`](ablations_130/README.md) | Which part of the learning rule matters? (130 layers, 128 training pulses, 20 seeds) | Without learning, the network never ignites. With only 128 training pulses, plasticity left active during protection gave no complete word even without noise, and with noise the training does not reach layer 130. |
 | [`noisy_training_130/`](noisy_training_130/README.md) | Does longer noisy training install a robust regime at 130 layers? (20 seeds, paired controls) | Yes in 20/20 seeds, against 0/20 for clean training of the same duration. Its 24-pulse test partly reused training noise (see the correction in its README). |
 | [`gate_noise_130/`](gate_noise_130/README.md) | Is the protection gate needed for robustness? Does the effect hold at three noise levels? (2,048 training pulses, 20 seeds per level) | The gate is not needed; without it gains saturate. The noisy-training benefit is confirmed at all three levels with fully separate noise. |
+| [`gate_cap_restore_130/`](gate_cap_restore_130/README.md) | Does the gate stop gain growth, or only the cap? (caps 4, 8, 16; gate restored after one pulse; 20 seeds per level) | Without the gate, gains follow the cap; with it, they stay near 1.5 whatever the cap; restoring it stops growth at once. |
+| [`fixed_gain_130/`](fixed_gain_130/README.md) | Can high gains fixed by hand replace learning? (gains 4 from t = 0; two input rates; 20 seeds per level) | Yes: 60 of 60 complete words, with better timing; at a faster rate, fast recovery is also needed. |
+| [`gain_sweep_shuffle_130/`](gain_sweep_shuffle_130/README.md) | How large must uniform gains be? Does the placement of learned gains matter? (uniform sweep 0.3 to 4; three shuffle types; 20 seeds per level) | Uniform gains need 1.8 / 2 / 3; learned gains work at about 1.5; shuffling them destroys transmission. |
 
 ## What is still open
 
-- Whether the gate has another benefit (keeping gains away from saturation, resource use, remaining
-  plasticity), and whether learning settles under bounded noise.
-- Continuous noise, physical-parameter uncertainty and other topologies with the longer training.
+- Whether a hand-designed non-uniform allocation (for example, strong central and weak lateral ports,
+  without phase information) matches the learned one at the same gain level.
+- A cost measure in which lower gains matter; in this model the resource E never limits the dynamics.
+- Whether learning settles under bounded noise; continuous noise, physical-parameter uncertainty and
+  other topologies with the longer training.
 - Any guarantee for every realization: these are 2 to 20 sampled runs per condition.
 
 The code, runs and reports were produced with AI assistants under the author's direction. The

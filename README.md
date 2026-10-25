@@ -90,12 +90,12 @@ reviewed. To check the depth release assets, run `python3 -I tools/verify_depth_
 ## Exploratory simulations (not certified)
 
 [`exploratory/`](exploratory/README.md) tests the same physical kernel with a point simulator, outside
-the certified setting: noise on transmitted charges, arrival jitter, closer pulses, other pulse shapes,
-other topologies, ablations of the learning rule and longer training at 130 layers. Main findings so
-far: **networks trained under noise transmit reliably at 130 layers under that noise** (99.5 to 100 % of
-pulses with gains frozen, against 9 to 79 % after clean training of the same duration, three noise
-levels, 20 seeds each), with timing then approximate (about 1 % RMS); and **the protection gate is not
-needed for this robustness**: without it, gains simply saturate at their cap.
+the certified setting: noise, other inputs and topologies, ablations of the learning rule, fixed-gain
+controls and shuffles of learned gains, at up to 130 layers. Main findings so far: **the learning rule
+finds a lane-specific gain allocation that transmits reliably under noise at 130 layers with less gain
+than any working uniform setting of the tested grid** (mean gain about 1.5, against 1.8 to 3 for uniform gains), and shuffling the
+learned gains destroys transmission; **learning is not necessary if high gains (4) can be set by hand**;
+noise during training matters; and the protection gate stops learning rather than producing robustness.
 These are sampled simulations, not proofs.
 
 ## v4.3: conditional future invariance on a relative gain domain
