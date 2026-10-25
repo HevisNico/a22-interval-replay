@@ -1,5 +1,14 @@
 # Longer noisy training at 130 layers (exploratory)
 
+> **Correction (25 October 2026).** In this study, the noise generator reused, for some pulses of the
+> **24-pulse test**, the noise keys of training pulses from label 128 onward: part of that test saw the
+> same noise draws as training pulses. The 24-pulse results below are therefore not a fully independent
+> test. The 128-pulse test used separate keys. The follow-up study
+> [`../gate_noise_130/`](../gate_noise_130/README.md) uses separate keys for every evaluation and
+> confirms the main effect at three noise levels (with gains frozen at test, noisy training beats clean
+> training by 21 to 91 points). It also tests the protection gate: it is **not** needed for this
+> robustness.
+
 **Status: exploratory point simulations, not certified.** 20 seeds, paired controls.
 
 The ablation study (`../ablations_130/`) showed that with noise, 128 training pulses do not let the
@@ -49,8 +58,7 @@ duplicated; frozen: 12 missing, 0 duplicated.
   same results: it is not an on-line repair.
 - **Transmission is reliable, timing is approximate.** With 10 % amplitude noise, intervals are
   preserved to about 1 % RMS, not exactly.
-- **Not established here:** that the protection gate is necessary (its ablation was not repeated with
-  the longer training); other noise levels, topologies or physical-parameter uncertainty; any guarantee
+- **Not established here:** other topologies or physical-parameter uncertainty; any guarantee
   beyond these 20 seeds. Twenty successes out of twenty still give only an 83 % lower bound (95 %
   confidence) on the probability of a complete word.
 

@@ -91,10 +91,12 @@ reviewed. To check the depth release assets, run `python3 -I tools/verify_depth_
 
 [`exploratory/`](exploratory/README.md) tests the same physical kernel with a point simulator, outside
 the certified setting: noise on transmitted charges, arrival jitter, closer pulses, other pulse shapes,
-other topologies, ablations of the learning rule and longer training at 130 layers. Main finding so
-far: **networks trained under noise transmit every pulse at 130 layers under 10 % amplitude noise in
-20 seeds out of 20, against 0 out of 20 for clean training of the same duration**; timing then remains
-approximate (about 1 % RMS). These are sampled simulations, not proofs.
+other topologies, ablations of the learning rule and longer training at 130 layers. Main findings so
+far: **networks trained under noise transmit reliably at 130 layers under that noise** (99.5 to 100 % of
+pulses with gains frozen, against 9 to 79 % after clean training of the same duration, three noise
+levels, 20 seeds each), with timing then approximate (about 1 % RMS); and **the protection gate is not
+needed for this robustness**: without it, gains simply saturate at their cap.
+These are sampled simulations, not proofs.
 
 ## v4.3: conditional future invariance on a relative gain domain
 
