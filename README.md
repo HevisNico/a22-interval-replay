@@ -62,6 +62,10 @@ at most 5 % of width (layer 18: 7.28e-3 against 6.91e-3).*
   [`WHY_A22_MATTERS.md`](WHY_A22_MATTERS.md).
 - **The most useful single check**: Task 1 of [`REVIEW.md`](REVIEW.md), the strict-root lemma on which
   the whole event-order argument rests (one to three hours, no need to know the rest).
+- **How the proof fits together**: [`PROOF_WALKTHROUGH.md`](PROOF_WALKTHROUGH.md), a guided tour of
+  the v3.3 argument in five propositions, from learning coverage to exact interval preservation, with
+  the three most delicate points and a map to the source documents. It explains the proof; it does not
+  add an independent validation.
 - **The proof itself**: start with
   [`proof/learning_justification/output/REVIEW_GUIDE_EN.txt`](proof/learning_justification/output/REVIEW_GUIDE_EN.txt).
 
@@ -180,6 +184,7 @@ about the recorded campaign. See [results/HASHES.md](results/HASHES.md) for both
 | Path | What it is |
 |---|---|
 | `WHY_A22_MATTERS.md` | Why this network matters: the question, related work, limits of the method |
+| `PROOF_WALKTHROUGH.md` | Guided tour of the v3.3 proof: five propositions, three delicate points, source map |
 | `CHANGELOG.md` | What each release added |
 | `depth/` | The v4.0-depth extension: summary, certificates, theory, review records, layer index, verification replay; `depth/point4/` holds the open entry problem (v4.2) |
 | `sweep/` | The box-width sweep: results, run records and the exact sweep program (v4.2) |
