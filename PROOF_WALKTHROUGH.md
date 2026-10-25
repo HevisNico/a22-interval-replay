@@ -132,7 +132,7 @@ Combining the first four propositions yields the training-entry statement:
 
 $$
 H_{\mathrm{entry}}:\quad
-\operatorname{Reach}_{\mathrm{training}}(1116)\subseteq Q.
+\mathrm{Reach}_{\mathrm{training}}(1116)\subseteq Q.
 $$
 
 **What this supplies:** the premise needed to apply the future theorem to every trajectory of the stated training family.
