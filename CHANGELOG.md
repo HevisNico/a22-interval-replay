@@ -63,3 +63,14 @@ The proof level is the same as for v3.3: a manual proof under A1–A4, with dire
 not yet independently reviewed. Entry into the tail contract is certified for six prescribed
 preparations, not for the whole uncertainty box.
 To check the release assets, run `python3 -I tools/verify_depth_assets.py <assets folder>`.
+
+## v4.3: future invariance on a common relative gain domain
+
+The physical kernel is unchanged. The new [G_rel dossier](depth/g_rel/README.md)
+provides a conditional manual theorem for regenerated learned states: one firing
+per source pulse in the 191-cell mask and exact preservation of all future source
+intervals for gaps at least 20. The head formula includes the finite raw-current
+tail; local relative guards preserve influential gains while allowing masked
+gains and recovery to evolve. Directed checks accept 35/40 declared decimal
+states; the generator and read-only reader share arithmetic. Training entry,
+large-basin attraction and arbitrary-depth certification are not established.

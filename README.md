@@ -83,6 +83,16 @@ Later releases extend the result; each is described in [`CHANGELOG.md`](CHANGELO
 These results have the same proof level as above: a manual proof under A1–A4, not yet independently
 reviewed. To check the depth release assets, run `python3 -I tools/verify_depth_assets.py <assets folder>`.
 
+## v4.3: conditional future invariance on a relative gain domain
+
+The [G_rel dossier](depth/g_rel/README.md) characterizes regenerated learned states
+that preserve the same 191-cell transmitting mask and exact temporal intervals.
+Its common local gain-arrival inequalities admit different learning-dose patterns;
+35 of 40 saved decimal vectors pass directed membership checks. Start with the
+[one-page reviewer note](depth/g_rel/reviewer/ONE_PAGE_EN.pdf).
+This is a conditional manual theorem, **not a proof of universal training entry
+or a complete learning campaign at ±1%**. The five unresolved cases remain recorded.
+
 ## Origin of the model
 
 The physical kernel of A22 is inspired by the **Reset Operator** of Nicolas Breuillaud (*The Reset

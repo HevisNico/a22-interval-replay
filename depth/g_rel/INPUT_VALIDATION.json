@@ -1,0 +1,6 @@
+{
+  "status": "PASS_ALL_DECLARED_INPUTS_PHYSICALLY_ADMISSIBLE",
+  "vectors": 40,
+  "ports": 25920,
+  "note": "g=min(saved exp(z),C) removes cap roundoff only; regenerated charges are a theorem premise, not certified training reachability."
+}

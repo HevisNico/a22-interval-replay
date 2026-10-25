@@ -1,0 +1,221 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "case": "basin_e0.0_a0.01_shift-1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.0_a0.01_shift1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.0_a0.01_random0",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.0_a0.01_random1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.0_a0.01_random2",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.0_a0.03_shift-1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.0_a0.03_shift1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.0_a0.03_random0",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.0_a0.03_random1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.0_a0.03_random2",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.0_a0.1_shift1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.0_a0.1_random0",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.0_a0.1_random2",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.0_a0.3_shift-1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 7
+    },
+    {
+      "case": "basin_e0.0_a0.3_shift1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.0_a0.3_random0",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 1
+    },
+    {
+      "case": "basin_e0.0_a0.3_random1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.0_a0.3_random2",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.01_a0.01_shift-1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.01_a0.01_shift1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.01_a0.01_random0",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.01_a0.01_random1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.01_a0.01_random2",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.01_a0.03_shift-1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.01_a0.03_shift1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.01_a0.03_random0",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.01_a0.03_random1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.01_a0.03_random2",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 2
+    },
+    {
+      "case": "basin_e0.01_a0.1_shift1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.01_a0.1_random0",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.01_a0.1_random1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.01_a0.3_shift1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.01_a0.3_random0",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    },
+    {
+      "case": "basin_e0.01_a0.3_random1",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 1
+    },
+    {
+      "case": "basin_e0.01_a0.3_random2",
+      "status": "PASS_READ_ONLY_MEMBERSHIP",
+      "active": 191,
+      "late_heads": 0
+    }
+  ],
+  "seconds": 221.70972969799914,
+  "resource_work": [
+    "242.9233376892839582834680699284318747200167562109306713119012918053797",
+    "242.9233376892839582834680699284318747200167562109306713119012918053925"
+  ],
+  "scope": "Separate read-only control flow, shared directed arithmetic and response helpers; not independent arithmetic or proof-assistant verification"
+}

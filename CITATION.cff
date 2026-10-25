@@ -5,8 +5,8 @@ type: software
 authors:
   - family-names: "Breuillaud"
     given-names: "Nicolas"
-version: "4.2"
-date-released: "2026-10-24"
+version: "4.3"
+date-released: "2026-10-25"
 license:
   - MIT
   - CC-BY-4.0
@@ -27,6 +27,8 @@ abstract: >-
   theorem), and gives speed ceilings for tail cohorts and for first activation during learning.
   Release 4.2 widens the tail contract and gives partial results, certified obstructions and a
   precise open problem for entry from every preparation of the original source.
+  Release 4.3 adds a conditional relative-gain-domain future-invariance theorem, with 35 of 40
+  declared decimal states passing directed membership checks; universal training entry remains open.
   The proof is not yet independently reviewed or machine-checked.
   The code, diagnostics and proof were produced with the AI assistants Claude (Anthropic) and
   ChatGPT (OpenAI) under the author's direction. The physical kernel is inspired by the author's
