@@ -95,7 +95,8 @@ controls and shuffles of learned gains, at up to 130 layers. Main findings so fa
 finds a lane-specific gain allocation that transmits reliably under noise at 130 layers with less gain
 than any working uniform setting of the tested grid** (mean gain about 1.5, against 1.8 to 3 for uniform gains), and shuffling the
 learned gains destroys transmission; **learning is not necessary if high gains (4) can be set by hand**;
-noise during training matters; and the protection gate stops learning rather than producing robustness.
+noise during training matters; the protection gate stops learning rather than producing robustness;
+and **the gated rule brings no energy advantage** in the model's own cost law (it costs 2 to 11 % more).
 These are sampled simulations, not proofs.
 
 ## v4.3: conditional future invariance on a relative gain domain
