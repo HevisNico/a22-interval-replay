@@ -87,18 +87,6 @@ Later releases extend the result; each is described in [`CHANGELOG.md`](CHANGELO
 These results have the same proof level as above: a manual proof under A1–A4, not yet independently
 reviewed. To check the depth release assets, run `python3 -I tools/verify_depth_assets.py <assets folder>`.
 
-## Exploratory simulations (not certified)
-
-[`exploratory/`](exploratory/README.md) tests the same physical kernel with a point simulator, outside
-the certified setting: noise, other inputs and topologies, ablations of the learning rule, fixed-gain
-controls and shuffles of learned gains, at up to 130 layers. Main findings so far: **the learning rule
-finds a lane-specific gain allocation that transmits reliably under noise at 130 layers with less gain
-than any working uniform setting of the tested grid** (mean gain about 1.5, against 1.8 to 3 for uniform gains), and shuffling the
-learned gains destroys transmission; **learning is not necessary if high gains (4) can be set by hand**;
-noise during training matters; the protection gate stops learning rather than producing robustness;
-and **the gated rule brings no energy advantage** in the model's own cost law (it costs 2 to 11 % more).
-These are sampled simulations, not proofs.
-
 ## v4.3: conditional future invariance on a relative gain domain
 
 The [G_rel dossier](depth/g_rel/README.md) characterizes regenerated learned states
@@ -108,6 +96,12 @@ Its common local gain-arrival inequalities admit different learning-dose pattern
 [one-page reviewer note](depth/g_rel/reviewer/ONE_PAGE_EN.pdf).
 This is a conditional manual theorem, **not a proof of universal training entry
 or a complete learning campaign at ±1%**. The five unresolved cases remain recorded.
+
+## Exploratory simulations (not certified)
+
+Uncertified point simulations of the same physical kernel (robustness to noise, controls of the learning
+rule, fixed and shuffled gains, energy) are collected in [`exploratory/`](exploratory/README.md), with
+their findings and limits. They are not part of the proof.
 
 ## Origin of the model
 
