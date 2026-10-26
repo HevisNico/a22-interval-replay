@@ -43,6 +43,15 @@ ungated one (+2 to +11 %), mostly through a longer slow protected phase; the mod
 maintaining a large gain ([`energy_130/`](energy_130/README.md)). With spurious lateral inputs, it does
 13 to 14 % less work than uniform gain 4, because rejected probes are not processed downstream.
 
+**7. Fixed physical uncertainty and link noise coexist in a small sampled pilot.**
+Six new devices with independent per-port auxiliary constants and gain caps at
+relative ±1e-4 were trained and tested in four paired nominal/uncertain × quiet/noisy
+regimes. All six uncertain/noisy devices transmitted the complete 128-pulse word
+at layer 130 without decoys (mean relative interval RMS 0.497%); with 24 lateral
+decoys, 3/6 words remained perfect. This combines the two perturbations in sampled
+simulations; it does not cover the parameter box or establish an improvement over
+nominal devices ([`joint_uncertainty_noise_130/`](joint_uncertainty_noise_130/README.md)).
+
 Overall, the case for learning is self-organization and calibration: from a state that does not
 ignite, the rule finds on its own a working, selective configuration, adapts its margin to the noise
 it meets, and then largely stops changing (completely without noise).
@@ -62,6 +71,7 @@ Timing remains approximate under noise (about 0.5 to 1.3 % relative RMS on the i
 | [`gain_sweep_shuffle_130/`](gain_sweep_shuffle_130/README.md) | How large must uniform gains be? Does the placement of learned gains matter? (uniform sweep 0.3 to 4; three shuffle types; 20 seeds per level) | Uniform gains need 1.8 / 2 / 3; learned gains work at about 1.5; shuffling them destroys transmission. |
 | [`energy_130/`](energy_130/README.md) | Is the gated network cheaper to run? (energy reserve integrated; matched gate on/off from the same state; 20 seeds per level) | No: it costs 2 to 11 % more, mostly through a longer slow protected phase. |
 | [`selectivity_130/`](selectivity_130/README.md) | Does the learned structure reject spurious inputs? (6 frozen configurations, 7 probe scenarios, 20 seeds per level) | It rejects 90 to 96 % of lateral probes that saturated networks relay; a simple rule matches it after the learned entrance. |
+| [`joint_uncertainty_noise_130/`](joint_uncertainty_noise_130/README.md) | Can fixed per-port parameter uncertainty and link noise coexist during learning and test? (130 layers, 6 paired seeds, ±1e-4) | All six uncertain/noisy baseline words complete; 3/6 with lateral decoys. Exploratory sampling only. |
 
 ## What is still open
 
@@ -71,8 +81,9 @@ Timing remains approximate under noise (about 0.5 to 1.3 % relative RMS on the i
   solved by a simple static rule.
 - A cost measure in which lower gains matter in clean use: the model charges nothing for maintaining a
   gain, and its reserve E never approaches depletion in these runs.
-- Whether learning settles under bounded noise; continuous noise, physical-parameter uncertainty and
-  other topologies with the longer training.
+- Whether learning settles under bounded noise; continuous noise, wider physical-parameter
+  uncertainty, initial-state uncertainty and other topologies with longer training. The joint
+  uncertainty/noise pilot samples six devices at ±1e-4 and one nonzero noise level only.
 - Any guarantee for every realization: these are 2 to 20 sampled runs per condition.
 
 The code, runs and reports were produced with AI assistants under the author's direction. The

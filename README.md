@@ -103,6 +103,13 @@ Uncertified point simulations of the same physical kernel (robustness to noise, 
 rule, fixed and shuffled gains, energy) are collected in [`exploratory/`](exploratory/README.md), with
 their findings and limits. They are not part of the proof.
 
+**Joint uncertainty + noise pilot:** six new sampled devices at relative ε = 1e-4
+were trained and tested under link noise at 130 layers. All six transmitted the
+complete 128-pulse word without decoys; with 24 lateral decoys, three of six words
+remained perfect. This is exploratory numerical evidence, not coverage of the
+parameter box or an extension of the proof. See
+[`exploratory/joint_uncertainty_noise_130/`](exploratory/joint_uncertainty_noise_130/README.md).
+
 ## Origin of the model
 
 The physical kernel of A22 is inspired by the **Reset Operator** of Nicolas Breuillaud (*The Reset

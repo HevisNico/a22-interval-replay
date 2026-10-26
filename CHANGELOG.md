@@ -74,3 +74,15 @@ tail; local relative guards preserve influential gains while allowing masked
 gains and recovery to evolve. Directed checks accept 35/40 declared decimal
 states; the generator and read-only reader share arithmetic. Training entry,
 large-basin attraction and arbitrary-depth certification are not established.
+
+## Exploratory addition: joint parameter uncertainty and link noise
+
+The completed [six-seed pilot](exploratory/joint_uncertainty_noise_130/README.md)
+combines independent per-cell/per-port auxiliary parameters and gain caps at
+relative ±1e-4 with link amplitude noise (log σ = 0.05) and jitter (SD 0.015).
+Four paired regimes give 24 acquisitions and 48 frozen-state baseline/decoy tests
+at 130 layers. All six uncertain/noisy baseline words are complete; with 24 lateral
+decoys, three of six remain perfect. Every scheduled outcome is retained and no
+simulator failure is recorded. This is exploratory sampling, with no initial-state
+uncertainty, parameter-box coverage, gate-superiority or lifecycle-energy claim.
+The exact completed package is attached to Release `exploratory-data-1`.
