@@ -1,0 +1,12 @@
+Campagne A22_v23_001, epsilon = 0.01 (+-1 %), moteur v2.3 (avant le correctif v2.3.1).
+
+- layer_10 : les 12 jobs sont calcules (recus + resultats), mais la couche n'a PAS ete
+  verifiee independamment : pas de manifest.json ni de complete.json. Ces resultats
+  ne sont donc pas acceptes.
+- layer_11 : refusal.json de la cellule 0 et stopped.json. Cause : plantage
+  AttributeError dans return_with_marks (bug du lanceur a scenarios, corrige en v2.3.1).
+  Avec le correctif, la meme cellule finit sur un refus propre :
+  "Local-cycle branch budget exceeded" (etat SLOW, t dans [148.42, 148.61]) ;
+  avec un budget de 4096 : "admissible event-order budget exceeded" apres 973 s.
+- campaign.log : journal complet de la campagne.
+Les couches 1 a 9 sont dans A22_v23_001_through_09.zip (deja envoye).

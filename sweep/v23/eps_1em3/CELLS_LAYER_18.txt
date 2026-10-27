@@ -1,0 +1,12 @@
+18 0 spikes 105 max date w 0.017 gains [('0.5216', '0.5468'), ('3.984', '3.984'), ('0.5215', '0.5468')] caps [False, False, False] elapsed 39 s
+18 1 spikes 105 max date w 0.0307 gains [('0.996', '0.9961'), ('1.692', '1.819'), ('0.5242', '0.5468')] caps [False, False, False] elapsed 39 s
+18 2 spikes 104 max date w 0.0122 gains [('0.996', '0.9961'), ('3.984', '3.984'), ('0.3615', '0.3791')] caps [False, False, False] elapsed 48 s
+18 3 spikes 104 max date w 0.022 gains [('0.996', '0.9961'), ('1.212', '1.254'), ('0.5466', '0.5467')] caps [False, False, False] elapsed 51 s
+18 4 spikes 104 max date w 0.446 gains [('0.3237', '0.3502'), ('1.467', '1.899'), ('0.5466', '0.5467')] caps [False, False, False] elapsed 2758 s
+18 5 spikes 104 max date w 0.0454 gains [('0.4227', '0.4366'), ('2.187', '2.187'), ('0.5466', '0.5467')] caps [False, False, False] elapsed 35 s
+18 6 spikes 104 max date w 0.218 gains [('0.3415', '0.3946'), ('2.187', '2.187'), ('0.3417', '0.3944')] caps [False, False, False] elapsed 48 s
+18 7 spikes 104 max date w 0.0453 gains [('0.5466', '0.5467'), ('2.187', '2.187'), ('0.4227', '0.4366')] caps [False, False, False] elapsed 35 s
+18 8 spikes 104 max date w 0.437 gains [('0.5466', '0.5467'), ('1.47', '1.895'), ('0.3238', '0.3502')] caps [False, False, False] elapsed 2714 s
+18 9 spikes 104 max date w 0.0218 gains [('0.5466', '0.5467'), ('1.213', '1.253'), ('0.996', '0.9961')] caps [False, False, False] elapsed 45 s
+18 10 spikes 104 max date w 0.0122 gains [('0.3617', '0.3789'), ('3.984', '3.984'), ('0.996', '0.9961')] caps [False, False, False] elapsed 41 s
+18 11 spikes 105 max date w 0.0304 gains [('0.5248', '0.5468'), ('1.694', '1.818'), ('0.996', '0.9961')] caps [False, False, False] elapsed 40 s

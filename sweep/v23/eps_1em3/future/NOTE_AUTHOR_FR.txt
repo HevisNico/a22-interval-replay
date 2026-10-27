@@ -1,0 +1,17 @@
+Vérification de l'invariance future, campagne A22_v231_1em3 (epsilon = 1e-3), moteur v2.3.1.
+
+certify_future_eps.py   copie de proof/provenance_audit/certify_future.py ; seules changent les
+                        constantes dérivées de epsilon (3e argument ; défaut 1e-4) et les comptes
+                        191/25/15, rapportés au lieu d'être imposés. Pas d'import du moteur.
+check_v33_eps1e-4.json  contrôle de non-régression : à epsilon = 1e-4 sur les états publiés de la
+                        v3.3, la sortie est identique au certificat publié (cellules, marges, repos).
+extract_terminal.py     extraction des 216 états terminaux de la campagne dans le format d'entrée.
+terminal_eps1e-3.json   ces états (g = exp(z) ou boîte du plafond, b, q, phases).
+                        m n'est pas stocké : fixé à r_m = 0.025 pour un auxiliaire READY ayant reçu
+                        une entrée (remise exacte de section), boîte initiale sinon.
+future_eps1e-3.json     résultat : PASS, 191 cellules actives, 25 inactives, 15 ports masqués,
+                        repos global avant 12.7907, marge 7.209 avant l'impulsion suivante.
+
+Portée : certificat conditionnel. Il suppose que la campagne encadre réellement tous les
+dispositifs de la boîte (lanceur à scénarios et modifications v2.3/v2.3.1 non revus), comme le
+certificat v3.3 supposait l'entrée. Non revu indépendamment.
