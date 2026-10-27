@@ -13,7 +13,7 @@ the few you happened to simulate?
 
 A22 answers that question for one concrete network: 18 layers of 12 cells, trained by 128 pulses
 with a local learning rule, for every device in a small parameter box (±1e-4 on the constants,
-±1e-5 on the initial states). The same computation also covers all 18 layers with ±3e-4 on the
+±1e-5 on the initial states). With two added lemmas the same result holds at ±1e-3 on the
 constants (see "Where the method stops working").
 
 ## The core result: learning reaches the same regime for every device
@@ -33,15 +33,18 @@ explicit quiescent domain Q**, with every learned gain known to within ±2.4 % i
 
 ## What follows from it, and why that part is easy
 
-Once the network is in Q, the gains are frozen and the network is back at exact rest. Each future
-pulse then produces the same response, shifted in time. So the next two statements are close to
+Once the network is in Q, it is back at exact rest, and the gains that decide each firing stay
+invariant: the influential ports' ERROR phases fall under protection, so their gains cannot change.
+The gains of masked ports and the recovery `b` may still evolve, within bounds that do not affect
+any firing time (`proof/FUTURE_INVARIANCE_PROOF_EN.txt`, sections C–D). Each future pulse therefore
+produces the same firing pattern, shifted in time. So the next two statements are close to
 immediate, and their proofs are short compared with the training proof:
 
 - from Q, for every future pulse sequence spaced by at least 20 time units, each active cell fires
   exactly once per pulse and the network returns to Q;
 - the intervals between pulses are therefore transmitted exactly through all 18 layers.
 
-The point is not that a frozen network transmits timing; it is that **learning, under varying event
+The point is not that a network with fixed firing gains transmits timing; it is that **learning, under varying event
 orders, provably lands every device in a state where it does**.
 
 The depth extensions add a result about **speed**: deep in the network, the time a pulse takes to
@@ -72,9 +75,9 @@ to how the signal was prepared.
   (Seong, Kim and Ko, 2024, arXiv:2408.10900), or of small neuronal archetypes modelled as timed
   automata (De Maria et al.). A22 certifies the **learning dynamics** itself.
 
-The claim, then, is narrow: certified enclosure of a learning spiking network through its whole
-training transient, with variable event orders and per-port uncertainty. We are not aware of
-earlier work that does exactly this, and pointers are welcome.
+In short: certified enclosure of a learning spiking network through its whole training transient,
+with variable event orders and per-port uncertainty. We know of no earlier work that does this;
+pointers are welcome.
 
 ## Where the method stops working
 
@@ -93,6 +96,14 @@ part of why affine arithmetic succeeds. What is known about its limits:
   | 1e-3 | 17 | layer 18, lane 6 |
   | 3e-3 | 7 | layer 8, lane 0 |
   | 1e-2 | 4 | layer 5 |
+
+  **At 1e-3 the refusal is lifted by two short lemmas.** The v3.3 program extended by a monotone
+  peak bound (C7) and its piecewise version (C6) accepts all 18 layers, and the end of training
+  passes both future-wave checkers: the full result holds on a box ten times wider
+  ([`sweep/v33_c7/README.md`](sweep/v33_c7/README.md)). A newer engine, the scenario launcher
+  v2.3.1, goes further on wider boxes: at least 12 layers at 3e-3, 9 at 1e-2, where it refuses
+  because the number of admissible event orders exceeds its budget
+  ([`sweep/v23/README.md`](sweep/v23/README.md)).
 
   The enclosures stay roughly proportional to ε: at 1e-3, the median output-date width agrees
   with a linear fit through the 1e-4 and 3e-4 campaigns to within 25 % on every accepted layer, and
@@ -117,8 +128,7 @@ part of why affine arithmetic succeeds. What is known about its limits:
 - It is **one model**. The equations, topology and learning rule are fixed choices of this
   realization, inspired by the author's Reset Operator. Nothing here proves that hypothesis in
   general ([`docs/MODEL_BOUNDARY_EN.txt`](docs/MODEL_BOUNDARY_EN.txt)).
-- **The proof is not yet reviewed.** It is a manual proof under explicit execution assumptions
-  (A1–A4), not machine-checked and not yet read by an independent expert.
+- **The proof is not yet reviewed** by an independent expert, and it is not machine-checked.
 - **One step is open.** Entry into the deep-layer regime is certified for six prescribed
   preparations. Whether every preparation of the original source enters it is open
   ([`depth/point4/README.md`](depth/point4/README.md)).

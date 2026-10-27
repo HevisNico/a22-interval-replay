@@ -14,9 +14,7 @@ theorems carry that contract through every deeper layer. Consequences:
   preparation;
 - every admissible future pulse word is transmitted with its intervals preserved exactly, at any depth.
 
-Proof level: as for v3.3, a manual mathematical and source-level proof under the execution
-assumptions A1–A4, combined with directed-rounding computations. It has not yet been reviewed
-independently.
+Proof level: as for v3.3, a manual proof under A1–A4 combined with directed-rounding computations.
 
 ## What was computed
 
@@ -134,7 +132,6 @@ has diameter above 1.03, far from the bridge regime. The missing step is stated 
   a cell close to threshold can fire almost at once (`cone/03_CAUSAL_CONE_EN.md` §6).
 - No numerical value of γ(P) for a particular law beyond the bounds above.
 - No relativistic or Lorentz-invariance interpretation. A22 is oriented and inhomogeneous and cannot test one.
-- No proof-assistant verification and no independent expert review yet.
 
 ## Assumptions, execution and incidents
 

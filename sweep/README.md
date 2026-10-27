@@ -7,8 +7,7 @@ folder with its own program identity. The only change is the relative half-width
 constants (LM, LS, LE, M and C, per port as in v3.3). The initial-state uncertainty stays at ±1e-5,
 so that a single quantity varies. The 1e-4 row is the published v3.3 campaign.
 
-These are research campaigns with the same status as v3.3 (`experimental_not_qualified`). The manual
-proof in `proof/` is written for ε = 1e-4 only; nothing here extends it to other boxes.
+The manual proof in `proof/` is written for ε = 1e-4 only.
 
 ## Results
 
@@ -23,6 +22,11 @@ proof in `proof/` is written for ε = 1e-4 only; nothing here extends it to othe
 Per-layer medians and maxima of the date widths, and the largest learned-gain width, are in
 [`WIDTHS_BY_LAYER.csv`](WIDTHS_BY_LAYER.csv), rebuilt from the run summaries by
 `python3 sweep/make_width_table.py`.
+
+**Beyond this table.** Program v3.3 extended by lemmas C7 and C6 accepts all 18 layers at 1e-3, and
+the end of training passes both future-wave checkers ([`v33_c7/README.md`](v33_c7/README.md)). The
+scenario launcher v2.3/v2.3.1 reaches 18 layers at 1e-3, at least 12 at 3e-3 and 9 at 1e-2
+([`v23/README.md`](v23/README.md)). The table and the analysis below describe the v3.3 program only.
 
 ## What it shows
 
@@ -57,6 +61,8 @@ A refusal is a limit of the computation, not a physical counterexample.
 | `eps_3em4/` | ε = 3e-4: campaign identity, run status and summary, run log, receipt, manifest of the full output, replay instructions |
 | `eps_1em3/` | ε = 1e-3: the same records (the manifest includes the refusal record of layer 18) |
 | `eps_3em3/` | ε = 3e-3: the same records (refusal at layer 8) |
+| `v23/` | the rerun with the scenario launcher v2.3/v2.3.1: engine sources and campaign records ([`v23/README.md`](v23/README.md)) |
+| `v33_c7/` | program v3.3 + C7 at 1e-3: package, lemmas, campaign records, terminal extraction, future certificates ([`v33_c7/README.md`](v33_c7/README.md)) |
 
 The full campaign outputs (several GB) are not in the repository. Each `RUN_MANIFEST.json` lists every
 output file with its SHA-256, and each `SETUP_AND_REPLAY_EN.txt` explains how to verify an archived run

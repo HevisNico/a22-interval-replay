@@ -4,7 +4,7 @@
 
 This guide explains the v3.3 argument for the 216-cell network. Start with the one-page overview, follow the five propositions, then use the source map to inspect individual obligations. Later depth and random-medium results have separate reading routes at the end.
 
-**Proof status.** The repository supplies a manual mathematical and source-level proof under execution assumptions A1–A4. Its numerical checks support particular finite inequalities and artifact identities. The argument has not been independently reviewed by an expert or machine-checked in a proof assistant. This walkthrough explains that argument; it does not add an independent validation. The archived software status remains `experimental_not_qualified`.
+**Proof status.** The repository supplies a manual mathematical and source-level proof under execution assumptions A1–A4. Its numerical checks support particular finite inequalities and artifact identities. The argument has not been independently reviewed by an expert or machine-checked in a proof assistant.
 
 Source snapshot: [commit `7133335`](https://github.com/HevisNico/a22-interval-replay/tree/7133335109b11b64ed8b7a94a584f30674fce128), consulted 25 October 2026. The links below point to that snapshot, so later repository changes do not silently alter their targets.
 

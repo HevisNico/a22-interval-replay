@@ -22,21 +22,19 @@ every admissible future input**. The network has 216 coupled hybrid cells (18 la
    pulses are transmitted **exactly** through all 18 layers. The latencies depend on the device and on
    the learned gains; they are not claimed to be equal across devices.
 
-So in this realization, a learning process with local rules installs, under small parameter
-uncertainty (±1e-4 relative on device constants, ±1e-5 on initial states), a regime that transmits
-temporal patterns exactly. This box is much smaller than the variability of real components; the
-result is a statement about it, not about physical hardware. Point simulations can suggest such a
-property; they cannot establish it for every point of the box.
+So in this realization, local learning rules install, for every device in the box, a regime that
+transmits temporal patterns exactly. The box is much smaller than the variability of real
+components.
 
 > **Made with AI.** The code, the diagnostics and the written proof were produced with Claude
 > (Anthropic) and ChatGPT (OpenAI) under the author's direction (see [How this was built](#how-this-was-built)).
 >
 > **Status.** The computation is complete, reproducible and bound to its exact code by hashes. The
-> coverage and invariance argument is a **manual mathematical proof under explicit execution
-> assumptions** (A1–A4: authentic execution of the recorded program, correct arithmetic runtime and
-> native binary, fail-closed assertions, namespace discipline). It has **not yet been reviewed by an
-> independent expert** and is not machine-checked. The archived software status remains
-> `experimental_not_qualified`. Review is welcome: see **[REVIEW.md](REVIEW.md)**.
+> coverage and invariance argument is a manual proof under explicit execution assumptions (A1–A4:
+> authentic execution of the recorded program, correct arithmetic runtime and native binary,
+> fail-closed assertions, namespace discipline), not machine-checked and not yet reviewed by an
+> independent expert. This applies to every result in the repository. Review is welcome:
+> **[REVIEW.md](REVIEW.md)**.
 
 | | |
 |---|---|
@@ -58,14 +56,14 @@ at most 5 % of width (layer 18: 7.28e-3 against 6.91e-3).*
 
 ## Start here
 
+- **Every result with its scope, status and check, in one table**: [`RESULTS_STATUS.md`](RESULTS_STATUS.md).
 - **Why this network matters**, what is already known and where the method stops working:
   [`WHY_A22_MATTERS.md`](WHY_A22_MATTERS.md).
 - **The most useful single check**: Task 1 of [`REVIEW.md`](REVIEW.md), the strict-root lemma on which
   the whole event-order argument rests (one to three hours, no need to know the rest).
 - **How the proof fits together**: [`PROOF_WALKTHROUGH.md`](PROOF_WALKTHROUGH.md), a guided tour of
   the v3.3 argument in five propositions, from learning coverage to exact interval preservation, with
-  the three most delicate points and a map to the source documents. It explains the proof; it does not
-  add an independent validation.
+  the three most delicate points and a map to the source documents.
 - **The proof itself**: start with
   [`proof/learning_justification/output/REVIEW_GUIDE_EN.txt`](proof/learning_justification/output/REVIEW_GUIDE_EN.txt).
 
@@ -81,11 +79,35 @@ Later releases extend the result; each is described in [`CHANGELOG.md`](CHANGELO
   speed, with proved speed ceilings.
 - **Open problem** ([`depth/point4/`](depth/point4/README.md)). Whether *every* preparation of the
   original source enters that regime is open; the partial results and obstructions are recorded.
-- **Box width** ([`sweep/`](sweep/README.md)). Research campaigns cover all 18 layers at ±3e-4 and 17 at
-  ±1e-3; the manual proof covers ±1e-4 only.
+- **Box width** ([`sweep/`](sweep/README.md)). Research campaigns cover all 18 layers at ±3e-4; with the
+  newer scenario engine ([`sweep/v23/`](sweep/v23/README.md)), all 18 at ±1e-3, at least 12 at ±3e-3 and 9
+  at ±1e-2. With two added lemmas the proof extends to ±1e-3 (v4.4 section below).
 
-These results have the same proof level as above: a manual proof under A1–A4, not yet independently
-reviewed. To check the depth release assets, run `python3 -I tools/verify_depth_assets.py <assets folder>`.
+To check the depth release assets, run `python3 -I tools/verify_depth_assets.py <assets folder>`.
+
+## v4.4: the same result on a box ten times wider (±1e-3)
+
+The v3.3 program, extended by two short lemmas, gives the whole chain at ±1e-3 on the physical
+constants (initial states still ±1e-5): training enclosed through all 18 layers, end of training in
+Q, and exact transmission of every admissible pulse word afterwards
+([`sweep/v33_c7/`](sweep/v33_c7/README.md)).
+
+| | ±1e-4 (v3.3) | ±1e-3 (v3.3 + C7) |
+|---|---|---|
+| Layers accepted | 18 / 18 | 18 / 18 |
+| Training pulses; active cells at exact rest | 21 302; 191 | 21 302; 191 |
+| Future regime from Q (two independent checkers) | 191 cells fire once per pulse, at rest before 12.791 | the same |
+| Smallest future margin | 0.0491 | 0.0489 |
+| Additions to the proof | — | lemmas C7, C6 and remark P ([`LEMMAS_C7_C6_EN.txt`](sweep/v33_c7/LEMMAS_C7_C6_EN.txt)); general-ε wording of the future proof ([addendum](sweep/v33_c7/FUTURE_INVARIANCE_GENERAL_EPS_EN.txt)) |
+
+C7 bounds the READY charge with the kernel's own monotone peak bound where v3.3 refused; C6 is a
+piecewise version of the same bound; P establishes the root-bracket slope on a partition, without
+changing the acceptance predicate.
+
+A newer engine, the scenario launcher v2.3.1 ([`sweep/v23/`](sweep/v23/README.md)), reaches the same
+chain at ±1e-3 by another route, and goes further on wider boxes (at least 12 layers at ±3e-3, 9 at
+±1e-2). Its coverage would need ten lemmas
+([`LEMMAS_EN.md`](sweep/v23/proof_extension/LEMMAS_EN.md)).
 
 ## v4.3: conditional future invariance on a relative gain domain
 
@@ -94,20 +116,19 @@ that preserve the same 191-cell transmitting mask and exact temporal intervals.
 Its common local gain-arrival inequalities admit different learning-dose patterns;
 35 of 40 saved decimal vectors pass directed membership checks. Start with the
 [one-page reviewer note](depth/g_rel/reviewer/ONE_PAGE_EN.pdf).
-This is a conditional manual theorem, **not a proof of universal training entry
-or a complete learning campaign at ±1%**. The five unresolved cases remain recorded.
+The theorem is conditional: it does not show that training reaches this domain.
+The five unresolved cases are recorded.
 
 ## Exploratory simulations (not certified)
 
 Uncertified point simulations of the same physical kernel (robustness to noise, controls of the learning
 rule, fixed and shuffled gains, energy) are collected in [`exploratory/`](exploratory/README.md), with
-their findings and limits. They are not part of the proof.
+their findings and limits.
 
 **Joint uncertainty + noise pilot:** six new sampled devices at relative ε = 1e-4
 were trained and tested under link noise at 130 layers. All six transmitted the
 complete 128-pulse word without decoys; with 24 lateral decoys, three of six words
-remained perfect. This is exploratory numerical evidence, not coverage of the
-parameter box or an extension of the proof. See
+remained perfect. See
 [`exploratory/joint_uncertainty_noise_130/`](exploratory/joint_uncertainty_noise_130/README.md).
 
 ## Origin of the model
@@ -124,8 +145,8 @@ realization is [`engine/reference/full_model_reference.md`](engine/reference/ful
 [`engine/reference/STATUS_NOTE_EN.md`](engine/reference/STATUS_NOTE_EN.md) first. The physical
 definition in that file is current; its status statements are historical.
 
-The result is about this realization and its parameter box. It is not a proof of the Reset Operator
-hypothesis in general (see [`docs/MODEL_BOUNDARY_EN.txt`](docs/MODEL_BOUNDARY_EN.txt)).
+The result concerns this realization only, not the Reset Operator hypothesis in general
+([`docs/MODEL_BOUNDARY_EN.txt`](docs/MODEL_BOUNDARY_EN.txt)).
 
 ## How the proof is organized
 
@@ -141,13 +162,10 @@ The chain is: **initial section → every training step → terminal domain Q �
 | Q → Q for every future pulse | `proof/FUTURE_INVARIANCE_PROOF_EN.txt` | analytic argument + two independent inequality checkers |
 | Exact transmission of the pulse word | `proof/GLOBAL_THEOREM_AND_WORD_PRESERVATION_EN.txt`¹ | fixed influential gains + layer induction |
 
-¹ This file predates the learning-coverage theorem. Its sentence "The current dossier has not discharged
-that application premise [H_entry]" is **historical**: H_entry is discharged by
-`LEARNING_COVERAGE_THEOREM_EN.txt` at the manual level under A1–A4 (`proof/STATUS.json`:
-`"global_training_entry": "PROVED BY THE SUPPLIED MANUAL ARGUMENT, UNDER A1-A4"`). The file is kept
-byte-identical because its SHA-256 is cited by the proof dossier and by `depth/`. The same applies to
-`proof/TRAINING_ENTRY_REVIEW_EN.txt` and `proof/historical_status/` (see the "Historical documents"
-section of `proof/README_EN.txt`).
+¹ Written before the learning-coverage theorem: its remark that H_entry is not discharged is
+historical (H_entry is discharged by `LEARNING_COVERAGE_THEOREM_EN.txt`, see `proof/STATUS.json`). The
+file, like `proof/TRAINING_ENTRY_REVIEW_EN.txt` and `proof/historical_status/`, is kept byte-identical
+because its hash is cited.
 
 ## What was closed
 
@@ -226,10 +244,10 @@ author's direction. The model, the Reset Operator and the research questions are
 and ChatGPT wrote and corrected the code, ran the diagnostics, drafted the proof (mainly ChatGPT) and
 audited it (mainly Claude); each also re-checked the other's work. The author designed the model, ran
 the campaigns and directed the work; he relied on the assistants for parts of the mathematics that he
-has not checked in full himself. This is why the repository does not ask to be taken on trust: the
-campaign is bound to its exact code by reproducible hashes, every layer is re-read by a separate
-process, critical decisions are re-proved by independent scripts, the results are compared with an independent reference, and the proof states its
-assumptions explicitly. What it still needs is review by human specialists.
+has not checked in full himself. Hence the safeguards: the campaign is bound to its exact code by
+reproducible hashes, every layer is re-read by a separate process, critical decisions are re-proved by
+independent scripts, results are compared with an independent reference, and the proof states its
+assumptions.
 
 ## License and citation
 
