@@ -118,7 +118,7 @@ invariant in Q.
 
 ## Exploratory addition: joint parameter uncertainty and link noise
 
-The completed [six-seed pilot](exploratory/joint_uncertainty_noise_130/README.md)
+The completed [six-seed pilot](https://github.com/HevisNico/a22-exploratory/blob/main/joint_uncertainty_noise_130/README.md)
 combines independent per-cell/per-port auxiliary parameters and gain caps at
 relative ±1e-4 with link amplitude noise (log σ = 0.05) and jitter (SD 0.015).
 Four paired regimes give 24 acquisitions and 48 frozen-state baseline/decoy tests
@@ -126,4 +126,5 @@ at 130 layers. All six uncertain/noisy baseline words are complete; with 24 late
 decoys, three of six remain perfect. Every scheduled outcome is retained and no
 simulator failure is recorded. This is exploratory sampling, with no initial-state
 uncertainty, parameter-box coverage, gate-superiority or lifecycle-energy claim.
-The exact completed package is attached to Release `exploratory-data-1`.
+The exact completed package is attached to Release `exploratory-data-1`. The exploratory studies have
+since moved to their own repository, [a22-exploratory](https://github.com/HevisNico/a22-exploratory).
