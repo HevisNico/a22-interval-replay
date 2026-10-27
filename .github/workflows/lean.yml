@@ -1,0 +1,29 @@
+name: Lean (strict-root core)
+
+on:
+  push:
+    paths:
+      - 'proof/lean/**'
+      - '.github/workflows/lean.yml'
+  pull_request:
+    paths:
+      - 'proof/lean/**'
+      - '.github/workflows/lean.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build with Lean and Mathlib (cache included)
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: proof/lean
+      - name: Check the axioms (no sorryAx)
+        working-directory: proof/lean
+        run: |
+          lake env lean StrictRoot.lean > axioms.log 2>&1
+          cat axioms.log
+          test "$(grep -c "depends on axioms" axioms.log)" -eq 6
+          ! grep -q sorryAx axioms.log

@@ -73,6 +73,16 @@ gains and recovery to evolve. Directed checks accept 35/40 declared decimal
 states; the generator and read-only reader share arithmetic. Training entry,
 large-basin attraction and arbitrary-depth certification are not established.
 
+## Lean formalization of the strict-root core
+
+The abstract argument of Task 1 of [`REVIEW.md`](REVIEW.md), on which the event-order reasoning of
+the whole proof rests, is formalized in Lean 4 with Mathlib ([`proof/lean/`](proof/lean/README.md)):
+open-image lemma in two-point form, accepted brackets, Newton steps (including the
+rounded-midpoint-zero case), every retained refinement output, strict event order, and a
+countermodel showing the freshness hypothesis is necessary. No `sorry`; a GitHub workflow rebuilds
+it and checks the axioms. The bridge to the code (that it satisfies the hypotheses) is not
+formalized. Remark P of v4.4 meets the slope hypothesis of `newton_step_strict_slope`.
+
 ## v4.4: the result at ±1e-3
 
 **Program v3.3 + C7** ([`sweep/v33_c7/`](sweep/v33_c7/README.md)). At ε = 1e-3 the v3.3 program,
