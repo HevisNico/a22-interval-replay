@@ -35,6 +35,7 @@ workflow `.github/workflows/lean.yml` builds the file and fails if any `#print a
 
 ```sh
 cd proof/lean
+lake update             # resolves Mathlib v4.35.0, writes lake-manifest.json
 lake exe cache get      # prebuilt Mathlib
 lake build
 lake env lean StrictRoot.lean   # prints the axioms

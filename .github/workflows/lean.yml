@@ -14,14 +14,26 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: proof/lean
     steps:
       - uses: actions/checkout@v4
-      - name: Build with Lean and Mathlib (cache included)
-        uses: leanprover/lean-action@v1
-        with:
-          lake-package-directory: proof/lean
+      - name: Install elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Resolve Mathlib v4.35.0 and its dependencies
+        # Mathlib is pinned by tag in lakefile.toml; its dependencies follow
+        # Mathlib's own lake-manifest.json at that tag.
+        run: |
+          lake update
+          cat lake-manifest.json
+      - name: Fetch the prebuilt Mathlib cache
+        run: lake exe cache get
+      - name: Build
+        run: lake build
       - name: Check the axioms (no sorryAx)
-        working-directory: proof/lean
         run: |
           lake env lean StrictRoot.lean > axioms.log 2>&1
           cat axioms.log
