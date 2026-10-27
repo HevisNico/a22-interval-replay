@@ -13,8 +13,8 @@ the few you happened to simulate?
 
 A22 answers that question for one concrete network: 18 layers of 12 cells, trained by 128 pulses
 with a local learning rule, for every device in a small parameter box (±1e-4 on the constants,
-±1e-5 on the initial states). With two added lemmas the same result holds at ±1e-3 on the
-constants (see "Where the method stops working").
+±1e-5 on the initial states). With three added lemmas (C7, C6, E) the same result holds
+at ±1e-3 on the constants (see "Where the method stops working").
 
 ## The core result: learning reaches the same regime for every device
 
@@ -97,10 +97,13 @@ part of why affine arithmetic succeeds. What is known about its limits:
   | 3e-3 | 7 | layer 8, lane 0 |
   | 1e-2 | 4 | layer 5 |
 
-  **At 1e-3 the refusal is lifted by two short lemmas.** The v3.3 program extended by a monotone
-  peak bound (C7) and its piecewise version (C6), both machine-checked in Lean
+  **At 1e-3 the refusal is lifted by two short lemmas.** The v3.3 program extended by a
+  monotone peak bound (C7) and its piecewise version (C6), both machine-checked in Lean
   ([`proof/lean/`](proof/lean/README.md)), accepts all 18 layers, and the end of training
-  passes both future-wave checkers: the full result holds on a box ten times wider
+  passes both future-wave checkers. One more lemma (E) covers commutations with an input arrival,
+  which appear only at this width
+  ([addendum](sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt)): the full result holds on a box
+  ten times wider
   ([`sweep/v33_c7/README.md`](sweep/v33_c7/README.md)). A newer engine, the scenario launcher
   v2.3.1, goes further on wider boxes: at least 12 layers at 3e-3, 9 at 1e-2, where it refuses
   because the number of admissible event orders exceeds its budget

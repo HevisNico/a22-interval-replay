@@ -84,15 +84,15 @@ Later releases extend the result; each is described in [`CHANGELOG.md`](CHANGELO
   original source enters that regime is open; the partial results and obstructions are recorded.
 - **Box width** ([`sweep/`](sweep/README.md)). Research campaigns cover all 18 layers at ±3e-4; with the
   newer scenario engine ([`sweep/v23/`](sweep/v23/README.md)), all 18 at ±1e-3, at least 12 at ±3e-3 and 9
-  at ±1e-2. With two added lemmas the proof extends to ±1e-3 (v4.4 section below).
+  at ±1e-2. With three added lemmas (C7, C6, E) the proof extends to ±1e-3 (v4.4 section below).
 
 To check the depth release assets, run `python3 -I tools/verify_depth_assets.py <assets folder>`.
 
 ## v4.4: the same result on a box ten times wider (±1e-3)
 
-The v3.3 program, extended by two short lemmas, gives the whole chain at ±1e-3 on the physical
-constants (initial states still ±1e-5): training enclosed through all 18 layers, end of training in
-Q, and exact transmission of every admissible pulse word afterwards
+The v3.3 program, extended by lemmas C7 and C6 (with remark P), gives the whole chain at ±1e-3 on
+the physical constants (initial states still ±1e-5): training enclosed through all 18 layers, end of
+training in Q, and exact transmission of every admissible pulse word afterwards
 ([`sweep/v33_c7/`](sweep/v33_c7/README.md)).
 
 | | ±1e-4 (v3.3) | ±1e-3 (v3.3 + C7) |
@@ -101,13 +101,16 @@ Q, and exact transmission of every admissible pulse word afterwards
 | Network emissions during training (all cells, over the 128 source pulses); active cells at exact rest | 21 302; 191 | 21 302; 191 |
 | Future regime from Q (two independent checkers) | 191 cells fire once per pulse, at rest before 12.791 | the same |
 | Smallest future margin | 0.0491 | 0.0489 |
-| Additions to the proof | — | lemmas C7, C6 and remark P ([`LEMMAS_C7_C6_EN.txt`](sweep/v33_c7/LEMMAS_C7_C6_EN.txt)), their mathematical content machine-checked in Lean ([`PeakBounds.lean`](proof/lean/PeakBounds.lean)); general-ε wording of the future proof ([addendum](sweep/v33_c7/FUTURE_INVARIANCE_GENERAL_EPS_EN.txt)) |
+| Additions to the proof | — | lemmas C7, C6 and remark P ([`LEMMAS_C7_C6_EN.txt`](sweep/v33_c7/LEMMAS_C7_C6_EN.txt)), machine-checked in Lean ([`PeakBounds.lean`](proof/lean/PeakBounds.lean)); lemma E, the commutation macro with an input arrival, and the initial-section certificate rechecked at ±1e-3 ([coverage addendum](sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt)); general-ε wording of the future proof ([future addendum](sweep/v33_c7/FUTURE_INVARIANCE_GENERAL_EPS_EN.txt)) |
 
 C7 bounds the READY charge with the kernel's own monotone peak bound where v3.3 refused; C6 is a
 piecewise version of the same bound; P establishes the root-bracket slope on a partition, without
-changing the acceptance predicate. The full outputs and the engine as run are assets of
+changing the acceptance predicate. Lemma E is not a program change: at ±1e-3 the existing commutation
+macro also handles input arrivals, which the v3.3 proof did not need, and lemma E proves that case.
+The full outputs and the engine as run are assets of
 [Release v4.4](https://github.com/HevisNico/a22-interval-replay/releases/tag/v4.4), and one command
-checks everything: `python3 -I sweep/v33_c7/verify_release.py <assets folder>`.
+checks everything, including the initial section and the commutations:
+`python3 -I sweep/v33_c7/verify_release.py <assets folder> --strict`.
 
 A newer engine, the scenario launcher v2.3.1 ([`sweep/v23/`](sweep/v23/README.md)), reaches the same
 chain at ±1e-3 by another route, and goes further on wider boxes (at least 12 layers at ±3e-3, 9 at

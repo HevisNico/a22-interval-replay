@@ -1,9 +1,9 @@
 # The whole chain at ε = 1e-3 with program v3.3 + C7
 
 **Result.** At relative half-width ε = 1e-3 on the physical constants (ten times the proved box;
-initial states ±1e-5), the v3.3 program extended by two short lemmas encloses the complete training
-transient of all 18 layers. The end of training lies in a quiescent domain Q, and both future-wave
-checkers prove that every admissible pulse word is then transmitted exactly.
+initial states ±1e-5), the v3.3 program extended by lemmas C7 and C6 (with remark P) encloses the
+complete training transient of all 18 layers. The end of training lies in a quiescent domain Q, and
+both future-wave checkers prove that every admissible pulse word is then transmitted exactly.
 
 | | ε = 1e-4 (published, v3.3) | ε = 1e-3 (this folder, v3.3 + C7) |
 |---|---|---|
@@ -12,7 +12,7 @@ checkers prove that every admissible pulse word is then transmitted exactly.
 | Active cells at exact rest; auxiliary ports at exact rest; gain caps | 191; 540; 4 | 191; 540; 4 |
 | Future regime from Q | 191 cells fire once per pulse; at rest before 12.791 | same; at rest before 12.791 |
 | Smallest future margin | 0.0491 | 0.0489 |
-| Additions to the proof | — | lemmas C7, C6 and remark P ([`LEMMAS_C7_C6_EN.txt`](LEMMAS_C7_C6_EN.txt)), machine-checked in Lean ([`PeakBounds.lean`](../../proof/lean/PeakBounds.lean)) |
+| Additions to the proof | — | lemmas C7, C6 and remark P ([`LEMMAS_C7_C6_EN.txt`](LEMMAS_C7_C6_EN.txt)), machine-checked in Lean ([`PeakBounds.lean`](../../proof/lean/PeakBounds.lean)); lemma E and the initial section at 1e-3 ([`COVERAGE_THEOREM_GENERAL_EPS_EN.txt`](COVERAGE_THEOREM_GENERAL_EPS_EN.txt)) |
 
 ¹ Output spikes of all 216 cells together while the source emits its 128 training pulses.
 
@@ -23,15 +23,17 @@ The v3.3 program alone stops at layer 18, cell (18, 6), at this ε ([`../README.
 [`verify_release.py`](verify_release.py) checks, from the repository and the downloaded release
 assets: the asset hashes, the engine identity (the campaign `kernel_id` recomputed from the as-run
 engine), every output record against the manifest, the chain of receipts and payloads, the
-engine-independent terminal extraction, and both future-wave certificates.
+engine-independent terminal extraction, both future-wave certificates, the initial-section
+certificate at 1e-4 and 1e-3, and the recorded commutations against lemma E.
 
 ```sh
-python3 -I sweep/v33_c7/verify_release.py <folder with the v4.4 release assets>
+python3 -I sweep/v33_c7/verify_release.py <folder with the v4.4 release assets> --strict
 ```
 
-The `kernel_id` step needs Python 3.12 with numpy 2.3.5 and scipy 1.17.0 (it imports the engine);
-with another Python it is reported as skipped and the other steps still run. The extraction and the
-two future checkers take about six minutes in total.
+The verification is complete only when all nine steps pass. The `kernel_id` step needs Python 3.12
+with numpy 2.3.5 and scipy 1.17.0 (it imports the engine); with another Python it is skipped, the
+other steps still run, and the verdict is INCOMPLETE. With `--strict` a skipped step also gives exit
+code 3; a failed step always gives 1.
 
 ## Release assets (v4.4)
 
@@ -90,6 +92,7 @@ single wide evaluation. C1 was then dropped.
 ## Not yet done
 
 - The mathematical content of C7, C6 and remark P is machine-checked
-  ([`proof/lean/PeakBounds.lean`](../../proof/lean/PeakBounds.lean)); that the program's interval
-  evaluations meet their hypotheses has not been reviewed, like the rest of the proof.
+  ([`proof/lean/PeakBounds.lean`](../../proof/lean/PeakBounds.lean)); lemma E is not yet. That the
+  program's interval evaluations meet their hypotheses has not been reviewed, like the rest of the
+  proof.
 - No run at ε = 3e-3 or 1e-2 with this program.
