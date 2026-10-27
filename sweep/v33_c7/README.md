@@ -12,7 +12,7 @@ checkers prove that every admissible pulse word is then transmitted exactly.
 | Active cells at exact rest; auxiliary ports at exact rest; gain caps | 191; 540; 4 | 191; 540; 4 |
 | Future regime from Q | 191 cells fire once per pulse; at rest before 12.791 | same; at rest before 12.791 |
 | Smallest future margin | 0.0491 | 0.0489 |
-| Additions to the proof | — | lemmas C7, C6 and remark P ([`LEMMAS_C7_C6_EN.txt`](LEMMAS_C7_C6_EN.txt)) |
+| Additions to the proof | — | lemmas C7, C6 and remark P ([`LEMMAS_C7_C6_EN.txt`](LEMMAS_C7_C6_EN.txt)), machine-checked in Lean ([`PeakBounds.lean`](../../proof/lean/PeakBounds.lean)) |
 
 ¹ Output spikes of all 216 cells together while the source emits its 128 training pulses.
 
@@ -86,5 +86,7 @@ single wide evaluation. C1 was then dropped.
 
 ## Not yet done
 
-- The lemmas C7, C6 and remark P have not been reviewed, like the rest of the proof.
+- The mathematical content of C7, C6 and remark P is machine-checked
+  ([`proof/lean/PeakBounds.lean`](../../proof/lean/PeakBounds.lean)); that the program's interval
+  evaluations meet their hypotheses has not been reviewed, like the rest of the proof.
 - No run at ε = 3e-3 or 1e-2 with this program.

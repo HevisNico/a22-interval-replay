@@ -81,7 +81,13 @@ open-image lemma in two-point form, accepted brackets, Newton steps (including t
 rounded-midpoint-zero case), every retained refinement output, strict event order, and a
 countermodel showing the freshness hypothesis is necessary. No `sorry`; a GitHub workflow rebuilds
 it and checks the axioms. The bridge to the code (that it satisfies the hypotheses) is not
-formalized. Remark P of v4.4 meets the slope hypothesis of `newton_step_strict_slope`.
+formalized.
+
+The three additions of v4.4 are formalized as well ([`PeakBounds.lean`](proof/lean/PeakBounds.lean)):
+lemma C7 (the READY charge is monotone in the initial charge and the current amplitude, so one
+corner bound covers every device; it rises to its stationary point and then falls), lemma C6
+(piecewise cover, bisection) and remark P (the hull of the piece enclosures is open about the mean
+slope, which meets the slope hypothesis of `newton_step_strict_slope`).
 
 ## v4.4: the result at ±1e-3
 
