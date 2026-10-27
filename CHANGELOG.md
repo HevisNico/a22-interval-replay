@@ -54,14 +54,12 @@ showing what any complete proof must overcome.
 **How wide can the box be?** ([`sweep/README.md`](sweep/README.md)). Fresh campaigns with wider
 parameter boxes cover all 18 layers at ±3e-4 (three times the v3.3 box) and 17 layers at ±1e-3,
 then stop earlier (7 layers at ±3e-3, 4 at ±1e-2). The enclosures stay roughly proportional to the box
-width; what fails first is the certification of an event order. These campaigns are research runs; the
-manual proof covers ±1e-4 only.
+width; what fails first is the certification of an event order.
 
 ## Proof level of the depth results
 
-The proof level is the same as for v3.3: a manual proof under A1–A4, with directed-rounding computations,
-not yet independently reviewed. Entry into the tail contract is certified for six prescribed
-preparations, not for the whole uncertainty box.
+Same proof level as v3.3. Entry into the tail contract is certified for six prescribed preparations,
+not for the whole uncertainty box.
 To check the release assets, run `python3 -I tools/verify_depth_assets.py <assets folder>`.
 
 ## v4.3: future invariance on a common relative gain domain
@@ -74,6 +72,30 @@ tail; local relative guards preserve influential gains while allowing masked
 gains and recovery to evolve. Directed checks accept 35/40 declared decimal
 states; the generator and read-only reader share arithmetic. Training entry,
 large-basin attraction and arbitrary-depth certification are not established.
+
+## v4.4: the result at ±1e-3
+
+**Program v3.3 + C7** ([`sweep/v33_c7/`](sweep/v33_c7/README.md)). At ε = 1e-3 the v3.3 program,
+extended by lemma C7 (monotone peak bound where the peak-time logarithm is not certified), lemma C6
+(its piecewise version) and remark P (root-bracket slope established on a partition), accepts all 18
+layers. The engine-independent extraction gives the same structure as at 1e-4 (21 302 pulses, 191
+active cells at exact rest, 4 gain caps), and both future-wave checkers, adapted to ε, pass. The
+future-invariance proof is restated for general ε in an addendum. v3.3 alone stops at cell (18, 6);
+an intermediate rule (C1, a narrower first auxiliary delay) turned out unnecessary and was dropped.
+
+**Scenario launcher v2.3/v2.3.1** ([`sweep/v23/`](sweep/v23/README.md)), which keeps each possible
+output history of a cell as a separate scenario:
+
+- ε = 1e-3: 18 of 18 layers, and the end of training passes both future-wave checkers;
+- ε = 3e-3: at least 12 layers (v3.3: 7); the run was stopped during layer 13, not refused;
+- ε = 1e-2: 9 layers (v3.3: 4); first refusal at layer 11, lane 0, event-order budget exceeded;
+- a soundness audit of every change from v3.3 ([`AUDIT_ENGINE_V231.md`](sweep/v23/AUDIT_ENGINE_V231.md))
+  and the ten lemmas its coverage would need ([`LEMMAS_EN.md`](sweep/v23/proof_extension/LEMMAS_EN.md)).
+
+**Documentation.** [`RESULTS_STATUS.md`](RESULTS_STATUS.md) lists every result with its scope, status,
+authoritative document and check. Repeated disclaimers were removed. The pilot README separates the
+effect of the decoys from the per-test results, and `WHY_A22_MATTERS.md` now says which gains stay
+invariant in Q.
 
 ## Exploratory addition: joint parameter uncertainty and link noise
 

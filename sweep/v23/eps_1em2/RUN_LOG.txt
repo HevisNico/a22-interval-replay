@@ -1,0 +1,231 @@
+Fast Scenario Launcher v2.1 — NEW canonical research campaign
+Output: /home/user/a22_runs/A22_v23_001 epsilon: 0.01 through: 18
+SCENARIO JOB 1 2 f4f3ef1557ee COMPLETE 0.067 s; 1 histories
+SCENARIO JOB 1 3 a6780ca73a83 COMPLETE 0.124 s; 1 histories
+SCENARIO JOB 1 5 e9277664b152 COMPLETE 0.085 s; 1 histories
+SCENARIO JOB 1 4 e363100d807e COMPLETE 0.092 s; 1 histories
+SCENARIO JOB 1 6 2f7b1a10ef04 COMPLETE 0.066 s; 1 histories
+SCENARIO JOB 1 7 292c0ec57cd4 COMPLETE 0.063 s; 1 histories
+SCENARIO JOB 1 8 c48284e5471b COMPLETE 0.087 s; 1 histories
+SCENARIO JOB 1 9 59bec483c689 COMPLETE 0.067 s; 1 histories
+SCENARIO JOB 1 1 a929553427c7 COMPLETE 6.767 s; 1 histories
+SCENARIO JOB 1 10 b0ca5fbea63f COMPLETE 0.074 s; 1 histories
+SCENARIO JOB 1 0 539a13a32f2a COMPLETE 7.64 s; 1 histories
+SCENARIO JOB 2 3 695bf3a2a5a5 COMPLETE 0.078 s; 1 histories
+SCENARIO JOB 2 4 9ba71c749cf6 COMPLETE 0.068 s; 1 histories
+SCENARIO JOB 2 5 58b251ddca67 COMPLETE 0.062 s; 1 histories
+SCENARIO JOB 2 7 afbd218ea68a COMPLETE 0.066 s; 1 histories
+SCENARIO JOB 1 11 117b7ac2e469 COMPLETE 6.655 s; 1 histories
+SCENARIO JOB 2 8 f76513c78879 COMPLETE 0.138 s; 1 histories
+SCENARIO JOB 2 2 f6ebc4f16b2a COMPLETE 9.066 s; 1 histories
+SCENARIO PREFIX VERIFIED 1
+SCENARIO LAYER 1 COMPLETE 21.991 s
+SCENARIO JOB 2 1 3fc9f92a601c COMPLETE 16.783 s; 1 histories
+SCENARIO JOB 2 9 ffd4aacfa82f COMPLETE 0.096 s; 1 histories
+SCENARIO JOB 2 10 50e17bb1925f COMPLETE 8.363 s; 1 histories
+SCENARIO JOB 2 6 e140d3c45352 COMPLETE 0.078 s; 1 histories
+SCENARIO JOB 2 11 c8325f771074 COMPLETE 14.984 s; 1 histories
+SCENARIO JOB 3 3 2489a1361ce0 COMPLETE 7.866 s; 1 histories
+SCENARIO JOB 2 0 5b3daff5805e COMPLETE 27.975 s; 1 histories
+SCENARIO JOB 3 2 539063232a78 COMPLETE 19.863 s; 1 histories
+SCENARIO JOB 3 9 a4fa94f4891c COMPLETE 11.681 s; 1 histories
+SCENARIO PREFIX VERIFIED 2
+SCENARIO LAYER 2 COMPLETE 45.753 s
+SCENARIO JOB 3 10 3d1ff5258d3f COMPLETE 20.211 s; 1 histories
+SCENARIO JOB 3 7 8f1c21393ed4 COMPLETE 0.062 s; 1 histories
+SCENARIO JOB 3 8 c57915e17910 COMPLETE 0.095 s; 1 histories
+SCENARIO JOB 3 4 c2f17b5942b3 COMPLETE 0.096 s; 1 histories
+SCENARIO JOB 3 5 3974f7791b53 COMPLETE 0.106 s; 1 histories
+SCENARIO JOB 3 6 0c47354bb434 COMPLETE 0.066 s; 1 histories
+SCENARIO JOB 4 9 36769e963792 COMPLETE 16.003 s; 1 histories
+SCENARIO JOB 3 0 1b997a109715 COMPLETE 36.341 s; 1 histories
+SCENARIO JOB 3 1 045842e24dff COMPLETE 33.732 s; 1 histories
+SCENARIO JOB 3 11 7a3ee639658d COMPLETE 34.408 s; 1 histories
+SCENARIO PREFIX VERIFIED 3
+SCENARIO JOB 4 8 70b0206a6552 COMPLETE 13.654 s; 1 histories
+SCENARIO LAYER 3 COMPLETE 70.038 s
+ZIP /home/user/a22_runs/A22_v23_001_through_03.zip
+SCENARIO JOB 4 3 060ec77bfe48 COMPLETE 21.585 s; 1 histories
+SCENARIO JOB 4 1 28c079b0b12e COMPLETE 37.951 s; 1 histories
+SCENARIO JOB 4 0 631274085269 COMPLETE 37.823 s; 1 histories
+SCENARIO JOB 4 11 7968c5cc5acd COMPLETE 32.165 s; 1 histories
+SCENARIO JOB 4 10 0df61d286eec COMPLETE 26.964 s; 1 histories
+SCENARIO JOB 4 5 da3736f807f7 COMPLETE 0.1 s; 1 histories
+SCENARIO JOB 4 6 4a7bf51f4d62 COMPLETE 0.064 s; 1 histories
+SCENARIO JOB 4 7 470abf1631de COMPLETE 0.08 s; 1 histories
+SCENARIO JOB 4 4 650d6c3bf602 COMPLETE 9.054 s; 1 histories
+SCENARIO JOB 4 2 d2401133cd74 COMPLETE 29.377 s; 1 histories
+SCENARIO PREFIX VERIFIED 4
+SCENARIO LAYER 4 COMPLETE 106.922 s
+SCENARIO JOB 5 0 f91ceb153900 COMPLETE 51.141 s; 1 histories
+SCENARIO JOB 5 11 86b2047bbc4f COMPLETE 54.77 s; 1 histories
+SCENARIO JOB 5 10 408b1fe7f62a COMPLETE 52.271 s; 1 histories
+SCENARIO JOB 5 1 f000959e0911 COMPLETE 54.275 s; 1 histories
+SCENARIO JOB 5 9 e3f96d8d04fa COMPLETE 24.701 s; 1 histories
+SCENARIO JOB 5 3 aeb3ab67b2a4 COMPLETE 25.801 s; 1 histories
+SCENARIO JOB 5 4 e48e22e3ebad COMPLETE 14.195 s; 1 histories
+SCENARIO JOB 5 7 04343ec2d9da COMPLETE 10.658 s; 1 histories
+SCENARIO JOB 5 6 ac61c8817308 COMPLETE 0.066 s; 1 histories
+SCENARIO JOB 5 8 f993d2f90048 COMPLETE 13.423 s; 1 histories
+SCENARIO JOB 5 2 66fc134258b5 COMPLETE 43.828 s; 1 histories
+SCENARIO JOB 5 5 7e05682cb2ca COMPLETE 8.813 s; 1 histories
+SCENARIO PREFIX VERIFIED 5
+SCENARIO LAYER 5 COMPLETE 118.884 s
+SCENARIO JOB 6 10 9cfb22564f69 COMPLETE 47.987 s; 1 histories
+SCENARIO JOB 6 0 5ec6492b4ac7 COMPLETE 48.562 s; 1 histories
+SCENARIO JOB 6 11 8238b073e17c COMPLETE 52.87 s; 1 histories
+SCENARIO JOB 6 1 667406efd170 COMPLETE 56.1 s; 1 histories
+SCENARIO JOB 6 9 8e72ec5d306c COMPLETE 35.44 s; 1 histories
+SCENARIO JOB 6 3 7bfd89bdfeaf COMPLETE 34.398 s; 1 histories
+SCENARIO JOB 6 2 9d6534e4a4ad COMPLETE 40.83 s; 1 histories
+SCENARIO JOB 6 4 ed316a2ca88e COMPLETE 35.775 s; 1 histories
+SCENARIO JOB 6 5 2aa21bb84d25 COMPLETE 11.885 s; 1 histories
+SCENARIO JOB 6 7 b50bb1dadfec COMPLETE 12.37 s; 1 histories
+SCENARIO JOB 6 6 f76ae3b1b521 COMPLETE 19.014 s; 1 histories
+SCENARIO JOB 6 8 fac38451e18f COMPLETE 38.169 s; 1 histories
+SCENARIO PREFIX VERIFIED 6
+SCENARIO LAYER 6 COMPLETE 142.9 s
+ZIP /home/user/a22_runs/A22_v23_001_through_06.zip
+SCENARIO JOB 7 0 7071d7756855 COMPLETE 53.558 s; 1 histories
+SCENARIO JOB 7 1 2f7ea594633b COMPLETE 54.926 s; 1 histories
+SCENARIO JOB 7 2 db266728d7ed COMPLETE 54.597 s; 1 histories
+SCENARIO JOB 7 10 ee4b83fa9003 COMPLETE 52.136 s; 1 histories
+SCENARIO JOB 7 9 fcfc02bdf467 COMPLETE 37.073 s; 1 histories
+SCENARIO JOB 7 7 404008925b5a COMPLETE 24.936 s; 1 histories
+SCENARIO JOB 7 11 2787bb1a43a5 COMPLETE 47.653 s; 1 histories
+SCENARIO JOB 7 3 f9062097807e COMPLETE 36.029 s; 1 histories
+SCENARIO JOB 7 5 885c36180562 COMPLETE 24.859 s; 1 histories
+SCENARIO JOB 7 8 89f249e15074 COMPLETE 37.291 s; 1 histories
+SCENARIO JOB 7 6 bdb2b068be01 COMPLETE 24.524 s; 1 histories
+SCENARIO JOB 7 4 28dd690039a0 COMPLETE 36.017 s; 1 histories
+SCENARIO PREFIX VERIFIED 7
+SCENARIO LAYER 7 COMPLETE 156.646 s
+SCENARIO JOB 8 0 9c5575e76bf9 COMPLETE 55.155 s; 1 histories
+SCENARIO JOB 8 2 c3f72360a680 COMPLETE 52.7 s; 1 histories
+SCENARIO JOB 8 1 9f4a974c715f COMPLETE 54.07 s; 1 histories
+SCENARIO JOB 8 3 2a05cb069fa3 COMPLETE 53.054 s; 1 histories
+SCENARIO JOB 8 7 ce84e7ac233d COMPLETE 30.021 s; 1 histories
+SCENARIO JOB 8 11 0be1ba505cdb COMPLETE 45.813 s; 1 histories
+SCENARIO JOB 8 9 fb94eb6216bc COMPLETE 43.376 s; 1 histories
+SCENARIO JOB 8 10 883a24f351f5 COMPLETE 44.583 s; 1 histories
+SCENARIO JOB 8 8 6399c0aafd80 COMPLETE 42.079 s; 1 histories
+SCENARIO JOB 8 5 b4075557b22e COMPLETE 32.294 s; 1 histories
+SCENARIO JOB 8 6 3bdd1c455f41 COMPLETE 36.358 s; 1 histories
+SCENARIO JOB 8 4 1882c91e2f29 COMPLETE 41.937 s; 1 histories
+SCENARIO PREFIX VERIFIED 8
+SCENARIO LAYER 8 COMPLETE 168.209 s
+SCENARIO JOB 9 0 9c1919448af4 COMPLETE 38.905 s; 1 histories
+SCENARIO JOB 9 1 7395072ecbce COMPLETE 51.687 s; 1 histories
+SCENARIO JOB 9 11 7d86e0fde1c7 COMPLETE 50.417 s; 1 histories
+SCENARIO JOB 9 2 4d808260a0bf COMPLETE 63.206 s; 1 histories
+SCENARIO JOB 9 3 7f5f7a7644c9 COMPLETE 46.582 s; 1 histories
+SCENARIO JOB 9 4 91b1c978593a COMPLETE 44.616 s; 1 histories
+SCENARIO JOB 9 10 415e63b3668e COMPLETE 61.284 s; 1 histories
+SCENARIO JOB 9 9 d50b393cc4b2 COMPLETE 49.877 s; 1 histories
+SCENARIO JOB 9 7 4991d1ffbf6a COMPLETE 32.101 s; 1 histories
+SCENARIO JOB 9 8 75059397f3b1 COMPLETE 44.187 s; 1 histories
+SCENARIO JOB 9 5 03caec85943e COMPLETE 34.087 s; 1 histories
+SCENARIO JOB 9 6 c4e7fef2fc72 COMPLETE 50.107 s; 1 histories
+SCENARIO PREFIX VERIFIED 9
+SCENARIO LAYER 9 COMPLETE 201.272 s
+ZIP /home/user/a22_runs/A22_v23_001_through_09.zip
+SCENARIO JOB 10 3 b715a003108f COMPLETE 58.937 s; 1 histories
+SCENARIO JOB 10 9 5428b0349751 COMPLETE 61.43 s; 1 histories
+SCENARIO JOB 10 11 4082b5e9d9c6 COMPLETE 85.943 s; 1 histories
+SCENARIO JOB 10 0 7b1814050608 COMPLETE 13.596 s; 1 histories
+SCENARIO JOB 10 1 c1fb36eef4ef COMPLETE 256.314 s; 1 histories
+SCENARIO JOB 10 5 49cdd6484abe COMPLETE 51.739 s; 1 histories
+SCENARIO JOB 10 6 59e7583a951d COMPLETE 41.696 s; 1 histories
+SCENARIO JOB 10 7 a69ed1ac92f5 COMPLETE 42.594 s; 1 histories
+SCENARIO JOB 10 8 d705e929a165 COMPLETE 36.774 s; 1 histories
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/kernel/R_cycle_local_A20_2026-10-18/validation_A15.py", line 62, in unit
+    return dep.start(s['t'],s['q'],[(j,o,C if s['caps'][j] else s['z'][j].exp()) for j,o in enumerate(s['raw']) if o is not None])
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/affine/memory_root.py", line 47, in advance
+    raise error
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/affine/memory_root.py", line 14, in advance
+    try:return original(s,boundary,cell,count)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/affine/nofire_cover.py", line 26, in advance
+    if depth==16 or len(leaves)+len(stack)>65536:raise error
+                                                 ^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/affine/nofire_cover.py", line 14, in advance
+    try:return original(s,boundary,cell,count)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/affine/engine.py", line 361, in <lambda>
+    b.advance=lambda s,bd,cell,count:causal.advance(s,bd,cell,count,orig_advance)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/kernel/R_continuation_A22_2026-10-18/avance_causale_A22.py", line 12, in advance
+    return original(s,boundary,cell,count)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/kernel/R_cycle_local_A20_2026-10-18/validation_A15.py", line 30, in advance
+    C=4*(1+I(-EPS.hi,EPS.hi));Z=C.ln()
+                                 ^^^^^^
+outils_validation.Ambiguous: ready guard still overlaps external boundary or possible tangency
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/concurrent/futures/process.py", line 263, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/run_scenarios.py", line 93, in worker
+    result=scenario_engine.compute(e,t,case['layer'],case['lane'],trains,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/affine/scenario_engine.py", line 29, in compute
+    single=e.compute_cell(layer,lane,trains,producer,physical_namespace=physical_namespace)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/affine/engine.py", line 376, in compute_cell
+    outputs,state=b.unit(inputs,f'{layer},{lane}:aff')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/kernel/R_cycle_local_A20_2026-10-18/validation_A15.py", line 66, in unit
+    J=sum((g[j]*A*(-A*t.minus(x)).exp() for j,x in enumerate(s['raw']) if x is not None),I(0))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/affine/scenario_engine.py", line 22, in split
+    result=tightening.window(b,s,pending,idx,cell,count)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/affine/recovery_tightening.py", line 52, in window
+    result = pending_window(s, pending, idx, cell, count,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/kernel/R_continuation_A22_2026-10-18/retour_file_A22.py", line 36, in pending_window
+    ready,proof=anticipate(s,pending,index,f'{cell}:{count}:A22-return',return_solver)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/kernel/R_continuation_A22_2026-10-18/retour_file_A22.py", line 18, in anticipate
+    late=return_solver(s,key+':without-new-marks')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/affine/recovery_tightening.py", line 53, in <lambda>
+    return_solver=lambda state, key: contract_return(b, state, key),
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/affine/recovery_tightening.py", line 15, in contract_return
+    original = return_with_marks(s, key)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/kernel/R_cycle_local_A20_2026-10-18/branche_retour_A19.py", line 19, in return_with_marks
+    assert all(h.fire.token()==s['fire'].token() for h in s['actuation'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/kernel/R_cycle_local_A20_2026-10-18/branche_retour_A19.py", line 19, in <genexpr>
+    assert all(h.fire.token()==s['fire'].token() for h in s['actuation'])
+               ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'token'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/run_scenarios.py", line 380, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/run_scenarios.py", line 267, in main
+    if first<=args.through:dataflow(root,cfg,a,args,epsilon,first,previous)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user/639bf09c-4754-5d56-bd03-cec9e6fe4a78/scratchpad/v23/A22_fast_scenario_launcher_v2_3/engine/run_scenarios.py", line 362, in dataflow
+    r=future.result()
+      ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+AttributeError: 'NoneType' object has no attribute 'token'

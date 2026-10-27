@@ -1,0 +1,2 @@
+/home/user/a22_runs/campaign_start.txt: Mon Oct 26 16:08:12 UTC 2026
+/home/user/a22_runs/campaign_1em3_start.txt: Mon Oct 26 18:49:29 UTC 2026
