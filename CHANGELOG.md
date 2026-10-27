@@ -132,5 +132,6 @@ at 130 layers. All six uncertain/noisy baseline words are complete; with 24 late
 decoys, three of six remain perfect. Every scheduled outcome is retained and no
 simulator failure is recorded. This is exploratory sampling, with no initial-state
 uncertainty, parameter-box coverage, gate-superiority or lifecycle-energy claim.
-The exact completed package is attached to Release `exploratory-data-1`. The exploratory studies have
-since moved to their own repository, [a22-exploratory](https://github.com/HevisNico/a22-exploratory).
+The exploratory studies and their raw data, including this package, have since moved to their own
+repository, [a22-exploratory](https://github.com/HevisNico/a22-exploratory) (release
+[`exploratory-data-1`](https://github.com/HevisNico/a22-exploratory/releases/tag/exploratory-data-1)).
