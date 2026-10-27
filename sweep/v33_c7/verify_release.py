@@ -1,9 +1,12 @@
 """One-command check of release v4.4 (program v3.3 + C7, eps = 1e-3).
 
 Usage, from the repository root, with the six release assets in one folder:
-  python3 -I sweep/v33_c7/verify_release.py <assets folder> [--work <scratch folder>]
+  python3 -I sweep/v33_c7/verify_release.py <assets folder> [--work <scratch folder>] [--strict]
 
-Steps (each prints PASS, FAIL or SKIP; the exit code is 1 if any step fails):
+Each step prints PASS, FAIL or SKIP. The verification is complete only when every
+step passes. Exit code: 0 complete; 1 a step failed; 3 with --strict, no step
+failed but one was skipped (without --strict a skip gives 0 and the verdict
+INCOMPLETE). Steps:
  1. asset hashes against RELEASE_ASSETS_SHA256.json;
  2. engine: every file of the as-run engine that enters the program identity
     equals the fresh-launch package in this folder, apart from its two built
@@ -16,7 +19,12 @@ Steps (each prints PASS, FAIL or SKIP; the exit code is 1 if any step fails):
     its parent receipts, and every payload has the hash its receipt states;
  6. extraction: audit_campaign_dir.py on the outputs reproduces terminal/;
  7. future: both future-wave checkers at eps = 1e-3 pass and reproduce the
-    content of the committed certificates.
+    content of the committed certificates;
+ 8. initial section: certify_initial_section_eps.py reproduces the published
+    certificate at eps = 1e-4 and the committed one at 1e-3, and passes;
+ 9. commutations: audit_commutations.py on the outputs reproduces
+    terminal/commutation_usage_eps1e-3.json, and every recorded group is made
+    of the actions lemma E covers (COVERAGE_THEOREM_GENERAL_EPS_EN.txt).
 Standard library only, except step 3, which runs the engine in a subprocess.
 """
 import hashlib, json, os, shutil, subprocess, sys, zipfile
@@ -191,6 +199,45 @@ def step_future(out):
            f'{"same content as" if same else "DIFFERENT from"} the committed certificates')
 
 
+def step_initial(work):
+    out = work / 'initial'
+    out.mkdir(exist_ok=True)
+    script = HERE / 'certify_initial_section_eps.py'
+    published = REPO / 'proof' / 'final_entry_audit' / 'output' / 'initial_section_certificate.json'
+    same = []
+    for eps, ref in (('1e-4', published), ('1e-3', HERE / 'terminal' / 'initial_section_eps1e-3.json')):
+        run_script([script, out / f'initial_{eps}.json', eps])
+        if (out / f'initial_{eps}.json').read_bytes() == ref.read_bytes():
+            same.append(eps)
+    status = json.loads((out / 'initial_1e-3.json').read_text())['status']
+    report('8 initial section', status == 'PASS' and len(same) == 2,
+           f'status {status} at 1e-3; byte-identical to the reference at {", ".join(same) or "neither eps"}')
+
+
+COVERED = {'raw_on', 'raw_off', 'mark_on', 'mark_off', 'error_on', 'error_off'}
+
+
+def step_commutations(run, work):
+    out = work / 'commutation_usage.json'
+    run_script([HERE / 'audit_commutations.py', run, out])
+    same = out.read_bytes() == (HERE / 'terminal' / 'commutation_usage_eps1e-3.json').read_bytes()
+    u = json.loads(out.read_text())
+    actions = {a for p in u['event_patterns'] for group in p['events'] for a in group}
+    recorded = json.loads((HERE / 'terminal' / 'all_layers_audit.json').read_text())['recorded_guards']['fire_arrival_commutation']
+    ok = same and actions <= COVERED and u['count'] == recorded
+    report('9 commutations', ok, f'{u["count"]} recorded (audit: {recorded}), actions {sorted(actions)}'
+           + ('' if actions <= COVERED else f'; NOT covered by lemma E: {sorted(actions - COVERED)}')
+           + f'; {"same as" if same else "DIFFERENT from"} the committed summary')
+
+
+def guarded(step, fn, *args):
+    try:
+        return fn(*args)
+    except Exception as exc:
+        report(step, False, f'{type(exc).__name__}: {str(exc)[:160]}')
+        return None
+
+
 def main():
     if not __debug__:
         raise RuntimeError('run without -O')
@@ -199,17 +246,33 @@ def main():
         print(__doc__); sys.exit(2)
     assets = Path(args[0]).resolve()
     work = Path(args[args.index('--work') + 1]).resolve() if '--work' in args else assets / 'verify_work'
+    strict = '--strict' in args
     work.mkdir(parents=True, exist_ok=True)
-    step_assets(assets)
-    root = step_engine(assets, work)
-    step_identity(root)
-    run = step_outputs(assets, work)
-    step_chain(run)
-    out = step_extraction(run, work)
-    step_future(out)
-    failed = RESULTS.count('FAIL')
-    print(f'\n{RESULTS.count("PASS")} PASS, {failed} FAIL, {RESULTS.count("SKIP")} SKIP')
-    sys.exit(1 if failed else 0)
+    guarded('1 asset hashes', step_assets, assets)
+    root = guarded('2 engine contents', step_engine, assets, work)
+    if root is None:
+        report('3 engine identity', False, 'not run: step 2 failed')
+    else:
+        guarded('3 engine identity', step_identity, root)
+    run = guarded('4 output records', step_outputs, assets, work)
+    if run is None:
+        for step in ('5 receipt chain', '6 terminal extraction', '7 future invariance'):
+            report(step, False, 'not run: step 4 failed')
+        guarded('8 initial section', step_initial, work)
+        report('9 commutations', False, 'not run: step 4 failed')
+    else:
+        guarded('5 receipt chain', step_chain, run)
+        out = guarded('6 terminal extraction', step_extraction, run, work)
+        if out is None:
+            report('7 future invariance', False, 'not run: step 6 failed')
+        else:
+            guarded('7 future invariance', step_future, out)
+        guarded('8 initial section', step_initial, work)
+        guarded('9 commutations', step_commutations, run, work)
+    passed, failed, skipped = (RESULTS.count(k) for k in ('PASS', 'FAIL', 'SKIP'))
+    verdict = 'FAILED' if failed else ('INCOMPLETE (a step was skipped)' if skipped else 'COMPLETE')
+    print(f'\n{passed} PASS, {failed} FAIL, {skipped} SKIP: verification {verdict}')
+    sys.exit(1 if failed else (3 if skipped and strict else 0))
 
 
 if __name__ == '__main__':

@@ -104,7 +104,9 @@ proves the commutation macro in general.
 v3.3 alone stops at cell (18, 6); an intermediate rule (C1, a narrower first auxiliary delay) turned
 out unnecessary and was dropped. The package adds 16 targeted tests of C7, C6 and P (94 in total),
 and `sweep/v33_c7/verify_release.py` checks the whole release in one command: asset hashes, engine
-identity, output records, receipt chain, terminal extraction and both future certificates.
+identity, output records, receipt chain, terminal extraction and both future certificates; it now also
+reruns the initial-section certificate and the commutation audit, and `--strict` makes a skipped step
+fail the run.
 
 **Scenario launcher v2.3/v2.3.1** ([`sweep/v23/`](sweep/v23/README.md)), which keeps each possible
 output history of a cell as a separate scenario:
