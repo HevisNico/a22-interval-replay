@@ -78,10 +78,13 @@ large-basin attraction and arbitrary-depth certification are not established.
 **Program v3.3 + C7** ([`sweep/v33_c7/`](sweep/v33_c7/README.md)). At ε = 1e-3 the v3.3 program,
 extended by lemma C7 (monotone peak bound where the peak-time logarithm is not certified), lemma C6
 (its piecewise version) and remark P (root-bracket slope established on a partition), accepts all 18
-layers. The engine-independent extraction gives the same structure as at 1e-4 (21 302 pulses, 191
-active cells at exact rest, 4 gain caps), and both future-wave checkers, adapted to ε, pass. The
-future-invariance proof is restated for general ε in an addendum. v3.3 alone stops at cell (18, 6);
-an intermediate rule (C1, a narrower first auxiliary delay) turned out unnecessary and was dropped.
+layers. The engine-independent extraction gives the same structure as at 1e-4 (21 302 network
+emissions during training, 191 active cells at exact rest, 4 gain caps), and both future-wave
+checkers, adapted to ε, pass. The future-invariance proof is restated for general ε in an addendum.
+v3.3 alone stops at cell (18, 6); an intermediate rule (C1, a narrower first auxiliary delay) turned
+out unnecessary and was dropped. The package adds 16 targeted tests of C7, C6 and P (94 in total),
+and `sweep/v33_c7/verify_release.py` checks the whole release in one command: asset hashes, engine
+identity, output records, receipt chain, terminal extraction and both future certificates.
 
 **Scenario launcher v2.3/v2.3.1** ([`sweep/v23/`](sweep/v23/README.md)), which keeps each possible
 output history of a cell as a separate scenario:

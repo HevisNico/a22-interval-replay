@@ -95,14 +95,16 @@ Q, and exact transmission of every admissible pulse word afterwards
 | | ±1e-4 (v3.3) | ±1e-3 (v3.3 + C7) |
 |---|---|---|
 | Layers accepted | 18 / 18 | 18 / 18 |
-| Training pulses; active cells at exact rest | 21 302; 191 | 21 302; 191 |
+| Network emissions during training (all cells, over the 128 source pulses); active cells at exact rest | 21 302; 191 | 21 302; 191 |
 | Future regime from Q (two independent checkers) | 191 cells fire once per pulse, at rest before 12.791 | the same |
 | Smallest future margin | 0.0491 | 0.0489 |
 | Additions to the proof | — | lemmas C7, C6 and remark P ([`LEMMAS_C7_C6_EN.txt`](sweep/v33_c7/LEMMAS_C7_C6_EN.txt)); general-ε wording of the future proof ([addendum](sweep/v33_c7/FUTURE_INVARIANCE_GENERAL_EPS_EN.txt)) |
 
 C7 bounds the READY charge with the kernel's own monotone peak bound where v3.3 refused; C6 is a
 piecewise version of the same bound; P establishes the root-bracket slope on a partition, without
-changing the acceptance predicate.
+changing the acceptance predicate. The full outputs and the engine as run are assets of
+[Release v4.4](https://github.com/HevisNico/a22-interval-replay/releases/tag/v4.4), and one command
+checks everything: `python3 -I sweep/v33_c7/verify_release.py <assets folder>`.
 
 A newer engine, the scenario launcher v2.3.1 ([`sweep/v23/`](sweep/v23/README.md)), reaches the same
 chain at ±1e-3 by another route, and goes further on wider boxes (at least 12 layers at ±3e-3, 9 at
