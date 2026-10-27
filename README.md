@@ -124,17 +124,6 @@ Its common local gain-arrival inequalities admit different learning-dose pattern
 The theorem is conditional: it does not show that training reaches this domain.
 The five unresolved cases are recorded.
 
-## Exploratory simulations (not certified)
-
-Point simulations of the same physical kernel, outside the certified setting (noise, ablations of the
-learning rule, fixed and shuffled gains, energy, 130 layers), are in a separate repository,
-[a22-exploratory](https://github.com/HevisNico/a22-exploratory). Two of their findings bear on the result above:
-
-- gains fixed by hand at 4, without learning, also transmit: learning is not necessary if high gains
-  can be set;
-- what learning provides is a gain allocation that transmits under noise with less gain than any
-  uniform setting tested, and that shuffling the learned gains destroys.
-
 ## Origin of the model
 
 The physical kernel of A22 is inspired by the **Reset Operator** of Nicolas Breuillaud (*The Reset

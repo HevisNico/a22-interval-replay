@@ -3,7 +3,6 @@
 One line per result. **Proved** means a manual proof under the execution assumptions A1–A4 (stated in
 [`proof/README_EN.txt`](proof/README_EN.txt)), not yet independently reviewed. **Machine-checked**
 means formalized in Lean 4 with Mathlib, without `sorry`. **Computed** means a reproducible certified computation whose coverage argument is not complete.
-**Exploratory** means sampled point simulations.
 
 | Result | Scope and hypotheses | Status | Authoritative document | Check |
 |---|---|---|---|---|
@@ -20,7 +19,6 @@ means formalized in Lean 4 with Mathlib, without `sorry`. **Computed** means a r
 | Box-width sweep, program v3.3 | ε = 3e-4: 18 layers; 1e-3: 17; 3e-3: 7; 1e-2: 4 | computed | [`sweep/README.md`](sweep/README.md) | `sweep/*/SETUP_AND_REPLAY_EN.txt` |
 | Whole chain at ε = 1e-3 (training, end in Q, every future word) | ε = 1e-3, δ = 1e-5, program v3.3 + C7 | proved, by extension: lemmas C7, C6 and remark P added to the coverage theorem; their mathematical content machine-checked ([`proof/lean/PeakBounds.lean`](proof/lean/PeakBounds.lean)) | [`sweep/v33_c7/README.md`](sweep/v33_c7/README.md) | `python3 -I sweep/v33_c7/verify_release.py <v4.4 assets>` |
 | Whole chain at ε = 1e-3, scenario engine v2.3.1 | 18 layers, end in Q, future checkers pass; coverage needs lemmas B1, B2, C1–C8 | computed | [`sweep/v23/README.md`](sweep/v23/README.md) | `sweep/v23/eps_1em3/future/README.md` |
-| Noise, decoys, ablations, longer training, 130 layers | sampled devices and noise realizations | exploratory | [a22-exploratory](https://github.com/HevisNico/a22-exploratory) (separate repository) | `verify.py` where provided |
 
 ¹ This file and `proof/TRAINING_ENTRY_REVIEW_EN.txt` predate the learning-coverage theorem and still
 describe the training-entry premise as open. They are kept byte-identical because their hashes are
