@@ -193,7 +193,7 @@ has diameter above 1.03, far from the bridge regime. The missing step is stated 
 | `theory/` | The two theory texts and the conditional tail certificate |
 | `review/` | Adaptation note, review addenda, first-future and recovery records, integrity incident records |
 | `replay_gap/` | Verification-replay result, comparison report, environment report |
-| `ergodic/` | v4.1: heterogeneous tail and ergodic speed (proofs, verifiers, results, source snapshots) |
+| `ergodic/` | v4.1: heterogeneous tail and ergodic speed (proofs, verifiers, results, source snapshots). The snapshots in `ergodic/sources/` are hash-pinned copies; their relative links (for example in `depth__README.md`) point to their original locations and do not resolve from there |
 | `point4/` | v4.2: entry for every preparation — proved partial results, certified obstructions, open problem |
 | `cone/` | v4.1: speed ceilings and forward cones (proof, verifier, certificate; includes the `ergodic/` package as a dependency ZIP) |
 
