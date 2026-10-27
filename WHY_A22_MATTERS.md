@@ -98,7 +98,8 @@ part of why affine arithmetic succeeds. What is known about its limits:
   | 1e-2 | 4 | layer 5 |
 
   **At 1e-3 the refusal is lifted by two short lemmas.** The v3.3 program extended by a monotone
-  peak bound (C7) and its piecewise version (C6) accepts all 18 layers, and the end of training
+  peak bound (C7) and its piecewise version (C6), both machine-checked in Lean
+  ([`proof/lean/`](proof/lean/README.md)), accepts all 18 layers, and the end of training
   passes both future-wave checkers: the full result holds on a box ten times wider
   ([`sweep/v33_c7/README.md`](sweep/v33_c7/README.md)). A newer engine, the scenario launcher
   v2.3.1, goes further on wider boxes: at least 12 layers at 3e-3, 9 at 1e-2, where it refuses
@@ -128,7 +129,9 @@ part of why affine arithmetic succeeds. What is known about its limits:
 - It is **one model**. The equations, topology and learning rule are fixed choices of this
   realization, inspired by the author's Reset Operator. Nothing here proves that hypothesis in
   general ([`docs/MODEL_BOUNDARY_EN.txt`](docs/MODEL_BOUNDARY_EN.txt)).
-- **The proof is not yet reviewed** by an independent expert, and it is not machine-checked.
+- **The proof is not yet reviewed** by an independent expert. Only parts of it are machine-checked
+  (Lean: the abstract core of the strict-root lemma and the v4.4 lemmas); the link between those
+  statements and the code is not.
 - **One step is open.** Entry into the deep-layer regime is certified for six prescribed
   preparations. Whether every preparation of the original source enters it is open
   ([`depth/point4/README.md`](depth/point4/README.md)).

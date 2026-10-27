@@ -1,6 +1,9 @@
 EXTENDING THE v3.3 LEARNING-COVERAGE ARGUMENT TO PROGRAM v3.3 + C7
 ====================================================================
 
+Formal version: proof/lean/PeakBounds.lean (Lean 4, Mathlib, no sorry)
+proves the mathematical content of C7, C6 and remark P below.
+
 Program: v3.3 + C7 (A22_fresh_launch_v3_3_C7.zip in this folder). It differs
 from the v3.3 program only by the changes in ENGINE_CHANGES_FROM_V33.diff
 and the module affine/cluster_memory_cover.py:
