@@ -124,18 +124,6 @@ Its common local gain-arrival inequalities admit different learning-dose pattern
 The theorem is conditional: it does not show that training reaches this domain.
 The five unresolved cases are recorded.
 
-## Exploratory simulations (not certified)
-
-Uncertified point simulations of the same physical kernel (robustness to noise, controls of the learning
-rule, fixed and shuffled gains, energy) are collected in [`exploratory/`](exploratory/README.md), with
-their findings and limits.
-
-**Joint uncertainty + noise pilot:** six new sampled devices at relative ε = 1e-4
-were trained and tested under link noise at 130 layers. All six transmitted the
-complete 128-pulse word without decoys; with 24 lateral decoys, three of six words
-remained perfect. See
-[`exploratory/joint_uncertainty_noise_130/`](exploratory/joint_uncertainty_noise_130/README.md).
-
 ## Origin of the model
 
 The physical kernel of A22 is inspired by the **Reset Operator** of Nicolas Breuillaud (*The Reset
@@ -221,7 +209,6 @@ about the recorded campaign. See [results/HASHES.md](results/HASHES.md) for both
 |---|---|
 | `WHY_A22_MATTERS.md` | Why this network matters: the question, related work, limits of the method |
 | `PROOF_WALKTHROUGH.md` | Guided tour of the v3.3 proof: five propositions, three delicate points, source map |
-| `exploratory/` | Uncertified point simulations: noise, inputs, topologies, ablations, noisy training; the point simulator |
 | `CHANGELOG.md` | What each release added |
 | `depth/` | The v4.0-depth extension: summary, certificates, theory, review records, layer index, verification replay; `depth/point4/` holds the open entry problem (v4.2) |
 | `sweep/` | The box-width sweep: results, run records and the exact sweep program (v4.2) |
