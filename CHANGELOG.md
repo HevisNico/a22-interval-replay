@@ -96,7 +96,11 @@ extended by lemma C7 (monotone peak bound where the peak-time logarithm is not c
 (its piecewise version) and remark P (root-bracket slope established on a partition), accepts all 18
 layers. The engine-independent extraction gives the same structure as at 1e-4 (21 302 network
 emissions during training, 191 active cells at exact rest, 4 gain caps), and both future-wave
-checkers, adapted to ε, pass. The future-invariance proof is restated for general ε in an addendum.
+checkers, adapted to ε, pass. The future-invariance proof is restated for general ε in an addendum,
+and so is the learning-coverage theorem ([`COVERAGE_THEOREM_GENERAL_EPS_EN.txt`](sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt)):
+the initial-section inequalities are rechecked at 1e-3 and pass. At 1e-3, 202 of the 206 recorded
+fire/event commutations include an input arrival, a case the theorem left out; lemma E of the addendum
+proves the commutation macro in general.
 v3.3 alone stops at cell (18, 6); an intermediate rule (C1, a narrower first auxiliary delay) turned
 out unnecessary and was dropped. The package adds 16 targeted tests of C7, C6 and P (94 in total),
 and `sweep/v33_c7/verify_release.py` checks the whole release in one command: asset hashes, engine

@@ -17,6 +17,10 @@ Background for every task: the [README](README.md), the method section of
 [proof/learning_justification/output/REVIEW_GUIDE_EN.txt](proof/learning_justification/output/REVIEW_GUIDE_EN.txt).
 In what follows, *affine form* means *c + Σ dₖ εₖ + [−e, e]*, valid for every ε in [−1, 1]^N, and
 "the theorem" means `proof/learning_justification/output/LEARNING_COVERAGE_THEOREM_EN.txt`.
+Files of the proof folder kept byte-identical for their hashes may still say that the training entry
+H_entry is open (`proof/GLOBAL_THEOREM_AND_WORD_PRESERVATION_EN.txt`, last sentence); the theorem
+supersedes them ([`proof/OMITTED_IN_REPOSITORY.md`](proof/OMITTED_IN_REPOSITORY.md)). For ε = 1e-3,
+read the theorem with [`sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt`](sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt).
 
 The code actually executed differs from the files in places: some functions are rewritten when the
 engine is loaded. Their final text is in `proof/kernel_soundness/output/effective_source/`.
@@ -42,6 +46,9 @@ spike and an event can never pass the ordinary order test.
    strictly inside, including the case where the rounded midpoint is 0?
 3. Is there any exp/ln evaluation on these paths whose result is exact (no adjacent-number expansion)
    and would remove the strict margin?
+   (Known case: `exp` returns 1 exactly for the exact point argument 0, that is at elapsed time zero,
+   where q0 < 1 excludes a root; the wording of Section 5.1 on this is clarified at the end of
+   `sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt`.)
 
 **Machine-checked part.** The abstract argument behind questions 1 and 2 (open-image lemma in
 two-point form, accepted brackets, Newton steps including the rounded-midpoint-zero case, every
@@ -57,6 +64,8 @@ covers it, through every successful path: ordinary advance, external groups, pro
 groups, recovery/auxiliary groups, the local-cycle resolver, and the 202 recorded commutations (all a
 spike against one end of mark, including the fallback `_first_crossing_cover`). Entry into event groups
 is always forward in time (`proof/learning_justification/output/GROUP_ENTRY_CLOCK_LEMMA_EN.txt`).
+At ε = 1e-3 the commutations also include input arrivals (202 of 206); they are covered by lemma E of
+[`sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt`](sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt).
 
 **Where:** effective `unit` (`proof/kernel_soundness/output/effective_source/unit.txt`),
 `validation_A15.py` (`admissible_orders`, `protected_section_cluster`, `recovery_auxiliary_cluster`),

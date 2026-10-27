@@ -80,6 +80,9 @@ single wide evaluation. C1 was then dropped.
 | `audit_campaign_dir.py` | engine-independent extraction of the 216 terminal states, same checks as `proof/provenance_audit/audit_all_layers.py` |
 | `terminal/all_layers_audit.json`, `terminal/all_terminal_exact.json` | its outputs |
 | `terminal/future_certificate_eps1e-3.json`, `terminal/independent_check_eps1e-3.json` | both future-wave checkers at ε = 1e-3: PASS |
+| `COVERAGE_THEOREM_GENERAL_EPS_EN.txt` | the steps of the learning-coverage theorem that use ε, and what replaces them at 1e-3 |
+| `certify_initial_section_eps.py`, `terminal/initial_section_eps1e-3.json` | the initial-section inequalities for any ε (byte-identical output to the published certificate at 1e-4): PASS at 1e-3 |
+| `audit_commutations.py`, `terminal/commutation_usage_eps1e-3.json` | the 206 recorded commutations: 202 involve an input arrival, which Section 8(vi) of the theorem does not cover; lemma E of the addendum does |
 | `FUTURE_INVARIANCE_GENERAL_EPS_EN.txt` | the two changes that state the future-invariance proof for general ε, and the certified values |
 | `LEMMAS_C7_C6_EN.txt` | lemmas C7, C6 and remark P, placed in the coverage theorem |
 | `verify_release.py`, `RELEASE_ASSETS_SHA256.json` | the one-command check and the asset hashes it uses |
