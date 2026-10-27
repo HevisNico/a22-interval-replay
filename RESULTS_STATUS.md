@@ -1,12 +1,13 @@
 # Results and their status
 
 One line per result. **Proved** means a manual proof under the execution assumptions A1–A4 (stated in
-[`proof/README_EN.txt`](proof/README_EN.txt)), not machine-checked and not yet independently reviewed.
-**Computed** means a reproducible certified computation whose coverage argument is not complete.
+[`proof/README_EN.txt`](proof/README_EN.txt)), not yet independently reviewed. **Machine-checked**
+means formalized in Lean 4 with Mathlib, without `sorry`. **Computed** means a reproducible certified computation whose coverage argument is not complete.
 **Exploratory** means sampled point simulations.
 
 | Result | Scope and hypotheses | Status | Authoritative document | Check |
 |---|---|---|---|---|
+| Strict-root lemma, abstract core (open image, brackets, Newton steps, refinement, strict event order) | exact real arithmetic; the code's enclosure and freshness properties are hypotheses | machine-checked | [`proof/lean/StrictRoot.lean`](proof/lean/StrictRoot.lean) | `.github/workflows/lean.yml`, or paste into live.lean-lang.org |
 | Initial section [0, U0] | initial box δ = 1e-5, ε = 1e-4 | proved | `proof/final_entry_audit/` | `python3 proof/final_entry_audit/certify_initial_section.py out.json` |
 | Training enclosed, 18 layers, end in Q | ε = 1e-4, δ = 1e-5, per-port constants, program v3.3 | proved | [`proof/learning_justification/output/LEARNING_COVERAGE_THEOREM_EN.txt`](proof/learning_justification/output/LEARNING_COVERAGE_THEOREM_EN.txt) | `verify_build_identity.py`, `verify_source_witnesses.py` (Release `v3.3-proof`, see README "Reproduce") |
 | Q → Q for every future pulse (gaps ≥ 20) | from Q at ε = 1e-4 | proved | [`proof/FUTURE_INVARIANCE_PROOF_EN.txt`](proof/FUTURE_INVARIANCE_PROOF_EN.txt) | `proof/provenance_audit/certify_future.py`, `verify_future_certificate.py` |

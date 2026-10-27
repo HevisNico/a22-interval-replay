@@ -107,6 +107,15 @@ f(I(m)) in each Newton step, as in v3.3. S is a plain interval; section 6
 only requires that s be enclosed. The acceptance predicate is the same
 three inequalities. So section 6 applies word for word.
 
+The strictness argument of section 6 (formalized in proof/lean/StrictRoot.lean)
+also covers the case where the rounded midpoint is a root: there the
+freedom comes from the slope, and newton_step_strict_slope needs a slope
+enclosure open about the true mean slope s. Each piece enclosure S_k
+contains its derivative values strictly (the open-image lemma applied to
+the derivative evaluation), so each value lies strictly between min S_k.lo
+and max S_k.hi, and so does their average s. The hull S is therefore open
+about s, as required.
+
 
 SUMMARY OF WHAT THE EXTENSION ADDS
 ----------------------------------

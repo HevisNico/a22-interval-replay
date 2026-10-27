@@ -43,6 +43,13 @@ spike and an event can never pass the ordinary order test.
 3. Is there any exp/ln evaluation on these paths whose result is exact (no adjacent-number expansion)
    and would remove the strict margin?
 
+**Machine-checked part.** The abstract argument behind questions 1 and 2 (open-image lemma in
+two-point form, accepted brackets, Newton steps including the rounded-midpoint-zero case, every
+retained refinement output, strict event order) is formalized in Lean 4 with Mathlib:
+[`proof/lean/StrictRoot.lean`](proof/lean/StrictRoot.lean), no `sorry`. What remains to review is
+the bridge: that the code satisfies its hypotheses (`Encloses …`, `Straddles …`), which is
+question 3 together with freshness of the perturbed coordinates and the evaluation order.
+
 ## Task 2 — Event coverage and every successful exit (theorem, Section 8)
 
 **Claim.** For every physical order of events, including equal times, the program keeps a branch that

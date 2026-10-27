@@ -32,8 +32,9 @@ components.
 > **Status.** The computation is complete, reproducible and bound to its exact code by hashes. The
 > coverage and invariance argument is a manual proof under explicit execution assumptions (A1–A4:
 > authentic execution of the recorded program, correct arithmetic runtime and native binary,
-> fail-closed assertions, namespace discipline), not machine-checked and not yet reviewed by an
-> independent expert. This applies to every result in the repository. Review is welcome:
+> fail-closed assertions, namespace discipline), not yet reviewed by an independent expert, and
+> machine-checked only for the abstract core of the strict-root lemma (Lean 4,
+> [`proof/lean/`](proof/lean/README.md)). This applies to every result in the repository. Review is welcome:
 > **[REVIEW.md](REVIEW.md)**.
 
 | | |
@@ -60,7 +61,9 @@ at most 5 % of width (layer 18: 7.28e-3 against 6.91e-3).*
 - **Why this network matters**, what is already known and where the method stops working:
   [`WHY_A22_MATTERS.md`](WHY_A22_MATTERS.md).
 - **The most useful single check**: Task 1 of [`REVIEW.md`](REVIEW.md), the strict-root lemma on which
-  the whole event-order argument rests (one to three hours, no need to know the rest).
+  the whole event-order argument rests (one to three hours, no need to know the rest). Its abstract
+  core is machine-checked in Lean 4 ([`proof/lean/`](proof/lean/README.md)); the bridge to the code
+  is what remains to review.
 - **How the proof fits together**: [`PROOF_WALKTHROUGH.md`](PROOF_WALKTHROUGH.md), a guided tour of
   the v3.3 argument in five propositions, from learning coverage to exact interval preservation, with
   the three most delicate points and a map to the source documents.
