@@ -1,5 +1,5 @@
 name = "a22_strict_root"
-defaultTargets = ["StrictRoot", "PeakBounds"]
+defaultTargets = ["StrictRoot", "PeakBounds", "CommutationE"]
 
 [[require]]
 name = "mathlib"
@@ -11,3 +11,6 @@ name = "StrictRoot"
 
 [[lean_lib]]
 name = "PeakBounds"
+
+[[lean_lib]]
+name = "CommutationE"
