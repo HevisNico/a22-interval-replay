@@ -6,7 +6,8 @@ Usage, from the repository root, with the six release assets in one folder:
 Each step prints PASS, FAIL or SKIP. The verification is complete only when every
 step passes. Exit code: 0 complete; 1 a step failed; 3 with --strict, no step
 failed but one was skipped (without --strict a skip gives 0 and the verdict
-INCOMPLETE). Steps:
+INCOMPLETE). A failure of step 1 or 2 stops the run at once: an archive whose hash or
+engine sources do not match is never extracted further, imported or executed. Steps:
  1. asset hashes against RELEASE_ASSETS_SHA256.json;
  2. engine: every file of the as-run engine that enters the program identity
     equals the fresh-launch package in this folder, apart from its two built
@@ -96,7 +97,7 @@ def step_engine(assets, work):
     report('2 engine contents', ok, f'{len(a & b)} source files identical to the fresh-launch package, '
            f'{len(binaries)} binaries, rounding binary {"matches" if native_ok else "DOES NOT match"} campaign.json'
            + (f'; differ: {differ}; unmatched: {extra}' if differ or extra else ''))
-    return root
+    return root if ok else None
 
 
 def step_identity(root):
@@ -138,30 +139,36 @@ def step_outputs(assets, work):
 
 
 def step_chain(run):
+    """Exact lineage, as the engine writes it (run.py): a receipt of layer 1 has no
+    parent; a receipt of layer n > 1 lists, in lane order, the hashes of the 12
+    receipts of layer n - 1; complete.json lists, in lane order, the hashes of the
+    12 receipts of its layer. A missing or partial list is a failure."""
     campaign = json.loads((run / 'campaign.json').read_text())
     problems = []
-    previous = None
+    previous = []
     for layer in range(1, 19):
         base = run / f'layer_{layer:02d}'
-        receipts = {}
+        hashes = []
         for lane in range(12):
             cell = base / f'cell_{lane:02d}'
             r = json.loads((cell / 'receipt.json').read_text())
-            receipts[sha(cell / 'receipt.json')] = r
-            case = r['case']
-            if (case['run_id'], case['kernel_id'], case['layer'], case['lane']) != (campaign['run_id'], campaign['kernel_id'], layer, lane):
+            hashes.append(sha(cell / 'receipt.json'))
+            case = r.get('case', {})
+            if (case.get('run_id'), case.get('kernel_id'), case.get('layer'), case.get('lane')) != (
+                    campaign['run_id'], campaign['kernel_id'], layer, lane):
                 problems.append(f'({layer},{lane}) wrong case')
-            if r['payload_sha256'] != sha(cell / 'result.json'):
+            if r.get('payload_sha256') != sha(cell / 'result.json'):
                 problems.append(f'({layer},{lane}) payload hash')
-            parents = case.get('parent_receipts') or []
-            if layer > 1 and not set(parents) <= set(previous):
-                problems.append(f'({layer},{lane}) unknown parent receipt')
+            if case.get('parent_receipts') != previous:
+                problems.append(f'({layer},{lane}) parent receipts are not the 12 receipts of layer {layer - 1}'
+                                if layer > 1 else f'(1,{lane}) a layer-1 receipt has parents')
         listed = json.loads((base / 'complete.json').read_text()).get('receipts')
-        if listed is not None and set(listed) != set(receipts):
-            problems.append(f'layer {layer}: complete.json lists other receipts')
-        previous = set(receipts)
-    report('5 receipt chain', not problems, '18 layers x 12 cells: case identity, payload hashes, parent links, completion lists'
-           + (f'; problems: {problems[:5]}' if problems else ''))
+        if listed != hashes:
+            problems.append(f'layer {layer}: complete.json does not list its 12 receipts'
+                            if listed is not None else f'layer {layer}: complete.json has no receipt list')
+        previous = hashes
+    report('5 receipt chain', not problems, '18 layers x 12 cells: case identity, payload hashes, exact parent '
+           'lists, exact completion lists' + (f'; problems: {problems[:5]}' if problems else ''))
 
 
 def run_script(args):
@@ -238,6 +245,14 @@ def guarded(step, fn, *args):
         return None
 
 
+def stop(reason):
+    """End the run at an integrity failure, before any later step."""
+    print(f'\nSTOPPED: {reason}')
+    passed, failed = RESULTS.count('PASS'), RESULTS.count('FAIL')
+    print(f'{passed} PASS, {failed} FAIL, later steps not run: verification FAILED')
+    sys.exit(1)
+
+
 def main():
     if not __debug__:
         raise RuntimeError('run without -O')
@@ -248,12 +263,14 @@ def main():
     work = Path(args[args.index('--work') + 1]).resolve() if '--work' in args else assets / 'verify_work'
     strict = '--strict' in args
     work.mkdir(parents=True, exist_ok=True)
-    guarded('1 asset hashes', step_assets, assets)
+    # Integrity gates: after a failure of step 1 nothing is extracted, and after a
+    # failure of step 2 nothing from the archives is imported or executed.
+    if guarded('1 asset hashes', step_assets, assets) is not True:
+        stop('step 1 failed: no archive is extracted or executed')
     root = guarded('2 engine contents', step_engine, assets, work)
     if root is None:
-        report('3 engine identity', False, 'not run: step 2 failed')
-    else:
-        guarded('3 engine identity', step_identity, root)
+        stop('step 2 failed: the extracted engine is not imported or executed')
+    guarded('3 engine identity', step_identity, root)
     run = guarded('4 output records', step_outputs, assets, work)
     if run is None:
         for step in ('5 receipt chain', '6 terminal extraction', '7 future invariance'):

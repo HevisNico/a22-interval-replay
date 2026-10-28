@@ -141,3 +141,12 @@ uncertainty, parameter-box coverage, gate-superiority or lifecycle-energy claim.
 The exploratory studies and their raw data, including this package, have since moved to their own
 repository, [a22-exploratory](https://github.com/HevisNico/a22-exploratory) (release
 [`exploratory-data-1`](https://github.com/HevisNico/a22-exploratory/releases/tag/exploratory-data-1)).
+
+## Audit fixes: verification integrity
+
+After an external audit: `sweep/v33_c7/verify_release.py` stops at a failed asset hash or engine
+comparison, before it imports or runs anything from the archives (a substituted engine archive
+could run code before), and its lineage step requires the exact parent and completion lists the
+engine writes. `depth/g_rel/audit.py` refuses a truncated or misaligned list of witnesses; the
+`.gitignore` listed in the G_rel manifest is restored. The CI now also checks the G_rel manifest
+and audit and the cone and ergodic certificates.
