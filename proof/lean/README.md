@@ -1,6 +1,6 @@
 # Lean formalization
 
-Three files, all without `sorry`; their `#print axioms` list only `propext`, `Classical.choice` and
+Five files, all without `sorry`; their `#print axioms` list only `propext`, `Classical.choice` and
 `Quot.sound`.
 
 ## Strict-root core
@@ -60,10 +60,43 @@ section 3): a READY fire against a group of exterior events that includes input 
 E0 (which events leave the charge unchanged) and E3 (every order and fire position is kept) are
 statements about the program and are not formalized.
 
+## First crossings
+
+[`FirstCrossing.lean`](FirstCrossing.lean): the facts about the first time the charge reaches 1
+that the coverage theorem uses when it accepts a fire.
+
+| Result | Statement |
+|---|---|
+| `first_crossing_exists`, `first_crossing_unique` | a continuous charge that reaches 1 has exactly one first crossing |
+| `cover_encloses` | section 8(vi), `_first_crossing_cover`: below 1 on `[a, lower)` and at least 1 at `upper` puts the first crossing in `[lower, upper]`, with no slope assumption |
+| `ready_root_bracket` | section 6, `ready_root`: the first crossing lies between those of the two corner trajectories |
+| `deriv_stays_nonpos`, `ascending_root_is_first` | section 7: with `d' = −K d − A J`, `J ≥ 0`, a derivative that reaches `≤ 0` stays `≤ 0`, so a root where the charge rises is the first crossing |
+
+The raw ends, where the current drops and `d` only decreases, are a hypothesis of
+`ascending_root_is_first`.
+
+## One future wave and the exact word
+
+[`FutureWave.lean`](FutureWave.lean): the steps of the future proof
+([`FUTURE_INVARIANCE_PROOF_EN.txt`](../FUTURE_INVARIANCE_PROOF_EN.txt), sections C–D) and of the
+word-preservation argument
+([`GLOBAL_THEOREM_AND_WORD_PRESERVATION_EN.txt`](../GLOBAL_THEOREM_AND_WORD_PRESERVATION_EN.txt))
+that do not depend on the certified numbers.
+
+| Result | Statement |
+|---|---|
+| `h_strictMonoOn` | if `K e^{−K} < A e^{−A}` (checked by the certificate), `h` is strictly increasing on `[0, 1]` |
+| `protection_duration` | with `ℓ' = −b`, `β ≤ b ≤ 1.1`, the protected phase lasts between `L/1.1` and `L/β` |
+| `first_crossing_shift`, `head_charge_shift`, `latency_fixed` | parents firing at `s + dᵢ` give a charge that depends on `t − s` only, so the cell fires at `s + d` with `d` independent of `s` |
+| `word_preserved` | two waves fire the cell at times whose difference is that of the source pulses; applied layer by layer, this is the induction of the global theorem |
+
+The certified inequalities (brackets, margins, the settling bound 12.791) remain those of the two
+independent checkers.
+
 ## Build
 
 Pinned to Lean `v4.35.0` and Mathlib `v4.35.0` (`lean-toolchain`, `lakefile.toml`). The GitHub
-workflow `.github/workflows/lean.yml` builds the three files and fails if any `#print axioms` mentions
+workflow `.github/workflows/lean.yml` builds the five files and fails if any `#print axioms` mentions
 `sorryAx`. Locally:
 
 ```sh
@@ -74,6 +107,8 @@ lake build
 lake env lean StrictRoot.lean   # prints the axioms
 lake env lean PeakBounds.lean
 lake env lean CommutationE.lean
+lake env lean FirstCrossing.lean
+lake env lean FutureWave.lean
 ```
 
 `StrictRoot.lean` can also be pasted into <https://live.lean-lang.org> (current Mathlib), where it checks

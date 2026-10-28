@@ -90,6 +90,10 @@ corner bound covers every device; it rises to its stationary point and then fall
 slope, which meets the slope hypothesis of `newton_step_strict_slope`). So is the mathematical part of
 lemma E ([`CommutationE.lean`](proof/lean/CommutationE.lean)): the fire bracket, the bound of the
 arrivals' contribution, and the enclosure of the fire by the date the commutation macro emits.
+[`FirstCrossing.lean`](proof/lean/FirstCrossing.lean) covers the first-crossing facts of the coverage
+theorem (slice cover, comparison roots, a rising root is the first crossing), and
+[`FutureWave.lean`](proof/lean/FutureWave.lean) the number-free steps of the future proof (monotone
+head response, protection duration, fixed latency, exact word).
 
 ## v4.4: the result at ±1e-3
 

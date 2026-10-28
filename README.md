@@ -33,8 +33,8 @@ components.
 > coverage and invariance argument is a manual proof under explicit execution assumptions (A1–A4:
 > authentic execution of the recorded program, correct arithmetic runtime and native binary,
 > fail-closed assertions, namespace discipline), not yet reviewed by an independent expert, and
-> machine-checked only in parts: the abstract core of the strict-root lemma and the lemmas added
-> in v4.4 (Lean 4, [`proof/lean/`](proof/lean/README.md)). This applies to every result in the repository. Review is welcome:
+> machine-checked only in parts: the abstract core of the strict-root lemma, the lemmas added in
+> v4.4, the first-crossing facts and the number-free steps of the future proof (Lean 4, [`proof/lean/`](proof/lean/README.md)). This applies to every result in the repository. Review is welcome:
 > **[REVIEW.md](REVIEW.md)**.
 
 | | |
