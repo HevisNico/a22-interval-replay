@@ -101,7 +101,7 @@ training in Q, and exact transmission of every admissible pulse word afterwards
 | Network emissions during training (all cells, over the 128 source pulses); active cells at exact rest | 21 302; 191 | 21 302; 191 |
 | Future regime from Q (two independent checkers) | 191 cells fire once per pulse, at rest before 12.791 | the same |
 | Smallest future margin | 0.0491 | 0.0489 |
-| Additions to the proof | — | lemmas C7, C6 and remark P ([`LEMMAS_C7_C6_EN.txt`](sweep/v33_c7/LEMMAS_C7_C6_EN.txt)), machine-checked in Lean ([`PeakBounds.lean`](proof/lean/PeakBounds.lean)); lemma E, the commutation macro with an input arrival, and the initial-section certificate rechecked at ±1e-3 ([coverage addendum](sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt)); general-ε wording of the future proof ([future addendum](sweep/v33_c7/FUTURE_INVARIANCE_GENERAL_EPS_EN.txt)) |
+| Additions to the proof | — | lemmas C7, C6 and remark P ([`LEMMAS_C7_C6_EN.txt`](sweep/v33_c7/LEMMAS_C7_C6_EN.txt)), machine-checked in Lean ([`PeakBounds.lean`](proof/lean/PeakBounds.lean)); lemma E, the commutation macro with an input arrival ([`CommutationE.lean`](proof/lean/CommutationE.lean) for its mathematical part), and the initial-section certificate rechecked at ±1e-3 ([coverage addendum](sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt)); general-ε wording of the future proof ([future addendum](sweep/v33_c7/FUTURE_INVARIANCE_GENERAL_EPS_EN.txt)) |
 
 C7 bounds the READY charge with the kernel's own monotone peak bound where v3.3 refused; C6 is a
 piecewise version of the same bound; P establishes the root-bracket slope on a partition, without

@@ -1,6 +1,6 @@
 # Lean formalization
 
-Two files, both without `sorry`; their `#print axioms` list only `propext`, `Classical.choice` and
+Three files, all without `sorry`; their `#print axioms` list only `propext`, `Classical.choice` and
 `Quot.sound`.
 
 ## Strict-root core
@@ -43,10 +43,27 @@ shortcut in `exp`/`ln`, the slope evaluated before the guard, the fresh time ato
 Same scope as above: that `peak_upper`, `dep.evaluate` and the derivative enclosures meet these
 hypotheses is a claim about the code, not formalized.
 
+## Lemma E (v4.4, commutations at ε = 1e-3)
+
+[`CommutationE.lean`](CommutationE.lean) proves the mathematical part of lemma E
+([`sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt`](../../sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt),
+section 3): a READY fire against a group of exterior events that includes input arrivals.
+
+| Result | Statement |
+|---|---|
+| `e1_upper`, `e1_lower` | E1: the fire lies in `[min(a_min, f0), f0]` |
+| `h_le_linear`, `arrivals_le` | E2: `h(u) ≤ A u` for every `u ≥ 0`, so the arrivals add at most `G A (t − a_min)` |
+| `e2_tighten`, `kappa_form`, `below_line_of_monotone` | E2: with `Q0' ≥ σ > 0`, the fire comes no earlier than `f0 − κ (f0 − a_min)`, `κ = G A/(σ + G A)` |
+| `e_fire_enclosure` | the date the macro emits, `[f0 − κ w, f0]` with `w ≥ (f0 − a_min)^+`, contains the fire |
+
+`h(u) ≤ A u` is proved from `1 − e^{−x} ≤ x`, without the concavity condition the macro asserts.
+E0 (which events leave the charge unchanged) and E3 (every order and fire position is kept) are
+statements about the program and are not formalized.
+
 ## Build
 
 Pinned to Lean `v4.35.0` and Mathlib `v4.35.0` (`lean-toolchain`, `lakefile.toml`). The GitHub
-workflow `.github/workflows/lean.yml` builds both files and fails if any `#print axioms` mentions
+workflow `.github/workflows/lean.yml` builds the three files and fails if any `#print axioms` mentions
 `sorryAx`. Locally:
 
 ```sh
@@ -56,6 +73,7 @@ lake exe cache get      # prebuilt Mathlib
 lake build
 lake env lean StrictRoot.lean   # prints the axioms
 lake env lean PeakBounds.lean
+lake env lean CommutationE.lean
 ```
 
 `StrictRoot.lean` can also be pasted into <https://live.lean-lang.org> (current Mathlib), where it checks

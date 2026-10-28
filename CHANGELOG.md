@@ -87,7 +87,9 @@ The three additions of v4.4 are formalized as well ([`PeakBounds.lean`](proof/le
 lemma C7 (the READY charge is monotone in the initial charge and the current amplitude, so one
 corner bound covers every device; it rises to its stationary point and then falls), lemma C6
 (piecewise cover, bisection) and remark P (the hull of the piece enclosures is open about the mean
-slope, which meets the slope hypothesis of `newton_step_strict_slope`).
+slope, which meets the slope hypothesis of `newton_step_strict_slope`). So is the mathematical part of
+lemma E ([`CommutationE.lean`](proof/lean/CommutationE.lean)): the fire bracket, the bound of the
+arrivals' contribution, and the enclosure of the fire by the date the commutation macro emits.
 
 ## v4.4: the result at ±1e-3
 
