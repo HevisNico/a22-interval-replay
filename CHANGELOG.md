@@ -150,3 +150,18 @@ could run code before), and its lineage step requires the exact parent and compl
 engine writes. `depth/g_rel/audit.py` refuses a truncated or misaligned list of witnesses; the
 `.gitignore` listed in the G_rel manifest is restored. The CI now also checks the G_rel manifest
 and audit and the cone and ergodic certificates.
+
+## Corrections after a systematic audit; ε = 3e-3 to 16 layers
+
+**Newton, two cases.** `sweep/v33_c7/LEMMAS_C7_C6_EN.txt` (remark P) and `proof/lean/README.md`
+attributed to the slope the strictness of the Newton image when the midpoint is a root. That is
+wrong: if f(m) = 0, m − f(m)/s = m for every slope. The freedom then comes from the new guard
+evaluation around zero (`newton_step_strict`); the slope serves the rounded-midpoint-zero case,
+where f(0) < 0 (`newton_step_strict_slope`). The theorem and the Lean statements already make this
+distinction; only the two explanations are corrected. `REVIEW.md` also states why the first-contact
+cover of Section 8(vi) gives an upward crossing on the path where it is used.
+
+**ε = 3e-3.** The scenario launcher v2.3.1, with payloads stored xz-compressed (kernel, arithmetic,
+scheduler and verification unchanged), completes layers 1 to 16 with no refusal and no error
+([`sweep/v23/eps_3em3_xz/`](sweep/v23/eps_3em3_xz/README.md)); it was stopped during layer 17 for
+computing time, not by a refusal. The previous figure was at least 12 layers.

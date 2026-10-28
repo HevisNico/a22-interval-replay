@@ -111,13 +111,22 @@ only requires that s be enclosed. The acceptance predicate is the same
 three inequalities. So section 6 applies word for word.
 
 The strictness argument of section 6 (formalized in proof/lean/StrictRoot.lean)
-also covers the case where the rounded midpoint is a root: there the
-freedom comes from the slope, and newton_step_strict_slope needs a slope
-enclosure open about the true mean slope s. Each piece enclosure S_k
-contains its derivative values strictly (the open-image lemma applied to
-the derivative evaluation), so each value lies strictly between min S_k.lo
-and max S_k.hi, and so does their average s. The hull S is therefore open
-about s, as required.
+distinguishes two cases.
+
+If the positive midpoint m is itself a root, f(m)=0, strictness comes from
+the newly evaluated guard enclosure around zero, with the positive mean
+slope held fixed (newton_step_strict). Varying the slope alone cannot widen
+m - 0/s. The fresh guard freedom is supplied by the open-image argument of
+sections 5-6 of the theorem.
+
+If the rounded midpoint is zero, the live READY invariant gives f(0)<0.
+Here newton_step_strict_slope uses a slope enclosure open about the true
+positive mean slope s. Each piece enclosure S_k contains its derivative
+values strictly (the open-image lemma applied to the derivative evaluation),
+so each value lies strictly between min S_k.lo and max S_k.hi, and so does
+their average s. The hull S is therefore open about s, as required.
+SLOW may instead use its open logarithmic guard as described in section 6.
+This is the rounded-midpoint-zero case, not the midpoint-is-a-root case.
 
 
 SUMMARY OF WHAT THE EXTENSION ADDS

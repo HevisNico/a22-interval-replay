@@ -14,7 +14,8 @@ kernel is the same as v3.3. Two versions were used:
 | Engine | `source_identity` | Sources | Used for |
 |---|---|---|---|
 | v2.3 | `549f6726…eb544` | [`SOURCE_V23_FOR_REPLAY.zip`](SOURCE_V23_FOR_REPLAY.zip) (sha256 `c79af2fe…caec3d`) | ε = 1e-2, layers 1–9 |
-| v2.3.1 | `d892d759…8ad2ce` | [`SOURCE_V231_FOR_REPLAY.zip`](SOURCE_V231_FOR_REPLAY.zip) (sha256 `bef16cd5…d944e24`) | ε = 1e-3, ε = 3e-3, diagnostic rerun at 1e-2 |
+| v2.3.1 | `d892d759…8ad2ce` | [`SOURCE_V231_FOR_REPLAY.zip`](SOURCE_V231_FOR_REPLAY.zip) (sha256 `bef16cd5…d944e24`) | ε = 1e-3, first ε = 3e-3 run, diagnostic rerun at 1e-2 |
+| v2.3.1 + xz storage | `bc18c23f…aca76f` | [`SOURCE_V231_XZ_FOR_REPLAY.zip`](SOURCE_V231_XZ_FOR_REPLAY.zip) (sha256 `260dc3b3…eebfcd631d`) | ε = 3e-3, layers 1–16 |
 
 v2.3.1 differs from v2.3 by one guard in `engine/affine/scenario_engine.py`: an ambiguous READY
 advance (p ≠ 2) is no longer sent to the slow-recovery resolver, where it crashed, but returns the
@@ -31,7 +32,7 @@ These are research campaigns (`experimental_not_qualified`). **The manual proof 
 |---|---|---|---|
 | 1e-4 | 18 of 18 (proved) | not run | control campaign still to do |
 | 1e-3 | 17 | **18 of 18** (v2.3.1) | none; enclosures wide at the mirror cells (18, 4) and (18, 8) |
-| 3e-3 | 7 | **at least 12** (v2.3.1) | campaign stopped by the author during layer 13 (estimated ~24 h to finish); not a refusal |
+| 3e-3 | 7 | **at least 16** (v2.3.1 + xz storage) | no refusal; stopped by the author during layer 17 for computing time (layer-17 jobs 5 to 10 times longer) |
 | 1e-2 | 4 | **9** (v2.3) | layer 10 computed but never verified; layer 11, lane 0: "Local-cycle branch budget exceeded" (v2.3.1 diagnostic) |
 
 ### ε = 1e-3: all 18 layers ([`eps_1em3/`](eps_1em3/))
@@ -81,7 +82,20 @@ theorem is listed below.
 - At this box width the limit is the number of admissible event orders, not a bug or the width of the
   enclosures.
 
-### ε = 3e-3: at least 12 layers ([`eps_3em3/`](eps_3em3/))
+### ε = 3e-3: at least 16 layers ([`eps_3em3_xz/`](eps_3em3_xz/README.md))
+
+- Engine v2.3.1 with xz-compressed payloads (the kernel, arithmetic, scheduler and verification are
+  unchanged). Layers 1–16 complete, the whole prefix verified (`"through": 16`), **no refusal and no
+  error**. The run was stopped during layer 17 by the author because of computing time, not because
+  the kernel or the proof refused anything: the jobs of layer 17 took 4 to 7 minutes each, against
+  30 to 50 s before, and returned 6 histories each.
+- Jobs per layer: 12 up to layer 8, then 15, 17, 67, 133, 231, 360, 670, 850.
+- A first run with the unmodified v2.3.1 (`eps_3em3/`, the log below) stopped during layer 13. A
+  second uncompressed run completed layer 14 (360 jobs, the same count) and was stopped during
+  layer 15 because its outputs would no longer fit on the session's disk (layer 14 alone was
+  7.5 GB); the storage change was made for this reason.
+
+### ε = 3e-3, first run ([`eps_3em3/`](eps_3em3/))
 
 - Engine v2.3.1. The run log ([`RUN_LOG_PARTIAL.txt`](eps_3em3/RUN_LOG_PARTIAL.txt)) shows layers 1–12
   complete with the prefix verified, and layer 13 in progress when the run was stopped. Its
@@ -111,5 +125,7 @@ theorem is listed below.
 | `AUDIT_ENGINE_V231.md` | soundness audit of every change from v3.3 to v2.3.1 |
 | `proof_extension/LEMMAS_EN.md` | lemmas B1, B2, C1–C8 and the assumptions needed to extend the coverage argument |
 | `eps_1em2/` | `campaign.json`, layer 9 `complete.json`, layer 11 crash record, `stopped.json`, v2.3.1 diagnostic refusal, run log, author's note (French) |
-| `eps_3em3/` | partial run log |
+| `SOURCE_V231_XZ_FOR_REPLAY.zip` | the v2.3.1 package with xz-compressed payloads (`README_XZ_STORAGE.md`, `CHANGES_XZ_STORAGE.diff` inside) |
+| `eps_3em3_xz/` | ε = 3e-3, layers 1–16: `campaign.json`, layer 16 completion and verification of the whole prefix, run log |
+| `eps_3em3/` | first ε = 3e-3 run: partial run log |
 | `START_TIMES.txt` | start times of the 1e-2 and 1e-3 runs |

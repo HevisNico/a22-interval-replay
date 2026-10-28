@@ -83,7 +83,7 @@ Later releases extend the result; each is described in [`CHANGELOG.md`](CHANGELO
 - **Open problem** ([`depth/point4/`](depth/point4/README.md)). Whether *every* preparation of the
   original source enters that regime is open; the partial results and obstructions are recorded.
 - **Box width** ([`sweep/`](sweep/README.md)). Research campaigns cover all 18 layers at ±3e-4; with the
-  newer scenario engine ([`sweep/v23/`](sweep/v23/README.md)), all 18 at ±1e-3, at least 12 at ±3e-3 and 9
+  newer scenario engine ([`sweep/v23/`](sweep/v23/README.md)), all 18 at ±1e-3, at least 16 at ±3e-3 and 9
   at ±1e-2. With three added lemmas (C7, C6, E) the proof extends to ±1e-3 (v4.4 section below).
 
 To check the depth release assets, run `python3 -I tools/verify_depth_assets.py <assets folder>`.
@@ -113,7 +113,7 @@ checks everything, including the initial section and the commutations:
 `python3 -I sweep/v33_c7/verify_release.py <assets folder> --strict`.
 
 A newer engine, the scenario launcher v2.3.1 ([`sweep/v23/`](sweep/v23/README.md)), reaches the same
-chain at ±1e-3 by another route, and goes further on wider boxes (at least 12 layers at ±3e-3, 9 at
+chain at ±1e-3 by another route, and goes further on wider boxes (at least 16 layers at ±3e-3, 9 at
 ±1e-2). Its coverage would need ten lemmas
 ([`LEMMAS_EN.md`](sweep/v23/proof_extension/LEMMAS_EN.md)).
 
