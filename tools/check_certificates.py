@@ -1,4 +1,6 @@
 """Regenerate every committed certificate that needs no campaign output, and compare.
+Also checks the depth releases: the G_rel manifest and audit, and the cone and ergodic
+certificates (compared without their environment field, which records the machine).
 
 Run from the repository root:  python3 -I tools/check_certificates.py
 Standard library only; no engine import. Each check prints PASS or FAIL; the exit code
@@ -9,7 +11,7 @@ so they are compared by content; an independent check is compared without its
 certificate_sha256 field, which must instead be the hash of the regenerated certificate.
 The initial-section certificates are deterministic and compared byte for byte.
 """
-import hashlib, json, subprocess, sys, tempfile
+import hashlib, json, shutil, subprocess, sys, tempfile
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
@@ -24,6 +26,15 @@ def run(*args):
                          capture_output=True, text=True, cwd=REPO)
     if out.returncode != 0:
         raise RuntimeError((out.stderr.strip().splitlines() or ['?'])[-1][:200])
+
+
+def run_local(script, *args, cwd=None):
+    """For the depth scripts, which import helpers from their own folder."""
+    out = subprocess.run([sys.executable, '-B', str(script)] + [str(a) for a in args],
+                         capture_output=True, text=True, cwd=cwd or Path(script).parent)
+    if out.returncode != 0:
+        raise RuntimeError((out.stderr.strip().splitlines() or ['?'])[-1][:200])
+    return out.stdout
 
 
 def sha(path):
@@ -104,6 +115,36 @@ def main():
             FUT / 'certify_future_eps.py', FUT / 'verify_future_certificate_eps.py',
             FUT / 'terminal_eps1e-3.json', FUT / 'future_eps1e-3.json',
             FUT / 'independent_check_eps1e-3.json', ('1e-3',), tmp))
+        DEPTH = REPO / 'depth'
+
+        def grel():
+            out = run_local(DEPTH / 'g_rel' / 'verify_manifest.py')
+            report('depth/g_rel manifest', 'PASS_RELEASE_MANIFEST' in out, out.strip())
+            copy = tmp / 'g_rel'
+            shutil.copytree(DEPTH / 'g_rel', copy, ignore=shutil.ignore_patterns('__pycache__'))
+            run_local(copy / 'audit.py')
+            new, ref = (json.loads((d / 'AUDIT.json').read_text()) for d in (copy, DEPTH / 'g_rel'))
+            report('depth/g_rel audit', new['status'] == 'PASS' and new['rows'] == ref['rows'],
+                   f'{len(new["rows"])} witnesses, {"same" if new["rows"] == ref["rows"] else "DIFFERENT"} rows')
+        check('depth/g_rel', grel)
+
+        def without_env(path):
+            d = json.loads(Path(path).read_text())
+            d.pop('environment', None)
+            return d
+
+        def cone():
+            out = tmp / 'cone.json'
+            run_local(DEPTH / 'cone' / 'verify_cone.py', out)
+            report('depth/cone certificate', without_env(out) == without_env(DEPTH / 'cone' / 'cone_certificate.json'))
+        check('depth/cone certificate', cone)
+
+        def ergodic():
+            out = tmp / 'ergodic.json'
+            run_local(DEPTH / 'ergodic' / 'verify.py', out)
+            report('depth/ergodic bounds',
+                   without_env(out) == without_env(DEPTH / 'ergodic' / 'comparison_and_bounds.json'))
+        check('depth/ergodic bounds', ergodic)
     failed = RESULTS.count(False)
     print(f'\n{RESULTS.count(True)} PASS, {failed} FAIL')
     sys.exit(1 if failed else 0)

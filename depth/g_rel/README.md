@@ -45,7 +45,12 @@ python3 verify_manifest.py
 python3 audit.py
 ```
 
-`audit.py` takes a few minutes with four worker processes. To regenerate proposed
+`audit.py` takes a few minutes with four worker processes. It checks that the 40 declared
+states and the 40 membership rows are the same cases in the same order, that 35 pass, and that
+each of the 35 is verified, before it reports PASS. (Revision after an external audit: it used to
+accept a truncated list. The manifest records the revised `audit.py`, and the `.gitignore` it
+lists, lost at upload, is restored.) The CI runs `verify_manifest.py` and `audit.py` on every
+pull request. To regenerate proposed
 head brackets, run `python3 check.py`. This rewrites `MEMBERSHIP.json`; durations
 will differ. Keep a pristine copy if you want to preserve the release hashes.
 

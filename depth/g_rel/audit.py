@@ -13,7 +13,8 @@ def slope(x):
 def verify(task):
     d,r=task;phase={(0,j):I(0) if j==0 else None for j in range(12)};active=0;late=0
     require=lambda b,m: (_ for _ in ()).throw(ArithmeticError(m)) if not b else None
-    require(len(r['records'])==216,'cell count')
+    require(len(d['cells'])==216 and len(r['records'])==216,'cell count')
+    require(r['case']['name']==d['case']['name'],'case identity')
     for c,z in zip(d['cells'],r['records']):
         n,j=c['layer'],c['lane'];require(z['cell']==[n,j],'order');pa=[phase[n-1,(j+s)%12] for s in [-1,0,1]];ports=[p for p in range(3) if pa[p] is not None]
         if not z['active']:require(not ports,'silent driven');phase[n,j]=None;continue
@@ -36,8 +37,17 @@ def verify(task):
         require((20+I(min(x.lo for x in arr))-I(F.hi)-Pmax).lo>0,'local return')
         phase[n,j]=I(origin)+F;late+=int(z['after_first_raw_end'])
     require(active==191,'mask');return {'case':r['case']['name'],'status':'PASS_READ_ONLY_MEMBERSHIP','active':active,'late_heads':late}
+# Expected coverage (REPORT_EN.md): 40 declared states, 35 of them pass membership.
+CASES,PASSING=40,35
 def main():
-    t=time.monotonic();docs=json.load(open(ROOT/'INPUT_STATES.json'));m=json.load(open(ROOT/'MEMBERSHIP.json'));tasks=[(d,r) for d,r in zip(docs,m['rows']) if r['status'].startswith('PASS')]
+    t=time.monotonic();docs=json.load(open(ROOT/'INPUT_STATES.json'));m=json.load(open(ROOT/'MEMBERSHIP.json'))
+    # Count and align before zipping, so that a truncated or reordered list cannot
+    # shrink the set of witnesses that is checked.
+    require(len(docs)==CASES and len(m['rows'])==CASES,'case count')
+    require([d['case']['name'] for d in docs]==[r['case']['name'] for r in m['rows']],'case identities')
+    require(len({d['case']['name'] for d in docs})==CASES,'distinct cases')
+    tasks=[(d,r) for d,r in zip(docs,m['rows']) if r['status'].startswith('PASS')]
+    require(len(tasks)==PASSING and m['passing']==PASSING,'passing coverage')
     # Uniform resource/aux-drain assumptions from the unchanged physical kernel.
     f=I('.99','1.01');M=I('.975')/h('.02')*f;LM=log('1.25')/I('.02')*f;LE=A/I('.15')*f;LS=3*log(2)/I('1.06')*f
     require(dh(1).lo>0 and max(LE.hi,LS.hi)<LM.lo,'uniform physical guards')
@@ -45,6 +55,7 @@ def main():
     work=(3*I('4.04')+3*I(M.hi)+1)*A+I('1.1')+I('4.5')*I(LM.hi)+I('2.4')*I(LE.hi)
     require(work.hi<500,'resource reserve')
     with concurrent.futures.ProcessPoolExecutor(max_workers=4) as ex:rows=list(ex.map(verify,tasks))
+    require([x['case'] for x in rows]==[r['case']['name'] for _,r in tasks],'every passing witness verified')
     (ROOT/'AUDIT.json').write_text(json.dumps({'status':'PASS','rows':rows,'seconds':time.monotonic()-t,'resource_work':work.pair(),'scope':'Separate read-only control flow, shared directed arithmetic and response helpers; not independent arithmetic or proof-assistant verification'},indent=2)+'\n')
     print('PASS',len(rows),flush=True)
 if __name__=='__main__':main()

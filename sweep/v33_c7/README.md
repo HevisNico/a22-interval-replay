@@ -33,7 +33,10 @@ python3 -I sweep/v33_c7/verify_release.py <folder with the v4.4 release assets> 
 The verification is complete only when all nine steps pass. The `kernel_id` step needs Python 3.12
 with numpy 2.3.5 and scipy 1.17.0 (it imports the engine); with another Python it is skipped, the
 other steps still run, and the verdict is INCOMPLETE. With `--strict` a skipped step also gives exit
-code 3; a failed step always gives 1.
+code 3; a failed step always gives 1. A failure of step 1 (asset hashes) or step 2 (engine sources)
+stops the run at once, so an archive that does not match is never imported or executed. Step 5
+requires the exact lineage the engine writes: no parent in layer 1, and in every later layer the 12
+receipts of the layer before, in lane order.
 
 ## Release assets (v4.4)
 
