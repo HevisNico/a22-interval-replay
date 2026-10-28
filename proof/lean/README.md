@@ -1,6 +1,6 @@
 # Lean formalization
 
-Two files, both without `sorry`; their `#print axioms` list only `propext`, `Classical.choice` and
+Five files, all without `sorry`; their `#print axioms` list only `propext`, `Classical.choice` and
 `Quot.sound`.
 
 ## Strict-root core
@@ -43,10 +43,60 @@ shortcut in `exp`/`ln`, the slope evaluated before the guard, the fresh time ato
 Same scope as above: that `peak_upper`, `dep.evaluate` and the derivative enclosures meet these
 hypotheses is a claim about the code, not formalized.
 
+## Lemma E (v4.4, commutations at ε = 1e-3)
+
+[`CommutationE.lean`](CommutationE.lean) proves the mathematical part of lemma E
+([`sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt`](../../sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt),
+section 3): a READY fire against a group of exterior events that includes input arrivals.
+
+| Result | Statement |
+|---|---|
+| `e1_upper`, `e1_lower` | E1: the fire lies in `[min(a_min, f0), f0]` |
+| `h_le_linear`, `arrivals_le` | E2: `h(u) ≤ A u` for every `u ≥ 0`, so the arrivals add at most `G A (t − a_min)` |
+| `e2_tighten`, `kappa_form`, `below_line_of_monotone` | E2: with `Q0' ≥ σ > 0`, the fire comes no earlier than `f0 − κ (f0 − a_min)`, `κ = G A/(σ + G A)` |
+| `e_fire_enclosure` | the date the macro emits, `[f0 − κ w, f0]` with `w ≥ (f0 − a_min)^+`, contains the fire |
+
+`h(u) ≤ A u` is proved from `1 − e^{−x} ≤ x`, without the concavity condition the macro asserts.
+E0 (which events leave the charge unchanged) and E3 (every order and fire position is kept) are
+statements about the program and are not formalized.
+
+## First crossings
+
+[`FirstCrossing.lean`](FirstCrossing.lean): the facts about the first time the charge reaches 1
+that the coverage theorem uses when it accepts a fire.
+
+| Result | Statement |
+|---|---|
+| `first_crossing_exists`, `first_crossing_unique` | a continuous charge that reaches 1 has exactly one first crossing |
+| `cover_encloses` | section 8(vi), `_first_crossing_cover`: below 1 on `[a, lower)` and at least 1 at `upper` puts the first crossing in `[lower, upper]`, with no slope assumption |
+| `ready_root_bracket` | section 6, `ready_root`: the first crossing lies between those of the two corner trajectories |
+| `deriv_stays_nonpos`, `ascending_root_is_first` | section 7: with `d' = −K d − A J`, `J ≥ 0`, a derivative that reaches `≤ 0` stays `≤ 0`, so a root where the charge rises is the first crossing |
+
+The raw ends, where the current drops and `d` only decreases, are a hypothesis of
+`ascending_root_is_first`.
+
+## One future wave and the exact word
+
+[`FutureWave.lean`](FutureWave.lean): the steps of the future proof
+([`FUTURE_INVARIANCE_PROOF_EN.txt`](../FUTURE_INVARIANCE_PROOF_EN.txt), sections C–D) and of the
+word-preservation argument
+([`GLOBAL_THEOREM_AND_WORD_PRESERVATION_EN.txt`](../GLOBAL_THEOREM_AND_WORD_PRESERVATION_EN.txt))
+that do not depend on the certified numbers.
+
+| Result | Statement |
+|---|---|
+| `h_strictMonoOn` | if `K e^{−K} < A e^{−A}` (checked by the certificate), `h` is strictly increasing on `[0, 1]` |
+| `protection_duration` | with `ℓ' = −b`, `β ≤ b ≤ 1.1`, the protected phase lasts between `L/1.1` and `L/β` |
+| `first_crossing_shift`, `head_charge_shift`, `latency_fixed` | parents firing at `s + dᵢ` give a charge that depends on `t − s` only, so the cell fires at `s + d` with `d` independent of `s` |
+| `word_preserved` | two waves fire the cell at times whose difference is that of the source pulses; applied layer by layer, this is the induction of the global theorem |
+
+The certified inequalities (brackets, margins, the settling bound 12.791) remain those of the two
+independent checkers.
+
 ## Build
 
 Pinned to Lean `v4.35.0` and Mathlib `v4.35.0` (`lean-toolchain`, `lakefile.toml`). The GitHub
-workflow `.github/workflows/lean.yml` builds both files and fails if any `#print axioms` mentions
+workflow `.github/workflows/lean.yml` builds the five files and fails if any `#print axioms` mentions
 `sorryAx`. Locally:
 
 ```sh
@@ -56,6 +106,9 @@ lake exe cache get      # prebuilt Mathlib
 lake build
 lake env lean StrictRoot.lean   # prints the axioms
 lake env lean PeakBounds.lean
+lake env lean CommutationE.lean
+lake env lean FirstCrossing.lean
+lake env lean FutureWave.lean
 ```
 
 `StrictRoot.lean` can also be pasted into <https://live.lean-lang.org> (current Mathlib), where it checks

@@ -133,7 +133,8 @@ part of why affine arithmetic succeeds. What is known about its limits:
   realization, inspired by the author's Reset Operator. Nothing here proves that hypothesis in
   general ([`docs/MODEL_BOUNDARY_EN.txt`](docs/MODEL_BOUNDARY_EN.txt)).
 - **The proof is not yet reviewed** by an independent expert. Only parts of it are machine-checked
-  (Lean: the abstract core of the strict-root lemma and the v4.4 lemmas); the link between those
+  (Lean: the abstract core of the strict-root lemma, the v4.4 lemmas, the first-crossing facts and
+  the number-free steps of the future proof); the link between those
   statements and the code is not.
 - **One step is open.** Entry into the deep-layer regime is certified for six prescribed
   preparations. Whether every preparation of the original source enters it is open

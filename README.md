@@ -33,8 +33,8 @@ components.
 > coverage and invariance argument is a manual proof under explicit execution assumptions (A1–A4:
 > authentic execution of the recorded program, correct arithmetic runtime and native binary,
 > fail-closed assertions, namespace discipline), not yet reviewed by an independent expert, and
-> machine-checked only in parts: the abstract core of the strict-root lemma and the lemmas added
-> in v4.4 (Lean 4, [`proof/lean/`](proof/lean/README.md)). This applies to every result in the repository. Review is welcome:
+> machine-checked only in parts: the abstract core of the strict-root lemma, the lemmas added in
+> v4.4, the first-crossing facts and the number-free steps of the future proof (Lean 4, [`proof/lean/`](proof/lean/README.md)). This applies to every result in the repository. Review is welcome:
 > **[REVIEW.md](REVIEW.md)**.
 
 | | |
@@ -101,7 +101,7 @@ training in Q, and exact transmission of every admissible pulse word afterwards
 | Network emissions during training (all cells, over the 128 source pulses); active cells at exact rest | 21 302; 191 | 21 302; 191 |
 | Future regime from Q (two independent checkers) | 191 cells fire once per pulse, at rest before 12.791 | the same |
 | Smallest future margin | 0.0491 | 0.0489 |
-| Additions to the proof | — | lemmas C7, C6 and remark P ([`LEMMAS_C7_C6_EN.txt`](sweep/v33_c7/LEMMAS_C7_C6_EN.txt)), machine-checked in Lean ([`PeakBounds.lean`](proof/lean/PeakBounds.lean)); lemma E, the commutation macro with an input arrival, and the initial-section certificate rechecked at ±1e-3 ([coverage addendum](sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt)); general-ε wording of the future proof ([future addendum](sweep/v33_c7/FUTURE_INVARIANCE_GENERAL_EPS_EN.txt)) |
+| Additions to the proof | — | lemmas C7, C6 and remark P ([`LEMMAS_C7_C6_EN.txt`](sweep/v33_c7/LEMMAS_C7_C6_EN.txt)), machine-checked in Lean ([`PeakBounds.lean`](proof/lean/PeakBounds.lean)); lemma E, the commutation macro with an input arrival ([`CommutationE.lean`](proof/lean/CommutationE.lean) for its mathematical part), and the initial-section certificate rechecked at ±1e-3 ([coverage addendum](sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt)); general-ε wording of the future proof ([future addendum](sweep/v33_c7/FUTURE_INVARIANCE_GENERAL_EPS_EN.txt)) |
 
 C7 bounds the READY charge with the kernel's own monotone peak bound where v3.3 refused; C6 is a
 piecewise version of the same bound; P establishes the root-bracket slope on a partition, without

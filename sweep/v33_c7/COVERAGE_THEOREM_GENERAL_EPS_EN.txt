@@ -49,7 +49,10 @@ No other step uses the value of eps.
    LEMMA E. Fire against a group of exterior events, in READY
    ----------------------------------------------------------
    The argument is the one written in the docstring of affine/commutation.py,
-   checked here against _resolve and _fire_root.
+   checked here against _resolve and _fire_root. Formal version of E1, E2 and
+   the enclosure: proof/lean/CommutationE.lean (Lean 4, Mathlib, no sorry);
+   there h(u) <= A u is proved for every u >= 0, without the concavity
+   condition below.
 
    Setting. A live READY state s at time t0 with pulse memory; a group of
    exterior events whose order relative to the READY fire is not decided.

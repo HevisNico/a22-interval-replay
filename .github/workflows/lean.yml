@@ -43,7 +43,7 @@ jobs:
           fi
       - name: Check the axioms (no sorryAx)
         run: |
-          for f in StrictRoot PeakBounds; do
+          for f in StrictRoot PeakBounds CommutationE FirstCrossing FutureWave; do
             lake env lean "$f.lean" > "axioms_$f.log" 2>&1
             echo "== $f"; cat "axioms_$f.log"
             test "$(grep -c "depends on axioms" "axioms_$f.log")" -eq 6

@@ -92,7 +92,8 @@ single wide evaluation. C1 was then dropped.
 ## Not yet done
 
 - The mathematical content of C7, C6 and remark P is machine-checked
-  ([`proof/lean/PeakBounds.lean`](../../proof/lean/PeakBounds.lean)); lemma E is not yet. That the
+  ([`proof/lean/PeakBounds.lean`](../../proof/lean/PeakBounds.lean)), and so is the mathematical part of
+  lemma E ([`proof/lean/CommutationE.lean`](../../proof/lean/CommutationE.lean)). That the
   program's interval evaluations meet their hypotheses has not been reviewed, like the rest of the
   proof.
 - No run at ε = 3e-3 or 1e-2 with this program.
