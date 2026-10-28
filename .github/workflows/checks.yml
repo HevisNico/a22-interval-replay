@@ -1,0 +1,52 @@
+name: Engine tests and certificates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  engine:
+    # The published v3.3 engine (77 tests) and the v3.3 + C7 package of v4.4 (94 tests).
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package: [v3.3, v3.3+C7]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Native build dependencies
+        run: sudo apt-get update && sudo apt-get install -y libssl-dev
+      - name: Locate the package
+        run: |
+          if [ "${{ matrix.package }}" = "v3.3" ]; then
+            echo "PKG=$PWD/engine" >> "$GITHUB_ENV"
+          else
+            mkdir -p "$RUNNER_TEMP/c7"
+            unzip -q sweep/v33_c7/A22_fresh_launch_v3_3_C7.zip -d "$RUNNER_TEMP/c7"
+            echo "PKG=$RUNNER_TEMP/c7/A22_fresh_launch_v3_3_C7" >> "$GITHUB_ENV"
+          fi
+      - name: Install the pinned dependencies
+        run: python -m pip install -r "$PKG/requirements.txt"
+      - name: Build the native extensions
+        working-directory: ${{ env.PKG }}
+        run: python build_all_native.py
+      - name: Unit tests
+        working-directory: ${{ env.PKG }}
+        run: python -B -m unittest discover -s tests
+
+  certificates:
+    # Regenerates every committed certificate that needs no campaign output (initial
+    # sections, future-wave certificates and their independent checks) and compares.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regenerate and compare
+        run: python -I tools/check_certificates.py
