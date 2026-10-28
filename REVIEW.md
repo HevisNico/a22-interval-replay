@@ -76,6 +76,11 @@ At ε = 1e-3 the commutations also include input arrivals (202 of 206); they are
    zero duration?
 2. Is the first-crossing property (unimodality of the READY charge between events, Section 7) used
    correctly at every place a spike is accepted?
+   (A point to check: `_first_crossing_cover` encloses the first *contact* Q ≥ 1, tangency
+   included, not by itself an upward crossing. On the path where it is used, Q0 receives no new
+   arrival, its derivative does not turn positive again after becoming negative (Section 7), and the
+   accepted upper guard at a positive time has the open enclosure of Section 5, so `f(hi).lo ≥ 0`
+   gives a physical `f(hi) > 0`: a maximum tangent to 1 is not accepted on that path.)
 
 ## Task 3 — Unions: memory anchors and the fields kept from the first branch (theorem, Section 9)
 

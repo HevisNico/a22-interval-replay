@@ -105,7 +105,7 @@ part of why affine arithmetic succeeds. What is known about its limits:
   ([addendum](sweep/v33_c7/COVERAGE_THEOREM_GENERAL_EPS_EN.txt)): the full result holds on a box
   ten times wider
   ([`sweep/v33_c7/README.md`](sweep/v33_c7/README.md)). A newer engine, the scenario launcher
-  v2.3.1, goes further on wider boxes: at least 12 layers at 3e-3, 9 at 1e-2, where it refuses
+  v2.3.1, goes further on wider boxes: at least 16 layers at 3e-3, 9 at 1e-2, where it refuses
   because the number of admissible event orders exceeds its budget
   ([`sweep/v23/README.md`](sweep/v23/README.md)).
 
