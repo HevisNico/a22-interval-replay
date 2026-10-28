@@ -1,14 +1,10 @@
 name: Lean (strict-root core)
 
 on:
+  # Every pull request, since the build is a required check on main.
   push:
-    paths:
-      - 'proof/lean/**'
-      - '.github/workflows/lean.yml'
+    branches: [main]
   pull_request:
-    paths:
-      - 'proof/lean/**'
-      - '.github/workflows/lean.yml'
   workflow_dispatch:
 
 jobs:
