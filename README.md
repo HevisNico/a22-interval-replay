@@ -127,11 +127,11 @@ C7 bounds the READY charge with the kernel's own monotone peak bound where v3.3 
 piecewise version of the same bound; P establishes the root-bracket slope on a partition, without
 changing the acceptance predicate. Lemma E is not a program change: at ±1e-3 the existing commutation
 macro also handles input arrivals, which the v3.3 proof did not need, and lemma E proves that case.
-The full outputs and the engine as run are assets of
-[Release v4.6.1](https://github.com/HevisNico/a22-interval-replay/releases/tag/v4.6.1) (corrected rerun,
-see the erratum below; the original run is in Release v4.4), and one command checks everything,
-including the initial section and the commutations:
-`python3 -I sweep/v33_c7/verify_release.py <assets folder> --strict`.
+The committed records are those of the corrected rerun (erratum below); its full outputs are not
+published (archive hashes in `sweep/v33_c7/RELEASE_ASSETS_SHA256.json`, archives on request), and
+[Release v4.4](https://github.com/HevisNico/a22-interval-replay/releases/tag/v4.4) holds the outputs of
+the original run. Given the archives, one command checks everything, including the initial section and
+the commutations: `python3 -I sweep/v33_c7/verify_release.py <assets folder> --strict`.
 
 A newer engine, the scenario launcher v2.3.1 ([`sweep/v23/`](sweep/v23/README.md)), reaches the same
 chain at ±1e-3 by another route, and goes further on wider boxes (at least 16 layers at ±3e-3, 9 at

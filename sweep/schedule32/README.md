@@ -62,9 +62,10 @@ outputs; they do not replay the dynamics.
 
 The complete delivery of the corrected rerun (campaign outputs in
 `A22_rerun32_fixE_results/campaign32_eps1e-3_fixE/`, engine hashes, logs including the regression test
-and the run console) is `A22_schedule32_fixE_run.zip` of Release `v4.6.1`; its hash is in
-[`RELEASE_ASSETS_SHA256.json`](RELEASE_ASSETS_SHA256.json). The three archives of Release `v4.5` hold the
-original run.
+and the run console) is `A22_schedule32_fixE_run.zip`; its hash is in
+[`RELEASE_ASSETS_SHA256.json`](RELEASE_ASSETS_SHA256.json). It is not published; it is available on
+request. The three archives of Release `v4.5` hold the original run and do not match the committed
+records.
 
 ## Records in this folder
 

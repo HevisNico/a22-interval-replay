@@ -58,10 +58,12 @@ every margin is the same. The tests of the corrected packages: 97 (C7), 99 (32-p
 (28-pulse calendar).
 
 The 128- and 28-pulse campaigns were rerun with CPython 3.13; the 32-pulse campaign with CPython 3.12
-on another machine. The records in the three folders, `RESULT.json` and the release asset hashes are
-those of the reruns; the outputs are in release
-[v4.6.1](https://github.com/HevisNico/a22-interval-replay/releases/tag/v4.6.1). The archives of
-v4.4, v4.5 and v4.6 remain available as the record of the original runs.
+on another machine. The records in the three folders and `RESULT.json` are those of the reruns, and
+each `campaign/RUN_MANIFEST.json` gives the SHA-256 of every output file. The full outputs of the
+28-pulse rerun are the release assets of [a22-28-pulses](https://github.com/HevisNico/a22-28-pulses). Those of the 128- and 32-pulse reruns are not
+published; their archive hashes are in `RELEASE_ASSETS_SHA256.json` of each folder, and the archives are
+available on request. The archives of releases v4.4, v4.5 and v4.6 remain the record of the original
+runs; they do not match the records now committed.
 
 ## Not affected
 

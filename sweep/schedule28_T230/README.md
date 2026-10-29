@@ -67,7 +67,7 @@ outputs; they do not replay the dynamics.
 
 ## Release assets
 
-The corrected rerun is in two archives of Release `v4.6.1` (the campaign outputs
+The corrected rerun is in the two release archives of [a22-28-pulses](https://github.com/HevisNico/a22-28-pulses) (the campaign outputs
 `campaign28_T230_eps1e-3/`, and the engine exactly as run with its binaries); their hashes are in
 [`RELEASE_ASSETS_SHA256.json`](RELEASE_ASSETS_SHA256.json). The three archives of Release `v4.6` hold
 the original run.

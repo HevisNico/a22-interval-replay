@@ -33,7 +33,7 @@ engine-independent terminal extraction, both future-wave certificates, the initi
 certificate at 1e-4 and 1e-3, and the recorded commutations against lemma E.
 
 ```sh
-python3 -I sweep/v33_c7/verify_release.py <folder with the v4.6.1 release assets of this folder> --strict
+python3 -I sweep/v33_c7/verify_release.py <folder with the archives listed in RELEASE_ASSETS_SHA256.json> --strict
 ```
 
 The verification is complete only when all nine steps pass. The `kernel_id` step needs the CPython recorded in
@@ -44,10 +44,15 @@ stops the run at once, so an archive that does not match is never imported or ex
 requires the exact lineage the engine writes: no parent in layer 1, and in every later layer the 12
 receipts of the layer before, in lane order.
 
-## Release assets (v4.6.1)
+## Output archives
 
-Download from [Release v4.6.1](https://github.com/HevisNico/a22-interval-replay/releases/tag/v4.6.1)
-(the corrected run; the archives of [v4.4](https://github.com/HevisNico/a22-interval-replay/releases/tag/v4.4) are those of the original run):
+The committed records are those of the corrected rerun (erratum v4.6.1). Its archives, listed below with
+their hashes in [`RELEASE_ASSETS_SHA256.json`](RELEASE_ASSETS_SHA256.json), are not published; they are
+available on request. The archives of the same names in
+[Release v4.4](https://github.com/HevisNico/a22-interval-replay/releases/tag/v4.4) are those of the
+original run and do not match the committed records. Without archives, the CI and
+`tools/check_certificates.py` still regenerate the initial section and both future certificates from
+the committed terminal extraction.
 
 | Asset | Content |
 |---|---|

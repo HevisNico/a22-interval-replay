@@ -198,8 +198,9 @@ records are published. Outputs, executed engine and audit scripts are assets of 
 - **Reruns.** The campaigns of `sweep/v33_c7/` (128 pulses), `sweep/schedule32/` and
   `sweep/schedule28_T230/` were rerun from scratch with the corrected program. Terminal bounds,
   commutations (206, 14, 6), Q28 and both future certificates are identical; `kernel_id`, `run_id` and
-  the payload hashes changed. Records, `RESULT.json` and release hashes are those of the reruns; the
-  outputs are assets of Release `v4.6.1`. Tests: 97, 99 and 101.
+  the payload hashes changed. Records, `RESULT.json` and archive hashes are those of the reruns. The
+  28-pulse outputs are the release assets of a22-28-pulses; the 128- and 32-pulse outputs are not
+  published. Tests: 97, 99 and 101.
 - **Second future checker.** It skipped cells without inputs; it now checks the structural premises
   of every cell, the rest state of silent cells and the count of 216 distinct cells. Outputs unchanged
   on the five published domains.
