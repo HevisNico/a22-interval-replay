@@ -13,7 +13,8 @@ engine sources do not match is never extracted further, imported or executed. St
     equals the fresh-launch package in this folder, apart from its two built
     binaries; the arithmetic binary has the hash recorded in campaign.json;
  3. engine identity: the campaign kernel_id recomputed from the as-run engine
-    (needs Python 3.12 with numpy 2.3.5 and scipy 1.17.0, else SKIP);
+    (needs the CPython the as-run binaries were built for, recorded in campaign.json,
+    with numpy 2.3.5 and scipy 1.17.0, else SKIP);
  4. outputs: every record of the five output archives against RUN_MANIFEST.json;
  5. chain: each layer's completion record lists exactly the hashes of its 12
     receipts, every receipt names its campaign and kernel and the hashes of
@@ -91,8 +92,8 @@ def step_engine(assets, work):
     differ = sorted(x for x in a & b if sha(root / x) != sha(froot / x))
     extra = sorted(a - b - binaries) + sorted(b - a)
     campaign = json.loads((HERE / 'campaign' / 'campaign.json').read_text())
-    native = root / 'affine' / '_rounding_native.cpython-312-x86_64-linux-gnu.so'
-    native_ok = native.exists() and sha(native) == campaign['environment']['native_sha256']
+    natives = sorted((root / 'affine').glob('_rounding_native*.so'))
+    native_ok = len(natives) == 1 and sha(natives[0]) == campaign['environment']['native_sha256']
     ok = not differ and not extra and len(binaries) == 2 and native_ok
     report('2 engine contents', ok, f'{len(a & b)} source files identical to the fresh-launch package, '
            f'{len(binaries)} binaries, rounding binary {"matches" if native_ok else "DOES NOT match"} campaign.json'
@@ -115,8 +116,8 @@ def step_identity(root):
     except Exception as exc:
         report('3 engine identity', None, f'engine not runnable here ({exc})'); return
     if out.returncode != 0:
-        report('3 engine identity', None, 'engine not runnable with this Python (needs CPython 3.12, numpy 2.3.5, '
-               'scipy 1.17.0): ' + (out.stderr.strip().splitlines() or ['?'])[-1][:120]); return
+        report('3 engine identity', None, 'engine not runnable with this Python (needs the CPython of '
+               'campaign.json, numpy 2.3.5, scipy 1.17.0): ' + (out.stderr.strip().splitlines() or ['?'])[-1][:120]); return
     got = out.stdout.strip().splitlines()[-1]
     report('3 engine identity', got == campaign['kernel_id'], f'kernel_id {got[:16]}… vs campaign {campaign["kernel_id"][:16]}…')
 

@@ -28,7 +28,7 @@ gain in about [1.47, 1.90]) pass as well.
 | `certify_future_eps.py` | `proof/provenance_audit/certify_future.py` with ε as third argument; only ε-derived constants change, and the counts 191/25/15 are reported instead of imposed |
 | `future_eps1e-3.json` | its certificate at ε = 1e-3: PASS |
 | `check_v33_eps1e-4.json` | non-regression: at ε = 1e-4 on the published v3.3 states, identical to the published certificate on every common field |
-| `verify_future_certificate_eps.py` | `proof/provenance_audit/verify_future_certificate.py` (the independent checker: directed Decimal, own series, no root search) with ε as fourth argument; the four ε-derived constants are the only change |
+| `verify_future_certificate_eps.py` | `proof/provenance_audit/verify_future_certificate.py` (the independent checker: directed Decimal, own series, no root search) with ε as fourth argument; the four ε-derived constants are the only change. Since v4.6.1 both check the premises of every cell, including the rest state of silent cells ([`erratum_v4.6.1/`](../../../../erratum_v4.6.1/README.md)) |
 | `independent_check_eps1e-3.json` | its result at ε = 1e-3: PASS (191, 15, 525) |
 | `independent_check_v33_eps1e-4.json` | non-regression: identical to `proof/provenance_audit/output/future_independent_check.json` |
 | `NOTE_AUTHOR_FR.txt` | the author's note (French) |

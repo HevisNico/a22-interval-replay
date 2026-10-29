@@ -148,6 +148,6 @@
     }
   ],
   "interpretation": "A failure only rejects this sufficient box-inclusion test; it does not prove physical non-membership in Q128.",
-  "original_terminal_sha256": "2392d3a647c089d0ccbe8841c9bf352f2611c32facfcb7ed30325eb405798910",
-  "new_terminal_sha256": "e4e87f749c3a0c956f79fcb95d9637a080df41d66d5a516f153e1b365758f754"
+  "original_terminal_sha256": "8f16fec6f22e3835d9791ec97bd08f1234ccd77065c390e106f5ecc33ec345cd",
+  "new_terminal_sha256": "2252944377fa5991af197339aab025053540b47971dd69941b8718afec2bc774"
 }

@@ -24,7 +24,8 @@ Per-layer medians and maxima of the date widths, and the largest learned-gain wi
 `python3 sweep/make_width_table.py`.
 
 **Beyond this table.** Program v3.3 extended by lemmas C7 and C6 accepts all 18 layers at 1e-3, and
-the end of training passes both future-wave checkers; lemma E completes the proof at that width ([`v33_c7/README.md`](v33_c7/README.md)). The
+the end of training passes both future-wave checkers; lemma E completes the proof at that width ([`v33_c7/README.md`](v33_c7/README.md); campaign rerun in v4.6.1
+with the outward widening, [`../erratum_v4.6.1/`](../erratum_v4.6.1/README.md)). The
 scenario launcher v2.3/v2.3.1 reaches 18 layers at 1e-3, at least 16 at 3e-3 and 9 at 1e-2
 ([`v23/README.md`](v23/README.md)). The table and the analysis below describe the v3.3 program only.
 

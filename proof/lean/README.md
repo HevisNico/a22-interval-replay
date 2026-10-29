@@ -58,7 +58,9 @@ section 3): a READY fire against a group of exterior events that includes input 
 
 `h(u) ≤ A u` is proved from `1 − e^{−x} ≤ x`, without the concavity condition the macro asserts.
 E0 (which events leave the charge unchanged) and E3 (every order and fire position is kept) are
-statements about the program and are not formalized.
+statements about the program and are not formalized. Neither is the rounding of the emitted interval:
+the program must compute `[f0 − κ w, f0]` outward, which up to v4.6 it did not do exactly (a 28-digit
+negation); see [`erratum_v4.6.1/`](../../erratum_v4.6.1/README.md).
 
 ## First crossings
 

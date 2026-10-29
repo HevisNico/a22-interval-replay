@@ -18,6 +18,12 @@ both future-wave checkers prove that every admissible pulse word is then transmi
 
 The v3.3 program alone stops at layer 18, cell (18, 6), at this ε ([`../README.md`](../README.md)).
 
+**Erratum v4.6.1.** The lemma-E widening of the package computed `I(-delta, 0)`, whose unary minus rounds
+to 28 digits and could move the lower end of the fire enclosure inward by about 1e-29. The package now
+uses the exact `delta.copy_negate()`, with a regression test, and the campaign of this folder was rerun
+with it: every terminal bound, both future certificates and the 206 commutations are identical; only the
+identity hashes changed. Details: [`erratum_v4.6.1/`](../../erratum_v4.6.1/README.md).
+
 ## Verify everything with one command
 
 [`verify_release.py`](verify_release.py) checks, from the repository and the downloaded release
@@ -27,20 +33,21 @@ engine-independent terminal extraction, both future-wave certificates, the initi
 certificate at 1e-4 and 1e-3, and the recorded commutations against lemma E.
 
 ```sh
-python3 -I sweep/v33_c7/verify_release.py <folder with the v4.4 release assets> --strict
+python3 -I sweep/v33_c7/verify_release.py <folder with the v4.6.1 release assets of this folder> --strict
 ```
 
-The verification is complete only when all nine steps pass. The `kernel_id` step needs Python 3.12
-with numpy 2.3.5 and scipy 1.17.0 (it imports the engine); with another Python it is skipped, the
+The verification is complete only when all nine steps pass. The `kernel_id` step needs the CPython recorded in
+`campaign/campaign.json` (3.13 for the corrected run) with numpy 2.3.5 and scipy 1.17.0 (it imports the engine); with another Python it is skipped, the
 other steps still run, and the verdict is INCOMPLETE. With `--strict` a skipped step also gives exit
 code 3; a failed step always gives 1. A failure of step 1 (asset hashes) or step 2 (engine sources)
 stops the run at once, so an archive that does not match is never imported or executed. Step 5
 requires the exact lineage the engine writes: no parent in layer 1, and in every later layer the 12
 receipts of the layer before, in lane order.
 
-## Release assets (v4.4)
+## Release assets (v4.6.1)
 
-Download from [Release v4.4](https://github.com/HevisNico/a22-interval-replay/releases/tag/v4.4):
+Download from [Release v4.6.1](https://github.com/HevisNico/a22-interval-replay/releases/tag/v4.6.1)
+(the corrected run; the archives of [v4.4](https://github.com/HevisNico/a22-interval-replay/releases/tag/v4.4) are those of the original run):
 
 | Asset | Content |
 |---|---|
@@ -66,7 +73,8 @@ parameter, plus three changes in `affine/engine.py`
   slope is positive on every piece but not provably so in one evaluation over [0, 0.64].
 
 `tests/test_c7_c6_p.py` (16 tests) covers the three paths: threshold proximity, near-zero slope,
-partition boundaries, and refusal whenever the bound is insufficient. The package passes 94 tests;
+partition boundaries, and refusal whenever the bound is insufficient. The package passes 97 tests
+(94 before the v4.6.1 erratum and its regression test `tests/test_commutation_rounding.py`);
 see `VALIDATION_EN.txt` inside the zip.
 
 How these were found: v3.3 refused (18, 6) on the peak logarithm; v3.3 + C1 (a narrower first
@@ -78,10 +86,10 @@ single wide evaluation. C1 was then dropped.
 
 | Path | Content |
 |---|---|
-| `campaign/campaign.json` | identity: `kernel_id` d8fedb8d…, run 556d92bf…, ε = 0.001 |
+| `campaign/campaign.json` | identity: `kernel_id` d59fe056…, run 96f175d2…, ε = 0.001 (corrected run of v4.6.1) |
 | `campaign/layer_NN/complete.json`, `verification.json` | completion and independent re-read of each layer |
 | `campaign/RUN_MANIFEST.json` | SHA-256 and size of all 469 JSON records of the output |
-| `campaign/RUN_LOG.txt` | console log (1 h 15 min with 4 workers; (18, 4) and (18, 8) took about 29 min each) |
+| `campaign/RUN_LOG.txt` | console log of the corrected run (about 1 h 37 min with 4 workers) |
 | `audit_campaign_dir.py` | engine-independent extraction of the 216 terminal states, same checks as `proof/provenance_audit/audit_all_layers.py` |
 | `terminal/all_layers_audit.json`, `terminal/all_terminal_exact.json` | its outputs |
 | `terminal/future_certificate_eps1e-3.json`, `terminal/independent_check_eps1e-3.json` | both future-wave checkers at ε = 1e-3: PASS |

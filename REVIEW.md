@@ -124,6 +124,14 @@ the two checkers `proof/provenance_audit/certify_future.py` and `verify_future_c
 **Where:** `engine/affine/affine_iv.py`, `engine/affine/rounding.py`, `engine/affine/rounding_native.c`,
 `engine/affine/sound_lattice.py`, the theorem's Section 4, and the earlier audit `docs/AUDIT_EN.txt`.
 
+**Found and fixed (v4.6.1).** Operands built outside these operations must also be outward. The lemma-E
+widening wrote `I(-delta, D(0))`: Python's unary minus rounds to the 28-digit context, so the lower end
+could move inward by about 6e-30. The corrected program uses `delta.copy_negate()`; the regression test,
+the failing output of the old program and the reruns are in
+[`erratum_v4.6.1/`](erratum_v4.6.1/README.md). To audit it, run the test on both packages. A search for
+other context-rounded constructions (unary minus, `abs`, `+x`, arithmetic on `Decimal` outside `iv.UP` /
+`iv.DOWN`) feeding an interval end is welcome.
+
 ## Task 6 — Per-port parameter symbols (fix P)
 
 **Claim.** Each port *j* of a cell gets one symbol per constant (LM, LS, LE, M), used only where the

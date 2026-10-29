@@ -8,9 +8,9 @@ on:
 
 jobs:
   engine:
-    # The published v3.3 engine (77 tests), the v3.3 + C7 package of v4.4 (94 tests), and that
-    # package with the 32-pulse calendar of v4.5 applied (96 tests, including test_calendar32.py),
-    # and with the 28-pulse, T = 230 calendar of v4.6 applied (98 tests, including test_calendar28.py).
+    # The published v3.3 engine (77 tests), the v3.3 + C7 package of v4.4 (97 tests since the v4.6.1 erratum), and that
+    # package with the 32-pulse calendar of v4.5 applied (99 tests, including test_calendar32.py),
+    # and with the 28-pulse, T = 230 calendar of v4.6 applied (101 tests, including test_calendar28.py).
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
