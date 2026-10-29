@@ -1,0 +1,32 @@
+[
+  {
+    "check": "terminal_extraction",
+    "exit_code": 0,
+    "log": "terminal_extraction.log"
+  },
+  {
+    "check": "lineage_and_clocks",
+    "exit_code": 0,
+    "log": "lineage_and_clocks.log"
+  },
+  {
+    "check": "commutations",
+    "exit_code": 0,
+    "log": "commutations.log"
+  },
+  {
+    "check": "initial_section",
+    "exit_code": 0,
+    "log": "initial_section.log"
+  },
+  {
+    "check": "future_integer",
+    "exit_code": 0,
+    "log": "future_integer.log"
+  },
+  {
+    "check": "future_decimal",
+    "exit_code": 0,
+    "log": "future_decimal.log"
+  }
+]

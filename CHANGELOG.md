@@ -176,3 +176,14 @@ Q32 ([`sweep/schedule32/`](sweep/schedule32/README.md)). The terminal box is not
 domain (11 of 2 160 bounds), so the learned state differs while the guarantee is the same; the
 horizon stays 1116. The CI regenerates its future certificate; the outputs, the executed engine and
 the audit scripts are assets of Release `v4.5`.
+
+## v4.6: 28 training pulses, terminal time 230
+
+A sampled point-simulation sweep (8 to 32 pulses, uniform and non-uniform schedules, 257 devices of
+the box) proposed 28 pulses and an earlier cut at T = 230. Run through the enclosure engine of v4.4
+with only the schedule and the terminal time changed, it is accepted on all 18 layers at ε = 1e-3:
+2 202 training emissions, 191 active cells, 6 commutations all covered by lemma E, and both
+future-wave checkers pass on the terminal domain Q28 with the same smallest margin
+([`sweep/schedule28_T230/`](sweep/schedule28_T230/README.md)). The CI runs the patched engine and
+regenerates the future certificate; the v4.5 calendar is now tested by CI as well, and its campaign
+records are published. Outputs, executed engine and audit scripts are assets of Release `v4.6`.
