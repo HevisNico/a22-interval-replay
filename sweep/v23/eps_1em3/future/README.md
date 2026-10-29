@@ -56,3 +56,14 @@ python3 -I verify_future_certificate_eps.py terminal_eps1e-3.json future_eps1e-3
   point after the section reset. Ports that never received input keep the initial box r_m ± 1e-5.
 - The extraction itself was not rerun here (it needs Python 3.12 and the full outputs). For layer 18,
   the 12 `payload_sha256` in `terminal_eps1e-3.json` match the campaign receipts.
+
+## General independent checker
+
+`verify_future_certificate_general.py` is `verify_future_certificate_eps.py` with its last two
+assertions generalized: the active, masked and influential port counts must equal those of the
+certificate being checked (every cell's masked and influential ports are already compared one by
+one), instead of the fixed reference counts 191, 15 and 525; and the network must be at rest before
+the next pulse at 20, the condition of the future theorem, instead of the reference bound 12.791.
+On the five published domains (v3.3 at 1e-4, v4.4, v4.5, v4.6 and the scenario launcher) it gives
+the same margins, counts and quiescence bound as the original. It is meant for terminal domains
+whose learned state masks a different set of ports; the original file is unchanged.
