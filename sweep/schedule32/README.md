@@ -45,6 +45,7 @@ v4.4 (`terminal/initial_section_eps1e-3.json` is byte-identical to `sweep/v33_c7
 | Check | How |
 |---|---|
 | Future-wave certificate and independent check regenerated and compared | CI, `tools/check_certificates.py` |
+| Patched engine: the C7 tests and `test_calendar32.py` (96 tests) | CI, engine job `v4.5-calendar32` |
 | Terminal extraction from the outputs (byte-identical to `terminal/`) | `python3 -I sweep/v33_c7/audit_campaign_dir.py <outputs>/campaign32_eps1e-3 <dir>` |
 | Commutation kinds (14, all covered by lemma E) | `python3 -I sweep/v33_c7/audit_commutations.py <outputs>/campaign32_eps1e-3 <file>` |
 | Every output file against the manifest | `campaign/RUN_MANIFEST.json` (SHA-256 and size of all 487 files) |

@@ -8,12 +8,13 @@ on:
 
 jobs:
   engine:
-    # The published v3.3 engine (77 tests) and the v3.3 + C7 package of v4.4 (94 tests).
+    # The published v3.3 engine (77 tests), the v3.3 + C7 package of v4.4 (94 tests), and that
+    # package with the 32-pulse calendar of v4.5 applied (96 tests, including test_calendar32.py).
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        package: [v3.3, v3.3+C7]
+        package: [v3.3, v3.3+C7, v4.5-calendar32]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -28,7 +29,12 @@ jobs:
           else
             mkdir -p "$RUNNER_TEMP/c7"
             unzip -q sweep/v33_c7/A22_fresh_launch_v3_3_C7.zip -d "$RUNNER_TEMP/c7"
-            echo "PKG=$RUNNER_TEMP/c7/A22_fresh_launch_v3_3_C7" >> "$GITHUB_ENV"
+            PKG="$RUNNER_TEMP/c7/A22_fresh_launch_v3_3_C7"
+            if [ "${{ matrix.package }}" = "v4.5-calendar32" ]; then
+              patch -p1 -d "$PKG" < sweep/schedule32/calendar32.patch
+              cp sweep/schedule32/test_calendar32.py "$PKG/tests/"
+            fi
+            echo "PKG=$PKG" >> "$GITHUB_ENV"
           fi
       - name: Install the pinned dependencies
         run: python -m pip install -r "$PKG/requirements.txt"
