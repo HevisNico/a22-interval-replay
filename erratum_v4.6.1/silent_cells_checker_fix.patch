@@ -1,0 +1,56 @@
+diff --git a/proof/provenance_audit/verify_future_certificate.py b/proof/provenance_audit/verify_future_certificate.py
+index dc8bf42..1e54705 100644
+--- a/proof/provenance_audit/verify_future_certificate.py
++++ b/proof/provenance_audit/verify_future_certificate.py
+@@ -59,13 +59,22 @@ def main():
+  LM=log(B('1.25'))/B('.02')*B('1.0001');LS=3*log(B(2))/B('1.06')*B('1.0001');LE=A/B('.15')*B('1.0001')
+  assert max(LS.u,LE.u)<LM.l
+  W=(3*B('4.0004')+3*B(M.u)+1)*A+B('1.1')+B('4.5')*LM+B('2.4')*LE;assert W.u<500
++ assert len(data['cells'])==216 and len({(x['layer'],x['lane']) for x in data['cells']})==216
+  pmin=1+LN25/B('1.1');cells={(x['layer'],x['lane']):x for x in data['cells']};rows={(r['layer'],r['lane']):r for r in c['cells']}
+  prev=[B(0)]+[None]*11;quiet=D(0);minima={};active=masked_n=influential_n=0
+  for n in range(1,19):
+   cur=[]
+   for lane in range(12):
+    s=cells[n,lane];ins={p:prev[(lane+p-1)%12] for p in range(3) if prev[(lane+p-1)%12] is not None}
+-   if not ins:assert (n,lane) not in rows;cur.append(None);continue
++   # Every cell, silent or active, must satisfy the structural premises of the terminal domain
++   # (the same ones the first checker asserts); silent cells are not skipped unchecked.
++   assert s['main_phase']==0 and s['aux_phases']==[0,0,0] and s['pending']==[] and s['raw_inputs']==[None]*3
++   assert s['E']==[50,100] and all(D(g[0])>0 for g in s['g'])
++   assert all(D(m[0])<=D('.025')<=D(m[1])<1 for m in s['m'])
++   if not ins:
++    assert s['pulses']==0 and D(s['q'][0])<=D('.1')<=D(s['q'][1])<1
++    assert (n,lane) not in rows;cur.append(None);continue
++   assert s['pulses']>0
+    r=rows[n,lane];f=B(*r['fire']);active+=1
+    assert {a['port']:B(*a['arrival']).pair() for a in r['inputs']}=={p:v.pair() for p,v in ins.items()}
+    assert all(D(x)==D('.1') for x in s['q']) and all(all(D(x)==D('.025') for x in s['m'][p]) for p in ins)
+diff --git a/sweep/v23/eps_1em3/future/verify_future_certificate_eps.py b/sweep/v23/eps_1em3/future/verify_future_certificate_eps.py
+index 0329c7d..1955bc7 100644
+--- a/sweep/v23/eps_1em3/future/verify_future_certificate_eps.py
++++ b/sweep/v23/eps_1em3/future/verify_future_certificate_eps.py
+@@ -59,13 +59,22 @@ def main():
+  LM=log(B('1.25'))/B('.02')*B(UP);LS=3*log(B(2))/B('1.06')*B(UP);LE=A/B('.15')*B(UP)
+  assert max(LS.u,LE.u)<LM.l
+  W=(3*B(str(4*(1+E)))+3*B(M.u)+1)*A+B('1.1')+B('4.5')*LM+B('2.4')*LE;assert W.u<500
++ assert len(data['cells'])==216 and len({(x['layer'],x['lane']) for x in data['cells']})==216
+  pmin=1+LN25/B('1.1');cells={(x['layer'],x['lane']):x for x in data['cells']};rows={(r['layer'],r['lane']):r for r in c['cells']}
+  prev=[B(0)]+[None]*11;quiet=D(0);minima={};active=masked_n=influential_n=0
+  for n in range(1,19):
+   cur=[]
+   for lane in range(12):
+    s=cells[n,lane];ins={p:prev[(lane+p-1)%12] for p in range(3) if prev[(lane+p-1)%12] is not None}
+-   if not ins:assert (n,lane) not in rows;cur.append(None);continue
++   # Every cell, silent or active, must satisfy the structural premises of the terminal domain
++   # (the same ones the first checker asserts); silent cells are not skipped unchecked.
++   assert s['main_phase']==0 and s['aux_phases']==[0,0,0] and s['pending']==[] and s['raw_inputs']==[None]*3
++   assert s['E']==[50,100] and all(D(g[0])>0 for g in s['g'])
++   assert all(D(m[0])<=D('.025')<=D(m[1])<1 for m in s['m'])
++   if not ins:
++    assert s['pulses']==0 and D(s['q'][0])<=D('.1')<=D(s['q'][1])<1
++    assert (n,lane) not in rows;cur.append(None);continue
++   assert s['pulses']>0
+    r=rows[n,lane];f=B(*r['fire']);active+=1
+    assert {a['port']:B(*a['arrival']).pair() for a in r['inputs']}=={p:v.pair() for p,v in ins.items()}
+    assert all(D(x)==D('.1') for x in s['q']) and all(all(D(x)==D('.025') for x in s['m'][p]) for p in ins)

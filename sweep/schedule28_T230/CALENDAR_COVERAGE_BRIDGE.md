@@ -20,6 +20,8 @@ lemmas C7/C6/P, and future-invariance argument are retained unchanged under
 document supplies a proposed adaptation, subject to the same execution and
 soundness assumptions A1–A4 and to independent expert review. The full new
 campaign is not formally verified in Lean.
+Lemma E is applied with the outward widening of the corrected program
+(erratum v4.6.1, `erratum_v4.6.1/` at the root of the repository).
 
 ## Exact executable changes
 

@@ -93,6 +93,12 @@ No other step uses the value of eps.
    otherwise kappa = 1 and E1 gives the same bound. So the emitted date
    t0 + r0 + [-kappa w, 0], with r0 an enclosure of f0 - t0 from the ordinary
    root path (or the first-crossing cover of Section 8(vi)), contains F.
+   This requires the interval [-kappa w, 0] to be computed outward. Up to
+   v4.6 the program wrote I(-delta, 0) with delta = kappa w rounded upward
+   at 160 digits; the unary minus rounds to 28 digits and could move the
+   lower end inward (about 6e-30 at cell (18, 4) of the 28-pulse campaign).
+   v4.6.1 uses the exact negation and reruns the campaigns, with identical
+   results (erratum_v4.6.1/ at the root of the repository).
 
    E3 (every order is kept). _fire_root certifies Q0(t0 + hi) >= 1 with hi
    below the horizon, so the fire occurs in the window, before the next

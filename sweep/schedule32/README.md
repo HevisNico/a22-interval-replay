@@ -29,6 +29,10 @@ written out in [`CALENDAR_COVERAGE_BRIDGE.md`](CALENDAR_COVERAGE_BRIDGE.md); lik
 proof it is manual and not yet independently reviewed. The initial section at ε = 1e-3 is the one of
 v4.4 (`terminal/initial_section_eps1e-3.json` is byte-identical to `sweep/v33_c7/terminal/`).
 
+**Erratum v4.6.1.** The campaign was rerun with the corrected lemma-E widening (exact negation; see
+[`erratum_v4.6.1/`](../../erratum_v4.6.1/README.md)). Terminal bounds, the 14 commutations and both future
+certificates are identical; the records below are those of the rerun.
+
 ## What it does not say
 
 - **Not the same learned state.** The terminal box is not contained in the published Q128 domain:
@@ -45,9 +49,9 @@ v4.4 (`terminal/initial_section_eps1e-3.json` is byte-identical to `sweep/v33_c7
 | Check | How |
 |---|---|
 | Future-wave certificate and independent check regenerated and compared | CI, `tools/check_certificates.py` |
-| Patched engine: the C7 tests and `test_calendar32.py` (96 tests) | CI, engine job `v4.5-calendar32` |
-| Terminal extraction from the outputs (byte-identical to `terminal/`) | `python3 -I sweep/v33_c7/audit_campaign_dir.py <outputs>/campaign32_eps1e-3 <dir>` |
-| Commutation kinds (14, all covered by lemma E) | `python3 -I sweep/v33_c7/audit_commutations.py <outputs>/campaign32_eps1e-3 <file>` |
+| Patched engine: the C7 tests and `test_calendar32.py` (99 tests) | CI, engine job `v4.5-calendar32` |
+| Terminal extraction from the outputs (byte-identical to `terminal/`) | `python3 -I sweep/v33_c7/audit_campaign_dir.py <outputs>/campaign32_eps1e-3_fixE <dir>` |
+| Commutation kinds (14, all covered by lemma E) | `python3 -I sweep/v33_c7/audit_commutations.py <outputs>/campaign32_eps1e-3_fixE <file>` |
 | Every output file against the manifest | `campaign/RUN_MANIFEST.json` (SHA-256 and size of all 487 files) |
 
 The extraction, the commutation audit and both future checkers were rerun from the raw outputs with
@@ -56,17 +60,20 @@ outputs; they do not replay the dynamics.
 
 ## Release assets
 
-The complete delivery (campaign outputs, the executed engine with its binaries, logs and audit
-scripts) is in three archives of Release `v4.5`, to be unzipped into the same folder; their hashes
-are in [`RELEASE_ASSETS_SHA256.json`](RELEASE_ASSETS_SHA256.json).
+The complete delivery of the corrected rerun (campaign outputs in
+`A22_rerun32_fixE_results/campaign32_eps1e-3_fixE/`, engine hashes, logs including the regression test
+and the run console) is `A22_schedule32_fixE_run.zip`; its hash is in
+[`RELEASE_ASSETS_SHA256.json`](RELEASE_ASSETS_SHA256.json). It is not published; it is available on
+request. The three archives of Release `v4.5` hold the original run and do not match the committed
+records.
 
 ## Records in this folder
 
 | Path | Content |
 |---|---|
-| `campaign/campaign.json` | identity: `kernel_id` d67c8f16…, run 300ca4ad…, ε = 0.001, the 32-pulse schedule |
+| `campaign/campaign.json` | identity: `kernel_id` 03f33af9…, run 3fb88908…, ε = 0.001, the 32-pulse schedule (corrected rerun) |
 | `campaign/layer_NN/` | completion and independent re-read of each layer, per-cell rows |
 | `campaign/RUN_MANIFEST.json` | SHA-256 and size of every output file |
-| `campaign/RUN_LOG_PARTIAL.txt` | console log; it stops during layer 16, the records of layers 15–18 are complete |
+| `campaign/RUN_LOG.txt` | console log of the rerun |
 | `terminal/` | terminal extraction, commutations, Q128 comparison, future certificate and independent check, lineage and clock audit |
 | `protocol.json`, `RESULT.json` | specification and summary of the campaign |

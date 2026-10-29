@@ -5,16 +5,16 @@
   "masked_count": 15,
   "status": "PASS: future closure conditional on physical entry into the specified terminal domain",
   "scope": "Finite directed-integer inequality certificate, not a campaign replay and not an entry-soundness certificate",
-  "terminal_input_sha256": "ba3f89ea84047963c77c444452df5145161a7d3b381b3b9432455168873388eb",
+  "terminal_input_sha256": "b6b2642f985b7bc9d5c88a84c05617dec4dcba282bda32e21569e6d5fdd5118f",
   "campaign": {
     "environment": {
       "arithmetic_backend": "native",
-      "native_sha256": "29b1d226d6576e418c38d476cb050a20b37f6db67b6f70ca734423cac6985c57",
+      "native_sha256": "87a53495f570436f8fe41e58dcb6a05f0078fbb034bd01adc3f48162b6e40d02",
       "numpy": "2.3.5",
-      "python": "3.12.14",
+      "python": "3.13.17",
       "scipy": "1.17.0"
     },
-    "kernel_id": "886d1c5c26feb072dba290a3b44239faf9bed1359413089fb250d83e0f47db37",
+    "kernel_id": "b49dca10167d09511d6933d3ca1dbc50ebce16664cb872395f707ab689fa89ae",
     "parameters": {
       "epsilon_relative": "0.001",
       "initial_delta": "1e-5",
@@ -27,7 +27,7 @@
         "terminal_time": "230"
       }
     },
-    "run_id": "c6e073d7527d41f5ac665cdc12f8acb9",
+    "run_id": "25e6fa5fa78d4ed7afa804f780a0d92c",
     "schema": "A22-affine-research-campaign-1",
     "scientific_status": "experimental_not_qualified"
   },
@@ -265,12 +265,12 @@
   "global_idle_margin_before_20": "7.209317824829427912444160017286767557806409491267747885639931539382328737459633347913851004",
   "minimum_margins": {
     "before_first_error": "0.172671211763944162479352920532941103696108578921078921078921078921078921078921078921078921",
-    "ready_before_next_input": "13.034706747814412586702317628180017069525159491267747885639931539382328737459633347913851004",
-    "influential_errors_end_before_reopening": "0.54059369558133513422192888531718037846772442323082555767055775238766455580328063151810552",
-    "auxiliary_ready_before_next_same_port_input": "18.748748364000857964402075868111114960175018768768768768768768768768768768768768768768768766",
-    "masked_arrival_after_firing": "0.04894699350597875309176743030548095703125",
+    "before_first_raw_end": "0.073770496053157330607064068317413330078125",
     "all_raw_inputs_end_before_reopening": "0.099900263316728261753662237996928455402080654462056788901788983618895787034511862749336754",
-    "before_first_raw_end": "0.073770496053157330607064068317413330078125"
+    "ready_before_next_input": "13.034706747814412586702317628180017069525159491267747885639931539382328737459633347913851004",
+    "masked_arrival_after_firing": "0.04894699350597875309176743030548095703125",
+    "auxiliary_ready_before_next_same_port_input": "18.748748364000857964402075868111114960175018768768768768768768768768768768768768768768768766",
+    "influential_errors_end_before_reopening": "0.54059369558133513422192888531718037846772442323082555767055775238766455580328063151810552"
   },
   "cells": [
     {

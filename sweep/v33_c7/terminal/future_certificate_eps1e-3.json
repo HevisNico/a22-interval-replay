@@ -5,21 +5,21 @@
   "masked_count": 15,
   "status": "PASS: future closure conditional on physical entry into the specified terminal domain",
   "scope": "Finite directed-integer inequality certificate, not a campaign replay and not an entry-soundness certificate",
-  "terminal_input_sha256": "2392d3a647c089d0ccbe8841c9bf352f2611c32facfcb7ed30325eb405798910",
+  "terminal_input_sha256": "8f16fec6f22e3835d9791ec97bd08f1234ccd77065c390e106f5ecc33ec345cd",
   "campaign": {
     "environment": {
       "arithmetic_backend": "native",
-      "native_sha256": "f8745c6046e0ba84f0c8d6457d478d43bc041132ec67bb4484bb131e08f8941e",
+      "native_sha256": "87a53495f570436f8fe41e58dcb6a05f0078fbb034bd01adc3f48162b6e40d02",
       "numpy": "2.3.5",
-      "python": "3.12.3",
+      "python": "3.13.17",
       "scipy": "1.17.0"
     },
-    "kernel_id": "d8fedb8d10940585ab0ecbac53360882e98769cf4dde8d703f87319dfc8bad3d",
+    "kernel_id": "d59fe056dc0ddce2cc3c5f03bd4b04a11551ffa711a7d271aa48b95bdf829597",
     "parameters": {
       "epsilon_relative": "0.001",
       "initial_delta": "1e-5"
     },
-    "run_id": "556d92bf365c4a158023627b07c5b514",
+    "run_id": "96f175d29fe247e9be82dbce36a620b9",
     "schema": "A22-affine-research-campaign-1",
     "scientific_status": "experimental_not_qualified"
   },
@@ -257,12 +257,12 @@
   "global_idle_margin_before_20": "7.209317824829427912444160017286767557806409491267747885639931539382328737459633347913851004",
   "minimum_margins": {
     "auxiliary_ready_before_next_same_port_input": "18.748748364000857964402075868111114960175018768768768768768768768768768768768768768768768766",
-    "ready_before_next_input": "13.034706747814412586702317628180017069525159491267747885639931539382328737459633347913851004",
-    "influential_errors_end_before_reopening": "0.54059369558133513422192888531718037846772442323082555767055775238766455580328063151810552",
-    "masked_arrival_after_firing": "0.04894699350597875309176743030548095703125",
+    "all_raw_inputs_end_before_reopening": "0.099900263316728261753662237996928455402080654462056788901788983618895787034511862749336754",
     "before_first_raw_end": "0.073770496053157330607064068317413330078125",
     "before_first_error": "0.172671211763944162479352920532941103696108578921078921078921078921078921078921078921078921",
-    "all_raw_inputs_end_before_reopening": "0.099900263316728261753662237996928455402080654462056788901788983618895787034511862749336754"
+    "ready_before_next_input": "13.034706747814412586702317628180017069525159491267747885639931539382328737459633347913851004",
+    "influential_errors_end_before_reopening": "0.54059369558133513422192888531718037846772442323082555767055775238766455580328063151810552",
+    "masked_arrival_after_firing": "0.04894699350597875309176743030548095703125"
   },
   "cells": [
     {

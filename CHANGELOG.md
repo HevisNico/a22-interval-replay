@@ -187,3 +187,22 @@ future-wave checkers pass on the terminal domain Q28 with the same smallest marg
 ([`sweep/schedule28_T230/`](sweep/schedule28_T230/README.md)). The CI runs the patched engine and
 regenerates the future certificate; the v4.5 calendar is now tested by CI as well, and its campaign
 records are published. Outputs, executed engine and audit scripts are assets of Release `v4.6`.
+
+## v4.6.1: erratum, lemma-E widening and silent cells
+
+- **Outward widening.** `affine/commutation.py` computed the lemma-E interval as `I(-delta, D(0))`; the
+  unary minus rounds a 160-digit δ to 28 digits and could move the lower end inward (6.2e-30 at cell
+  (18, 4), batch 89, of the 28-pulse campaign). It now uses `delta.copy_negate()`, which is exact.
+  Regression test `tests/test_commutation_rounding.py` on the archived δ of (18, 4): FAIL on the program
+  as run in v4.4 to v4.6, OK on the corrected one (outputs kept in [`erratum_v4.6.1/`](erratum_v4.6.1/README.md)).
+- **Reruns.** The campaigns of `sweep/v33_c7/` (128 pulses), `sweep/schedule32/` and
+  `sweep/schedule28_T230/` were rerun from scratch with the corrected program. Terminal bounds,
+  commutations (206, 14, 6), Q28 and both future certificates are identical; `kernel_id`, `run_id` and
+  the payload hashes changed. Records, `RESULT.json` and archive hashes are those of the reruns. The
+  28-pulse outputs are the release assets of a22-28-pulses; the 128- and 32-pulse outputs are not
+  published. Tests: 97, 99 and 101.
+- **Second future checker.** It skipped cells without inputs; it now checks the structural premises
+  of every cell, the rest state of silent cells and the count of 216 distinct cells. Outputs unchanged
+  on the five published domains.
+- `sweep/v33_c7/verify_release.py` finds the rounding binary whatever the CPython tag.
+- The v3.3 program of `engine/` is unchanged: its campaign records only zero widenings.

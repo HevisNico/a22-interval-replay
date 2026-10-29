@@ -135,4 +135,6 @@ SUMMARY OF WHAT THE EXTENSION ADDS
 Two lemmas (C7, C6) and one remark (P), all about steps where v3.3 would
 refuse. No event order, branch, join, ledger or deposit rule changes. The
 execution assumptions A1-A4 apply to the v3.3 + C7 program and its build,
-as recorded in campaign/campaign.json (kernel_id d8fedb8d...).
+as recorded in campaign/campaign.json (kernel_id d8fedb8d... for the run of
+v4.4; d59fe056... for the rerun of v4.6.1 with the corrected lemma-E
+widening, see erratum_v4.6.1/; C7, C6 and P are unchanged).

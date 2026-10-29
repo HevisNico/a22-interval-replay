@@ -1,0 +1,11 @@
+--- a/affine/commutation.py (v3.3 and v4.4 to v4.6)
++++ b/affine/commutation.py (v4.6.1)
+@@ -225,7 +225,7 @@
+             ga = iv.UP.multiply(gains, b.A.hi)
+             kappa = min(D(1), iv.UP.divide(ga, iv.DOWN.add(sigma, ga)))
+     delta = iv.UP.multiply(kappa, w)
+-    rho = r0 + I(-delta, D(0)) if delta > 0 else r0
++    rho = r0 + I(delta.copy_negate(), D(0)) if delta > 0 else r0
+     fire = b.shift(t0, rho, f'{cell}:{count}:commuted-fire')
+     upper = max([fire.box().hi] + [tt.box().hi for tt, _ in group])
+     if not upper < D(next_lo):

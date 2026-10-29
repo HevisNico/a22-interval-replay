@@ -61,7 +61,8 @@ The proposed transfer is as follows.
    parameter definitions are loaded from authenticated parent results.
 5. The actually used macro kinds and counts must be read from `terminal32/`.
    Commutations involving arrivals use Lemma E of the general-epsilon
-   addendum, rather than only the initial text's `mark_off` specialization.
+   addendum, rather than only the initial text's `mark_off` specialization,
+   with the outward widening of the corrected program (erratum v4.6.1).
    The passive audit checks lineage and global equality of retained time-atom
    definitions; it does not replace the local physical soundness argument.
 

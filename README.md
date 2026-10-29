@@ -127,10 +127,11 @@ C7 bounds the READY charge with the kernel's own monotone peak bound where v3.3 
 piecewise version of the same bound; P establishes the root-bracket slope on a partition, without
 changing the acceptance predicate. Lemma E is not a program change: at ±1e-3 the existing commutation
 macro also handles input arrivals, which the v3.3 proof did not need, and lemma E proves that case.
-The full outputs and the engine as run are assets of
-[Release v4.4](https://github.com/HevisNico/a22-interval-replay/releases/tag/v4.4), and one command
-checks everything, including the initial section and the commutations:
-`python3 -I sweep/v33_c7/verify_release.py <assets folder> --strict`.
+The committed records are those of the corrected rerun (erratum below); its full outputs are not
+published (archive hashes in `sweep/v33_c7/RELEASE_ASSETS_SHA256.json`, archives on request), and
+[Release v4.4](https://github.com/HevisNico/a22-interval-replay/releases/tag/v4.4) holds the outputs of
+the original run. Given the archives, one command checks everything, including the initial section and
+the commutations: `python3 -I sweep/v33_c7/verify_release.py <assets folder> --strict`.
 
 A newer engine, the scenario launcher v2.3.1 ([`sweep/v23/`](sweep/v23/README.md)), reaches the same
 chain at ±1e-3 by another route, and goes further on wider boxes (at least 16 layers at ±3e-3, 9 at
@@ -153,6 +154,16 @@ both future-wave checkers prove exact transmission of every admissible pulse wor
 ([`sweep/schedule28_T230/`](sweep/schedule28_T230/README.md)). Training and settling together take about
 a fifth of the original horizon. The schedule came from a sampled point-simulation sweep; it is not
 shown to be minimal.
+
+## v4.6.1: erratum, outward rounding of the lemma-E widening
+
+The program of v4.4 to v4.6 computed the lemma-E widening `[−δ, 0]` with a unary minus that rounds to
+28 digits, so the lower end could move inward (by about 6e-30 at cell (18, 4) of the 28-pulse campaign).
+It now uses the exact negation, with a regression test on that case that fails on the old program and
+passes on the new one. The 128-, 32- and 28-pulse campaigns were rerun with the corrected program:
+every terminal bound, every commutation, Q28 and both future certificates are identical; only the
+identity hashes changed. The second future checker now also checks the silent cells. Details: [`erratum_v4.6.1/`](erratum_v4.6.1/README.md).
+The v3.3 program of `engine/` is unchanged: its campaign records only zero widenings.
 
 ## Origin of the model
 

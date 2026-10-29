@@ -33,6 +33,12 @@ argument is written out in [`CALENDAR_COVERAGE_BRIDGE.md`](CALENDAR_COVERAGE_BRI
 the proof it is manual and not yet independently reviewed. The initial section at ε = 1e-3 is the one of
 v4.4 (`terminal/initial_section_eps1e-3.json` is byte-identical to `sweep/v33_c7/terminal/`).
 
+**Erratum v4.6.1.** The campaign was rerun with the corrected lemma-E widening (exact negation; the
+case found was cell (18, 4) of this campaign; see [`erratum_v4.6.1/`](../../erratum_v4.6.1/README.md)).
+Terminal bounds, the 6 commutations, Q28 and both future certificates are identical; the records below
+are those of the rerun. The 28-pulse result now has its own repository,
+[a22-28-pulses](https://github.com/HevisNico/a22-28-pulses).
+
 ## What it does not say
 
 - **Not the same learned state.** The future theorem holds for Q28, built from this campaign's own
@@ -47,7 +53,7 @@ v4.4 (`terminal/initial_section_eps1e-3.json` is byte-identical to `sweep/v33_c7
 
 | Check | How |
 |---|---|
-| Patched engine: the C7 tests and `test_calendar28.py` (98 tests) | CI, engine job `v4.6-calendar28` |
+| Patched engine: the C7 tests and `test_calendar28.py` (101 tests) | CI, engine job `v4.6-calendar28` |
 | Future-wave certificate and independent check regenerated and compared | CI, `tools/check_certificates.py` |
 | Terminal extraction from the outputs (byte-identical to `terminal/`) | the extractor of `sweep/v33_c7/audit_campaign_dir.py` with 1116 replaced by 230 |
 | Commutation kinds (6, all covered by lemma E) | `python3 -I sweep/v33_c7/audit_commutations.py <outputs>/campaign28_T230_eps1e-3 <file>` |
@@ -61,17 +67,18 @@ outputs; they do not replay the dynamics.
 
 ## Release assets
 
-The complete delivery (campaign outputs, the executed engine with its binaries, logs and audit scripts)
-is in three archives of Release `v4.6`, to be unzipped into the same folder; their hashes are in
-[`RELEASE_ASSETS_SHA256.json`](RELEASE_ASSETS_SHA256.json).
+The corrected rerun is in the two release archives of [a22-28-pulses](https://github.com/HevisNico/a22-28-pulses) (the campaign outputs
+`campaign28_T230_eps1e-3/`, and the engine exactly as run with its binaries); their hashes are in
+[`RELEASE_ASSETS_SHA256.json`](RELEASE_ASSETS_SHA256.json). The three archives of Release `v4.6` hold
+the original run.
 
 ## Records in this folder
 
 | Path | Content |
 |---|---|
-| `campaign/campaign.json` | identity: `kernel_id` 886d1c5c…, run c6e073d7…, ε = 0.001, 28 pulses, T = 230 |
+| `campaign/campaign.json` | identity: `kernel_id` b49dca10…, run 25e6fa5f…, ε = 0.001, 28 pulses, T = 230 (corrected rerun) |
 | `campaign/layer_NN/` | completion and independent re-read of each layer, per-cell rows |
 | `campaign/RUN_MANIFEST.json` | SHA-256 and size of every output file |
-| `campaign/RUN_LOG.txt` | console log |
+| `campaign/RUN_LOG.txt` | console log of the rerun |
 | `terminal/` | terminal extraction, layer audit, commutations, future certificate and independent check, Q28, lineage and clock audit |
 | `protocol.json`, `RESULT.json` | specification and summary of the campaign |

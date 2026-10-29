@@ -3,17 +3,17 @@
   "campaign": {
     "environment": {
       "arithmetic_backend": "native",
-      "native_sha256": "f8745c6046e0ba84f0c8d6457d478d43bc041132ec67bb4484bb131e08f8941e",
+      "native_sha256": "87a53495f570436f8fe41e58dcb6a05f0078fbb034bd01adc3f48162b6e40d02",
       "numpy": "2.3.5",
-      "python": "3.12.3",
+      "python": "3.13.17",
       "scipy": "1.17.0"
     },
-    "kernel_id": "d8fedb8d10940585ab0ecbac53360882e98769cf4dde8d703f87319dfc8bad3d",
+    "kernel_id": "d59fe056dc0ddce2cc3c5f03bd4b04a11551ffa711a7d271aa48b95bdf829597",
     "parameters": {
       "epsilon_relative": "0.001",
       "initial_delta": "1e-5"
     },
-    "run_id": "556d92bf365c4a158023627b07c5b514",
+    "run_id": "96f175d29fe247e9be82dbce36a620b9",
     "schema": "A22-affine-research-campaign-1",
     "scientific_status": "experimental_not_qualified"
   },

@@ -4,12 +4,12 @@
   "campaign": {
     "environment": {
       "arithmetic_backend": "native",
-      "native_sha256": "29b1d226d6576e418c38d476cb050a20b37f6db67b6f70ca734423cac6985c57",
+      "native_sha256": "87a53495f570436f8fe41e58dcb6a05f0078fbb034bd01adc3f48162b6e40d02",
       "numpy": "2.3.5",
-      "python": "3.12.14",
+      "python": "3.13.17",
       "scipy": "1.17.0"
     },
-    "kernel_id": "886d1c5c26feb072dba290a3b44239faf9bed1359413089fb250d83e0f47db37",
+    "kernel_id": "b49dca10167d09511d6933d3ca1dbc50ebce16664cb872395f707ab689fa89ae",
     "parameters": {
       "epsilon_relative": "0.001",
       "initial_delta": "1e-5",
@@ -22,12 +22,12 @@
         "terminal_time": "230"
       }
     },
-    "run_id": "c6e073d7527d41f5ac665cdc12f8acb9",
+    "run_id": "25e6fa5fa78d4ed7afa804f780a0d92c",
     "schema": "A22-affine-research-campaign-1",
     "scientific_status": "experimental_not_qualified"
   },
-  "terminal_input_sha256": "ba3f89ea84047963c77c444452df5145161a7d3b381b3b9432455168873388eb",
-  "future_certificate_sha256": "be1794540859d650f0e1a5da590737ef2983e01e97392992dac53e5f67e52086",
+  "terminal_input_sha256": "b6b2642f985b7bc9d5c88a84c05617dec4dcba282bda32e21569e6d5fdd5118f",
+  "future_certificate_sha256": "0a4d28081dba894beb368fd6a679ec34ed75f007ae11c1681f54c8d53250e762",
   "port_counts": {
     "influential": 525,
     "masked": 15,
