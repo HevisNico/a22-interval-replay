@@ -1,0 +1,63 @@
+{
+  "name": "Training schedule search with a bounded meta-selection step",
+  "campaign": "Certification of a 32-pulse training schedule",
+  "upstream_repository": "https://github.com/HevisNico/a22-interval-replay",
+  "upstream_commit": "d413423d65d45fc98c6f67f1e63af43ca983edc0",
+  "upstream_source_zip_git_blob": "9f44aa482502a376b5a78b4d4bd62d2ec4392da5",
+  "network": {
+    "layers": 18,
+    "lanes": 12,
+    "cells": 216
+  },
+  "calendar": {
+    "source_lane": 0,
+    "times": [
+      0,
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      96,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152,
+      160,
+      168,
+      176,
+      184,
+      192,
+      200,
+      208,
+      216,
+      224,
+      232,
+      240,
+      248
+    ],
+    "last_source_time": 248,
+    "terminal_time": 1116
+  },
+  "physical_epsilon_relative": "1e-3",
+  "initial_delta": "1e-5",
+  "scope": "Whole original independent physical parameter box and original initial family; no sampling; engine acceptance conditional on the manual soundness argument.",
+  "acceptance_obligations": [
+    "All 216 cells and 18 fresh layer verifications complete with authenticated common parent histories.",
+    "Exact terminal extraction and quiescence at 1116.",
+    "Comparison against original Q128 (do not silently rename a new domain).",
+    "Fresh future closure certificate on Q32, if needed, and independent checker.",
+    "Source-level coverage bridge from 128 to finite 32-pulse prefix and all actually used macros."
+  ],
+  "future_source_minimum_gap": "20",
+  "manual_proof_status": "Adaptation to be assessed; no Lean verification of the full new campaign; independent expert review pending."
+}

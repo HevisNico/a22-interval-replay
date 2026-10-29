@@ -1,0 +1,40 @@
+{
+  "name": "Training schedule search with a bounded meta-selection step",
+  "experiment": "Certification of a 32-pulse training schedule",
+  "campaign": {
+    "environment": {
+      "arithmetic_backend": "native",
+      "native_sha256": "29b1d226d6576e418c38d476cb050a20b37f6db67b6f70ca734423cac6985c57",
+      "numpy": "2.3.5",
+      "python": "3.12.14",
+      "scipy": "1.17.0"
+    },
+    "kernel_id": "d67c8f1623e20f36869bf3a39a8a56c6c6ec814ffb3f730ed5198350b860c7f3",
+    "parameters": {
+      "epsilon_relative": "0.001",
+      "initial_delta": "1e-5",
+      "training_calendar": {
+        "count": 32,
+        "first": "0",
+        "gap": "8",
+        "last": "248",
+        "source_lane": 0,
+        "terminal_time": "1116"
+      }
+    },
+    "run_id": "300ca4ad687f4e26b2962dea1a7dd096",
+    "schema": "A22-affine-research-campaign-1",
+    "scientific_status": "experimental_not_qualified"
+  },
+  "completed_cells": 216,
+  "active_cells": 191,
+  "inactive_cells": 25,
+  "total_training_emissions": 2966,
+  "original_Q128_inclusion": "INCLUSION_NOT_ESTABLISHED",
+  "original_Q128_failed_bounds": 11,
+  "future_domain": "Q32",
+  "future_integer_status": "PASS: future closure conditional on physical entry into the specified terminal domain",
+  "future_independent_status": "PASS",
+  "all_audit_processes_succeeded": true,
+  "qualification": "Manual proof adaptation supplied, subject to its trust assumptions and independent review; no full Lean certification."
+}

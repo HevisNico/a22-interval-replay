@@ -115,6 +115,14 @@ chain at ±1e-3 by another route, and goes further on wider boxes (at least 16 l
 ±1e-2). Its coverage would need ten lemmas
 ([`LEMMAS_EN.md`](sweep/v23/proof_extension/LEMMAS_EN.md)).
 
+## v4.5: a quarter of the training, same guarantee (±1e-3)
+
+Training with **32 source pulses** instead of 128 (times 0, 8, …, 248), with the same program except
+the source schedule, is enclosed through all 18 layers on the ±1e-3 box. At T = 1116 the network is
+in a domain Q32 from which both future-wave checkers prove exact transmission of every admissible
+pulse word ([`sweep/schedule32/`](sweep/schedule32/README.md)). Q32 is not the 128-pulse domain:
+the learned state differs, the guarantee is the same.
+
 ## Origin of the model
 
 The physical kernel of A22 is inspired by the **Reset Operator** of Nicolas Breuillaud (*The Reset
