@@ -1,5 +1,10 @@
 # A22 — enclosing every learning trajectory of a 216-cell spiking network, with a manual proof
 
+> **The current result now has its own repository: [a22-28-pulses](https://github.com/HevisNico/a22-28-pulses).**
+> 28 training pulses, ±0.1 % on the physical constants, guarantee from t = 230, with the engine that ran,
+> the campaign, the terminal domain, every proof document and a single verification command.
+> This repository keeps the development history (v3.2 to v4.6, depth, box-width sweeps).
+
 **Contribution.** This repository contains a computer-assisted enclosure of **all admissible
 trajectories** of a learning spiking network during its full training transient, together with
 a written proof that the computation covers them and that the learned state is then **invariant for
