@@ -1,7 +1,7 @@
 # A22 — enclosing every learning trajectory of a 216-cell spiking network, with a manual proof
 
 **Contribution.** This repository contains a computer-assisted enclosure of **all admissible
-trajectories** of a learning spiking network during its full 128-pulse training transient, together with
+trajectories** of a learning spiking network during its full training transient, together with
 a written proof that the computation covers them and that the learned state is then **invariant for
 every admissible future input**. The network has 216 coupled hybrid cells (18 layers × 12 lanes) with:
 - uncertain physical parameters (±1e-4 relative), **independent for each input port of each cell**;
@@ -9,8 +9,9 @@ every admissible future input**. The network has 216 coupled hybrid cells (18 la
 - evolving learned gains and a recovery actuator;
 - threshold crossings, and events whose order may vary.
 
-**The result**, for every fixed device in the parameter box and every admissible initial state (proof in
-[`proof/`](proof/), under the execution assumptions A1–A4 stated there):
+**The result**, stated here for the first complete version (v3.3: box ±1e-4, 128 training pulses), for
+every fixed device in the parameter box and every admissible initial state (proof in [`proof/`](proof/),
+under the execution assumptions A1–A4 stated there):
 
 1. **Training.** After the 128 training pulses (times 8k, horizon 1116), the network is in an explicit
    quiescent domain Q. The learned gains are determined to within ±2.4 % in the worst cell, and the
@@ -21,6 +22,19 @@ every admissible future input**. The network has 216 coupled hybrid cells (18 la
 3. **Exact transmission.** Each active cell answers with a fixed latency, so the intervals between
    pulses are transmitted **exactly** through all 18 layers. The latencies depend on the device and on
    the learned gains; they are not claimed to be equal across devices.
+
+**Later versions keep the same three conclusions** on a box ten times wider and with much shorter
+training:
+
+| Version | Physical box | Training pulses | Guarantee holds from | Terminal domain |
+|---|---|---|---|---|
+| v3.3 | ±1e-4 | 128 (0, 8, …, 1016) | t = 1116 | Q |
+| v4.4 ([`sweep/v33_c7/`](sweep/v33_c7/README.md)) | ±1e-3 | 128 | t = 1116 | Q at ±1e-3 |
+| v4.5 ([`sweep/schedule32/`](sweep/schedule32/README.md)) | ±1e-3 | 32 (0, 8, …, 248) | t = 1116 | Q32 |
+| **v4.6** ([`sweep/schedule28_T230/`](sweep/schedule28_T230/README.md)) | **±1e-3** | **28 (0, 8, …, 216)** | **t = 230** | Q28 |
+
+Each terminal domain is built from its own campaign; the learned states differ, the guarantee is the
+same. The precision figures below are those of v3.3.
 
 So in this realization, local learning rules install, for every device in the box, a regime that
 transmits temporal patterns exactly. The box is much smaller than the variability of real
@@ -83,6 +97,9 @@ Later releases extend the result; each is described in [`CHANGELOG.md`](CHANGELO
 - **Box width** ([`sweep/`](sweep/README.md)). Research campaigns cover all 18 layers at ±3e-4; with the
   newer scenario engine ([`sweep/v23/`](sweep/v23/README.md)), all 18 at ±1e-3, at least 16 at ±3e-3 and 9
   at ±1e-2. With three added lemmas (C7, C6, E) the proof extends to ±1e-3 (v4.4 section below).
+- **Shorter training** (v4.5, v4.6, sections below). At ±1e-3, 32 and then 28 source pulses suffice, and
+  with 28 the guarantee already holds at t = 230; the schedules come from point-simulation sweeps and
+  are not shown to be minimal.
 
 To check the depth release assets, run `python3 -I tools/verify_depth_assets.py <assets folder>`.
 
