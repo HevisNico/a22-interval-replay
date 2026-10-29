@@ -9,12 +9,13 @@ on:
 jobs:
   engine:
     # The published v3.3 engine (77 tests), the v3.3 + C7 package of v4.4 (94 tests), and that
-    # package with the 32-pulse calendar of v4.5 applied (96 tests, including test_calendar32.py).
+    # package with the 32-pulse calendar of v4.5 applied (96 tests, including test_calendar32.py),
+    # and with the 28-pulse, T = 230 calendar of v4.6 applied (98 tests, including test_calendar28.py).
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        package: [v3.3, v3.3+C7, v4.5-calendar32]
+        package: [v3.3, v3.3+C7, v4.5-calendar32, v4.6-calendar28]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -33,6 +34,9 @@ jobs:
             if [ "${{ matrix.package }}" = "v4.5-calendar32" ]; then
               patch -p1 -d "$PKG" < sweep/schedule32/calendar32.patch
               cp sweep/schedule32/test_calendar32.py "$PKG/tests/"
+            elif [ "${{ matrix.package }}" = "v4.6-calendar28" ]; then
+              patch -p1 -d "$PKG" < sweep/schedule28_T230/calendar28_T230.patch
+              cp sweep/schedule28_T230/test_calendar28.py "$PKG/tests/"
             fi
             echo "PKG=$PKG" >> "$GITHUB_ENV"
           fi

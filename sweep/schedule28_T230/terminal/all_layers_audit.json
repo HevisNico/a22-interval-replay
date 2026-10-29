@@ -1,0 +1,1555 @@
+{
+  "scope": "All stored payloads and exact terminal states of one campaign directory; no engine execution and no physical soundness qualification",
+  "campaign": {
+    "environment": {
+      "arithmetic_backend": "native",
+      "native_sha256": "29b1d226d6576e418c38d476cb050a20b37f6db67b6f70ca734423cac6985c57",
+      "numpy": "2.3.5",
+      "python": "3.12.14",
+      "scipy": "1.17.0"
+    },
+    "kernel_id": "886d1c5c26feb072dba290a3b44239faf9bed1359413089fb250d83e0f47db37",
+    "parameters": {
+      "epsilon_relative": "0.001",
+      "initial_delta": "1e-5",
+      "training_calendar": {
+        "count": 28,
+        "first": "0",
+        "gap": "8",
+        "last": "216",
+        "source_lane": 0,
+        "terminal_time": "230"
+      }
+    },
+    "run_id": "c6e073d7527d41f5ac665cdc12f8acb9",
+    "schema": "A22-affine-research-campaign-1",
+    "scientific_status": "experimental_not_qualified"
+  },
+  "checks": [
+    {
+      "layer": 1,
+      "lane": 0,
+      "nodes": 605,
+      "bytes": 729228,
+      "sha256": "1ab8bc854d10bb9595fee2737c0d2faccb7b52d2645beda1b1503a25aed7f1b4"
+    },
+    {
+      "layer": 1,
+      "lane": 1,
+      "nodes": 582,
+      "bytes": 656165,
+      "sha256": "519b854fb1514554f4500e4f4408733fecea776d1bbae207f3d45f45dc02aa00"
+    },
+    {
+      "layer": 1,
+      "lane": 2,
+      "nodes": 168,
+      "bytes": 9588,
+      "sha256": "764b1b10fb21dccbd393f2ea2271406ab462133bae59f1af4e1e6f7de86e50be"
+    },
+    {
+      "layer": 1,
+      "lane": 3,
+      "nodes": 168,
+      "bytes": 9588,
+      "sha256": "39a9bb342f11421a19770448a4b2fdfd14058c86954501807f49aead6ceae8f9"
+    },
+    {
+      "layer": 1,
+      "lane": 4,
+      "nodes": 168,
+      "bytes": 9588,
+      "sha256": "4de405c7ffd6842bca419237cc330eebee04dc40ed8066de2620780659bbb829"
+    },
+    {
+      "layer": 1,
+      "lane": 5,
+      "nodes": 168,
+      "bytes": 9588,
+      "sha256": "e0ad80cfd33fe9e4609bb563a9c0034e4f08653c261a18eba8dfee6e02409706"
+    },
+    {
+      "layer": 1,
+      "lane": 6,
+      "nodes": 167,
+      "bytes": 9575,
+      "sha256": "398a69b8a4088744fd6ce7aef675640a119395008dd681bc4d86706056c3734c"
+    },
+    {
+      "layer": 1,
+      "lane": 7,
+      "nodes": 168,
+      "bytes": 9588,
+      "sha256": "8f27cb9d6f9bbff961fc3bc5b9c824ab98abfc9380a9c879109ca0d63e5b5534"
+    },
+    {
+      "layer": 1,
+      "lane": 8,
+      "nodes": 168,
+      "bytes": 9588,
+      "sha256": "9d01f655a0a0a9898212b18a7e51be57c5b37bd87b8934eef0247024562873b0"
+    },
+    {
+      "layer": 1,
+      "lane": 9,
+      "nodes": 168,
+      "bytes": 9588,
+      "sha256": "a6e4247ae189d901997e2f09d37991437fe949787d3a90497e9915436a7e2479"
+    },
+    {
+      "layer": 1,
+      "lane": 10,
+      "nodes": 168,
+      "bytes": 9597,
+      "sha256": "15b0326c68b1aa6adfed70f0e1700206a647770d25fe7875d8658476c91795d8"
+    },
+    {
+      "layer": 1,
+      "lane": 11,
+      "nodes": 583,
+      "bytes": 664564,
+      "sha256": "9c2a9f200f85df286a573c0731da9b09911b327a59a648c1ffc36fcc194b8ff3"
+    },
+    {
+      "layer": 2,
+      "lane": 0,
+      "nodes": 568,
+      "bytes": 1179309,
+      "sha256": "a765ad04e92c108a2a5cb93d1c629baa1ae08a43d0bba7c5c72f4f9dbefdd68f"
+    },
+    {
+      "layer": 2,
+      "lane": 1,
+      "nodes": 792,
+      "bytes": 1356851,
+      "sha256": "98db30a207108ca9e2e7fdcabd0a45c1c43fadc980334990ec46fa3a0e1438a2"
+    },
+    {
+      "layer": 2,
+      "lane": 2,
+      "nodes": 686,
+      "bytes": 1074972,
+      "sha256": "79a9f8c4bfcaa1d0cf082479ae97c3cd962d77c6df35d77de0e0d9d4ac5fe73f"
+    },
+    {
+      "layer": 2,
+      "lane": 3,
+      "nodes": 182,
+      "bytes": 10601,
+      "sha256": "d0e7d4848fab7a5f0f1bb5e256f6ca9aec77215251c7fd33d9a4c5c2af4c2a49"
+    },
+    {
+      "layer": 2,
+      "lane": 4,
+      "nodes": 182,
+      "bytes": 10601,
+      "sha256": "74b554d4a5c5e7d6f9118b0218291d1e5e5d77f78ffd3a1c7d035ae37c0fd6a9"
+    },
+    {
+      "layer": 2,
+      "lane": 5,
+      "nodes": 182,
+      "bytes": 10601,
+      "sha256": "788ffccdf86bd9017acd2087cc6e616918529f1f0383925188a6ef0ce77ca4ed"
+    },
+    {
+      "layer": 2,
+      "lane": 6,
+      "nodes": 181,
+      "bytes": 10588,
+      "sha256": "bf58a2c85eca1fc6e76d45388a3e9cbcf37e7e11ec8a8c18a4a7ef2afea23751"
+    },
+    {
+      "layer": 2,
+      "lane": 7,
+      "nodes": 182,
+      "bytes": 10601,
+      "sha256": "49ac5cbe04693317a1b35528073b590cd629746d8b00091a62ee29703fb1e5d2"
+    },
+    {
+      "layer": 2,
+      "lane": 8,
+      "nodes": 182,
+      "bytes": 10601,
+      "sha256": "50d5b7f163e2b60250736877eed7ce2febc95479bd78adcea397a3ada52b50f8"
+    },
+    {
+      "layer": 2,
+      "lane": 9,
+      "nodes": 182,
+      "bytes": 10601,
+      "sha256": "95ab667191243c61716598286870ac5c294b163fac76e74f151a025ec2136772"
+    },
+    {
+      "layer": 2,
+      "lane": 10,
+      "nodes": 687,
+      "bytes": 1088971,
+      "sha256": "df0cc7a0d3d14f667d507cacc803576250b61c267273d8711e33c5cf4dbbc1af"
+    },
+    {
+      "layer": 2,
+      "lane": 11,
+      "nodes": 793,
+      "bytes": 1371327,
+      "sha256": "6508433ceb2d671a61b252593fd23721815c8189c32377e36a32961b8af9b4de"
+    },
+    {
+      "layer": 3,
+      "lane": 0,
+      "nodes": 585,
+      "bytes": 1257991,
+      "sha256": "dbefc733642cdb6fcca2d0fc279e3cda5739af4ddff831bc2a69427297524ba9"
+    },
+    {
+      "layer": 3,
+      "lane": 1,
+      "nodes": 970,
+      "bytes": 2037067,
+      "sha256": "e61f323e77017973e5bfd5a170645a4d225cc3af8125f34096af9bb7eb9bb5e0"
+    },
+    {
+      "layer": 3,
+      "lane": 2,
+      "nodes": 857,
+      "bytes": 1656510,
+      "sha256": "44666e702ad23cba985a623d4dd30d5add72a6b4e572575e4269d1dc41f7e121"
+    },
+    {
+      "layer": 3,
+      "lane": 3,
+      "nodes": 719,
+      "bytes": 1278467,
+      "sha256": "5ed25c2c380cf8a981e449e00fe0e6cb7ae5c5f71498e472c410dec9d74a8320"
+    },
+    {
+      "layer": 3,
+      "lane": 4,
+      "nodes": 182,
+      "bytes": 10601,
+      "sha256": "2d0cb3cfe532735dd1793c67df41b2cdd1e23ffc5f9ffeb0e97c8e7a8db16d22"
+    },
+    {
+      "layer": 3,
+      "lane": 5,
+      "nodes": 182,
+      "bytes": 10601,
+      "sha256": "a686e399c8a58cfa6c0a2057ec0855d09cd60086d2c001d0a3fd473dd76e4011"
+    },
+    {
+      "layer": 3,
+      "lane": 6,
+      "nodes": 181,
+      "bytes": 10588,
+      "sha256": "d802f29756b16353f15dd6d5fdf7751e03874395fef94890ceac3a24615811a0"
+    },
+    {
+      "layer": 3,
+      "lane": 7,
+      "nodes": 182,
+      "bytes": 10601,
+      "sha256": "47d2ffb404b436e34b02b178b475dd12a283dfa824829ded338717284354b6e4"
+    },
+    {
+      "layer": 3,
+      "lane": 8,
+      "nodes": 182,
+      "bytes": 10601,
+      "sha256": "3d24eaca67dc25478cc4c7b57c4cfd02271ce2537032c41069eeb8a3ea7934ac"
+    },
+    {
+      "layer": 3,
+      "lane": 9,
+      "nodes": 720,
+      "bytes": 1294433,
+      "sha256": "70bc115d2da3982574dab042bd2a59600d65b2a9e4ab04e9fb803738b164901f"
+    },
+    {
+      "layer": 3,
+      "lane": 10,
+      "nodes": 857,
+      "bytes": 1675199,
+      "sha256": "6a6962ad741216d5f9f23a41727c838723ea691501bb8dfd49375f9ee59c7bf6"
+    },
+    {
+      "layer": 3,
+      "lane": 11,
+      "nodes": 972,
+      "bytes": 2052252,
+      "sha256": "ea63423113e4731e65e51ee5c5828eb19c9811ca58294874a9cf3500da662340"
+    },
+    {
+      "layer": 4,
+      "lane": 0,
+      "nodes": 714,
+      "bytes": 1714882,
+      "sha256": "ea3004687be274221db349696b531c10869d9694932154ad232ac53934f16947"
+    },
+    {
+      "layer": 4,
+      "lane": 1,
+      "nodes": 1035,
+      "bytes": 2270974,
+      "sha256": "802ad576d2f313ec9a722a2f5934641dd9c7b0bd71f1e1df1b72a77e6ebb0172"
+    },
+    {
+      "layer": 4,
+      "lane": 2,
+      "nodes": 1029,
+      "bytes": 2190400,
+      "sha256": "f79dfdcc8ed280132ec3f36ec404d3593f1fb629f571550df9ef3d8f02c1ce4e"
+    },
+    {
+      "layer": 4,
+      "lane": 3,
+      "nodes": 873,
+      "bytes": 1718546,
+      "sha256": "9a8129ef48f00220b4f22bfbf8e439f5ced35774b4a4812eceb368612ffd0da9"
+    },
+    {
+      "layer": 4,
+      "lane": 4,
+      "nodes": 700,
+      "bytes": 1263048,
+      "sha256": "0d8b35d911e009c8e34a979350b9266ad2baff4b758cf4f53e40463e6e797f53"
+    },
+    {
+      "layer": 4,
+      "lane": 5,
+      "nodes": 182,
+      "bytes": 10601,
+      "sha256": "b8ad7fb07095faee7a891ece3b0339bdf4518f03218be8a97f1e302549bd29ee"
+    },
+    {
+      "layer": 4,
+      "lane": 6,
+      "nodes": 181,
+      "bytes": 10588,
+      "sha256": "94adc67cd84619e15f47d2712bfa845449e783d1ab5a5b150e854ab30243c611"
+    },
+    {
+      "layer": 4,
+      "lane": 7,
+      "nodes": 182,
+      "bytes": 10601,
+      "sha256": "4904bf57dbd02898016ebeab7b1584dd7423afc8eadb5a2297fe14f096196601"
+    },
+    {
+      "layer": 4,
+      "lane": 8,
+      "nodes": 701,
+      "bytes": 1278115,
+      "sha256": "87e0ffafd3da816b89ec66ac6b635a68aaeb94f6fd73fc1f9d462af263213d0c"
+    },
+    {
+      "layer": 4,
+      "lane": 9,
+      "nodes": 874,
+      "bytes": 1737769,
+      "sha256": "5f150f6119be88ddf61e97f3bbaac155fcace601442216036eb76f21f74a3511"
+    },
+    {
+      "layer": 4,
+      "lane": 10,
+      "nodes": 1032,
+      "bytes": 2210763,
+      "sha256": "35792f7aa6aae0f199461280542152ffb965d98c49c377a308f0e5f4c8769718"
+    },
+    {
+      "layer": 4,
+      "lane": 11,
+      "nodes": 1036,
+      "bytes": 2288956,
+      "sha256": "cdd4703b4df832b105c4ec2935396cc3a83310d18ab393edc821738a39b034dc"
+    },
+    {
+      "layer": 5,
+      "lane": 0,
+      "nodes": 605,
+      "bytes": 1320409,
+      "sha256": "1f0ee40b7489ad476ca8b1ccd2fd5cd9131146d0b85eebff3236cf770365604f"
+    },
+    {
+      "layer": 5,
+      "lane": 1,
+      "nodes": 1198,
+      "bytes": 2752834,
+      "sha256": "5bce8654648ac23d3f16597de05fdc989a33b05def076ac7fb71e911e6577701"
+    },
+    {
+      "layer": 5,
+      "lane": 2,
+      "nodes": 1154,
+      "bytes": 2547983,
+      "sha256": "079f4831cb56db152e9b26c8e92c0baee09e57615eab25c5fccc32c840b042cb"
+    },
+    {
+      "layer": 5,
+      "lane": 3,
+      "nodes": 1014,
+      "bytes": 2136757,
+      "sha256": "851eb64002ecf165e59a5e1bc43d40125538f80a21a3c8bdfb3a73db48842f4b"
+    },
+    {
+      "layer": 5,
+      "lane": 4,
+      "nodes": 824,
+      "bytes": 1570978,
+      "sha256": "5394b4585dd371a9b52a715109fe16e61a5ba05acc59bbd1d3decdff5db86287"
+    },
+    {
+      "layer": 5,
+      "lane": 5,
+      "nodes": 629,
+      "bytes": 1055759,
+      "sha256": "31f7754d742dc6c34cbf4748959a22ffcad6709eae56701fe0d14078b20f2213"
+    },
+    {
+      "layer": 5,
+      "lane": 6,
+      "nodes": 181,
+      "bytes": 10588,
+      "sha256": "e551348fffb7a81b1a0ffa89bd2fa71cdf227ba47b16bb8129950ebc49a5286d"
+    },
+    {
+      "layer": 5,
+      "lane": 7,
+      "nodes": 630,
+      "bytes": 1067656,
+      "sha256": "bed2bc011da85a14295cb9a71ed36f635a00d210260657dbf7deab818371f9cd"
+    },
+    {
+      "layer": 5,
+      "lane": 8,
+      "nodes": 825,
+      "bytes": 1587174,
+      "sha256": "08ab101400a657719c07c6bc0deeb5ad9ac0e137d7971ace5f4a3fd313bee2b6"
+    },
+    {
+      "layer": 5,
+      "lane": 9,
+      "nodes": 1015,
+      "bytes": 2155338,
+      "sha256": "71591a41986208e2493ce4f8de104a33e69138195d757b9302ccf8def4e600a9"
+    },
+    {
+      "layer": 5,
+      "lane": 10,
+      "nodes": 1155,
+      "bytes": 2569665,
+      "sha256": "33718e08648fcde87fa8de731e8826977dad2a3902d96e1ed0fabc461fa2d89f"
+    },
+    {
+      "layer": 5,
+      "lane": 11,
+      "nodes": 1198,
+      "bytes": 2772994,
+      "sha256": "fc301ed9705b3dc5c0fdaf0d6233a341573b2aaef3e3f4effe4f2ec7a90d95da"
+    },
+    {
+      "layer": 6,
+      "lane": 0,
+      "nodes": 718,
+      "bytes": 1687402,
+      "sha256": "e83f7d69917092e148493e61b1c43a084be8c99a90da13d529a9fb78d1696e14"
+    },
+    {
+      "layer": 6,
+      "lane": 1,
+      "nodes": 1284,
+      "bytes": 2994256,
+      "sha256": "eff4d9b6b4e4b5cf10bf09f4249fe39e1f565de356635e6700fd96108b002eb4"
+    },
+    {
+      "layer": 6,
+      "lane": 2,
+      "nodes": 1229,
+      "bytes": 2798188,
+      "sha256": "2114cc8265e3224a93299928630e9f5b32b0a8834a2e594a8ca03dc1e5ac04c6"
+    },
+    {
+      "layer": 6,
+      "lane": 3,
+      "nodes": 1123,
+      "bytes": 2539590,
+      "sha256": "1cd0a9bc59659942a87c082eb8470c0da739cf2458c0e6fbd88ae9aa2b46ec47"
+    },
+    {
+      "layer": 6,
+      "lane": 4,
+      "nodes": 947,
+      "bytes": 2018799,
+      "sha256": "188ec9c858d48362dc8878939f35eda22efa8f3e9de4dc7926674fa70264b02e"
+    },
+    {
+      "layer": 6,
+      "lane": 5,
+      "nodes": 772,
+      "bytes": 1444383,
+      "sha256": "6c7680174f9d8a7200977946a13071e6d1c632db2ca6806fa28c3b7263cd8ed1"
+    },
+    {
+      "layer": 6,
+      "lane": 6,
+      "nodes": 445,
+      "bytes": 583689,
+      "sha256": "860269acca9848f6c1225d77b55638c677b1253e7d19e0379494cb5b073fd5d0"
+    },
+    {
+      "layer": 6,
+      "lane": 7,
+      "nodes": 770,
+      "bytes": 1458091,
+      "sha256": "c7df35d864aed03223ba61391e7f7d57a64aa092b14cb885839e7392941df872"
+    },
+    {
+      "layer": 6,
+      "lane": 8,
+      "nodes": 945,
+      "bytes": 2035118,
+      "sha256": "a4ca75aafa52ded75d4abdce496d859c5d0d1764f1455270d085bef1862a1d85"
+    },
+    {
+      "layer": 6,
+      "lane": 9,
+      "nodes": 1123,
+      "bytes": 2560032,
+      "sha256": "da82403cd5706321c941010cd37452d5d3d967b73adf34ee3b119589da8fc4c0"
+    },
+    {
+      "layer": 6,
+      "lane": 10,
+      "nodes": 1228,
+      "bytes": 2820058,
+      "sha256": "30118caaf5796ddfa1548395507657fbb418df4fa17f91d3d3467f63e4c09954"
+    },
+    {
+      "layer": 6,
+      "lane": 11,
+      "nodes": 1282,
+      "bytes": 3015097,
+      "sha256": "36544a6fb8daf0a03e758764f9390ac2fc958b8f212b1cbb90f57a89a3f9a7c3"
+    },
+    {
+      "layer": 7,
+      "lane": 0,
+      "nodes": 623,
+      "bytes": 1313119,
+      "sha256": "ca2041900f4431096e6fe2a4d31d2ff4bc04aefacb4cf80bb678702c81095a61"
+    },
+    {
+      "layer": 7,
+      "lane": 1,
+      "nodes": 1307,
+      "bytes": 3048815,
+      "sha256": "8287ff25259e08447af722fa8ba4f1794dde25bb5783627e9682cac6243f3fa3"
+    },
+    {
+      "layer": 7,
+      "lane": 2,
+      "nodes": 1301,
+      "bytes": 3029295,
+      "sha256": "ea39f2858ec4a3d5a246aa7bc3cba28dfcc2b689ab8174b5d8822c0eb23c6943"
+    },
+    {
+      "layer": 7,
+      "lane": 3,
+      "nodes": 1239,
+      "bytes": 2894314,
+      "sha256": "52a94abe9bfe2517c4a028aaadfa92518543f0be59d57e83a0a92a5dbd47b049"
+    },
+    {
+      "layer": 7,
+      "lane": 4,
+      "nodes": 1043,
+      "bytes": 2262598,
+      "sha256": "6f45ba0a85aca81e88b250bfc47900209fd41a595abf1e9faad8cd648bf6a9f9"
+    },
+    {
+      "layer": 7,
+      "lane": 5,
+      "nodes": 880,
+      "bytes": 1816245,
+      "sha256": "49d84a8ed233aac2630c5788370c4d3205ab7f4e941b1998cb3b24ba2d28b92f"
+    },
+    {
+      "layer": 7,
+      "lane": 6,
+      "nodes": 505,
+      "bytes": 750123,
+      "sha256": "d6960abb6824729f87ebaf2fbc12cee346030551d81f9dc1ad572a91a3c4b414"
+    },
+    {
+      "layer": 7,
+      "lane": 7,
+      "nodes": 879,
+      "bytes": 1831055,
+      "sha256": "3436a241b1df97bb3c9fdf4621949af7c78eb098f10e8b14c25abcaafdc50e39"
+    },
+    {
+      "layer": 7,
+      "lane": 8,
+      "nodes": 1043,
+      "bytes": 2281027,
+      "sha256": "fdb19f3a68dfd21c0a37065021d3390fe451ca74750fd3c972bd4fc94b499449"
+    },
+    {
+      "layer": 7,
+      "lane": 9,
+      "nodes": 1239,
+      "bytes": 2916121,
+      "sha256": "c1ac7fd820e8894f618038509d1c907038e018fc2f02b4a227c483b07a5ffb76"
+    },
+    {
+      "layer": 7,
+      "lane": 10,
+      "nodes": 1302,
+      "bytes": 3051453,
+      "sha256": "df864eccd9074b4d5f42a0462b8d47edc6091c8363e2ba2ab0ef6e466cba7572"
+    },
+    {
+      "layer": 7,
+      "lane": 11,
+      "nodes": 1308,
+      "bytes": 3069779,
+      "sha256": "3328a289a8be383fc36c305a1d15a0ce2b09a7ccad0656a791f498c91e767e14"
+    },
+    {
+      "layer": 8,
+      "lane": 0,
+      "nodes": 871,
+      "bytes": 2012748,
+      "sha256": "b597c46119f391c5a2ffa411e38d92728b618b9294b64fe51bf8baee2fe16618"
+    },
+    {
+      "layer": 8,
+      "lane": 1,
+      "nodes": 1395,
+      "bytes": 3350916,
+      "sha256": "57087f0039e546490197b511ccc70184a01e66cd126e2da13b4ebe4e0da1fa86"
+    },
+    {
+      "layer": 8,
+      "lane": 2,
+      "nodes": 1350,
+      "bytes": 3231809,
+      "sha256": "97ac35f35d44509ddcf5f29084bee81e5595a551469ecfcbe6cc47402e06768e"
+    },
+    {
+      "layer": 8,
+      "lane": 3,
+      "nodes": 1320,
+      "bytes": 3117976,
+      "sha256": "5a69781ba96b27873b04d5b3dbb3bbc0c3a318da315056849faf85292b204d7f"
+    },
+    {
+      "layer": 8,
+      "lane": 4,
+      "nodes": 1126,
+      "bytes": 2571765,
+      "sha256": "2002ada42d178d5e62f574e4c0f614a621b940eeb2e0b7b2b43de00a2229c0f7"
+    },
+    {
+      "layer": 8,
+      "lane": 5,
+      "nodes": 843,
+      "bytes": 1726629,
+      "sha256": "2140f9a5f9db965ee02b599cdd7c50ae9f62227f0b56e5c3207f689706a57b1f"
+    },
+    {
+      "layer": 8,
+      "lane": 6,
+      "nodes": 550,
+      "bytes": 907694,
+      "sha256": "0b44e20bb294a75037d2958acbb8e702ad3f46142218763a181087c1e494b9cf"
+    },
+    {
+      "layer": 8,
+      "lane": 7,
+      "nodes": 842,
+      "bytes": 1739842,
+      "sha256": "419f0aee7479727aa8aa80f0d9f7e848175d0a355551c119122fff7dac1543e6"
+    },
+    {
+      "layer": 8,
+      "lane": 8,
+      "nodes": 1129,
+      "bytes": 2590838,
+      "sha256": "83923aa7acd7b9004817a3461254d30adc2885b8e06656db4cf95f3d3edb7323"
+    },
+    {
+      "layer": 8,
+      "lane": 9,
+      "nodes": 1322,
+      "bytes": 3139819,
+      "sha256": "bbccae0bb87f8202acf735bd454fafd8fa8d934d8a8b8d54c4bf5eff46c283cc"
+    },
+    {
+      "layer": 8,
+      "lane": 10,
+      "nodes": 1348,
+      "bytes": 3254425,
+      "sha256": "a030f1b7e6319d03890ba26a227d7367bd90d941c40def652e451aa2ca70f9fb"
+    },
+    {
+      "layer": 8,
+      "lane": 11,
+      "nodes": 1398,
+      "bytes": 3372949,
+      "sha256": "5a1751d701631fc90a9249d3f877ca947ddb76cddc8d300252708d43c443e310"
+    },
+    {
+      "layer": 9,
+      "lane": 0,
+      "nodes": 668,
+      "bytes": 1403202,
+      "sha256": "840504b0415d4293cfc7f4d0c7dd925f9719ed65e494219685aa54a3e240f059"
+    },
+    {
+      "layer": 9,
+      "lane": 1,
+      "nodes": 1365,
+      "bytes": 3264922,
+      "sha256": "3b21b7ad525f4478ff0bdff451853dc2dc9ba6cab8ab539ca93d126268ea69ed"
+    },
+    {
+      "layer": 9,
+      "lane": 2,
+      "nodes": 1426,
+      "bytes": 3457122,
+      "sha256": "9124c95f0cb2cd3ff9785340a73d95d1b1221fdfb7de7f3137ee4f281ce2316d"
+    },
+    {
+      "layer": 9,
+      "lane": 3,
+      "nodes": 1347,
+      "bytes": 3207786,
+      "sha256": "9a1123d660eac7beac3c8c6450e584ea70806078e7773efba7324db28f200b74"
+    },
+    {
+      "layer": 9,
+      "lane": 4,
+      "nodes": 1246,
+      "bytes": 2893860,
+      "sha256": "7d0ae838a0bf53509ead9af84b5e274be80500a5788f2efbf9906a4f1a0c980e"
+    },
+    {
+      "layer": 9,
+      "lane": 5,
+      "nodes": 959,
+      "bytes": 2055745,
+      "sha256": "2ef4320122611e72173823e3dd0dd95833a9dd3d5ca6a175dfbef5845d2c984d"
+    },
+    {
+      "layer": 9,
+      "lane": 6,
+      "nodes": 610,
+      "bytes": 1078773,
+      "sha256": "5b157642348fcc27641500629f8f7bb0d56f1e45882dfbd800764dbb061796d1"
+    },
+    {
+      "layer": 9,
+      "lane": 7,
+      "nodes": 955,
+      "bytes": 2069354,
+      "sha256": "0511a1cbc88bd04bd370a1c87cdecbf3bfb19cdf8fc141c7d0cd834dde6b0fde"
+    },
+    {
+      "layer": 9,
+      "lane": 8,
+      "nodes": 1241,
+      "bytes": 2912200,
+      "sha256": "74cc5df066ed2e6b1cbec31c75e8fa9304a63a43fafb7af0cb038fbd4819f59a"
+    },
+    {
+      "layer": 9,
+      "lane": 9,
+      "nodes": 1348,
+      "bytes": 3228673,
+      "sha256": "cbf4b9befc94ab0de742218ac77c7cd41a0317a8b310e58015e5fcd8258e84f6"
+    },
+    {
+      "layer": 9,
+      "lane": 10,
+      "nodes": 1427,
+      "bytes": 3479817,
+      "sha256": "ee1795c49d183ac75763fef5b8135a2740b2636ee3adecee9981974d40b9886a"
+    },
+    {
+      "layer": 9,
+      "lane": 11,
+      "nodes": 1367,
+      "bytes": 3285651,
+      "sha256": "aad32e0a6859a0161a9e06dc04530385a8f6f509a5ca50fd55019d693c0ea8f3"
+    },
+    {
+      "layer": 10,
+      "lane": 0,
+      "nodes": 683,
+      "bytes": 1502204,
+      "sha256": "715ec7b3a9c67487a2d9fc78d42c4172328b5434c12f3c889017596fa71f3b35"
+    },
+    {
+      "layer": 10,
+      "lane": 1,
+      "nodes": 1383,
+      "bytes": 3297689,
+      "sha256": "5fb6e6cca57d639aaae500584ff44439b34a4df7f06951f295fa3315a0c7046c"
+    },
+    {
+      "layer": 10,
+      "lane": 2,
+      "nodes": 1483,
+      "bytes": 3542521,
+      "sha256": "01e64fadfb354a8c03b484392d69e4592b8115e91a263b81e25959cc3c2c83e5"
+    },
+    {
+      "layer": 10,
+      "lane": 3,
+      "nodes": 1362,
+      "bytes": 3228082,
+      "sha256": "8a328bb984f75429b589e883d44a04ac1a4f4c553a09aa34e568cab5b468ea45"
+    },
+    {
+      "layer": 10,
+      "lane": 4,
+      "nodes": 1306,
+      "bytes": 3085147,
+      "sha256": "aedbc6810eedbdde74485df9c7e2393e8fcb50d9968f5c9f9f38adbf16d7661d"
+    },
+    {
+      "layer": 10,
+      "lane": 5,
+      "nodes": 794,
+      "bytes": 1607874,
+      "sha256": "ce1da1ac64af4930936b1649cb576bdc75028078597165fb35d2a981c1a2fd59"
+    },
+    {
+      "layer": 10,
+      "lane": 6,
+      "nodes": 677,
+      "bytes": 1260864,
+      "sha256": "ce2fdf5bffa3d8189d719066d22fa6c8a2fbf724b14dd61dc76afbc1210075a0"
+    },
+    {
+      "layer": 10,
+      "lane": 7,
+      "nodes": 796,
+      "bytes": 1613594,
+      "sha256": "42d4b5b59c7ca044c8606af6af8dae3402bb53477afa1e1dc054ddfba096c386"
+    },
+    {
+      "layer": 10,
+      "lane": 8,
+      "nodes": 1306,
+      "bytes": 3103430,
+      "sha256": "4c58e24a45549ccee303c2d911f06bb6b8bd441103ffada18260583df7ec2557"
+    },
+    {
+      "layer": 10,
+      "lane": 9,
+      "nodes": 1359,
+      "bytes": 3247308,
+      "sha256": "46a62155f410a6cdce897dfb6b57398f4c557bc75d5f6f03a3278102f5ec0bb5"
+    },
+    {
+      "layer": 10,
+      "lane": 10,
+      "nodes": 1483,
+      "bytes": 3564642,
+      "sha256": "6f50440708cba56ffa55248704790129dbaa2842b82711399cc975eecf65fcbd"
+    },
+    {
+      "layer": 10,
+      "lane": 11,
+      "nodes": 1384,
+      "bytes": 3316630,
+      "sha256": "de983ba146f8f73cb3d6d4f50879044aa86b336df8fa92e6c432766ebeeb8c2c"
+    },
+    {
+      "layer": 11,
+      "lane": 0,
+      "nodes": 688,
+      "bytes": 1408172,
+      "sha256": "a6f0dde542c278facb8b5892bc551210e0c83e59a7d26f1567971a448922a189"
+    },
+    {
+      "layer": 11,
+      "lane": 1,
+      "nodes": 1414,
+      "bytes": 3389673,
+      "sha256": "cdf64f97c9c4dca8a3f7e84f8d207eb67254f25dcf4f5d0ed1160e5d2c42efd0"
+    },
+    {
+      "layer": 11,
+      "lane": 2,
+      "nodes": 1468,
+      "bytes": 3522608,
+      "sha256": "0d2e2f5a48c5e55153297a90bc1877108b1ca011c25a3f72cc5473fdf0763cc6"
+    },
+    {
+      "layer": 11,
+      "lane": 3,
+      "nodes": 1365,
+      "bytes": 3241882,
+      "sha256": "aaf9e5f4f1b4093de189c1f45fe24e452bd16c2563bd8edabb395cf694256702"
+    },
+    {
+      "layer": 11,
+      "lane": 4,
+      "nodes": 1327,
+      "bytes": 3086725,
+      "sha256": "2d0ad31f6a19b32abfaed55afc51e4a1448d976ff08326c0c930f0dea2d588e3"
+    },
+    {
+      "layer": 11,
+      "lane": 5,
+      "nodes": 1054,
+      "bytes": 2337295,
+      "sha256": "7b6948a5dfcc71c59c20b94265874d813429f7396d359f07aa14c66ccc3c599a"
+    },
+    {
+      "layer": 11,
+      "lane": 6,
+      "nodes": 584,
+      "bytes": 1025367,
+      "sha256": "84a085d874f03363eedbfdd454589776077add182391cda40e8734cb0a8a76f0"
+    },
+    {
+      "layer": 11,
+      "lane": 7,
+      "nodes": 1056,
+      "bytes": 2349632,
+      "sha256": "deb9379e21ab923861218c829672f62a458ef7e3d0478c2f36a7489e12108095"
+    },
+    {
+      "layer": 11,
+      "lane": 8,
+      "nodes": 1329,
+      "bytes": 3104076,
+      "sha256": "f4d7a5cf1d58bc545ada75a1560ee06d06d74dc23175d568e97d71ffd466097b"
+    },
+    {
+      "layer": 11,
+      "lane": 9,
+      "nodes": 1367,
+      "bytes": 3261289,
+      "sha256": "2e031879e42f8fb26e2b03fec9f2ee1e25c4fefd501701bb4ee32630b33d8185"
+    },
+    {
+      "layer": 11,
+      "lane": 10,
+      "nodes": 1468,
+      "bytes": 3542974,
+      "sha256": "c7507b776a19f4754ca4d3ae25de0e7ca99d260cd2cb896acca01d9e920f6cd3"
+    },
+    {
+      "layer": 11,
+      "lane": 11,
+      "nodes": 1410,
+      "bytes": 3407684,
+      "sha256": "bb14da76f76a77e45654afa0185774eaa450672ba5d1a723ee4e62ecc3257089"
+    },
+    {
+      "layer": 12,
+      "lane": 0,
+      "nodes": 712,
+      "bytes": 1475010,
+      "sha256": "81e833e200c4bbc7c124d1b8bb4ba73bcf0ebe79a75a0bbd8552b3668d429eb8"
+    },
+    {
+      "layer": 12,
+      "lane": 1,
+      "nodes": 1326,
+      "bytes": 3150935,
+      "sha256": "ff01c3d07f200dce1b4e63fbf254200101f0de18094e8f8cb77372e82431dd13"
+    },
+    {
+      "layer": 12,
+      "lane": 2,
+      "nodes": 1587,
+      "bytes": 3761036,
+      "sha256": "b02509d727822e1fbfd9597f8e79612f6dc9d2c23a1818882f8cf9096681baff"
+    },
+    {
+      "layer": 12,
+      "lane": 3,
+      "nodes": 1469,
+      "bytes": 3533346,
+      "sha256": "7eb85c0b20c9bfc371156015cff50746fe602ac5e5d32b58ee8f085d03c84dbf"
+    },
+    {
+      "layer": 12,
+      "lane": 4,
+      "nodes": 1284,
+      "bytes": 2975412,
+      "sha256": "7e1bd809e5b753aff8456e0f90f04783da8452d8bfb2298481e14d6e92a75c23"
+    },
+    {
+      "layer": 12,
+      "lane": 5,
+      "nodes": 1122,
+      "bytes": 2520051,
+      "sha256": "06791c12908818babb20834cbfa98cc897c9b10e01d82e3998859c1deab05f64"
+    },
+    {
+      "layer": 12,
+      "lane": 6,
+      "nodes": 804,
+      "bytes": 1591709,
+      "sha256": "6b2ac4c7391c10283f15432fed516118ed6a78dfa07fe322ed196f7f0de00b2b"
+    },
+    {
+      "layer": 12,
+      "lane": 7,
+      "nodes": 1124,
+      "bytes": 2532813,
+      "sha256": "bffe6576ed5d4561fdc7c921c1eaa23d86dc74f0917c4326286aea193d7812a3"
+    },
+    {
+      "layer": 12,
+      "lane": 8,
+      "nodes": 1284,
+      "bytes": 2991606,
+      "sha256": "c7d7d02a3e8e50303a1a478e3a320860f01b1941f7c6d3e28ff09f82b61cd3c3"
+    },
+    {
+      "layer": 12,
+      "lane": 9,
+      "nodes": 1469,
+      "bytes": 3552600,
+      "sha256": "8734fd538546159bda6a6f15026784e47d6d3e7329a64a2cbefb66e45d9ae7b4"
+    },
+    {
+      "layer": 12,
+      "lane": 10,
+      "nodes": 1587,
+      "bytes": 3782357,
+      "sha256": "a5a7a6f116016afc8f8f8c8b7eb6d905efa4aadc532b5dfccce1576bcc74e83b"
+    },
+    {
+      "layer": 12,
+      "lane": 11,
+      "nodes": 1327,
+      "bytes": 3167063,
+      "sha256": "84aeaa2923580ac9f981ce35a62fdcaccd51e37033235157602340bb4c4d9b68"
+    },
+    {
+      "layer": 13,
+      "lane": 0,
+      "nodes": 695,
+      "bytes": 1417248,
+      "sha256": "39a1c769008becc8b5754503d2b63509216af69ae79f6d0865ac43c5f7ebe6e6"
+    },
+    {
+      "layer": 13,
+      "lane": 1,
+      "nodes": 1324,
+      "bytes": 3171708,
+      "sha256": "a289c9bcf90107a3e764ecafaa907742400232566af4310cf27e84cb39d8d0d2"
+    },
+    {
+      "layer": 13,
+      "lane": 2,
+      "nodes": 1467,
+      "bytes": 3527682,
+      "sha256": "4a03d66f56b3048fc22645e2a577a4eaa20dd39655088856384abd5af64e1535"
+    },
+    {
+      "layer": 13,
+      "lane": 3,
+      "nodes": 1461,
+      "bytes": 3522012,
+      "sha256": "1b983d60935db5ba9866c52d9df4aafbfc3eaf05d256f5884b8e50468c9ac95f"
+    },
+    {
+      "layer": 13,
+      "lane": 4,
+      "nodes": 1154,
+      "bytes": 2600459,
+      "sha256": "d77ef1955f31465fbc4acb8f244b0fb03750ae930c154daf9a744aa5627c3c43"
+    },
+    {
+      "layer": 13,
+      "lane": 5,
+      "nodes": 975,
+      "bytes": 2092243,
+      "sha256": "858f43aa7b01d49c604f0f5404a89cb5e568e852ff7799f12e9651932ee52f36"
+    },
+    {
+      "layer": 13,
+      "lane": 6,
+      "nodes": 871,
+      "bytes": 1756665,
+      "sha256": "d754d45c5f19002317e3f63eaec9d01b7d2cf66712c3a5d83c55c8b2a95df6c3"
+    },
+    {
+      "layer": 13,
+      "lane": 7,
+      "nodes": 976,
+      "bytes": 2097383,
+      "sha256": "1a60b18c74c5b0102abda5118df7a382fe55e48c465853b980165e3f0dc94ef6"
+    },
+    {
+      "layer": 13,
+      "lane": 8,
+      "nodes": 1154,
+      "bytes": 2614010,
+      "sha256": "873d83b62b1beb46d57bf39974e6defb46dca8d1567336597eb0335456db2c10"
+    },
+    {
+      "layer": 13,
+      "lane": 9,
+      "nodes": 1463,
+      "bytes": 3541299,
+      "sha256": "bd4f35e56d79dea99a0d70ac32753f0af2ca89a44c8cb3a6202bb5b3e4d863c4"
+    },
+    {
+      "layer": 13,
+      "lane": 10,
+      "nodes": 1469,
+      "bytes": 3546997,
+      "sha256": "baccf1d77d81ce66b92363055d9e14f3a9ed9bf11b57554795b8f0815061c1c9"
+    },
+    {
+      "layer": 13,
+      "lane": 11,
+      "nodes": 1325,
+      "bytes": 3188306,
+      "sha256": "329ca0cde994cf8dfc82c9e237c503133562ce6fd14e88c1cc923c1a38fd5d02"
+    },
+    {
+      "layer": 14,
+      "lane": 0,
+      "nodes": 940,
+      "bytes": 2101399,
+      "sha256": "847c5363fe537f8704b4ea0d237a5d6b4c4d0080cb96311e98b8e1ef1b9282f8"
+    },
+    {
+      "layer": 14,
+      "lane": 1,
+      "nodes": 1164,
+      "bytes": 2734407,
+      "sha256": "a2548bc0afed2b2d80e9ab94d05eda37446fca17753e26751348cd35b611d3ee"
+    },
+    {
+      "layer": 14,
+      "lane": 2,
+      "nodes": 1449,
+      "bytes": 3477306,
+      "sha256": "7a2356d75a06f22e6a5978f201ff1c1293c87d3842dcef4eeceabda55f8894a1"
+    },
+    {
+      "layer": 14,
+      "lane": 3,
+      "nodes": 1430,
+      "bytes": 3405962,
+      "sha256": "cf61ef8719957c9b631c1f0be08adee69bf29d994aca66abae0aa2c19f794995"
+    },
+    {
+      "layer": 14,
+      "lane": 4,
+      "nodes": 1086,
+      "bytes": 2533465,
+      "sha256": "e453a876311add8a7693942e2fda266bbda9d8738a548c428531eb2633a97bf0"
+    },
+    {
+      "layer": 14,
+      "lane": 5,
+      "nodes": 822,
+      "bytes": 1657003,
+      "sha256": "7b105cbee245e571a773c1a86bc725e2ffcb17d6a55ba814839abf4566331f8f"
+    },
+    {
+      "layer": 14,
+      "lane": 6,
+      "nodes": 464,
+      "bytes": 649840,
+      "sha256": "e865ce0842c426bc7c2e835f55ceb879763d42d3699900d9107b98dbc7e3a65d"
+    },
+    {
+      "layer": 14,
+      "lane": 7,
+      "nodes": 822,
+      "bytes": 1659201,
+      "sha256": "ea3f747f681d90115dab4e06c1292862179ca78cde56d8115c0e94bb3eea8543"
+    },
+    {
+      "layer": 14,
+      "lane": 8,
+      "nodes": 1086,
+      "bytes": 2540203,
+      "sha256": "d8dcc077cb7fde7ab26098333efd7f35f0ba7d34399c59af3ab72e15a142f040"
+    },
+    {
+      "layer": 14,
+      "lane": 9,
+      "nodes": 1430,
+      "bytes": 3423730,
+      "sha256": "e2a27252f601e8567c58c883df511f0a3569410bb7fde90565e879f85b2d143f"
+    },
+    {
+      "layer": 14,
+      "lane": 10,
+      "nodes": 1450,
+      "bytes": 3496529,
+      "sha256": "10c106e49f5df32cf20c49817c72e3a7273399461881c75efa593a056fda43f2"
+    },
+    {
+      "layer": 14,
+      "lane": 11,
+      "nodes": 1163,
+      "bytes": 2747185,
+      "sha256": "4300ed1a4e3173889aea9fa30cacaa3c48261c3c3348aef0659eacbb6dec3883"
+    },
+    {
+      "layer": 15,
+      "lane": 0,
+      "nodes": 673,
+      "bytes": 1272291,
+      "sha256": "d8c50d1731d163b20f64f3565e9de80455690ace80db81531e3378634d27a553"
+    },
+    {
+      "layer": 15,
+      "lane": 1,
+      "nodes": 1200,
+      "bytes": 2828877,
+      "sha256": "ace72812c517dfed44a3acc74689d4b5e0b434ba193909a64b224d0468603d76"
+    },
+    {
+      "layer": 15,
+      "lane": 2,
+      "nodes": 1427,
+      "bytes": 3446236,
+      "sha256": "9cdeeaf2849506d0ac2d98bf70df49398e68ef3bf78864a7e1aa6c55be7ce819"
+    },
+    {
+      "layer": 15,
+      "lane": 3,
+      "nodes": 1454,
+      "bytes": 3508876,
+      "sha256": "e85fbbecf6a651a519b2dc2b5886411aa2b7a2a6364c2e415f775d513e5525eb"
+    },
+    {
+      "layer": 15,
+      "lane": 4,
+      "nodes": 1324,
+      "bytes": 3100964,
+      "sha256": "d75c4c2dee368bb3523141fa1fdea0b3c0c7a80ebced432d690cc8b7d5655889"
+    },
+    {
+      "layer": 15,
+      "lane": 5,
+      "nodes": 495,
+      "bytes": 772288,
+      "sha256": "eccb2ecadb33ef44626b286051fc2d1a065d37200ba93194516d4d74f2cc9885"
+    },
+    {
+      "layer": 15,
+      "lane": 6,
+      "nodes": 619,
+      "bytes": 1111406,
+      "sha256": "e801c4632bafafa956d59ab986d05f789790ad2786d9b0f56db1af73a1bc7613"
+    },
+    {
+      "layer": 15,
+      "lane": 7,
+      "nodes": 495,
+      "bytes": 772791,
+      "sha256": "5d5fa2b00aec979993a302a4fe8c5d4890dbe926c4efcb8938677f9a8a2136ca"
+    },
+    {
+      "layer": 15,
+      "lane": 8,
+      "nodes": 1319,
+      "bytes": 3115036,
+      "sha256": "273fb5785cd5055fd66037820fd3301096e7cc8a788bb47eb66c10f25ebe0e28"
+    },
+    {
+      "layer": 15,
+      "lane": 9,
+      "nodes": 1453,
+      "bytes": 3526410,
+      "sha256": "4850a4f884a63a59f0ec63db055ff3fec4ef905012790a2475af6a1c62aea7b3"
+    },
+    {
+      "layer": 15,
+      "lane": 10,
+      "nodes": 1425,
+      "bytes": 3463574,
+      "sha256": "88dfaf9ee456ef12112b8da877fa893df038d8adc1ba408d7e6c3e2cb563ceca"
+    },
+    {
+      "layer": 15,
+      "lane": 11,
+      "nodes": 1201,
+      "bytes": 2842569,
+      "sha256": "52674d20d31903ef6bad621dbda630748239e0e4f8a87bb041750551a1f74e48"
+    },
+    {
+      "layer": 16,
+      "lane": 0,
+      "nodes": 722,
+      "bytes": 1407402,
+      "sha256": "f9594d0459354141d3ff67fa81a086ca91d6427506a9ae9a8bd069927d3019d9"
+    },
+    {
+      "layer": 16,
+      "lane": 1,
+      "nodes": 613,
+      "bytes": 1114992,
+      "sha256": "86089cf11af081ff57680d7f5eb0d3372b02c17b97da2ff2a9bdc60a389265ce"
+    },
+    {
+      "layer": 16,
+      "lane": 2,
+      "nodes": 1272,
+      "bytes": 2981887,
+      "sha256": "9b67fe7349245565bb59bc4be577f777183ae0a404c6a511a0781721910d868f"
+    },
+    {
+      "layer": 16,
+      "lane": 3,
+      "nodes": 1347,
+      "bytes": 3200202,
+      "sha256": "e01b0c6ecd26108215815ac5359c6cde97a84bb2917f9a274ee808d6d8a8851e"
+    },
+    {
+      "layer": 16,
+      "lane": 4,
+      "nodes": 749,
+      "bytes": 1487902,
+      "sha256": "c3e198cd64a578fe3eb9259b887eba5eb06e8811ccf59791679ae2cb7ea2101f"
+    },
+    {
+      "layer": 16,
+      "lane": 5,
+      "nodes": 623,
+      "bytes": 1058986,
+      "sha256": "e150218ea9e4962e2cdd54ae6d67f88fc009bb01e5f06f678978b0ebc07b6bba"
+    },
+    {
+      "layer": 16,
+      "lane": 6,
+      "nodes": 426,
+      "bytes": 580151,
+      "sha256": "d4783405d773a761e2d7c77f400b87643a5228817b2ca95c73438bf03b3f04cd"
+    },
+    {
+      "layer": 16,
+      "lane": 7,
+      "nodes": 622,
+      "bytes": 1061283,
+      "sha256": "cc04ffb2f7fa831047e41f20a5d0b535a3a08b483be4ca2b81bc094196cb7d4f"
+    },
+    {
+      "layer": 16,
+      "lane": 8,
+      "nodes": 750,
+      "bytes": 1492914,
+      "sha256": "038e0d4c3166a3c0e28d616ff0c1348a2e3b28825c08b9a3b6c59b87a8536c09"
+    },
+    {
+      "layer": 16,
+      "lane": 9,
+      "nodes": 1350,
+      "bytes": 3217317,
+      "sha256": "93dc39a9475dc3996175649c930918720d337b0c7c5e65585a5cc79cea541375"
+    },
+    {
+      "layer": 16,
+      "lane": 10,
+      "nodes": 1275,
+      "bytes": 2997707,
+      "sha256": "3b7106a0e26fb25fc5b9348b95d7a37a71b04ed130111a201e89b9ec374aea1c"
+    },
+    {
+      "layer": 16,
+      "lane": 11,
+      "nodes": 615,
+      "bytes": 1118742,
+      "sha256": "1614557053bd3c3588fdc6a27d989fc4a45fae19069ebf0b8a2650049fdcaee8"
+    },
+    {
+      "layer": 17,
+      "lane": 0,
+      "nodes": 452,
+      "bytes": 768224,
+      "sha256": "4293899ec21bfcede039818edc1a444196996402a3493a2a742311f66a44c817"
+    },
+    {
+      "layer": 17,
+      "lane": 1,
+      "nodes": 782,
+      "bytes": 1569210,
+      "sha256": "5e60d23c513ba16c9b54af571ce8d674779d3a55b316000f09ea0e215744bb21"
+    },
+    {
+      "layer": 17,
+      "lane": 2,
+      "nodes": 780,
+      "bytes": 1569976,
+      "sha256": "dbad9cffa6069115a81e5bb34197f3c61d463b20aeec128726db7e06cffdc05f"
+    },
+    {
+      "layer": 17,
+      "lane": 3,
+      "nodes": 1032,
+      "bytes": 2223339,
+      "sha256": "69c375899ed310a37835f77e497db12e625727ae1950ecef294c080e0d2438f7"
+    },
+    {
+      "layer": 17,
+      "lane": 4,
+      "nodes": 868,
+      "bytes": 1678947,
+      "sha256": "b877602137e35892baceebfbe9e394de1732d07a6778b35c213c68cc79f1b056"
+    },
+    {
+      "layer": 17,
+      "lane": 5,
+      "nodes": 481,
+      "bytes": 738745,
+      "sha256": "d961e2dff7d175c13a4af32c37b4299217afdee795e598764e5652a46121f024"
+    },
+    {
+      "layer": 17,
+      "lane": 6,
+      "nodes": 475,
+      "bytes": 711599,
+      "sha256": "a122ec51361977e15fe3003937d2515280d9426cec2cd186f178e59edc11458e"
+    },
+    {
+      "layer": 17,
+      "lane": 7,
+      "nodes": 480,
+      "bytes": 739402,
+      "sha256": "94d2936bdba45d3cd84708277200d12e14fe814654d726601d471e090308c4be"
+    },
+    {
+      "layer": 17,
+      "lane": 8,
+      "nodes": 871,
+      "bytes": 1684735,
+      "sha256": "2d1ff6ad0665abd5b8d9f7fb890a59af3131cd5c13452c393a9d2274ef1eddb6"
+    },
+    {
+      "layer": 17,
+      "lane": 9,
+      "nodes": 1036,
+      "bytes": 2235012,
+      "sha256": "82529dd72d93bda08f4fe1860c2f0984f861a49cd06456e46f9da8de9ed074f7"
+    },
+    {
+      "layer": 17,
+      "lane": 10,
+      "nodes": 781,
+      "bytes": 1577559,
+      "sha256": "892ed2e5c49f350f1c0073ada58b54d40460351bd589eb5a726601602c72917e"
+    },
+    {
+      "layer": 17,
+      "lane": 11,
+      "nodes": 783,
+      "bytes": 1575461,
+      "sha256": "251868db92e19bf8e604898c52600b322b9ccbf8379fe6f295c6a21c3a03f44a"
+    },
+    {
+      "layer": 18,
+      "lane": 0,
+      "nodes": 578,
+      "bytes": 911356,
+      "sha256": "2ea2d69cbe0a0a340c415debb9e5cb60c2c330f02c09ab441e69292112dee178"
+    },
+    {
+      "layer": 18,
+      "lane": 1,
+      "nodes": 556,
+      "bytes": 888715,
+      "sha256": "d7b536f6201e1e4ad5b081789a8f8d303d81d1033057967660f8452893f6d0ab"
+    },
+    {
+      "layer": 18,
+      "lane": 2,
+      "nodes": 774,
+      "bytes": 1532570,
+      "sha256": "b05189df7c618969d8a2a400c9c0de580a9a975b3e2bcffc2d6e4dc5a9f1f487"
+    },
+    {
+      "layer": 18,
+      "lane": 3,
+      "nodes": 837,
+      "bytes": 1636137,
+      "sha256": "95f6b3233e2f51b8c41a07ad34e1d9ff1cc9a889ab50e88d3365f2914e863852"
+    },
+    {
+      "layer": 18,
+      "lane": 4,
+      "nodes": 947,
+      "bytes": 1917603,
+      "sha256": "a12097ebb2dbfc21f71468893529de249e2e378b4d206df7d24bd925f9297b83"
+    },
+    {
+      "layer": 18,
+      "lane": 5,
+      "nodes": 554,
+      "bytes": 796675,
+      "sha256": "a73ee0f09cd5c4f9a2f592ffb987ce5c8ce382ca3d8bcd90bdbe5add5fb3a1f0"
+    },
+    {
+      "layer": 18,
+      "lane": 6,
+      "nodes": 541,
+      "bytes": 894556,
+      "sha256": "ec6cb07e90086428de70c404398ee4e4fd2ade126f453bdc2f7f8de618f1d83c"
+    },
+    {
+      "layer": 18,
+      "lane": 7,
+      "nodes": 554,
+      "bytes": 797690,
+      "sha256": "d02f34c8395de8c1b041b5879c18eb63491b5814757d7fe044fbbf0eca7defad"
+    },
+    {
+      "layer": 18,
+      "lane": 8,
+      "nodes": 948,
+      "bytes": 1925371,
+      "sha256": "bbb8db56ea67b124a5df387eeeb6c87bca0a42a24f87d419f136f124c869fe86"
+    },
+    {
+      "layer": 18,
+      "lane": 9,
+      "nodes": 838,
+      "bytes": 1642487,
+      "sha256": "920f92a9f9d2b113922ae76639bbf8a65d10f0fc415628c5d0e12ff99c87842a"
+    },
+    {
+      "layer": 18,
+      "lane": 10,
+      "nodes": 775,
+      "bytes": 1540185,
+      "sha256": "38cbd5413129d45adaecbc7c70937368fc53ff44f6356f028b27c37ac53b7097"
+    },
+    {
+      "layer": 18,
+      "lane": 11,
+      "nodes": 557,
+      "bytes": 891616,
+      "sha256": "2d8369de8896d8af7beed41029da341390c48dab0e67f07dcf0de99e46f6a411"
+    }
+  ],
+  "full_payloads_verified": 216,
+  "active_cells": 191,
+  "inactive_cells": 25,
+  "exact_rest_main_cells": 191,
+  "exact_rest_aux_ports": 540,
+  "pulses": 2202,
+  "recorded_guards": {
+    "no_fire_cover": 0,
+    "recovery_group_local_cycle": 0,
+    "fire_arrival_commutation": 6
+  },
+  "gain_caps": [],
+  "missing_payloads": 0
+}

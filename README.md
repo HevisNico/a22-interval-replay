@@ -123,6 +123,15 @@ in a domain Q32 from which both future-wave checkers prove exact transmission of
 pulse word ([`sweep/schedule32/`](sweep/schedule32/README.md)). Q32 is not the 128-pulse domain:
 the learned state differs, the guarantee is the same.
 
+## v4.6: 28 pulses, and the guarantee holds from t = 230
+
+With **28 source pulses** (times 0, 8, …, 216) the same program is enclosed through all 18 layers, and
+the enclosure is cut at **T = 230** instead of 1116: the network is already in a domain Q28 from which
+both future-wave checkers prove exact transmission of every admissible pulse word
+([`sweep/schedule28_T230/`](sweep/schedule28_T230/README.md)). Training and settling together take about
+a fifth of the original horizon. The schedule came from a sampled point-simulation sweep; it is not
+shown to be minimal.
+
 ## Origin of the model
 
 The physical kernel of A22 is inspired by the **Reset Operator** of Nicolas Breuillaud (*The Reset
