@@ -41,19 +41,14 @@ components.
 |---|---|
 | Layers completed / cells | 18 / 216, each layer re-read by a separate verifier process |
 | Campaign identity | `kernel_id` **reproduced exactly** from the published sources and the two archived binaries |
-| A14 reference gain boxes inside our enclosures | **648 / 648** (exact rational test) |
-| Independent H1/H2 re-check, layer 18 lanes 1, 4, 8, 11 | 418 / 418 spikes and 3,600 / 3,600 "no spike" decisions re-proved |
 | Output-date width, median cell, layer 18 | 7.3e-3 time units (worst cell: 3.8e-2) |
 | Learned gains, worst relative half-width | ±2.4 % (cell 18,6) |
 | Future regime (from Q) | 191 active cells, one spike each per pulse; network at rest within 12.791; margin > 7.209 before the next pulse |
 | Future-domain inequalities | checked by two independent programs (different arithmetic, no engine import) |
-| Critical-path time, 8 workers | 49 min in total (layer 18: 24 min) |
 
-![Output-date enclosure width by layer](figures/date_width_by_layer.png)
-
-*Median output-date width per layer during training. v3.3 treats each port's constants as independent,
-as the model specifies; v3.2 shared them across the three ports of a cell. The more general model costs
-at most 5 % of width (layer 18: 7.28e-3 against 6.91e-3).*
+Independent checks of the campaign (an independent reference for all 648 learned-gain boxes, a re-proof
+of every spike decision in four layer-18 cells) and per-layer timings are in
+[`docs/DETAILS.md`](docs/DETAILS.md).
 
 ## Start here
 
@@ -80,6 +75,9 @@ Later releases extend the result; each is described in [`CHANGELOG.md`](CHANGELO
   same medium, with exact transmission of every admissible pulse word.
 - **Random media.** For any stationary ergodic medium, almost every realization has the same limiting
   speed, with proved speed ceilings.
+- **Conditional future invariance on a relative gain domain** ([`depth/g_rel/`](depth/g_rel/README.md),
+  v4.3): regenerated learned states that keep the same transmitting mask; it does not show that
+  training reaches this domain.
 - **Open problem** ([`depth/point4/`](depth/point4/README.md)). Whether *every* preparation of the
   original source enters that regime is open; the partial results and obstructions are recorded.
 - **Box width** ([`sweep/`](sweep/README.md)). Research campaigns cover all 18 layers at ±3e-4; with the
@@ -117,16 +115,6 @@ chain at ±1e-3 by another route, and goes further on wider boxes (at least 16 l
 ±1e-2). Its coverage would need ten lemmas
 ([`LEMMAS_EN.md`](sweep/v23/proof_extension/LEMMAS_EN.md)).
 
-## v4.3: conditional future invariance on a relative gain domain
-
-The [G_rel dossier](depth/g_rel/README.md) characterizes regenerated learned states
-that preserve the same 191-cell transmitting mask and exact temporal intervals.
-Its common local gain-arrival inequalities admit different learning-dose patterns;
-35 of 40 saved decimal vectors pass directed membership checks. Start with the
-[one-page reviewer note](depth/g_rel/reviewer/ONE_PAGE_EN.pdf).
-The theorem is conditional: it does not show that training reaches this domain.
-The five unresolved cases are recorded.
-
 ## Origin of the model
 
 The physical kernel of A22 is inspired by the **Reset Operator** of Nicolas Breuillaud (*The Reset
@@ -137,9 +125,8 @@ A22 is one concrete realization of a threshold–protection–return cycle: a RE
 charge the cell, a threshold crossing, protected fast and slow phases during which the principal
 admission is closed, and a return to rest before admission reopens. The full model of the
 realization is [`engine/reference/full_model_reference.md`](engine/reference/full_model_reference.md)
-(in French). Its banner and its section 7 date from 18 October 2026, before the v3.3 campaign; read
-[`engine/reference/STATUS_NOTE_EN.md`](engine/reference/STATUS_NOTE_EN.md) first. The physical
-definition in that file is current; its status statements are historical.
+(in French; its status statements are historical, see
+[`engine/reference/STATUS_NOTE_EN.md`](engine/reference/STATUS_NOTE_EN.md)).
 
 The result concerns this realization only, not the Reset Operator hypothesis in general
 ([`docs/MODEL_BOUNDARY_EN.txt`](docs/MODEL_BOUNDARY_EN.txt)).
@@ -157,29 +144,22 @@ The chain is: **initial section → every training step → terminal domain Q �
 | Training end ⊂ Q | same theorem, Sections 10–11 | exact terminal extraction (216 authenticated results) |
 | Q → Q for every future pulse | `proof/FUTURE_INVARIANCE_PROOF_EN.txt` | analytic argument + two independent inequality checkers |
 | Exact transmission of the pulse word | `proof/GLOBAL_THEOREM_AND_WORD_PRESERVATION_EN.txt`¹ | fixed influential gains + layer induction |
+| Extension to ±1e-3 | `sweep/v33_c7/` (lemmas C7, C6, P, E and two addenda) | manual, with the mathematical parts in Lean |
+| Machine-checked parts | `proof/lean/` | Lean 4 + Mathlib, no `sorry`, built on every pull request |
 
 ¹ Written before the learning-coverage theorem: its remark that H_entry is not discharged is
 historical (H_entry is discharged by `LEARNING_COVERAGE_THEOREM_EN.txt`, see `proof/STATUS.json`). The
 file, like `proof/TRAINING_ENTRY_REVIEW_EN.txt` and `proof/historical_status/`, is kept byte-identical
 because its hash is cited.
 
-## What was closed
-
-The A14 reference (`results/reference_A14_gain_boxes.json`) lists one item as **unclosed**: *"A validated
-interval replay of the complete 128-pulse learning transient from the initial state."* This campaign is
-that replay. It agrees with the reference on all 648 learned-gain boxes. Those reference gains were
-observed numerically with parameters within 1e-8, a set that lies inside the parameter box used here.
-
-## Version history
-
-**v3.3** is the campaign reported and proved here. It gives each port of a cell its own symbol for
-each constant, as the model specifies; the earlier v3.2 campaign shared them across a cell's three
-ports and therefore covered only a sub-family of the devices. The full history is in
-[`CHANGELOG.md`](CHANGELOG.md).
-
 ## Reproduce
 
-**The proof checks** (no engine import, no campaign): download the complete proof dossier from the
+**Automatic checks.** Every pull request and every push to `main` builds the Lean files, runs the unit
+tests of the v3.3 engine and of the v3.3 + C7 package, and regenerates every committed certificate that
+needs no campaign output (`tools/check_certificates.py`); `main` accepts only changes that pass.
+The ±1e-3 release is checked with `python3 -I sweep/v33_c7/verify_release.py <assets folder> --strict`.
+
+**The v3.3 proof dossier checks** (no engine import, no campaign): download the complete proof dossier from the
 Release `v3.3-proof`, unzip it, and run from its folder, with Python 3 and without `-O`:
 
 ```
@@ -210,21 +190,22 @@ about the recorded campaign. See [results/HASHES.md](results/HASHES.md) for both
 
 | Path | What it is |
 |---|---|
+| `RESULTS_STATUS.md` | Every result with its scope, status, authoritative document and check |
 | `WHY_A22_MATTERS.md` | Why this network matters: the question, related work, limits of the method |
 | `PROOF_WALKTHROUGH.md` | Guided tour of the v3.3 proof: five propositions, three delicate points, source map |
 | `CHANGELOG.md` | What each release added |
 | `depth/` | The v4.0-depth extension: summary, certificates, theory, review records, layer index, verification replay; `depth/point4/` holds the open entry problem (v4.2) |
-| `sweep/` | The box-width sweep: results, run records and the exact sweep program (v4.2) |
-| `tools/verify_depth_assets.py` | Read-only integrity check of the v4.0-depth release assets |
+| `sweep/` | The box-width sweep (v4.2) and the ±1e-3 result (`sweep/v33_c7/`, v4.4) |
 | `proof/` | The proof dossier (theorems, lemmas, certificates, audit outputs, scripts); see `proof/OMITTED_IN_REPOSITORY.md` |
+| `proof/lean/` | The machine-checked parts (Lean 4, Mathlib) |
 | `engine/` | The exact v3.3 program sources used for the campaign (physics kernel unchanged since the first release) |
-| `tools/` | The read-only check scripts (same files as `engine/tools/`) |
+| `tools/` | Read-only checks: the H1/H2 re-check and campaign summary (as in `engine/tools/`), the depth-asset check, the certificate regeneration used by CI |
+| `.github/workflows/` | CI: Lean build, engine tests, certificate regeneration |
 | `results/campaign_summary.json` | Per-layer and per-cell summary of the campaign (timings, widths, gains, A14 inclusion) |
 | `results/h1h2_layer18_lanes_1_4_8_11.json` | Independent re-check of every spike decision in four layer-18 cells |
 | `results/layers_cells_and_timings.json` | Per-layer `cells.tsv` rows and `complete.json` of the campaign, in one file |
 | `results/campaign_identity.json` | Campaign identity (run_id, kernel_id, environment) |
 | `results/reference_A14_gain_boxes.json` | Independent reference gains (exact fractions) |
-| `results/v2_refusal_layer18_lane4.json` | The layer-18 refusal of the v2 engine, kept for the record |
 | `results/HASHES.md` | Identities, exact provenance reconstruction, file and Release-asset hashes |
 | `history/` | The v3.2 campaign and the plain-box refusal records |
 | `docs/DETAILS.md` | Method, fixes, results by layer, checks, limitations |
