@@ -2,6 +2,8 @@ __pycache__/
 *.pyc
 # campaign outputs and diagnostics (publish campaigns as Release assets instead)
 campaign*/
+# ...except the small per-layer records published next to each certified sweep
+!sweep/*/campaign/
 campagne*/
 *_through_*.zip
 test_diagnostics/

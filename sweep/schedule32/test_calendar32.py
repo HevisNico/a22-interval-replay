@@ -1,4 +1,10 @@
-"""Check the scientific input and shared clock of the shortened campaign."""
+"""Check the scientific input and shared clock of the shortened campaign.
+
+Runs from the tests/ folder of the C7 package with calendar32.patch applied, as in the
+v4.5 archives and in CI (.github/workflows/checks.yml, package v4.5-calendar32):
+  unzip sweep/v33_c7/A22_fresh_launch_v3_3_C7.zip; patch -p1 -d <pkg> < calendar32.patch
+  cp test_calendar32.py <pkg>/tests/; cd <pkg>; python -B -m unittest discover -s tests
+"""
 import sys
 import unittest
 from pathlib import Path
