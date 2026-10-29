@@ -165,3 +165,14 @@ cover of Section 8(vi) gives an upward crossing on the path where it is used.
 scheduler and verification unchanged), completes layers 1 to 16 with no refusal and no error
 ([`sweep/v23/eps_3em3_xz/`](sweep/v23/eps_3em3_xz/README.md)); it was stopped during layer 17 for
 computing time, not by a refusal. The previous figure was at least 12 layers.
+
+## v4.5: a 32-pulse training schedule, certified at ±1e-3
+
+An earlier point-simulation search selected a schedule of 32 source pulses (times 0, 8, …, 248)
+instead of 128. Run through the enclosure engine of v4.4 with only the source schedule changed, it
+is accepted on all 18 layers at ε = 1e-3: 2 966 training emissions, 191 active cells, 14
+commutations all covered by lemma E, and both future-wave checkers pass on the new terminal domain
+Q32 ([`sweep/schedule32/`](sweep/schedule32/README.md)). The terminal box is not inside the 128-pulse
+domain (11 of 2 160 bounds), so the learned state differs while the guarantee is the same; the
+horizon stays 1116. The CI regenerates its future certificate; the outputs, the executed engine and
+the audit scripts are assets of Release `v4.5`.

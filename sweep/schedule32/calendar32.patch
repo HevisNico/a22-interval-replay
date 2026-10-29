@@ -1,0 +1,22 @@
+--- upstream/run.py
++++ engine32/run.py
+@@ -37,7 +37,7 @@
+     from affine_iv import I
+     temporal.begin_producer(run_id+'/source')
+     clock=temporal.Time('canonical-initial-clock',I(0))
+-    return [tuple(clock.plus(8*k) for k in range(128))]+[()]*11
++    return [tuple(clock.plus(8*k) for k in range(32))]+[()]*11
+ 
+ def worker(case):
+     root=Path(case['run_dir']);layer=case['layer'];lane=case['lane']
+@@ -188,7 +188,9 @@
+             import _rounding_native
+             env['native_sha256']=a.file_hash(_rounding_native.__file__)
+         frozen_source_id=identity()
+-        parameters={'epsilon_relative':epsilon,'initial_delta':'1e-5'}
++        parameters={'epsilon_relative':epsilon,'initial_delta':'1e-5',
++                    'training_calendar':{'count':32,'gap':'8','first':'0','last':'248',
++                                         'source_lane':0,'terminal_time':'1116'}}
+         kernel_id=a.canonical_hash({'sources':frozen_source_id,'environment':env,'parameters':parameters,'precision':160,'symbols':affine_iv_kmax()})
+         config=root/'campaign.json'
+         if config.exists():

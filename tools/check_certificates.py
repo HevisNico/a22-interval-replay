@@ -110,6 +110,12 @@ def main():
             FUT / 'certify_future_eps.py', FUT / 'verify_future_certificate_eps.py',
             C7 / 'terminal' / 'all_terminal_exact.json', C7 / 'terminal' / 'future_certificate_eps1e-3.json',
             C7 / 'terminal' / 'independent_check_eps1e-3.json', ('1e-3',), tmp))
+        S32 = REPO / 'sweep' / 'schedule32' / 'terminal'
+        check('future, 32-pulse schedule at eps = 1e-3 (sweep/schedule32)', lambda: future_pair(
+            'future, 32-pulse schedule at eps = 1e-3 (sweep/schedule32)',
+            FUT / 'certify_future_eps.py', FUT / 'verify_future_certificate_eps.py',
+            S32 / 'all_terminal_exact.json', S32 / 'future_certificate.json',
+            S32 / 'independent_check.json', ('1e-3',), tmp))
         check('future, scenario launcher at eps = 1e-3 (sweep/v23)', lambda: future_pair(
             'future, scenario launcher at eps = 1e-3 (sweep/v23)',
             FUT / 'certify_future_eps.py', FUT / 'verify_future_certificate_eps.py',
